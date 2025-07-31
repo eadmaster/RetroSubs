@@ -22,5 +22,4 @@ Currently only [Bizhawk](https://tasvideos.org/Bizhawk) is supported, since it i
 
 ## Preview 
 
-![demo1](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/master/shots/demo1.png)  ![demo2](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/master/shots/demo2.png)
-
+![demo1](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/main/shots/demo1.png) ![demo2](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/main/shots/demo2.png)
