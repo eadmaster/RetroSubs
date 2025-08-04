@@ -1,0 +1,24 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: GPL-2.0
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [2837bbad, dad037696e80543845c56a218dc2571d]
+---
+
+# Densetsu no Stafy 4 English fan translation
+
+## Dialogues
+
+### Intro 
+
+text dump from 0009_textFiles/582164_585268.txt
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+|ARM9 System Bus|600BC20|1EC0|F0FCD0DCB6E8035E69E6551856C060B75598B236A1C5F53A88D37CA60A72791D|10|120|215|65|black|white|[Kyorosuke]<br>Yo! All you cute little girls<br>across the country!<br>I'm super happy to see you again!|よお！　ぜんこくのかわいい<br>おじょうちゃんたち！<br>またあえて　うれしいぜ！|
+|ARM9 System Bus|600BC20|1EC0|AC19A2AFBC056924AD764A90666FC1F2F6110EFB355B49CE773789F3A3CDDF3C|10|120|215|65|black|white|[Kyorosuke]<br>Now then, the great Kyorosuke<br>is gonna give you a lecture<br>on how to control things in the city!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
+|ARM9 System Bus|600BC20|1EC0|2A434C4519DC1CD22B5DD332DA5DE4A097708EDE25B680F0A8402048BAED619C|10|120|215|65|black|white|[Kyorosuke]<br>Make sure you remember this!<br>If you already got it,<br>you're one smart cookie!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
+|ARM9 System Bus|600BC20|1EC0|26DD7486920DF1297C29B8302D6FD1810CE969CE29F4A8970F34C436477007DD|10|120|215|65|black|white|[Kyorosuke]<br>You can press the Start Button to skip<br>and jump straight into the game if you want.<br>Alright, time for the explanation!|スタートボタンで　スキップして<br>さっさとゲームをはじめてもいいぞ<br>それじゃ　せつめいするぞ|
+|ARM9 System Bus|600BC20|1EC0|FCE731866AD12422D5F50E1A00871F801DBBA3C5EA98DE4315171BDB6776BB05|10|120|215|65|black|white|[Kyorosuke]<br>First, pay attention to the '!' mark.<br>It shows something important,<br>so don’t you dare miss it!|まず『！』マークに　ちゅうもくだ<br>だいじなポイントだから<br>ぜったい　見おとすなよ？|

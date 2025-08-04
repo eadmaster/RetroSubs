@@ -8,17 +8,16 @@ Can be used for:
  - In-game guides/tips
  - Additional OSDs
  
-The current implementation is based on SHA-1 memory hashes stored in CSV files.
+The current implementation is based on SHA-1 memory hashes stored in Markdown files.
  
 Text appeareance can be customized to fit the game native UI.
 
-Currently only [Bizhawk](https://tasvideos.org/Bizhawk) is supported, since it is the only emulator providing a [`memory.hash_region` function](https://tasvideos.org/Bizhawk/LuaFunctions).
+Currently only [Bizhawk](https://tasvideos.org/Bizhawk) is supported, since it is the only emulator providing a [`memory.hash_region` Lua function](https://tasvideos.org/Bizhawk/LuaFunctions).
 
 ## [Setup Guide](https://github.com/eadmaster/RetroSubs/wiki/Setup-Guide)
 
-## [CSV Examples](https://github.com/eadmaster/RetroSubs/wiki/CSV-Examples)
+## [Examples](https://github.com/eadmaster/RetroSubs/wiki/Examples)
 
-## [FAQs](https://github.com/eadmaster/RetroSubs/wiki/FAQs)
 
 ## Preview 
 

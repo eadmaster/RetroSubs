@@ -13,66 +13,149 @@ end
 
 CURRENT_EMU = detect_emu()
 
-function parse_csv(filename)
+
+local function trim(s)
+    return (s:gsub("^%s*(.-)%s*$", "%1"))
+end
+
+-- Safely split markdown row into columns, even if it lacks final pipe or has empty columns
+local function split_markdown_row(line)
+    local cols = {}
+    for col in line:gmatch("|?([^|]*)") do
+        if col ~= "" or #cols > 0 then
+            table.insert(cols, col)
+        end
+    end
+    return cols
+end
+
+
+function parse_markdown_multi_tables(filename)
     local entries = {}
+
+    local required_cols = { "region", "start", "len", "hash", "text" }
+    local optional_cols = { "x_pos", "y_pos", "fg_color", "bg_color", "width_box", "height_box", "font_size", "font_face" }
+
     local file = io.open(filename, "r")
     if not file then
         print("not found: ", filename)
         return nil
     end
-    
-    -- Read header
-    local header = file:read("*l")
-    
+
+    local header_map = nil
+    local header_found = false
+
     for line in file:lines() do
-        -- Skip empty lines and comment lines
-        if line:match("^%s*$") or line:match("^%s*#") then
+        line = trim(line)
+        
+        if line == "" or line:match("^%s*[#;]") then
+            header_found = false
             goto continue
         end
-        
-        -- Parse current line
-        --local region, start, len, hash, text = line:match("^([^,]+),([^,]+),([^,]+),([^,]+),(.+)$")
-        local region, start, len, hash,
-              x_pos, y_pos, width_box, height_box,
-              fg_color, bg_color, text = line:match(
-          "^([^,]+),([^,]+),([^,]+),([^,]+)," ..
-          "(.-),(.-),(.-),(.-),(.-),(.-)," ..
-          "(.+)$"
-        )
-        
-        -- Check required fields
-        if not (region and start and len and hash and text) then
-            print("Missing required fields in line (skipped): ", line)
+
+        -- Detect header line
+        if not header_found and line:match("^|") then
+            local raw_cols = split_markdown_row(line)
+            local cols = {}
+            for _, col in ipairs(raw_cols) do
+                cols[#cols + 1] = trim(col):lower()
+            end
+
+            -- Check if required columns exist
+            local map = {}
+            for i, c in ipairs(cols) do
+                map[c] = i
+            end
+
+            local has_all_required = true
+            for _, c in ipairs(required_cols) do
+                if not map[c] then
+                    has_all_required = false
+                    break
+                end
+            end
+
+            if has_all_required then
+                header_map = map
+                header_found = true
+                goto continue
+            end
+        end
+
+        -- Skip separator line under header
+        if header_found and line:match("^|%s*[-]+") then
             goto continue
         end
-        
-        table.insert(entries, {
-            region     = region,
-            start      = tonumber(start, 16),
-            len        = tonumber(len, 16),
-            hash       = hash,
-            text       = text,
-            x_pos      = tonumber(x_pos) or nil,
-            y_pos      = tonumber(y_pos) or nil,
-            height_box = tonumber(height_box) or nil,
-            width_box  = tonumber(width_box) or nil,
-            fg_color   = fg_color ~= "" and fg_color or nil,
-            bg_color   = bg_color ~= "" and bg_color or nil,
-        })
-        
+
+        -- Parse data row when header found
+        if header_found then
+            if not line:match("^|") then
+                -- End of this table, reset for next table
+                header_found = false
+                header_map = nil
+                goto continue
+            end
+
+            local cols = split_markdown_row(line)
+            for i, col in ipairs(cols) do
+                cols[i] = trim(col)
+            end
+
+            -- Skip row if fewer columns than header
+            if #cols < #header_map then
+                print("Warning: skipping malformed row: " .. line)
+                goto continue
+            end
+
+            -- Extract required fields
+            local function getcol(name)
+                return cols[header_map[name]]
+            end
+            
+            local region = getcol("region")
+            local start  = getcol("start")
+            local len    = getcol("len")
+            local hash   = getcol("hash")
+            local text   = getcol("text")
+
+            if not (region and start and len and hash and text and tonumber(start, 16) and tonumber(len, 16)) then
+                print("Warning: skipping incomplete row: " .. line)
+                goto continue
+            end
+            
+            local curr_entry = {
+                region = region,
+                start  = start,
+                len    = len,
+                hash   = hash,
+                text   = text,
+            }
+
+            for _, name in ipairs(optional_cols) do
+                if header_map[name] then
+                    local val = getcol(name) or nil
+                    if name == "x_pos" or name == "y_pos" or name == "width_box" or name == "height_box" or name == "font_size" then
+                        val = tonumber(val) -- returns nil if not valid
+                    end
+                    curr_entry[name] = val
+                end
+            end
+
+            local key1 = region .. ":" .. start .. ":" .. len
+            entries[key1] = entries[key1] or {}
+            entries[key1][hash] = curr_entry
+        end
+
         ::continue::
     end
 
     file:close()
-    
-    print("loaded: ", filename)
-    
     return entries
 end
 
 
 function get_memory_hash(region, start, len)
-    if start < 0 or len <= 0 then
+    if not start or not len or start < 0 or len <= 0 then
         print("invalid memory region", start, len)
         return ""
     end
@@ -101,6 +184,8 @@ function show_text(entry)
     local fg_color = entry.fg_color or 0xFFFFFFFF  -- default: white
     local height_box = entry.height_box -- optional
     local width_box = entry.width_box -- optional
+    local font_size = entry.font_size -- optional
+    local font_face = entry.font_face or "Arial" -- optional
     
     --print("X:", x_pos)
     --print("Y:", y_pos)
@@ -114,92 +199,95 @@ function show_text(entry)
         gui.drawRectangle(x_pos, y_pos, width_box, height_box, bg_color, bg_color);
     end
     
-    -- Split text into lines using \n
+    -- Split text into lines using <br>
     local line_count = 0
-    local text = entry.text:gsub("\\n", "\n")
-    for line in text:gmatch("[^\r\n]+") do
+    for line in (entry.text .. "<br>"):gmatch("([^<]+)<br>") do
         print(line)
         
-        -- bizhawk
-        -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
-        local curr_y_pos = y_pos + line_count*12
-        if (height_box and width_box and height_box > 0 and width_box > 0) then
-            gui.drawString(x_pos, curr_y_pos, line, fg_color , nil, nil, "Arial")
-        else
-            gui.drawString(x_pos, curr_y_pos, line, fg_color, bg_color, nil, "Arial")
+        if line then
+            -- bizhawk
+            -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
+            local curr_y_pos = y_pos + line_count*12
+            if (height_box and width_box and height_box > 0 and width_box > 0) then
+                gui.drawString(x_pos, curr_y_pos, line, fg_color , nil, font_size, font_face)
+            else
+                gui.drawString(x_pos, curr_y_pos, line, fg_color, bg_color, font_size, font_face)
+            end
+            --gui.text(x_pos + 10, curr_y_pos + 10, line, nil, "topleft" )
         end
-        --gui.text(x_pos + 10, curr_y_pos + 10, line, nil, "topleft" )
         
         line_count = line_count + 1
     end
 end
 
 -- main
-local data = parse_csv("RetroSubs/" .. gameinfo.getromname() .. ".csv")
+local parsed_markdown = parse_markdown_multi_tables("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
+if parsed_markdown == nil then
+    -- TODO: try to load from content dir
+    print("parsing failed")
+    return
+end
+-- 
+-- this is the script i'm working on https://github.com/eadmaster/RetroSubs/blob/main/RetroSubs.lua#L138
+
 local curr_hash = ""
 local CPU_SAVER_INTERVAL = 100
-local prev_entry = nil
-local prev_hash = nil
 local prev_text = nil
 local last_update = emu.framecount()
 local no_match = true
 
 while true do
-
+    
     -- check precond
     if not CURRENT_EMU == "bizhawk" then
         print("Unsupported emulator: " .. CURRENT_EMU)
         break
     end
-    if not data then
-        -- retry to load the CSV
-        -- data = parse_csv("RetroSubs/" .. gameinfo.getromname() .. ".csv")
+    if not parsed_markdown then
+        -- retry to load
+        -- parsed_markdown = parse_csv("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
         -- exit script
         break
     end
     
-	-- CPU SAVER
+    -- CPU SAVER
 	if (emu.framecount() - last_update) > CPU_SAVER_INTERVAL  then
         
         last_update = emu.framecount()
         no_match = true
-        prev_entry = nil
-        prev_hash = nil
-        
-        for i, entry in ipairs(data) do
-            --print(string.format("Region: %s, Start: 0x%X, Len: 0x%X, Hash: %s, Text: %s", entry.region, entry.start, entry.len, entry.hash, entry.text))
+
+        -- iterate over the memory regions to check
+        for key, group in pairs(parsed_markdown) do
+            print("Group:", key)
             
-            -- skip repeated regions
-            if prev_entry and prev_hash and prev_entry.region == entry.region and prev_entry.start == entry.start and prev_entry.len == entry.len then
-                -- same memory region, reuse prev_hash
-                curr_hash = prev_hash
-                --print("reuse hash")
-            else
-                curr_hash = get_memory_hash(entry.region, entry.start, entry.len)
-                print(string.format("hashed %X", entry.start), "= ", curr_hash)
-            end
-        
-            -- copies for the next iteration
-            prev_entry = entry
-            prev_hash = curr_hash          
-            
-            -- check current hash
-            if curr_hash == entry.hash then
-                --if prev_text and entry.text ~= prev_text then
+            -- compute the hash
+            local region, start, len = key:match("^(.-):([^:]+):([^:]+)$")
+            -- convert strings->int
+            start = tonumber(start, 16)
+            len = tonumber(len, 16)
+            curr_hash = get_memory_hash(region, start, len)
+            if curr_hash ~= "" then
+                print("hashed ", key, "= ", curr_hash)
+                
+                -- check if the hash is in any table
+                if group[curr_hash] ~= nil then
+                    local entry = group[curr_hash]
+                    -- if yes draw the textbox
+                    print("match:")
+                        print("  Hash:", curr_hash)
+                        print("    Text:", entry.text)
+                        print("    Pos:", entry.x_pos or "nil", entry.y_pos or "nil")
+                        print("    Colors:", entry.fg_color or "nil", entry.bg_color or "nil")
                     clear_text()
-                    -- TODO: handle pos_x, pos_y, fg_color, bg_color
                     show_text(entry)
                     no_match = false
-                    prev_text = entry.text
-                --end
-                break
+                end
             end
         end
-        
+
         if no_match then
             clear_text()
         end
-        
     end
 
 	emu.frameadvance();

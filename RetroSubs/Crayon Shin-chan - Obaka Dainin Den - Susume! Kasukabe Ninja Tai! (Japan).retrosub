@@ -1,0 +1,21 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: GPL-2.0
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "227fc16b", "8e5b4bb736b5030cf13052634d01ef69" ]
+---
+
+# Crayon Shin-chan - Obaka Dainin Den - Susume! Kasukabe Ninja Tai! English fan translation
+
+## Intro
+
+### Dialogues
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+|ARM9 System Bus|070004C0|178|733F2C842C18979657264FAAD2A6FA555F641B179D2EDBE545CF115BC8C8FEC0|30|230|190|100|black|#fbf3db|When Hideyoshi Yotomi <br>was still a child, in<br>Kasukabe, Musashino<br>Province|とよとみ ひでよしがまだきのした とうきちろうだったころむさしのくに かすかべに|
+|ARM9 System Bus|070004C0|178|54B2B4D50BDA08E05617DECC36C0C7381C5C85C472EB3BA7AED3ED82D27E60FF|30|230|190|100|black|#fbf3db|In skies darkened by ominous<br>clouds, there floated a castle known<br>as theMechanical Flying Fortress.|あんうん たれこめるそらにうかびしからくりてんくうじょうというしろがあった|
+|ARM9 System Bus|070004C0|178|4CB6259BAFBA2590F6CC8F4A7120B823E394AC28BB509B8BA11C0F4BA51C2277|30|230|190|100|black|#fbf3db|Within that fortress, a wicked ninja<br>used the Ninjutsu Demon Staff to cast<br>the world into utter terror and doom.|そのしろにはじゃあくなにんじゅつまにんぼうをあやつりよのなかを きょうふのドンぞこに おとしいれる|
+|ARM9 System Bus|070004C0|178|A1ECA5510DC4C029EF6E79F3429D8DBC766E70743BD112C37EE0026660832E0F|30|230|190|100|black|#fbf3db|A great ninja appeared<br>His name was Jadoh!|#だいまにんじゃがいたそのなはジャドー!|
