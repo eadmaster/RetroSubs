@@ -232,7 +232,8 @@ end
 
 local curr_hash = ""
 local CPU_SAVER_INTERVAL = 100
-local prev_text = nil
+local curr_visible_text_list = {}
+local prev_visible_text_list = {}
 local last_update = emu.framecount()
 local no_match = true
 
@@ -255,6 +256,7 @@ while true do
         
         last_update = emu.framecount()
         no_match = true
+        curr_visible_text_list = {} -- new empty table
 
         -- iterate over the memory regions to check
         for key, group in pairs(parsed_markdown) do
@@ -271,30 +273,33 @@ while true do
                 
                 -- check if the hash is in any table
                 if group[curr_hash] ~= nil then
+                    
                     local entry = group[curr_hash]
-                    -- if yes draw the textbox
-                    print("match:")
-                        print("  Hash:", curr_hash)
-                        print("    Text:", entry.text)
-                        print("    Pos:", entry.x_pos or "nil", entry.y_pos or "nil")
-                        print("    Colors:", entry.fg_color or "nil", entry.bg_color or "nil")
-                    clear_text()
-                    show_text(entry)
+                    curr_visible_text_list[entry.text] = true
                     no_match = false
+                    
+                    -- avoid redrawing the same text multiple times
+                    if not prev_visible_text_list[entry.text] then
+                    
+                        print("drawn:")
+                            print("  Hash:", curr_hash)
+                            print("    Text:", entry.text)
+                            print("    Pos:", entry.x_pos or "nil", entry.y_pos or "nil")
+                            print("    Colors:", entry.fg_color or "nil", entry.bg_color or "nil")
+
+                        show_text(entry)
+                    end
                 end
             end
-        end
+        end  -- end for
 
+        prev_visible_text_list = curr_visible_text_list
+        
         if no_match then
+            prev_visible_text_list = {}
             clear_text()
         end
     end
 
 	emu.frameadvance();
 end
-
-
-
-
-
-

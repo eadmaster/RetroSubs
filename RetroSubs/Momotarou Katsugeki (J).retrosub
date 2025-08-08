@@ -4,7 +4,7 @@ author: eadmaster
 license: GPL-2.0
 version: 0.1
 repository: https://github.com/eadmaster/RetroSubs
-compatible_hashes: [ "" ]
+compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
 
 # Momotarou Katsugeki English fan translation
@@ -31,7 +31,7 @@ compatible_hashes: [ "" ]
 |VRAM1|D700|C00|4ED28D4E44AD9E2DF4959ED359C6FDE0FBB278EEC84F087252713F81CDB393AA|30|60|170|60|white|black|Then grow into a real gamer!<br>When you get better, try other<br>Hudson games too!
 
 
-### Diff. selection
+### Difficulty selection
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
@@ -42,51 +42,57 @@ compatible_hashes: [ "" ]
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|60|55|130|30|black|white|To start let's practice dodging!
-|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|60|55|130|30|black|white|Dodge the falling poop!
-|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|130|30|black|white|Press I to jump<br>and dodge it!
-|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|130|30|black|white|Head right to the goal!<br>ready? Start
+|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|73|73|130|50|black|white|To start let's practice<br>dodging!
+|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|73|73|130|50|black|white|Dodge the falling poop!
+|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|73|73|130|50|black|white|Press I to jump<br>and dodge it!
+|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|73|73|130|50|black|white|Head right to the goal!<br>Ready? Start
 
 
 ### Granpas
 
 TODO: all the values for the money
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|20CD37EF5FEE419E900C8C18C0630936412005C0B40715DB1E9E43B0D9CA1065|65|40|120|45|white|black|Momotaro! You’ll<br>need some money<br>to fight the onis!
-|VRAM1|D700|C00|13A8D882E9410DCF221E36FF3996EDCFF30FA6D4D23273E094D247F899A6B1FB|65|40|120|45|white|black|Momotaro got 10 ryos!
-|VRAM1|D700|C00|10E0947966CEA15B66F940EB2FC3CD62DF65B103118D6A455D0DDA51BC1DF207|65|40|120|45|white|black|Momotaro got 100 ryos!
-|VRAM1|D700|C00|1BE2D055D164A08AD0B7DBF5D3EC3EE5A3A1AE95EBE42CA4CB43CF67AE763190|65|40|120|45|white|black|Take this dumpling<br>with you as well!
-|VRAM1|D700|C00|D22E4F95F9DDA5EF2D0E5AB019F2F97F529812B86EB65D67B96330764D27AE15|65|40|120|45|white|black|Momotaro got a<br>small dumpling!
-|VRAM1|D700|C00|999B829646B7262A6C3A43655283B69E2F12F6C8CF79B027FB87D2DDAA34A7A2|65|40|120|45|white|black|Momotaro!<br>Work for peace, and for<br>the good of all folks!
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+|VRAM1|D700|C00|20CD37EF5FEE419E900C8C18C0630936412005C0B40715DB1E9E43B0D9CA1065|62|40|120|45|white|black|Momotaro! You’ll<br>need cash to fight<br>the onis, won’t you?|「 ももたろうや!<br>オニたいし"に おかねか<br>ひつようし"ゃろう!」
+|VRAM1|D700|C00|0435AB02671D60EBBDB07ED0C688CB66F1CBDF50A7129A99B0B36733A856E8AF|62|40|120|45|white|black|Momotaro<br>got 0 ryos!|ももたろうは<br>[number]両  てにいれた!
+|VRAM1|D700|C00|13A8D882E9410DCF221E36FF3996EDCFF30FA6D4D23273E094D247F899A6B1FB|62|40|120|45|white|black|Momotaro<br>got 10 ryos!|ももたろうは<br>[number]両  てにいれた!
+|VRAM1|D700|C00|10E0947966CEA15B66F940EB2FC3CD62DF65B103118D6A455D0DDA51BC1DF207|62|40|120|45|white|black|Momotaro<br>got 100 ryos!|ももたろうは<br>[number]両  てにいれた!
+|VRAM1|D700|C00|1BE2D055D164A08AD0B7DBF5D3EC3EE5A3A1AE95EBE42CA4CB43CF67AE763190|62|40|120|45|white|black|Take this dumpling<br>with you as well!|「 きひ"た"んこ"も<br>もっていくか"よい!
+|VRAM1|D700|C00|D22E4F95F9DDA5EF2D0E5AB019F2F97F529812B86EB65D67B96330764D27AE15|62|40|120|45|white|black|Momotaro got a<br>small dumpling!|ももたろうは きひ"た"んこ"を<br>ひとつ てにいれた!
+|VRAM1|D700|C00|999B829646B7262A6C3A43655283B69E2F12F6C8CF79B027FB87D2DDAA34A7A2|62|40|120|45|white|black|Momotaro!<br>Work for peace, and for<br>the good of all folks!|「 ももたろうや!<br>よのため ひとのため<br>はけ"むのし"ゃ
 
-<!--
-TODO: Map
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|8CE2AA6F552A84CC4DB84126B8EC089C5F5C36270476A72C0FF98C5CF0B7B027|80|80|70|50|black|white|HANASAKA VILLAGE
+## Map
 
-TODO: Banners
-|VRAM1,FC00,C00,...,GAME START
--->
+TODO: all villages
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|font_size|text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|---------|----|
+|VRAM1|D700|C00|8CE2AA6F552A84CC4DB84126B8EC089C5F5C36270476A72C0FF98C5CF0B7B027|15|161|60|20|black|white|10|Hanasaka<br>Village
+
+
+## Banners
+
+TODO
+
+;|VRAM1,FC00,C00,...,GAME START
+
 
 ## Dialogues
 
-### Statue 
+### Password Statue 
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D080|500|AC2565FC829B00588784F32DBB9F47B6D20D4FAF3BBAB805BCCA6282B494DDC2|60|55|130|30|black|white|Hi! Momotaro!
-|VRAM1|D080|500|2B84908DED51BF69F18CC32EE72BDEE2FE3B77E8F1E064E0006BABA9561749AD|60|55|130|30|black|white|Listen<br>to my song
-|VRAM1|D080|500|0C32DACEFBBA3C512F65B08E0FA7D9915A7650B4C276D4078FD2B5885A7625A1|60|55|130|30|black|white|and take<br>a note
-|VRAM1|D080|500|BABD71E36488BEFA080021720CF6821766FFDA86550C6A7ACA8254A210F46FBF|60|55|130|30|black|white|To restart<br>from here
-|VRAM1|D080|500|19534EF73363AF7872DB0B5366DDAD19D1B85FB530DFF192BEE7A08F7FEF0D6E|60|55|130|30|black|white|To restart<br>from here
-|VRAM1|D080|500|EB70A30C9FBE30E2207B10DA0B675ABDAB3D04589FE72CF4B3998B454CB78E35|60|55|130|30|black|white|To restart<br>from here
-|VRAM1|D080|500|43CD2EDA13A1577B354E3113B761A8F20F693E5E9A791D95237E242B15DF4B1E|60|55|130|30|black|white|To restart<br>from here
-|VRAM1|D080|500|A2CCA647A464F5A5F042F1579F38252E439C773CB354B4BFF545404D836DB9DE|60|55|130|30|black|white|To restart<br>from here
-|VRAM1|D080|500|0CF64FC39DBEC484BD6A9B6EC9E155B15009BF25D41F5E17B3C2809B3E289EEC|60|55|130|30|black|white|To restart<br>from here
+|VRAM1|D080|500|AC2565FC829B00588784F32DBB9F47B6D20D4FAF3BBAB805BCCA6282B494DDC2|73|73|100|50|black|white|Hi!<br>Momotaro!
+|VRAM1|D080|500|25C74C535C160BD57960A7A7651C6461C9AF3F66993329ADD14AE001CE70E992|73|73|100|50|black|white|You’ve done well<br>to make it this far,<br>|よく<br>ここまて"<br>きなすった
+|VRAM1|D080|500|944C2473FF89C1C102FFF12ECEA1FBE21F9F73B81015497E5A6B78D3E98DB7A3|73|73|100|50|black|white|so how about<br>listening to a song?|いっきょく<br>きいて<br>もらえんか?
+|VRAM1|D080|500|04C82747B707C240460A8F359A4D6373DCAFF349C171603D1A3951DCFDB9F63B|73|73|100|50|black|white|Jot it down,<br>it’s my song of wisdom!|わしのうたを<br>メモしとけは"
+|VRAM1|D080|500|204231FC7928036CA7477D5E285DB7D9A81CA02EB684146F6650DBFCD4F38417|73|73|100|50|black|white|From here,<br>you’ll be able<br>to start again|ここから<br>また たひ"か"<br>て"きるのし
+|VRAM1|D080|500|6C299400B751F9BAED3F171D14B083C638D2D661FE2DA7D98982144C37B26383|90|73|100|50|black|white|whenever you like.<br>Want to hear it?|と"うし"ゃ<br>きいてくか?
+|VRAM1|D080|500|715B52F78F836DC5FFD180609CB285B2EE91450425DD86A448B773316BFAFB8B|90|73|100|50|black|white|Don’t push<br>yourself too<br>hard now!|あまり<br>むりを<br>せんように!
+|VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|90|73|100|50|black|white|So then,<br>stay sharp<br>on your path!|て"は<br>こころして<br>ゆくか"よい!
 
 
 ### 1st Village
