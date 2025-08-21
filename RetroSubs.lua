@@ -202,7 +202,7 @@ function show_text(entry)
     -- Split text into lines using <br>
     local line_count = 0
     for line in (entry.text .. "<br>"):gmatch("([^<]+)<br>") do
-        print(line)
+        --console.log(line)
         
         if line then
             -- bizhawk
@@ -227,8 +227,6 @@ if parsed_markdown == nil then
     print("parsing failed")
     return
 end
--- 
--- this is the script i'm working on https://github.com/eadmaster/RetroSubs/blob/main/RetroSubs.lua#L138
 
 local curr_hash = ""
 local CPU_SAVER_INTERVAL = 100
@@ -260,7 +258,7 @@ while true do
 
         -- iterate over the memory regions to check
         for key, group in pairs(parsed_markdown) do
-            print("Group:", key)
+            --print("Group:", key)
             
             -- compute the hash
             local region, start, len = key:match("^(.-):([^:]+):([^:]+)$")
@@ -269,7 +267,7 @@ while true do
             len = tonumber(len, 16)
             curr_hash = get_memory_hash(region, start, len)
             if curr_hash ~= "" then
-                print("hashed ", key, "= ", curr_hash)
+                --print("hashed ", key, "= ", curr_hash)
                 
                 -- check if the hash is in any table
                 if group[curr_hash] ~= nil then
@@ -281,11 +279,11 @@ while true do
                     -- avoid redrawing the same text multiple times
                     if not prev_visible_text_list[entry.text] then
                     
-                        print("drawn:")
-                            print("  Hash:", curr_hash)
-                            print("    Text:", entry.text)
-                            print("    Pos:", entry.x_pos or "nil", entry.y_pos or "nil")
-                            print("    Colors:", entry.fg_color or "nil", entry.bg_color or "nil")
+                        --print("drawn:")
+                        --    print("  Hash:", curr_hash)
+                        --    print("    Text:", entry.text)
+                        --    print("    Pos:", entry.x_pos or "nil", entry.y_pos or "nil")
+                        --    print("    Colors:", entry.fg_color or "nil", entry.bg_color or "nil")
 
                         show_text(entry)
                     end
