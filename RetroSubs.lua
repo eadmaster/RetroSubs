@@ -1,6 +1,17 @@
-
--- RetroSubs lua script by eadmaster
--- https://github.com/eadmaster/RetroSubs/
+--  RetroSubs - Subtitles for retro games.
+--  Copyright (C) 2025 - eadmaster
+--  https://github.com/eadmaster/RetroSubs/
+-- 
+--  RetroSubs is free software: you can redistribute it and/or modify it under the terms
+--  of the GNU General Public License as published by the Free Software Found-
+--  ation, either version 3 of the License, or (at your option) any later version.
+--
+--  RetroSubs is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+--  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+--  PURPOSE.  See the GNU General Public License for more details.
+--
+--  You should have received a copy of the GNU General Public License along with RetroSubs.
+--  If not, see <http://www.gnu.org/licenses/>.
 
 
 function detect_emu()
@@ -267,7 +278,7 @@ while true do
             len = tonumber(len, 16)
             curr_hash = get_memory_hash(region, start, len)
             if curr_hash ~= "" then
-                --print("hashed ", key, "= ", curr_hash)
+                -- print("hashed ", key, "= ", curr_hash)
                 
                 -- check if the hash is in any table
                 if group[curr_hash] ~= nil then
@@ -294,6 +305,7 @@ while true do
         prev_visible_text_list = curr_visible_text_list
         
         if no_match then
+            --print("clear all")
             prev_visible_text_list = {}
             clear_text()
         end

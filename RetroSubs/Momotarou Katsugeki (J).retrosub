@@ -11,7 +11,7 @@ compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 
 ## Hacking notes
 
-Most text is stored @ 1f078 , @ 42f45.
+Most text is stored in ROM @ 1f078 and @ 42f45.
 
 See abcde table: `Momotarou Katsugeki (J).tbl`
 
@@ -53,10 +53,10 @@ See abcde table: `Momotarou Katsugeki (J).tbl`
 |VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|125|30|black|white|Press I to jump<br>and dodge it!|
 |VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|125|30|black|white|Head right to the goal!<br>Ready? Start!|
 
+TODO: add a pause or make the text scrolling slower in this section, or some lines won't be visible.
+
 
 ### Granpas
-
-TODO: all the values for the money
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
@@ -68,21 +68,23 @@ TODO: all the values for the money
 |VRAM1|D700|C00|D22E4F95F9DDA5EF2D0E5AB019F2F97F529812B86EB65D67B96330764D27AE15|62|40|120|45|white|black|Momotaro got a<br>dumpling!|ももたろうは きひ"た"んこ"を<br>ひとつ てにいれた!|
 |VRAM1|D700|C00|999B829646B7262A6C3A43655283B69E2F12F6C8CF79B027FB87D2DDAA34A7A2|62|40|120|45|white|black|Momotaro!<br>Work for peace, and for<br>the good of all folks!|「 ももたろうや!<br>よのため ひとのため<br>はけ"むのし"ゃ|
 
+TODO: add all the values for the money
+
 
 ## Map
-
-TODO: all villages
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|font_size|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|---------|----|
 |VRAM1|D700|C00|8CE2AA6F552A84CC4DB84126B8EC089C5F5C36270476A72C0FF98C5CF0B7B027|15|161|60|20|black|white|10|Hanasaka<br>Village|
 
+TODO: all villages
+
 
 ## Banners
 
-TODO
-
 ;|VRAM1,FC00,C00,...,GAME START
+
+WIP
 
 
 ## Dialogues
@@ -157,8 +159,8 @@ TODO
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|7600|780|8F33B016150200A4458BE159031F0634288B3C763C91E7D12A0E159FDA6922B1|60|43|130|28|black|white| Welcome!<br>What would you like?|いらっしゃいませ-!<br>なにに なさいますか?|
-|VRAM1|7600|780|173B67CD2BC4765A3582F7DF8F6456D4EC609D902ABBC020992791CE358610EA|60|43|130|28|black|white| Karata’s Rice Ball:<br>restores 1 HP|からた"のオニギリ: 1コ たべると<br>からだのももが 1コ かいふくよ|
-|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|white| Yuki’s Rice Ball: restores<br>1 each of HP and skill!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
+|VRAM1|7600|780|173B67CD2BC4765A3582F7DF8F6456D4EC609D902ABBC020992791CE358610EA|60|43|130|28|black|white| Karata’s Rice Ball:<br>restores 1 peach HP|からた"のオニギリ: 1コ たべると<br>からだのももが 1コ かいふくよ|
+|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|white| Yuki’s Rice Ball: restores<br>1 each of HP and Skill!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
 |VRAM1|7600|780|EF48F3102D46A8D32109D3BE85639949D3DC448289B56135A1320AE236E84412|60|43|130|28|black|white| Didn’t find anything you<br>liked? Come again!|おきに めさなかったみたいね!<br>また いらしてくた"さいね!|
 |VRAM1|7600|780|162CD072E1B53B338E90DB8F2DAE88CDAA68E22BF554C3BD95BF8F92E0A1B81F|60|43|130|28|black|white| Thank you very much!<br>Do you need anything else?|ありがとうございました! まだなにかごいりょうですか?|
 
@@ -178,6 +180,9 @@ TODO
 
 ぼうぐ
 たけのどう
+
+TODO: rename Skill -> SP? (also used in shops)
+TODO: add items translations
 
 
 ## Item box messages

@@ -2,23 +2,138 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: GPL-2.0
-version: 0.1
+version: 0.2
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [2837bbad, dad037696e80543845c56a218dc2571d]
 ---
 
 # Densetsu no Stafy 4 English fan translation
 
-## Dialogues
+Localized Names:
 
-### Intro 
+ - Pufftop (Pufftop,テンカイ(Sky World) 
+ - Amiy Kingdom (Japanese: アミー王国)
+ - Papa Star = パパスタ (Papasta)
+ - Mama Star = 	ママスタ (Mamasuta)
+ - Starly = スタピー (Starly)
+ - Mattel = マテル
+ - Moe = キョロスケ (Kyorosuke)
+ - Ruby = (ハデヒラリ, Hadehirari)
+ - Old Man Lobber = ロブじいさん (Robu jiisan)
 
-text dump from 0009_textFiles/582164_585268.txt
+
+## Opening
+
+text dump from Opiter09_Stafy4-Translation-Tools/0014_textFiles/152820_158900.txt
+https://www.starfywiki.org/wiki/Densetsu_no_Starfy_4/Text_dump#Part_9    
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
-|ARM9 System Bus|600BC20|1EC0|F0FCD0DCB6E8035E69E6551856C060B75598B236A1C5F53A88D37CA60A72791D|10|120|215|65|black|white|[Kyorosuke]<br>Yo! All you cute little girls<br>across the country!<br>I'm super happy to see you again!|よお！　ぜんこくのかわいい<br>おじょうちゃんたち！<br>またあえて　うれしいぜ！|
-|ARM9 System Bus|600BC20|1EC0|AC19A2AFBC056924AD764A90666FC1F2F6110EFB355B49CE773789F3A3CDDF3C|10|120|215|65|black|white|[Kyorosuke]<br>Now then, the great Kyorosuke<br>is gonna give you a lecture<br>on how to control things in the city!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
-|ARM9 System Bus|600BC20|1EC0|2A434C4519DC1CD22B5DD332DA5DE4A097708EDE25B680F0A8402048BAED619C|10|120|215|65|black|white|[Kyorosuke]<br>Make sure you remember this!<br>If you already got it,<br>you're one smart cookie!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
-|ARM9 System Bus|600BC20|1EC0|26DD7486920DF1297C29B8302D6FD1810CE969CE29F4A8970F34C436477007DD|10|120|215|65|black|white|[Kyorosuke]<br>You can press the Start Button to skip<br>and jump straight into the game if you want.<br>Alright, time for the explanation!|スタートボタンで　スキップして<br>さっさとゲームをはじめてもいいぞ<br>それじゃ　せつめいするぞ|
-|ARM9 System Bus|600BC20|1EC0|FCE731866AD12422D5F50E1A00871F801DBBA3C5EA98DE4315171BDB6776BB05|10|120|215|65|black|white|[Kyorosuke]<br>First, pay attention to the '!' mark.<br>It shows something important,<br>so don’t you dare miss it!|まず『！』マークに　ちゅうもくだ<br>だいじなポイントだから<br>ぜったい　見おとすなよ？|
+|ARM9 System Bus|6000000|17000|885B4553F12FED550087B4A14CBD45E0755CC3634F6EAB7CBBDAEDE3A2093944|30|60|200|65|white|#AF000000|High above the great sea,<br>beyond the clouds, there was<br>a peaceful kingdom called Pufftop.|大きな海の　そらたかく<br>くもの上に　テンカイという<br>平和な　王国がありました|
+|ARM9 System Bus|6000000|17000|C27A1EE4B9F574209351C8781D530BE90DB07D4B62FDEE4BEFA1E4D50C245E5F|30|60|200|65|white|#AF000000|There, Prince Stafy of Pufftop<br>and his younger sister Starly<br>defeated a great evil…|テンカイの王子スタフィーと<br>その　いもうとスタピーが<br>きょだいな　あくをたおし…|
+|ARM9 System Bus|6000000|17000|500FA25ABC8DB4C19B1EFE1B50EB44B7832C6E76275D0818A40F1616EE3CEE78|30|60|200|65|white|#AF000000|At last, true peace<br>came to Pufftop, and everyone<br>lived happily together.|テンカイにも　ようやく<br>ほんとうの　平和がおとずれ<br>みんなたのしくくらしています|
+|ARM9 System Bus|6000000|17000|2F5D43D2F093573862C6D5D732DD94A6F500B8A6FDE5EE959DA92304616E6BD5|10|10|220|65|black|white|◆Moe<br>“Uwaaaaahhh!!!!<br>T-this is terrible!!”|◆キョロスケ<br>「うわあああーーー！！！！<br>た　たいへんだーー！」|
+|ARM9 System Bus|6000000|17000|991F1C7FE07C7EE1ADF06081738CFFA2DAD868051658E36B20E0C941C1A54F4A|10|10|220|65|black|white|◆Papa Star<br>“Why, if it isn’t Moe!<br>W-what’s wrong?<br>Didn’t you just come to play?”|◆パパスタ<br>「キョロスケではないか<br>ど　どうしたんじゃ<br>あそびに来たんじゃないのか？」|
+|ARM9 System Bus|6000000|17000|ECA631DEE12E85277342FE9AF36152F331C5BCA2F1A6196D383C98CE00A82D2D|30|60|200|65|white|#AF000000|The one who had come<br>was Stafy and Starly’s friend,<br>Moe.|やって来たのは<br>スタフィーとスタピーのともだち<br>キョロスケです|
+|ARM9 System Bus|6000000|17000|3AAE52228455A70C7EE669A3B5DA63D4B38E3F5F0F4FCCF9D74C6D99714BDA10|30|60|200|65|white|#AF000000|But he seemed to be<br>in a great panic…<br>What could have happened?|ずいぶん　大あわてです<br>いったい<br>どうしたのでしょう？|
+|ARM9 System Bus|6000000|17000|0A6AAB898A5106C8E0CEF7B3A18F251DC83DC10513858F930C46186F281D3B38|10|10|220|65|black|white|◆Moe<br>“A-at the entrance to Pufftop,<br>there was a girl I’ve never seen<br>collapsed on the ground!!”|◆キョロスケ<br>「て　テンカイの入り口に<br>見たことのない　女の子が<br>たおれてたんだよ！！」|
+|ARM9 System Bus|6000000|17000|7A696652AB7D2B71F510B6A11E2F9BBD20D208A3C3215B17D529F581B753F651|10|10|220|65|black|white|◆Starly<br>“Say what!? A girl!?<br>Clam-boy! Don’t tell me<br>you bullied her!!”|◆スタピー<br>「なんやて？　女の子！？<br>ハマグリ！　自分が<br>いじめたんちゃうやろな！」|
+|ARM9 System Bus|6000000|17000|619EA0A16E44A3124003B57D9A6959F4BD80852C8BAF4FE9AF812180222C68F6|10|10|220|65|black|white|◆Moe<br>“W-what are you, stupid!?<br>I’m telling you, she really<br>was collapsed there!!”|◆キョロスケ<br>「あ　アホかっ！！<br>ほんとに　たおれてたんだって！」|
+|ARM9 System Bus|6000000|17000|C066B9FD83588BA5BB750A6C8A3E1E9E19C9E98A88354BEA890110DA7E6837B0|10|10|220|65|black|white|◆Papa Star<br>“In any case, we must<br>treat her injuries at once.”|◆パパスタ<br>「とりあえず　すぐ<br>てあてして　あげるんじゃ」|
+|ARM9 System Bus|6000000|17000|723F87C45B08F44380CFA524E1C516083153E98D2AC5082CB04EB5DC2ACA2761|30|60|200|65|white|#AF000000|Before long, the girl<br>was given care and revived.|やがて　てあてをしてもらった<br>女の子は|
+|ARM9 System Bus|6000000|17000|2749110A7855B73DE8EFC96B472B92FE7F86FADA69A8F8783782BD422073F79C|30|60|200|65|white|#AF000000|She was then summoned<br>to the throne room<br>where Stafy and the others were.|スタフィーたちのいる<br>ぎょくざのまに　よばれました|
+|ARM9 System Bus|6000000|17000|B0E087953127D4A1EDDEA5DFD5A5C83593B0E6CB6A6A93BEEB9F899C67168C54|10|10|220|65|black|white|◆Papa Star<br>“Are you all right, young lady?<br>I don’t recall ever seeing<br>your face around these seas…”|◆パパスタ<br>「だいじょうぶかね？　ムスメさん<br>おぬし　このへんの<br>海では見かけないかおじゃが……」|
+|ARM9 System Bus|6000000|17000|1740E4F439D9A6DD88654282A728C774657EB6E174F21E58463256950CBABB53|10|10|220|65|black|white|◆???<br>“Thank you so much<br>for helping me.”|◆？？？「たすけてくださって<br>ありがとうございます」|
+|ARM9 System Bus|6000000|17000|7BC9948D812189215B20BAEEF3DA4493CAF62E481821F178B5B71C99ADE54584|10|10|220|65|black|white|◆Mattel<br>“I am Mattel,<br>from the Amiy Kingdom.”|◆マテル<br>「私は　アミー王国から<br>やってきた　マテルと<br>いうものです」|
+|ARM9 System Bus|6000000|17000|A60B77C78D03479B3C6F0C98694A9F0CD8BAED494E604E96E31E647945671BAD|10|10|220|65|black|white|◆Mama Star<br>“Oh my! Did you say<br>the Amiy Kingdom?<br>You must have come a long way.”|◆ママスタ<br>「まあ！　アミー王国ですって？<br>ずいぶん　とおくから<br>いらしたのね」|
+|ARM9 System Bus|6000000|17000|F575827624CF25B76195453725E40C405ECEC4B141B047898E458DCE64F3B00C|10|10|220|65|black|white|◆Papa Star<br>“From such a distant land,<br>what business could you possibly<br>have here in Pufftop?”|◆パパスタ<br>「そんな　はるかとおい国から<br>このテンカイに　いったい<br>なんの用じゃね？」|
+|ARM9 System Bus|6000000|17000|E1700FB52B7B334AA55FBA74A2263F098FBBDE4E0A52E70A0FA82F35FECB273C|10|10|220|65|black|white|◆Mattel<br>“Everyone, I beg you!<br>Please save my country…<br>the Amiy Kingdom!”|◆マテル<br>「みなさん　おねがいです！<br>私の国を…　アミー王国を<br>すくってください！」|
+|ARM9 System Bus|6000000|17000|0BA5D66A53F95DC9E4053C7C90DAE932A9A190244D410A657E8C1ADDE8AFBBFC|30|60|200|65|white|#AF000000|In our Amiy Kingdom,<br>there exists a treasured jewel<br>called the “Mon Amour Stone.”|私たちのアミー王国には<br>『モナムールストーン』という<br>ひほうがあります|
+|ARM9 System Bus|6000000|17000|06C964498640B9D471A3F48BA4D1021F6F1090076B60F3F9EB3CA01C1144FBCF|30|60|200|65|white|#AF000000|The Mon Amour Stone has,<br>since ancient times, been<br>revered as our guardian spirit…|モナムールストーンは大むかしから<br> 私たちのまもりがみとして<br>たいせつにうけつがれていて・・・|
+|ARM9 System Bus|6000000|17000|7BF77C1674C967AB1F5027F2516045C663461A6B3714D6E16B9FB087BC0FE88E|30|60|200|65|white|#AF000000|Protected by the Mon Amour Stone,<br>we lived together peacefully<br>and in harmony.|私たちは　モナムールストーンに<br>まもられて　なかよく平和に<br>くらしていました|
+|ARM9 System Bus|6000000|17000|0A6EEED0A0CE0382F04EDC6846D8EE304E8050DADEE7F328CCA4477792EEEBD9|30|60|200|65|white|#AF000000|That Mon Amour Stone<br>was stolen away<br>by someone!!|そのモナムールストーンが<br>なにものかに<br>ぬすまれてしまったのです！|
+|ARM9 System Bus|6000000|17000|5C979EDCD4362178D0B5157642F4BFC2D5D1FEE95A1D7FFD6631823A4946D06F|30|60|200|65|white|#AF000000|The culprit used the<br>stone’s immense power<br>to bring calamities on the land.|はんにんは　モナムールストーンの<br>きょだいな力を使って　国中に<br>わざわいを　よびよせ|
+|ARM9 System Bus|6000000|17000|BB7BB30FAE593B6F0F4CCC9DDD19ED65E569D3020584574F863765CBDC26AF0B|30|60|200|65|white|#AF000000|Now in the once-peaceful<br>Amiy Kingdom, villains<br>run rampant, troubling all.|平和だったアミー王国では<br>ワルモノが　あばれまわり<br>みんな　こまっています|
+|ARM9 System Bus|6000000|17000|D1F1A6156DACE7DA3846E4C44D0D2422D652A92875AA2C823B464AA8BCD01D20|30|60|200|65|white|#AF000000|Surely, the thief must<br>have some wicked scheme<br>in mind!|はんにんには　きっと<br>じゃあくなたくらみがあるに<br>ちがいありません！|
+|ARM9 System Bus|6000000|17000|E2406E23863AD23527FE1DF16BA3058C38EC046992DD559816C7F256CD431949|10|10|220|65|black|white|◆Mattel<br>“The villains even broke<br>into the castle… I was working<br>as a maid, but somehow escaped…”|◆マテル<br>「おしろにまで　ワルモノが<br>入りこみ　メイドをしていた私は<br>どうにかにげ出せましたが…」|
+|ARM9 System Bus|6000000|17000|A4FEA19A97E72B49D35C0AE3B7F79B6D91604B5A277F30F84AD8EEB87496245A|10|10|220|65|black|white|◆Starly<br>“But why’d you come all the<br>way to Pufftop? Isn’t it like,<br>super far away?”|◆スタピー<br>「でも　なんでわざわざ<br>テンカイに来たんや？<br>めっちゃとおいんやろ？」|
+|ARM9 System Bus|6000000|17000|8DBB209948A9BE254B4965CEDC429B00AF4DEC0D0E8BE642BF6364403D7253A0|10|10|220|65|black|white|◆Mattel<br>“When I was at a loss,<br>I heard about the great deeds<br>of Prince Stafy.”|◆マテル<br>「とほうにくれていたとき<br>スタフィーさんの　ごかつやくを<br>きいたんです」|
+|ARM9 System Bus|6000000|17000|9C7152D4372922EE3BF1E266D3041C5D3DC6C6ED7994DC9B47FF944607625C21|10|10|220|65|black|white|◆Mattel<br>“That the prince of a kingdom<br>called Pufftop had once defeated<br>a mighty evil…”|◆マテル<br>「テンカイという王国の王子は<br>きょだいな　あくをたおした<br>ゆうしゃだって」|
+|ARM9 System Bus|6000000|17000|524893DB977B5C0BDA711FAC9EB20182AF5AD80E86DE81095DB1FF57A94ADA78|10|10|220|65|black|white|◆Mattel<br>“Please, Prince Stafy!<br>I beg of you, save the<br>Amiy Kingdom!”|◆マテル<br>「おねがいです　スタフィーさん<br>どうか　アミー王国を<br>すくってください！」|
+|ARM9 System Bus|6000000|17000|786BB7734C6D4A16D6639B59291465B17122F94FF9961C388BF8F6A68A986482|10|10|220|65|black|white|◆Starly<br>“Hey big bro, let’s help her!<br>We can’t just leave her<br>like this, poor thing!”|◆スタピー<br>「なあにいちゃん　この人<br>たすけてあげようなー　<br>かわいそやん！」|
+|ARM9 System Bus|6000000|17000|CC27BB2C2E10D69F4C782BEBA256BEF7368C180F4A0ADE278750C775B30B4365|10|10|220|65|black|white|◆Moe<br>“Tch! There you go again,<br>doing stuff that doesn’t do<br>us any good…”|◆キョロスケ<br>「かーっ！　まーたそんな　なんの<br>トクにもならねーことを…」|
+|ARM9 System Bus|6000000|17000|C544F894A2CF480D80CBA422B4B04C735BC29AB427C19A4D2A1DDC1933C2AA9F|10|10|220|65|black|white|◆Moe<br>“No way, no way! Stafy’s<br>coming to hang out with me<br>right now, got it!?”|◆キョロスケ<br>「ダメだダメだ！　スタフィーは<br>今から　オレさまと<br>あそびに行くんだからよ」|
+|ARM9 System Bus|6000000|17000|BFA147DFE574C735AFE2D591618F9FE1D89D8ACA80C5508187C4E1E555350D85|10|10|220|65|black|white|◆Starly<br>“Clam-boy! You’re still<br>as dumb as ever…”|◆スタピー<br>「ハマグリ！　あんたは　あいかわらず<br>アホやなあ…」|
+|ARM9 System Bus|6000000|17000|A86F9A54DEBA868ED3CF791F23A440B0C48B451483606103FB430823058579AD|10|10|220|65|black|white|◆Starly<br>“If we get that whatever-it’s-called<br>stone, you could finally win over<br>that flashy Ruby lady, right?”|◆スタピー<br>「その　ナントカって石があれば<br>あんたのだいすきな　ハデヒラリの<br>ねーちゃんも　オトせるやん？」|
+|ARM9 System Bus|6000000|17000|2120315AC12E289D4CBB73EFFBC0DE907D42371652A27862834A9C5DAA0C253B|10|10|220|65|black|white|◆Moe<br>“…Ooooh! You’re right!<br>That’s it! Brilliant thinking,<br>Starly!!”|◆キョロスケ<br>「…おおお！　そうか！　<br>そのテがあったか！　でかしたぞ<br>スタピー！」|
+|ARM9 System Bus|6000000|17000|03E3787CCC0D92FC6E1C2AC5F40CD6F8DAE24D443215004039D173A4E476ABAF|10|10|220|65|black|white|◆Moe<br>“Now at last, Ruby<br>will be mine… heheheh, heh…<br>heh heh heh heh heh heh heh…”|◆キョロスケ<br>「これでようやく　ハデヒラリさんが<br>オレさまと…　デヘヘ　デヘ<br>デヘヘヘヘヘヘヘヘヘヘヘヘ」|
+|ARM9 System Bus|6000000|17000|4CC7297B6539A5481D6CBD874699D1570B1944D18EB1D0424082914213F2FA7C|10|10|220|65|black|white|◆Starly<br>(Phew… once again,<br>Clam-boy’s simple-mindedness<br>saved us…)|◆スタピー<br>（ふう…　あいかわらず<br>たんじゅんなハマグリで<br>たすかったわ……）|
+|ARM9 System Bus|6000000|17000|DEFB3FCCF4BA98CAC73ED3AB23E45AA987210116556547FD4461575A37F3B626|10|10|220|65|black|white|◆Moe<br>“All right, then let’s do like<br>always and go ask Old Man<br>Lobber for advice!”|◆キョロスケ<br>「よし　じゃあいつもどおり<br>ロブじいさんに　はなしを<br>ききにいこうぜ！」|
+|ARM9 System Bus|6000000|17000|1B634C8D177041322FAB507C548DD13A28923AED4BB505AED01B2BC47819847A|10|10|220|65|black|white|◆Papa Star<br>“H-hey, now!<br>You kids can’t just go off<br>on such a dangerous…”|◆パパスタ<br>「こっ　こら！<br>こどもたちだけで<br>そんな　キケンな……」|
+|ARM9 System Bus|6000000|17000|DA853FA331F915156A6680453597451D2C794ABEDE115176AE086219AEDA7039|10|10|220|65|black|white|◆Mama Star<br>“Oh, what perfect timing!<br>Lobber is actually staying<br>at Amiy Kingdom’s villa now.”|◆ママスタ<br>「あらー　ちょうどよかったわねー<br>ロブおじいさんなら　今<br>アミー王国のべっそうにいるわ」|
+|ARM9 System Bus|6000000|17000|2E5417B7AA98402811595ED05DF7EAF44DFB2047B6C87189942A7828EE1B32AC|10|10|220|65|black|white|◆Papa Star<br>“Wh-what!? Mama!!!?”|◆パパスタ<br>「ま　ママ！！！？」|
+|ARM9 System Bus|6000000|17000|B3CB10C09E9F8447C445F061677B4C357AB6431C0882A9645D7BD099D61175C2|10|10|220|65|black|white|◆Starly<br>“Well then, Papa, Mama—<br>we’re off! Don’t lag behind,<br>big bro!”|◆スタピー<br>「ほんなら　パパ　ママ<br>行ってきまーす<br>おくれなや　にいちゃん！」|
+|ARM9 System Bus|6000000|17000|0ADBCE34BE033CD4B36486BE665B890D9738BB505AE6EF397E166F7F5D540D67|10|10|220|65|black|white|◆Mama Star<br>“Be back in time<br>for dinner, okay?”|◆ママスタ<br>「ばんごはんまでに<br>かえるんですよー」|
+
+# TODO: banner: BUT THEN...!|ところが!|
+
+from Opiter09_Stafy4-Translation-Tools/0007_textFiles/113020_126588.txt
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+|ARM9 System Bus|6210840|3260| |10|10|220|65|black|white|◆？？？<br>「Prince Starfy of Pufftop…<br>Ufufu… against me you’re just<br>a little child, zamasu…」|◆？？？<br>「テンカイの王子スタフィー…<br>うふふ　ワタクシのあいてには<br>お子ちゃまザマスけど…」|
+|ARM9 System Bus|6210840|3260| |10|10|220|65|black|white|◆？？？<br>「Things are starting to get<br>interesting, zamasu…<br>Ufufufu… Oh-ho-ho-ho-ho!」||◆？？？<br>「おもしろくなってきたザマス…<br>うふふふ<br>おほほほほほほ」|
+|ARM9 System Bus|6210840|3260| |10|10|220|65|black|white|◆？？？<br>「O~ho-ho-ho-ho-ho-ho-ho!」||◆？？？<br>「おーっほっほっほっほっほっほ！」|
+
+
+## Main menu
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+|ARM9 System Bus|6000000|17000|023E5BAC5762852434DD26F295F27A0DFE367BB2148CB031B4484D154B73BF04|110|300| | |black|white|START| |
+|ARM9 System Bus|6000000|17000|2825676553616B3EB0312F42F71709707404356B93D951C5D5A81C83DFF7340A|30|60|200|65|white|#AF000000|FILE SELECT<br>Confirm -> A Button<br>Delete File -> Select<br>Copy File -> L Button||
+
+
+##TODO: Stage Map OSD
+
+#|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+#|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+#|ARM9 System Bus|6201500|| |10|10|220|65|black|white||
+
+
+
+## Dialogues
+
+### World 1 Map
+
+text dump from Opiter09_Stafy4-Translation-Tools/0009_textFiles/582164_585268.txt
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
+|ARM9 System Bus|6000000|17000|7E92EA46D5DB6F27EDCF7F13757CBD34D635C102E505DAD56CCFB6E86356E9BC|10|120|215|65|black|white|◆Moe<br>Yo! All you cute little girls<br>across the country!<br>I'm super happy to see you again!|◆キョロスケ<br> よお！　ぜんこくのかわいい<br>おじょうちゃんたち！<br>またあえて　うれしいぜ！|
+|ARM9 System Bus|6000000|17000|757D7D4FD44C4EEA0B8B1FC51A26C5822425E9AFB705DE2055B802CEC0AF55C1|10|120|215|65|black|white|◆Moe<br>Now then, the great Moe<br>is gonna give you a lecture<br>on how to control things in the city!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
+|ARM9 System Bus|6000000|17000|08CDA2CF30FFE66BBC2B90199860E54C2B50C62689E8B518F7FED644F8E7D71A|10|120|215|65|black|white|◆Moe<br>Make sure you remember this!<br>If you already got it,<br>you're one smart cookie!|今から　このキョロスケさまが<br>シティでの　そうさほうほうを<br>レクチャーしてやるからな！|
+|ARM9 System Bus|6000000|17000|2B745B5FC73AB825CFA51A0246C8E9C2D1182A9CEE581F9DEB107F73B7CAC359|10|120|215|65|black|white|◆Moe<br>You can press the Start Button to skip<br>and jump straight into the game if you want.<br>Alright, time for the explanation!|スタートボタンで　スキップして<br>さっさとゲームをはじめてもいいぞ<br>それじゃ　せつめいするぞ|
+|ARM9 System Bus|6000000|17000|2F0914A3F8DF91D7F2E60BD0595FC21F4A873FFB52E4C64D69AE3F1F6F4DF826|10|120|215|65|black|white|◆Moe<br>First, pay attention to the '!' mark.<br>It shows something important,<br>so don’t you dare miss it!|まず『！』マークに　ちゅうもくだ<br>だいじなポイントだから<br>ぜったい　見おとすなよ？|
+|ARM9 System Bus|6000000|17000|82C2B2ED650DD0A26E8F3C6856678EC4C8190A018D26BD5DB80D37F9EEDDB72E|10|120|215|65|black|white|◆Moe<br>Touch the bottom screen!<br>When you’re done, press the B button|下のがめんに　タッチしてくれ！<br>もういいってときは<br>Bボタンを押せよな」|
+|ARM9 System Bus|6000000|17000|C32B401771865E554078D25ECEDC63FA04258AA4A805132FD240097C62AA50E8|10|120|215|65|black|white|◆Moe<br>All right, all right! You picked<br>this one exactly as I told you!<br>Good job, you little rascal|◆キョロスケ<br>よしよし　ちゃんとオレさまの<br>しじどおり　コイツを<br>えらんだな！　えらいぞオメェ|
+|ARM9 System Bus|6000000|17000|86BBBC069A80BA9F221513E130AB78308E01BE140CBF127BE964337870D664F3|10|120|215|65|black|white|◆Moe<br>This is a talkable character.<br>If you touch them or move the cursor<br>and press the A button…|◆キョロスケ<br>これは　かいわキャラクター だな<br>タッチしたり　カーソルをうごかして<br>Aボタンを　押すと|
+|ARM9 System Bus|6000000|17000|685F3092B4188BF479AC1E0B122122B431859CC05F4516B85CE11488500AE849|10|120|215|65|black|white|◆Moe<br>You can hear what they have to say.|◆キョロスケ<br>こいつらに　はなしを<br>きくことが　できるぞ|
+|ARM9 System Bus|6000000|17000|A64DCCB6E9C693B9E2BB368A2E045CE120119D6CEF9A3737ED4F92F3375E4206|10|120|215|65|black|white|◆Moe<br>See the speech bubble with a “!”<br>above certain characters?|◆キョロスケ<br>かいわキャラクターの上に<br>『！』 マークのフキダシが<br>あるだろ？|
+|ARM9 System Bus|6000000|17000|B1BBEE32C46964C0DD6E4B79633D42DADF5F60EFD3C0D1493612CBFC835F64AF|10|120|215|65|black|white|◆Moe<br>Characters with this bubble often<br>have something important to tell you.|◆キョロスケ<br>このフキダシのあるキャラクターは<br>だいじなはなしを　きかせて<br>くれることが　おおいんだ|
+|ARM9 System Bus|6000000|17000|9F08392D18E9F447921977655838F0117F02AF7C5B3CBDCEC0B174FBF26E4C50|10|120|215|65|black|white|◆Moe<br>For example, if you listen to a request<br>from one of these characters,<br>you might get a treasure!|◆キョロスケ<br>たとえば　このフキダシの出てる<br>ヤツの　たのみをきいてやると<br>たからものがもらえたり|
+|ARM9 System Bus|6000000|17000|4B61D35117A039EF20315AD02D209E32EC95D6D02FD17647B4D71E16DDBF4130|10|120|215|65|black|white|◆Moe<br>They might also give you<br>important hints for your adventure.|◆キョロスケ<br>ぼうけんの　じゅうような<br>ヒントをくれたり<br>するかもな|
+|ARM9 System Bus|6000000|17000|042B90A54322E65312900A2697F8C95BE11C3763CF48BE81B9A93A2B28D2E6F2|10|120|215|65|black|white|◆Moe<br>Anyway, you should always<br>talk to anyone with a “!” mark!|◆キョロスケ<br>とにかく　この 『！』 マークの<br>ついてるヤツとは　ぜったいに<br>はなしといたほうがいいぜ！|
+|ARM9 System Bus|6000000|17000|5785A718122C8453D8D3856AEBD1A6A091A13203CA07944A597D0354EDA837B2|10|120|215|65|black|white|◆Moe<br>This is the mermaid who always<br>helps you. She can help you save your game.|◆キョロスケ<br> いつも　せわになってる<br>マーメイドのおねえさんだ<br>セーブ をてつだってくれるぞ|
+|ARM9 System Bus|6000000|17000|F646996F9EAB825A18D3A23B2104F92B29FE55153A5547DD440434B1F9B35219|10|120|215|65|black|white|◆Moe<br>If you want to save in the city,<br>ask this mermaid.|◆キョロスケ<br> シティでセーブしたいときは<br>この　マーメイドのおねえさんに<br>たのむんだぞ|
+|ARM9 System Bus|6000000|17000|84853E7FBE84E68EFD8B2AF77A82554FDC1859B7DBFBCDC246C940A808FDFF71|10|120|215|65|black|white|◆Moe<br>Whoa… this must be the shop<br>of the Lovely girls?<br>Looks like it’s still closed.|◆キョロスケ<br>こりゃ……　ラブリーたちの<br>みせじゃねえか？<br>まだ　しまってるみたいだぞ|
+|ARM9 System Bus|6000000|17000|EB174C18896A0066BA2B5CEBAB6978B07FC8F2BAE65ED55486DE6E5E0B8F7067|10|120|215|65|black|white|◆Moe<br>They’re probably off somewhere playing.<br>Geez… mutter, mutter…|◆キョロスケ<br>たぶん　あいつらどっかで<br>あそんでんじゃねーのか？<br>まったく………　ブツブツ|
+|ARM9 System Bus|6000000|17000|189B720E24549135DA0EE78E7CF33D01D6C28B1C3EFED41FD07E5B3A6553ED60|10|120|215|65|black|white|◆Moe<br>What’s the matter? Interested in the crab?<br>Leave this tiny crab alone…|◆キョロスケ<br>なんだ？　カニが気になるのか？<br>こんなちっちぇえカニ<br>ほっとけよ…|
+|ARM9 System Bus|6000000|17000|A087C188D016420F4157DFBBE84F1F41998AD850D76B77DE811D9BC77933A8BC|10|120|215|65|black|white|◆Moe<br>Fish are swimming here.<br>Don’t touch them or scare them!<br>They’re poor little things!|◆キョロスケ<br>サカナが　泳いでるな<br>タッチして　おどかしたりすんなよ<br>かわいそーだろ！|
+|ARM9 System Bus|6000000|17000|EEC0884846797DBD81AAE885A655AFD7BAA17CD54B3867D58E9A9B1A8E364151|10|120|215|65|black|white|◆Moe<br>From here, your adventure<br>on the stage begins!|◆キョロスケ<br>ここから　<br>ステージでのぼうけんの<br>はじまりだ！|
+|ARM9 System Bus|6000000|17000|72FC0FA15C19E10588102DA0C5544658E4CE0FB5A3BC9A6E9CBF6F22DB0E1A70|10|120|215|65|black|white|◆Moe<br>Once you’re ready in the city,<br>touch here to head to the stage!|◆キョロスケ<br>シティで　じゅんびがすんだと<br>思ったら　ここをタッチして<br>ステージに　行こうぜ！|
+|ARM9 System Bus|6000000|17000|7600A8BD66B617B657D85B755A6D16CA6883BD9AC614EF412E3FA19181EC8881|10|120|215|65|black|white|◆Moe<br>However, if there’s a cross mark like this,<br>you still can’t go to the stage.|◆キョロスケ<br>ただし　こんなふうにバツが<br>ついてるときは　まだ<br>ステージには行けねえぞ|
+|ARM9 System Bus|6000000|17000|96D73C2DB72AD168C3501F0977D58A4BCD8C3544B1328C17EE50F2D2D29D79C1|10|120|215|65|black|white|◆Moe<br>Talk to different characters.<br>Soon, you’ll be able to go.|◆キョロスケ<br>いろんなヤツにはなしでも<br>きいてみとけよ　そのうち<br>行けるようになるからよ|
+|ARM9 System Bus|6000000|17000|A109D2B9CBDE359DEA071F7319FF42D0002B5528BDF341BB179AA80153BA45CE|10|120|215|65|black|white|◆Moe<br>Enough explanation for now?<br>　　　Yes<br>　　　No|◆キョロスケ<br>もう　せつめいはいいのか？」<br>　　　はい<br>　　　いいえ|
+|ARM9 System Bus|6000000|17000|231AF2F96E819A44D6EB0E8BEBF655AF7C97619252DFBBF600F583FBBADBEFAF|10|120|215|65|black|white|◆Moe<br>Remember this above all!<br>“If a spot catches your eye, just<br>touch it like crazy!!”|◆キョロスケ<br>これだけは　おぼえとけよ！<br>『気になるばしょは　とにかく<br>タッチしまくれ！！』 だ！|
+|ARM9 System Bus|6000000|17000|FC7750831E03E810B30BB0AD3AAA626322AC90C7FD6FD21B8D973D43CEBE7D02|10|120|215|65|black|white|◆Moe<br>All right, here begins your<br>exciting adventure!|◆キョロスケ<br>それじゃ　いよいよ　たのしい<br>ぼうけんの　はじまりだぞ！|

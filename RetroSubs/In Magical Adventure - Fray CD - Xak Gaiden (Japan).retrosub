@@ -1,0 +1,157 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: GPL-2.0
+version: 0.2
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
+---
+
+# Fray CD - Xak Gaiden English fan translation
+
+## Hacking notes
+
+Text encoded in SJIS, stored @ 0x375030 in disc track 2.
+
+TODO: recheck 
+Localized names:
+
+ - Fray (フレイ)
+ - town of Azal
+ - Reigia Village
+ - Samus
+ - Menea
+ - Latok
+ - Lord Alseides
+ - Lord Reitune
+ - Demus (major)
+ ... https://retro-type.com/xyz/xcharacters.htm
+
+
+## Status menu
+
+ - Status (ステータス)
+     - げんきー! -> HEALTHY! | へっちゃらぱん -> PERFECTLY FINE! | う~ん -> HMM... NOT GREAT... | つらいよ〜 -> IT HURTS~ | もうダメ〜 -> I’M DONE FOR...
+     - Gold (ゴールド)
+     - Shield (シールド)
+   - Item (アイテム)
+   - Magic (マジック)
+ - Rod (ロッド)
+ - Heal (カイフク)
+ - Teleport (テレポート)
+ 
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
+|VRAM1|3D00|570|20F556C6D1A829E020E348614A443F018CA2D6DA05C452A343A871B84B09DB45|15|10|||white|#EF000000|Status<br> <br>                           IT HURTS!~ <br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+|VRAM1|3D00|570|C9CA363F509B4B37BBE36D1A73B25888FFDCA9E8DB84CEA29BAB28040EDF28DC|15|10|||white|#EF000000|Status<br> <br>                           HMM... NOT GREAT...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+|VRAM1|3D00|570|4C6C0DC91788DC8A730EDDF338E072FDE255E56C6F81E1FCF878379F013FCA58|15|10|||white|#EF000000|Status<br> <br>                           HEALTHY!<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+|VRAM1|3D00|570|11C2B35DFD3C6D265AEB76621A81678504086D2E63C2F1AA0A548D17BEFD5C6F|15|10|||white|#EF000000|Status<br> <br>                           HEALTHY!<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+|VRAM1|3D00|570|4711B889B9C1A46A9ABFC7FD196E3DF0F073529E09239DC1D1F7B36CE4A33D84|15|10|||white|#EF000000|Status<br> <br>                           PERFECTLY FINE!<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+|VRAM1|3D00|570|751152D942545735631344F37460FA7FD50A67A37F370BAB458A3F117070AE84|15|10|||white|#EF000000|Status<br> <br>                           I’M DONE FOR...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport||
+
+
+## Item boxes
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+|VRAM1|3D00|570|94E64DBA2FBF293B19A313A997D9AEBC9ED2EE57338252490439C9467626B689|9|188|238|35|red|#EF000000|Got 500 Gold!|500ゴールドを手に入れた!|
+|VRAM1|3D00|570|61C1ABF34DD0E132B54A22879BFD16CD5667CC67A83F06912B41F72D836CBF16|9|188|238|35|red|#EF000000|Got Sliced Bread!|パン【■】を手に入れた!|
+|VRAM1|3D00|570|966AB0C7935EF210D0C8BFE13D74AF9D02697F4388CE69488A0CD9DBC3887340|9|188|238|35|red|#EF000000|Got Flame Dragon!|フレイムドラゴン 【■】を手に入<br>れた!|
+|VRAM1|3D00|570|175E01F9D1C3D03E3CE5D05F3A06CE15B565CB80612500D49C45F0E766936EFC|9|188|238|35|red|#EF000000|Got Gemil Potion!|ゲミルポーション【■】を手に入 れた!|
+
+
+## Dialogues
+
+### Dragon
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+|VRAM1|3D00|570|3452B7AE3BDA85B427C0267E4F876AB7D59B79A3EEF6074029C32B2F1482BA0F|9|188|238|35|white|#EF000000|[Fray] Who's that?|[フレイ ] だ、だれ！？|
+|VRAM1|3D00|570|3638F20C6D4B9FB1681DBE17F2A54A494CD365F7364ED890461A0F45DCE89FC7|9|188|238|35|white|#EF000000|[Mysterious Voice] This is the land<br>connected to Lord Reitune, the God of<br>Water|[謎の声] ここを水の神、レイトゥーン様ゆかりの地、|
+|VRAM1|3D00|570|F87CE6FF0BA75604082129B6E0168127500055F3AE9ACA3CD457A1A6C5E746A1|9|188|238|35|white|#EF000000|Is this the deed of the Waterfall of<br>Promises? Answer me!|誓約の滝としっての所業か、こたえよ！|
+|VRAM1|3D00|570|DA34BD58E0D6955FCF704FAD22DC3A42B9309BC4F009022DE0EFC0CBF9481814|9|188|238|35|white|#EF000000|[Fray] Boo. What's the harm in touching it<br>a little?|[フレイ ] ぶぅ。いーじゃない、ちょっとぐらいさわっても。|
+|VRAM1|3D00|570|0147252BF31B26575392BA4788DFE766336BB409AFABF2A517BEBBA3A227935B|9|188|238|35|white|#EF000000|It's not like it’s going to wear out...|べつにへるモンじゃなし・・・|
+|VRAM1|3D00|570|015F00FA430F28ACB7B149E34C1DDF8242016BA9E18339DD80EBDF101B473E96|9|188|238|35|white|#EF000000|[Mysterious Voice] Hey! I told you to<br>stop that!|[謎の声]え〜い、やめいとゆーておろーが！|
+|VRAM1|3D00|570|D9FCCB058B573463859B045570FC852E0C3A1605DF190BD69F16C5DA139A3AA4|9|188|238|35|white|#EF000000|Stop at once, or else...|はやくやめんと・・・|
+|VRAM1|3D00|570|67D077A4646BE7BF00DF31BC4A0BC5E40E9A0542838BCC1910F8E51DDC02986F|9|188|238|35|white|#EF000000|[Mysterious Voice] I told you many times<br>not to touch it!|[謎の声]だから、あれほどさわるなと言ったではないか！|
+|VRAM1|3D00|570|9D3214B94F44744A6EBEF499D18C54B640B65EF6F93B32CE5D0C6BE671F87295|9|188|238|35|white|#EF000000|Blasphemy against the gods is something<br>this Dragon King cannot forgive!|神へのボウトクは、この水竜王が許しておくワケにはいかん。|
+|VRAM1|3D00|570|2F4E1CFDF95AB1BA4EAA2B67262B7A41DED6C0BB4F04B80B153DE7E171708CB8|9|188|238|35|white|#EF000000|[Fray] N-no way...|[フレイ] そ、そんな・・・|
+|VRAM1|3D00|570|EA68FC50EFB8B40EE41F1186472BB7897017DC1283EBDBB82149E15FA116A39E|9|188|238|35|white|#EF000000|[Dragon King] Yet I, too, serve the gods.<br>I do not relish needless killing.|[水竜王] しかし私とて神に仕えし身、無用の殺生は好まん。|
+|VRAM1|3D00|570|6E9A23F0F39BDBE568844C969E9DE503E0151843BED8257601A4CA11B578EF1C|9|188|238|35|white|#EF000000|If you leave here quietly, I will let you<br>go.|おとなしくここを去るのであれば見のがしてもやろう。|
+|VRAM1|3D00|570|68B1749EB3225D32BDD23B089F20623FB85F77E6A309FB4F1D24C4F831CA3CBD|9|188|238|35|white|#EF000000|[Fray] That’s a relief. While you’re at it...|[フレイ]  たすかるわ。ついでと言っちゃなんだけど・・・|
+|VRAM1|3D00|570|BC5E4E53DF1BCFA2D25CCA76E3D0B16D6E1EDEE015D7CCC309B0774954E6EAFD|9|188|238|35|white|#EF000000|Could you carry me across to the other<br>side?|私をむこう岸まで運んでってくれないかしら？|
+|VRAM1|3D00|570|15DB295AF2B1492DF913CC666ED2A830C52B7E480647903545D70F97A6007682|9|188|238|35|white|#EF000000|[Dragon King] ...Very well. I am broad of<br>heart.|[水竜王]  ・・・よかろう、私は心がひろいからな。|
+|VRAM1|3D00|570|0759F48C1DE6EAB272207596F7562C7ABAD2326D6779BEBDBB0C11B91CF32D88|9|188|238|35|white|#EF000000|Step forward a little more.|もうすこしまえへ出るがよい。|
+|VRAM1|3D00|570|5F747D66E5844F2A001CB36414101F03CBD0772769BBA0A68563BD723E50E531|9|188|238|35|white|#EF000000|[Fray] Mm, thanks.|[フレイ] ん、ありがと。|
+|VRAM1|3D00|570|F1827D478822CB057C67BC388FA937774913207710C2302DC97AA4E350C69301|9|188|238|35|white|#EF000000|[Dragon King] Once, and now again...|[水竜王]  一度ならず二度までも・・・。|
+|VRAM1|3D00|570|8875AC219E66061E882339420E2DB944A04CF2060D3060C85F7E7FB0D8B25662|9|188|238|35|white|#EF000000|I cannot forgive you any longer! Prepare<br>yourself!|もうカンベンならん、カクゴするがよい！|
+|VRAM1|3D00|570|6356D5756792B67E3E341A707E8830609D407C212D85E1E4D7180FF1AE73317B|9|188|238|35|white|#EF000000|[Fray] Fine. I suppose this is partly my<br>fault, too.|[フレイ] わかったわよ。 多少は私の責任でもあるわね。|
+|VRAM1|3D00|570|0858F6F99A2B8D536BEF32BB03D908A05FEE610B36039B03E1085E116876AA65|9|188|238|35|white|#EF000000|I’ll pick up the statue later and fix it<br>for you.|像は後でひろって、なおしといてあげるから。|
+|VRAM1|3D00|570|645D21EB6A605B6981C389B6C8BADDFBF12847A1160683EBA995A73AF2B4BF13|9|188|238|35|white|#EF000000|[Dragon King] You swear those words are<br>true?|[水竜王] その言葉にウソいつわりはないな。|
+|VRAM1|3D00|570|63F0A7E0B466B0E5D1778AC8FDC3C6851FE099F35847ABF9CD987EFA6268E43B|9|188|238|35|white|#EF000000|Very well. As a token, take this with<br>you.|よかろう。ついでだ、コレも持っていくがよい。|
+|VRAM1|3D00|570|1CB5E7FB7A2093873E1739AF4E9ABDAE76475B33EF052A3E0C7ADBE55E321C97|9|188|238|35|red|#EF000000|You got 1000 Gold!|1000ゴールドを手に入れた!|
+|VRAM1|3D00|570|714822FCC3742110AA926E356F8E5A00968004DB100CE1BA5923680AB8BCF06E|9|188|238|35|white|#EF000000|[Fray] Lucky me!|[フレイ] らっき!|
+|VRAM1|3D00|570|0DAB132E440D092680BE87C4DE024D3E50410D7C7D6BF13BCECAC49642326DC7|9|188|238|35|white|#EF000000|[Dragon King] Remember this well, and do<br>not forget.|[水竜王] よいな、しかとわすれるでないぞ。|
+|VRAM1|3D00|570|546F48766F85307A9E26F92AA6E44C7BB5CE6DE6556501363E025C7BD92D0307|9|188|238|35|white|#EF000000|[Fray] Hmph! It was broken from the<br>beginning anyway!|[フレイ]  フ〜ンだ！　あんなの最初から壊れてたんじゃない。|
+|VRAM1|3D00|570|C0861070D1E503CBE9A7A9B8840F009D89FBEC941E82D6C62963070235706A72|9|188|238|35|white|#EF000000|There’s no way a frail maiden like me<br>could break it by touching!|私みたいなカヨワイ乙女が触っただけで壊れるワケないでしょ！|
+|VRAM1|3D00|570|CE8B9CA16C66D5D78F9703388391881B507FB5F6A3DF76EFB5CBD62B2D4F925E|9|188|238|35|white|#EF000000|Well then, looks like I’ll have to take a<br>detour.|さ〜ってと、ちょっと回り道しなきゃなんないわね。|
+|VRAM1|3D00|570|2967E251908E7629A7E6B8BF6456DF49E60AE7439804BBFA4C06085EFA8EAD26|9|188|238|35|white|#EF000000|I’d better hurry to the town of Azal.|はやくアーザルの町に行かなくっちゃ。|
+
+
+### Village
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+|VRAM1|3D00|570|298F8A8D3B36B9B9762E5FA681BFBF83D780F3603B8579BBD7C4F3C9D944FB65|9|188|238|35|white|#EF000000|[Samus] Huh? Did that really happen?|[サムス] んあ? いたっけ、 そんなの?|
+|VRAM1|3D00|570|F098EE630AF5D0A9619C4F9445B1D65E370C1945A7B22C159EC2593F34A697F6|9|188|238|35|white|#EF000000|[Menea] Not in this town...|[メネア] この町じゃないけど|
+|VRAM1|3D00|570|05C13F7ADBA5B18733609CDEC9C0CC0F1C67E2756A6646D5A5569D86EA870E19|9|188|238|35|white|#EF000000|Wasn’t it that one in the neighboring<br>village, Reigia?|となりのレイジアの村にいたアレじゃない？|
+|VRAM1|3D00|570|DFF4D9E236EB39FB665895ADC7EA73F97CB0276821C6E93189E5C3554D9A0A5C|9|188|238|35|white|#EF000000|[Samus] Ah! That one!|[サムス]ああ! アレね!|
+|VRAM1|3D00|570|975BF2D935711A76F9F5D54D352E66E64C0BD527B91D2B48F35F18CA6353CE0D|9|188|238|35|white|#EF000000|The guy who kept staring at us from the<br>shadows.|ボクたちのこと、カゲからジロジロ見てたヤツだな。|
+|VRAM1|3D00|570|0A12BF835C18D6ECFF9378E972158756C22264471247F58CCF0721136E713964|9|188|238|35|white|#EF000000|He was creepy.|ブキミなやつだったよな。|
+|VRAM1|3D00|570|C492E0C3C1721E023B38EE962C4E72CF558E777EDC74E73D4E9B341FA4486101|9|188|238|35|white|#EF000000|[Menea] Maybe...|[メネア] ひょっとすると・・|
+|VRAM1|3D00|570|8F589F6791DB19731E82EC95C79DFD68E041425344C428F3E723A6E575337CD1|9|188|238|35|white|#EF000000|Maybe he’s the kidnapper everyone’s been<br>talking about lately.|アイツが近ごろウワサの人さらいだったりして。|
+|VRAM1|3D00|570|AD1D1EA2DEF94626E5DC1B67A9ACF78F5A10B73CC45C37EA56B0F06B762DBACC|9|188|238|35|white|#EF000000|Eek! That’s scary!|キャッ、あたし、こわぁい。|
+|VRAM1|3D00|570|5F29FD320101201F03615229797D7CF4B7C99660A41C9F95426F4E039E6D2C17|9|188|238|35|white|#EF000000|[Samus] Don’t worry, Menea.|[サムス] だいじょうぶだよ、メネア。|
+|VRAM1|3D00|570|965ECB35336D6EE15E262C5796892489215E25988E1384D694DF95C490F30D1F|9|188|238|35|white|#EF000000|I’ll make sure to protect you.|キミはこのボクがかならず守ってあげるよ。|
+|VRAM1|3D00|570|10689A1B24D5587A635F6F87584C0D373FB2387A2DE01B6F22EC81E117E714AF|9|188|238|35|white|#EF000000|[Menea] Oh, Samus...|[サムス] まぁっ、サムスったら・・・。|
+|VRAM1|3D00|570|90827E5E72DE8F5CC5BB74A621816D143DA568BFF2B897873A3C074EF57A7D35|9|188|238|35|white|#EF000000|[Fray] Don’t tell me it was really<br>Latok...?|[フレイ] まさか本当にラトク　さんが・・・？|
+|VRAM1|3D00|570|F248DCBDFD4C5021E68E094C79B12F03CEB70702094667D766DC5EC57EF5D944|9|188|238|35|white|#EF000000|No, impossible! Step aside!|ううん、そんなコトありえない！どいてっ！|
+|VRAM1|3D00|570|DADE5E9AA0156FC50B587E00A7C3C10FABE55CFE206052C3A841BCC00BDAE7EA|9|188|238|35|white|#EF000000|[Fray] I’ll prove Latok’s innocence<br>myself!|[フレイ]ラトクさんの無実、この私がはらしてみせるわ！|
+|VRAM1|3D00|570|4FAE9B4790374F918BC48CDD4889D703D8CE1C1ACD44B7FCA7DD96B966669768|9|188|238|35|white|#EF000000|[Samus] Menea...|[サムス] メネア・・・|
+|VRAM1|3D00|570|A408C6333B19648E638E25F62E7E5551295CE200784213A5557BE3D92703DC99|9|188|238|35|white|#EF000000|[Menea] Samus...|[メネア] サムス・・・|
+|VRAM1|3D00|570|6729A072AF8CA6E8737DF6B5D0919C638CC22A3EEF5745B3C9AB009013A4C680|9|188|238|35|white|#EF000000|[Samus] If it’s the guy we were talking<br>about, wasn’t he in Reigia?|[サムス] さっき言ってたヤツなら、レイジアの村じゃないか？|
+|VRAM1|3D00|570|4D4D81A5DF71EFB558FBC704B2961D15583A35C9EE7A0ADF7B177704C569F0FC|9|188|238|35|white|#EF000000|[Menea] Yes, we saw him in Reigia<br>Village.|[メネア] あたしたちがその人を見たのは、レイジアの村よ。|
+|VRAM1|3D00|570|AE2849FD535319C7CD70AA601D940C6828A7BCA66BF007D2213557202916EA6D|9|188|238|35|white|#EF000000|[Old Man] Whether it’s Lord Alseides’<br>curse or whatever...|[おじさん] アルセイデスさまのたたりだかなんだか知らんが、|
+|VRAM1|3D00|570|977383DE06E7CAE29ABA34F5FDD6AAF3A15FE8B9AD2D3123C45952659A1A2A36|9|188|238|35|white|#EF000000|It’s a real nuisance for the townsfolk.|町の者はいい迷惑してるよ。|
+|VRAM1|3D00|570|22170992CC5FC5B7D2300FC20F20D1CF66183EF7D64A0B155290EF6306CD0833|9|188|238|35|white|#EF000000|[Fray] ...No one home? |[フレイ]  ・・・ルスかな？|
+|VRAM1|3D00|570|3FCA11A32E48EFB19D64DD09DAA6408E78F26806FA75BBB1795EC756DD5B52B2|9|188|238|35|white|#EF000000|[Old Woman] Must be nice being a wizard.|[おばさん]  いいわねえ~、魔法使いは。|
+|VRAM1|3D00|570|E49FF7D3EBAB5DE21C06CEBB48C189A847339D1A54026E07AD37805916DEAC81|9|188|238|35|white|#EF000000|If only I could use teleport magic too...|あたしもテレポートの魔法が使えたらねぇ。|
+|VRAM1|3D00|570|35FCDFA77B945BD04101D3D05B0F6A782164738DE88B49E49B4BD94C1F849979|9|188|238|35|white|#EF000000|[Old Man] The Azas Plain has gotten<br>dangerous lately.|［おじいさん］ 近ごろはアーザス平原もブッソウになったのう。|
+|VRAM1|3D00|570|D4624CD7B2D31442E651FFB66844FC1302AD8ABFDB66BBE83E8F5F31E0CEC022|9|188|238|35|white|#EF000000|[Gatekeeper] Nope, nope. This gate stays<br>shut.|[門番] あ〜ダメダメ。その門は開きませんよ。|
+|VRAM1|3D00|570|3CD00E0D9ACC025F3FC51103136525472AFCF5261B6860EE03EE54F0DC468EC0|9|188|238|35|white|#EF000000|[Fray] Why not!?|[フレイ] なんでよぉ！？|
+|VRAM1|3D00|570|9F0DBB03798DA0FBEE04293588118C76CDDCFEFF6ED0DEE60F1DC5BB6E68AFAB|9|188|238|35|white|#EF000000|[Gatekeeper] Monsters have been showing<br>up more around here.|[門番] このあたりもモンスターが多くなりましてねぇ。|
+|VRAM1|3D00|570|9ED52A30E5AED5B2CCBE53BDC66FD80D98A508CAC1DC7357224850810FBC1F6E|9|188|238|35|white|#EF000000|It’s dangerous, so we usually keep it<br>closed.|危険なので、ふだんは開けないようにしてるんですよ。|
+|VRAM1|3D00|570|6613820385DD298F4D0A861ECB1031FD0E4FFEAA830BCDC10AB8D5CFB2AADA7A|9|188|238|35|white|#EF000000|[Fray] But I’m in a hurry!|[フレイ]  私はいそいでんの！|
+|VRAM1|3D00|570|F014D2BDFF15A1434AE08BEE18E8E9244C858BBA56100D14B37A1F5075BCDEDF|9|188|238|35|white|#EF000000|If you won’t open it, I’ll just smash this<br>gate down!|開けてくんないんだったら、この 門ブッこわしちゃうから！|
+|VRAM1|3D00|570|6A2A86F1024D3E7F5F3E9AF25877C61BBCECA2FC555087F3A92812439F444921|9|188|238|35|white|#EF000000|[Gatekeeper] P-please! Anything but<br>that!|[門番] お、おねがいです。それだけはごカンベンを！|
+|VRAM1|3D00|570|56986B97217CEC763B9FBBC1371E2AFF552646B4DA4E89F07544C8A1A449D3DE|9|188|238|35|white|#EF000000|The town would... the town would be...!|町が、町が・・・|
+|VRAM1|3D00|570|9AF36D4ACFD785ADBDBD552803A2805E03BF0542619D0A5144A4793C745D6C92|9|188|238|35|white|#EF000000|[Fray] Then you’ll open it, right?|[フレイ]  じゃあ、開けてくれるのね。|
+|VRAM1|3D00|570|5C10B53FD26B1AB9B096AE3AF7AE2B88C8C6DCB78B067456B7D9349D51C5FB08|9|188|238|35|white|#EF000000|[Gatekeeper] W-well...|[門番] そ、それは・・・|
+|VRAM1|3D00|570|455241471F79F7C76D3E75BB9CCDDFCD8C595E44F4C084584270DB1A85E70CB4|9|188|238|35|white|#EF000000|Ah, if the mayor approves, I can open it<br>for you.|そうだ、町長がＯＫすれば開けてもいいですよ。|
+|VRAM1|3D00|570|4702E22ADC71ADBD7B80D074F71EA574E9B626C6B49BF6A3E8CDA4D2DFA9160E|9|188|238|35|white|#EF000000|[Fray] So I just need to ask the mayor?<br>Got it.|[フレイ]  町長さんに言えばいいのね。わかったわ。|
+|VRAM1|3D00|570|E341E99F3093DDFE1C5DA7BE9FCAF542CDC3AFF900EE2BCD25E63772D05F3C54|9|188|238|35|white|#EF000000|[Fray] I know already!|[フレイ] わかってるってば！|
+|VRAM1|3D00|570|0AC74D07F784F47D34993FCA260864DAFE56EEF6444661E04E635B70D88110AB|9|188|238|35|white|#EF000000|This gate leads to Reigia Village, right?|この門からレイジアの村へ行けるんでしょ。|
+|VRAM1|3D00|570|2BEADA1CD79D6A9485686A3C1A3CF4F681B09BABDD38BD031B34EA1AFDC38241|9|188|238|35|white|#EF000000|[Gatekeeper] W-well, yes, that’s true...|[門番]  い、いや、確かにそれはそうなんですけども・・・|
+|VRAM1|3D00|570|AC7904BA5F8660EF2504EC2BC2D448F85EBE5BC53F6AAA6886C6A535D5707095|9|188|238|35|white|#EF000000|[Gatekeeper] Well? Did you get the<br>mayor's permission?|[門番] どうです？　町長の許可はおりましたか？|
+|VRAM1|3D00|570|24FF7496126DBBDCFE0313421366FE6FACF9100535F6AB753BCC949C08D774EE|9|188|238|35|white|#EF000000|His house...?|町長の家・・・ですか?|
+|VRAM1|3D00|570|92F77B9611C498DE2D788ACE9E89F5B672428FA467FED2D8E5B36F7C2893C4BB|9|188|238|35|white|#EF000000|It's the building to the south, with<br>no sign posted.|南にある、何も看板が出ていない建物がそうですよ。|
+|VRAM1|3D00|570|0F4C9B5D6610C78ABDB2B00E445EA10218B8CCC897AC20890F516D3E567AC619|9|188|238|35|white|#EF000000|[Fray] Uuugh... I just want to get<br>through already!|[フレイ] う゛う゛う゛・・・。早く向こうへ行きたいのにぃ！|
+
+TODO: resize window, find RAW text
+#|VRAM1|3D00|570|08F4E809D87158408BADB11EC7F0D1EE3327EDBE956E2E86871587E6E1CC0E4F|9|188|238|35|white|#EF000000|[Mayor] Yes, yes. Oh? I don’t believe<br>I’ve seen you before.|[町長] はいはい。 おや？　見かけない方ですな。|
+#|VRAM1|3D00|570|1F6764D93E3C502412296FCE5C3CE8B47D01B1CD87B7BF6DCD550490FB78BB25|9|188|238|35|white|#EF000000|I am Demus, mayor of this town of<br>Aazal. What business do you have?|私は、このアーザルの町の長をつとめるデムスと申します。なにかご用ですかな？|
+#|VRAM1|3D00|570|08F4E809D87158408BADB11EC7F0D1EE3327EDBE956E2E86871587E6E1CC0E4F|9|188|238|35|white|#EF000000|[Fray] Um, I’d like the gate north of<br>town to be opened.|[フレイ] あの~、町の北にある 門をあけてほしいんですけど。|
+#|VRAM1|3D00|570|08F4E809D87158408BADB11EC7F0D1EE3327EDBE956E2E86871587E6E1CC0E4F|9|188|238|35|white|#EF000000|[Mayor] The gate!? You’d best not<br>do that.|[町長] 門を!? それはおやめ 「なさったほうがいい。|
+#|VRAM1|3D00|570|08F4E809D87158408BADB11EC7F0D1EE3327EDBE956E2E86871587E6E1CC0E4F|9|188|238|35|white|#EF000000|[Fray] Is it really that dangerous<br>outside the town?|[フレイ] そんなに危険なんですか? 町の外って。|
+
+TODO: shops
