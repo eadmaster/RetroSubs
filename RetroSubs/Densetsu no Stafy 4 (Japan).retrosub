@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: GPL-2.0
-version: 0.2
+version: 0.3
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [2837bbad, dad037696e80543845c56a218dc2571d]
 ---
@@ -11,14 +11,14 @@ compatible_hashes: [2837bbad, dad037696e80543845c56a218dc2571d]
 
 Localized Names:
 
- - Pufftop (Pufftop,テンカイ(Sky World) 
- - Amiy Kingdom (Japanese: アミー王国)
+ - Pufftop = テンカイ (Tenkai, lit. "Sky World") 
+ - Amiy Kingdom = アミー王国
  - Papa Star = パパスタ (Papasta)
  - Mama Star = 	ママスタ (Mamasuta)
- - Starly = スタピー (Starly)
- - Mattel = マテル
+ - Starly = スタピー (Stapy)
+ - Mattel = マテル (Materu)
  - Moe = キョロスケ (Kyorosuke)
- - Ruby = (ハデヒラリ, Hadehirari)
+ - Ruby = ハデヒラリ  (Hadehirari)
  - Old Man Lobber = ロブじいさん (Robu jiisan)
 
 
@@ -88,10 +88,10 @@ from Opiter09_Stafy4-Translation-Tools/0007_textFiles/113020_126588.txt
 
 ## Main menu
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
-|ARM9 System Bus|6000000|17000|023E5BAC5762852434DD26F295F27A0DFE367BB2148CB031B4484D154B73BF04|110|300| | |black|white|START| |
-|ARM9 System Bus|6000000|17000|2825676553616B3EB0312F42F71709707404356B93D951C5D5A81C83DFF7340A|30|60|200|65|white|#AF000000|FILE SELECT<br>Confirm -> A Button<br>Delete File -> Select<br>Copy File -> L Button||
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
+|ARM9 System Bus|6000000|17000|023E5BAC5762852434DD26F295F27A0DFE367BB2148CB031B4484D154B73BF04|80|300| | |black|white|   TOUCH HERE<br>OR PRESS START|
+|ARM9 System Bus|6000000|17000|2825676553616B3EB0312F42F71709707404356B93D951C5D5A81C83DFF7340A|30|40|130|65|white|#AF000000|FILE SELECT<br> <br>Confirm -> A Button<br>Delete File -> Select<br>Copy File -> L Button||
 
 
 ##TODO: Stage Map OSD
@@ -99,7 +99,6 @@ from Opiter09_Stafy4-Translation-Tools/0007_textFiles/113020_126588.txt
 #|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
 #|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|
 #|ARM9 System Bus|6201500|| |10|10|220|65|black|white||
-
 
 
 ## Dialogues

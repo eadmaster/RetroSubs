@@ -49,8 +49,10 @@ function parse_markdown_multi_tables(filename)
 
     local file = io.open(filename, "r")
     if not file then
-        print("not found: ", filename)
+        --print("not found: ", filename)
         return nil
+    else
+        print("found: ", filename)
     end
 
     local header_map = nil
@@ -234,9 +236,24 @@ end
 -- main
 local parsed_markdown = parse_markdown_multi_tables("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
 if parsed_markdown == nil then
-    -- TODO: try to load from content dir
-    print("parsing failed")
-    return
+    -- try to load from content dir
+    local curr_rom_path = gameinfo.getrompath()  -- retroarch-only
+    
+    local config = client.getconfig()    -- bizhawk-only
+    if config.RecentRoms and config.RecentRoms[0] then
+        curr_rom_path = config.RecentRoms[0]
+        curr_rom_path = curr_rom_path:gsub("%*OpenRom%*", "")
+    end
+    
+    if curr_rom_path then
+        curr_rom_path = curr_rom_path:gsub("%.[^%.]+$", ".retrosub") -- Replace the extension
+        parsed_markdown = parse_markdown_multi_tables(curr_rom_path)
+    end
+    
+    if parsed_markdown == nil then
+        print("parsing failed or retrosub file not found")
+        return
+    end
 end
 
 local curr_hash = ""
@@ -249,10 +266,10 @@ local no_match = true
 while true do
     
     -- check precond
-    if not CURRENT_EMU == "bizhawk" then
-        print("Unsupported emulator: " .. CURRENT_EMU)
-        break
-    end
+    --if not CURRENT_EMU == "bizhawk" then
+    --    print("Unsupported emulator")
+    --    break
+    --end
     if not parsed_markdown then
         -- retry to load
         -- parsed_markdown = parse_csv("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
