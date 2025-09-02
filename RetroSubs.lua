@@ -61,11 +61,41 @@ function parse_markdown_multi_tables(filename)
     for line in file:lines() do
         line = trim(line)
         
+        -- Skip empty lines or comments
         if line == "" or line:match("^%s*[#;]") then
             header_found = false
             goto continue
         end
 
+        -- Detect Lua code block start
+        if line:match("^%s*```lua") then
+            print(line)
+            executing_lua = true
+            lua_lines = {}
+            goto continue
+        end
+            
+        -- If inside a Lua block, collect lines
+        if executing_lua then
+            if line:match("^%s*```") then
+                -- End of Lua block, execute code
+                local code = table.concat(lua_lines, "\n")
+                local fn, err = load(code)
+                if fn then
+                    local ok, result = pcall(fn)
+                    if not ok then
+                        print("Error executing Lua block:", result)
+                    end
+                else
+                    print("Error compiling Lua block:", err)
+                end
+                executing_lua = false
+            else
+                table.insert(lua_lines, line)
+            end
+            goto continue
+        end
+            
         -- Detect header line
         if not header_found and line:match("^|") then
             local raw_cols = split_markdown_row(line)
@@ -257,7 +287,7 @@ if parsed_markdown == nil then
 end
 
 local curr_hash = ""
-local CPU_SAVER_INTERVAL = 100
+local CPU_SAVER_INTERVAL = 50
 local curr_visible_text_list = {}
 local prev_visible_text_list = {}
 local last_update = emu.framecount()
