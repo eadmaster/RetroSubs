@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster (hacking), Shawnji (original translated English script)
 license: GPL-2.0
-version: 0.1
+version: 0.2
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "A9084D6E", "8041A028A666CC0ADC7A06C20A99D172" ]
 ---
@@ -20,20 +20,19 @@ See thingy table: `Kaizou Choujin Shubibinman (J).tbl`
 
 |region|start|len|hash|x_pos|y_pos|fg_color|text|
 |------|-----|---|----|-----|-----|--------|----|
-|VRAM1|A00|320|8D248EDD12016DC7BB61C45D890802C28DDC028DF14574DCACCB97E131FE4B41|55|120|#FFB600|Cyber Citizen SHOCKMAN|
+|VRAM1|A00|320|8D248EDD12016DC7BB61C45D890802C28DDC028DF14574DCACCB97E131FE4B41|55|20|#FFB600|Cyber Citizen SHOCKMAN<br>   English Translation v0.2<br>   by Shawnji & eadmaster|
 
 
 ## Map
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|2F40|60|7FE8F6FC7448E0F83EA862A32C31414F8B7AE2D1817D463DDCE86E89C07DB304|192|52|50|60|#FF000000|#FFDADA91|Move<br>Repair<br> <br>Shop<br>Hint|いどう<br>しゅうり<br>かいもの<br>ヒント|
-|VRAM1|2F40|60|DF52538A1419CF2C4022545EFAEEFC4F490F8A30E03714B7F2251405DE0F85C0|192|52|50|60|#FF000000|#FFDADA91|Move<br>Repair<br> <br>Shop<br>Hint|いどう<br>しゅうり<br>かいもの<br>ヒント|
+#|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+#|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+#|VRAM1|2F40|60|7FE8F6FC7448E0F83EA862A32C31414F8B7AE2D1817D463DDCE86E89C07DB304|192|52|50|60|#FF000000|#FFDADA91|Move<br>Repair<br> <br>Shop<br>Hint|いどう<br>しゅうり<br>かいもの<br>ヒント|
+#|VRAM1|2F40|60|DF52538A1419CF2C4022545EFAEEFC4F490F8A30E03714B7F2251405DE0F85C0|192|52|50|60|#FF000000|#FFDADA91|Move<br>Repair<br> <br>Shop<br>Hint|いどう<br>しゅうり<br>かいもの<br>ヒント|
+MEMO: now triggered by the dialogue line: と"うするんや?
 
 
 ## Dialogues
-
-### Intro
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
@@ -42,6 +41,7 @@ See thingy table: `Kaizou Choujin Shubibinman (J).tbl`
 |VRAM1|A00|320|34D919C48E9A3AA2D616744E500D0DFE134F8B0CC583A937620A43076EEBDA6E|55|168|112|47|#FFFFFFFF|#DF004848|Once peace is<br>restored, I'll put ya'll<br>back to normal.<br>You have 18 days.|へいわになれは゛、もとに<br>もと゛したるさかい。<br>きけ゛んは、18にちやて゛。|
 |VRAM1|A00|320|643F21EF7B55221B42E590B84A12EAA7427A6BCF5F32F52F57887A7D365CA8E2|55|168|112|47|#FFFFFFFF|#DF004848|C’mon, get a move<br>on!<br>Go all out on ‘em!|ほな、さくせんかいしや。<br>まあ、きは゛ってや!|
 |VRAM1|A00|320|87571EBDAB12083B629CD2808912357F9226BD462FF6D45451849A67D77C5B28|55|168|112|47|#FFFFFFFF|#DF004848|What'cha wanna'<br>do?|と"うするんや?|
+|VRAM1|A00|320|87571EBDAB12083B629CD2808912357F9226BD462FF6D45451849A67D77C5B28|192|52|50|60|#FF000000|#FFDADA91|Move<br>Repair<br> <br>Shop<br>Hint|いどう<br>しゅうり<br>かいもの<br>ヒント|
 |VRAM1|A00|320|DF52538A1419CF2C4022545EFAEEFC4F490F8A30E03714B7F2251405DE0F85C0|55|168|112|47|#FFFFFFFF|#DF004848|Where ya' headed?|と"こいくんや?|
 |VRAM1|A00|320|243946E6D4543E6BC74658FD1213EDAA982F2DE65CFC05057D1A1A21163D5303|55|168|112|47|#FFFFFFFF|#DF004848|It'll be 300¥.<br>That okay?|300いるかええかか?|
 |VRAM1|A00|320|FB696B4099138C90A686B6A2FA72F287C238F4741BFC1A5E541F08662332C9A0|55|168|112|47|#FFFFFFFF|#DF004848|That ain't enough!|たらんやないか!|

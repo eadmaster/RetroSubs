@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: GPL-2.0
-version: 0.4
+version: 0.4.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -43,8 +43,10 @@ statically patched into the ROM:
 memory.write_bytes_as_array(0x000197FB, {string.byte('ITEMS',1,5)}, "ROM") -- どうぐ = Items
 memory.write_bytes_as_array(0x00019802, {string.byte('SKIL',1,4)}, "ROM") -- じゅつ = Skills
 -- Items names
-memory.write_bytes_as_array(0x0004308E, {string.byte('I.BULLET ',1,9)}, "ROM") -- にちりんのつぶて = Nichirin's Bullet
-memory.write_bytes_as_array(0x000430E7, {string.byte('SNOWS ',1,5)}, "ROM") -- かんじき = Snowshoes
+-- : flies<br>to strike demons!|
+memory.write_bytes_as_array(0x000430BA, {string.byte('ICE SHD ',1,8)}, "ROM") -- ひょうがのつぶて = Ice Shard
+memory.write_bytes_as_array(0x0004308E, {string.byte('SUN SHD ',1,8)}, "ROM") -- にちりんのつぶて = Sun Shard
+memory.write_bytes_as_array(0x000430E7, {string.byte('SNOWSH',1,5)}, "ROM") -- かんじき = Snowshoes
 memory.write_bytes_as_array(0x00043141, {string.byte('INVIS ',1,5)}, "ROM") -- かくれみの = Cloak of Invisibility (temp. invincibility)
 memory.write_bytes_as_array(0x00043171, {string.byte('INVIS ',1,5)}, "ROM") -- のみずかき = Water permission?
 memory.write_bytes_as_array(0x00043008, {string.byte('DUMPLING',1,8)}, "ROM") -- きびだんご = Dumpling
@@ -59,9 +61,12 @@ memory.write_bytes_as_array(0x000431E3, {string.byte('PHE',1,3)}, "ROM") -- き�
 memory.write_bytes_as_array(0x000431E8, {string.byte('APE',1,3)}, "ROM") -- さる = Ape/Monkey
 -- messages
 memory.write_bytes_as_array(0x00042F46, {string.byte('NONE ',1,5)}, "ROM") -- ありません = None
-memory.write_bytes_as_array(0x000431B5, {string.byte('NO USE',1,6)}, "ROM") -- つかえません = cannot use
+--memory.write_bytes_as_array(0x000431B5, {string.byte('NO USE',1,6)}, "ROM") -- つかえません = None
+--memory.write_bytes_as_array(0x0004372F, {string.byte('NO USE',1,6)}, "ROM") -- つかえません = None
+memory.write_bytes_as_array(0x000199DA, {string.byte('NONE  ',1,6)}, "ROM") -- つかえません = None
+memory.write_bytes_as_array(0x00019A70, {string.byte('NONE  ',1,6)}, "ROM") -- つかえません = None
 memory.write_bytes_as_array(0x00019A66, {string.byte('CANT EAT',1,8)}, "ROM") -- たべられません  = cannot eat it
-
+-- TODO: translate weapons and armors
 ```
 
 #buggy:
@@ -69,7 +74,7 @@ memory.write_bytes_as_array(0x00019A66, {string.byte('CANT EAT',1,8)}, "ROM") --
 #|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 #|VRAM1|FE00|100|EC9BF2A43F24518964ED8FB54674EEEB9C7B5D4CCF12D0AF9C7E205802393C65|30|65|50|28|white|#CF000000|Tools<br>Skill|
 #|VRAM1|FE00|100|0D6EDEDB40181387338462299ECB1491100B262B05BEA389E44BD1C635E48AD2|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Nothing|
-#|VRAM1|FE00|100|F1BB0A3D68BC39846975E0302E15F1B382C018EA29C0A87D8A87D0D0BA751E3Dx|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Dumpling|
+#|VRAM1|FE00|100|F1BB0A3D68BC39846975E0302E15F1B382C018EA29C0A87D8A87D0D0BA751E3D|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Dumpling|
 #|VRAM1|FE00|100|CF372627B6701F9BCA25FAFC68964B85BCD71CF84F9F48D1BA3478E9A727331F|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Dumpling<br>                      Dumpling|
 #|VRAM1|FE00|100|E2331CBD0EA33A9356B9C12A0DE5023402AD3340B587054D86D93CD3B042524E|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Dumpling<br>                      Cloak of Invisibility|
 #|VRAM1|FE00|100|B5B6AD4A09233BC2931EC4B1D80A3256AD420DF841746CB20640D6C7975BBB6F|30|65|50|28|white|#CF000000|Tools<br>Skill<br>  <br>                       Dumpling<br>                      Cloak of Invisibility<br>                      Fire Bullet|
@@ -79,7 +84,7 @@ memory.write_bytes_as_array(0x00019A66, {string.byte('CANT EAT',1,8)}, "ROM") --
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|70|90|0|0|#ffff00|black|Momotaro’s Adventure<br> <br> <br> <br> <br> <br> <br>     Start    Continue| |
+|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|60|90|0|0|#ffff00|black| Momotaro’s Adventure<br>English Translation v0.4<br>          by eadmaster<br> <br> <br> <br> <br>         Start    Continue| |
 
 ALT.: Peach Boy Adventure
 
@@ -109,10 +114,10 @@ ALT.: Peach Boy Adventure
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|60|55|125|30|black|#DFFFFFFF|To start let's practice<br>dodging!|
-|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|60|55|125|30|black|#DFFFFFFF|Dodge the falling poop!|
-|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|125|30|black|#DFFFFFFF|Press I to jump<br>and dodge it!|
-|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|125|30|black|#DFFFFFFF|Head right to the goal!<br>Ready? Start!|
+|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|60|55|130|30|black|#DFFFFFFF|To start let's practice<br>dodging!|
+|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|60|55|130|30|black|#DFFFFFFF|Dodge the falling poop!|
+|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|130|30|black|#DFFFFFFF|Press I to jump<br>and dodge it!|
+|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|130|30|black|#DFFFFFFF|Head right to the goal!<br>Ready? Start!|
 
 TODO: add a pause or make the text scrolling slower in this section, or some lines won't be visible.
 
@@ -157,76 +162,76 @@ WIP
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D080|500|AC2565FC829B00588784F32DBB9F47B6D20D4FAF3BBAB805BCCA6282B494DDC2|60|45|130|50|black|#CFFFFFFF| Oh, Momotaro!|おお!<br>ももたろう!|
-|VRAM1|D080|500|2B84908DED51BF69F18CC32EE72BDEE2FE3B77E8F1E064E0006BABA9561749AD|60|45|130|50|black|#CFFFFFFF| The Oni leader has<br>departed, indeed!|オニたいし"に<br>たひ"た"つ<br>そうし"ゃな!|
-|VRAM1|D080|500|0C32DACEFBBA3C512F65B08E0FA7D9915A7650B4C276D4078FD2B5885A7625A1|60|45|130|50|black|#CFFFFFFF| Before you proceed,|たひ"にて"る<br>まえに<br>いくつか|
-|VRAM1|D080|500|BABD71E36488BEFA080021720CF6821766FFDA86550C6A7ACA8254A210F46FBF|60|45|130|50|black|#CFFFFFFF| there's something<br>I want to tell you!|おしえて<br>おきたい<br>ことがある!|
-|VRAM1|D080|500|19534EF73363AF7872DB0B5366DDAD19D1B85FB530DFF192BEE7A08F7FEF0D6E|60|45|130|50|black|#CFFFFFFF| Stand at the entrance|むらの<br>いりく"ちに<br>たって|
-|VRAM1|D080|500|EB70A30C9FBE30E2207B10DA0B675ABDAB3D04589FE72CF4B3998B454CB78E35|60|45|130|50|black|#CFFFFFFF| and press the Up<br>button|じゅうじ<br>ボタンを<br>うえにおすと|
-|VRAM1|D080|500|43CD2EDA13A1577B354E3113B761A8F20F693E5E9A791D95237E242B15DF4B1E|60|45|130|50|black|#CFFFFFFF| to enter the village|むらのなかに<br>はいっていく<br>ことか"て"きる|
-|VRAM1|D080|500|A2CCA647A464F5A5F042F1579F38252E439C773CB354B4BFF545404D836DB9DE|60|45|130|50|black|#CFFFFFFF| To speak with the<br>villagers|むらひ"とと<br>はなすには|
-|VRAM1|D080|500|0CF64FC39DBEC484BD6A9B6EC9E155B15009BF25D41F5E17B3C2809B3E289EEC|60|45|130|50|black|#CFFFFFFF| get close to them|ひとに<br>ちかつ"いて|
-|VRAM1|D080|500|EB70A30C9FBE30E2207B10DA0B675ABDAB3D04589FE72CF4B3998B454CB78E35|60|45|130|50|black|#CFFFFFFF| and press the Up<br>button|じゅうじ<br>ボタンを<br>うえにおすと|
-|VRAM1|D080|500|4BC8D78F2852B31A37193E8B4236FE5A27D17E9D66EDDBA735B841FC678020D6|60|45|130|50|black|#CFFFFFFF| to begin talking.|はなすことか"<br>て"きるのし"ゃ|
-|VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF| Well then, be careful<br>on your journey!|て"は<br>こころして<br>ゆくか"よい!|
-|VRAM1|D080|500|25C74C535C160BD57960A7A7651C6461C9AF3F66993329ADD14AE001CE70E992|60|45|130|50|black|#CFFFFFFF| You’ve done well<br>to make it this far,<br>|よく<br>ここまて"<br>きなすった|
-|VRAM1|D080|500|944C2473FF89C1C102FFF12ECEA1FBE21F9F73B81015497E5A6B78D3E98DB7A3|60|45|130|50|black|#CFFFFFFF| so how about<br>listening to a song?|いっきょく<br>きいて<br>もらえんか?|
-|VRAM1|D080|500|04C82747B707C240460A8F359A4D6373DCAFF349C171603D1A3951DCFDB9F63B|60|45|130|50|black|#CFFFFFFF| Write it down,<br>it’s my song of wisdom!|わしのうたを<br>メモしとけは"|
-|VRAM1|D080|500|204231FC7928036CA7477D5E285DB7D9A81CA02EB684146F6650DBFCD4F38417|60|45|130|50|black|#CFFFFFFF| You’ll be able to<br>continue from here<br>whenever you like.|ここから<br>また たひ"か"<br>て"きるのし|
-|VRAM1|D080|500|6C299400B751F9BAED3F171D14B083C638D2D661FE2DA7D98982144C37B26383|60|45|130|50|black|#CFFFFFFF| Want to hear it?<br>No (Yes)|と"うし"ゃ<br>きいてくか?|
-|VRAM1|D080|500|CD54EE158A3D2BD86AB5885E6BA5BF1AFA08AABC0EBAF6FEB2192E898535404C|60|45|130|50|black|#CFFFFFFF| Want to hear it?<br>(No) Yes|と"うし"ゃ<br>きいてくか?|
-|VRAM1|D080|500|715B52F78F836DC5FFD180609CB285B2EE91450425DD86A448B773316BFAFB8B|60|45|130|50|black|#CFFFFFFF| Don’t push yourself<br>too hard now!|あまり<br>むりを<br>せんように!|
-|VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF| Well then, be careful<br>on your journey!|て"は<br>こころして<br>ゆくか"よい!|
+|VRAM1|D080|500|AC2565FC829B00588784F32DBB9F47B6D20D4FAF3BBAB805BCCA6282B494DDC2|60|45|130|50|black|#CFFFFFFF|Oh, Momotaro!|おお!<br>ももたろう!|
+|VRAM1|D080|500|2B84908DED51BF69F18CC32EE72BDEE2FE3B77E8F1E064E0006BABA9561749AD|60|45|130|50|black|#CFFFFFFF|The Oni leader has<br>departed, indeed!|オニたいし"に<br>たひ"た"つ<br>そうし"ゃな!|
+|VRAM1|D080|500|0C32DACEFBBA3C512F65B08E0FA7D9915A7650B4C276D4078FD2B5885A7625A1|60|45|130|50|black|#CFFFFFFF|Before you proceed,|たひ"にて"る<br>まえに<br>いくつか|
+|VRAM1|D080|500|BABD71E36488BEFA080021720CF6821766FFDA86550C6A7ACA8254A210F46FBF|60|45|130|50|black|#CFFFFFFF|there's something<br>I want to tell you!|おしえて<br>おきたい<br>ことがある!|
+|VRAM1|D080|500|19534EF73363AF7872DB0B5366DDAD19D1B85FB530DFF192BEE7A08F7FEF0D6E|60|45|130|50|black|#CFFFFFFF|Stand at the entrance|むらの<br>いりく"ちに<br>たって|
+|VRAM1|D080|500|EB70A30C9FBE30E2207B10DA0B675ABDAB3D04589FE72CF4B3998B454CB78E35|60|45|130|50|black|#CFFFFFFF|and press the Up<br>button|じゅうじ<br>ボタンを<br>うえにおすと|
+|VRAM1|D080|500|43CD2EDA13A1577B354E3113B761A8F20F693E5E9A791D95237E242B15DF4B1E|60|45|130|50|black|#CFFFFFFF|to enter the village|むらのなかに<br>はいっていく<br>ことか"て"きる|
+|VRAM1|D080|500|A2CCA647A464F5A5F042F1579F38252E439C773CB354B4BFF545404D836DB9DE|60|45|130|50|black|#CFFFFFFF|To speak with the<br>villagers|むらひ"とと<br>はなすには|
+|VRAM1|D080|500|0CF64FC39DBEC484BD6A9B6EC9E155B15009BF25D41F5E17B3C2809B3E289EEC|60|45|130|50|black|#CFFFFFFF|get close to them|ひとに<br>ちかつ"いて|
+|VRAM1|D080|500|EB70A30C9FBE30E2207B10DA0B675ABDAB3D04589FE72CF4B3998B454CB78E35|60|45|130|50|black|#CFFFFFFF|and press the Up<br>button|じゅうじ<br>ボタンを<br>うえにおすと|
+|VRAM1|D080|500|4BC8D78F2852B31A37193E8B4236FE5A27D17E9D66EDDBA735B841FC678020D6|60|45|130|50|black|#CFFFFFFF|to begin talking.|はなすことか"<br>て"きるのし"ゃ|
+|VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF|Well then, be careful<br>on your journey!|て"は<br>こころして<br>ゆくか"よい!|
+|VRAM1|D080|500|25C74C535C160BD57960A7A7651C6461C9AF3F66993329ADD14AE001CE70E992|60|45|130|50|black|#CFFFFFFF|You’ve done well<br>to make it this far,<br>|よく<br>ここまて"<br>きなすった|
+|VRAM1|D080|500|944C2473FF89C1C102FFF12ECEA1FBE21F9F73B81015497E5A6B78D3E98DB7A3|60|45|130|50|black|#CFFFFFFF|so how about<br>listening to a song?|いっきょく<br>きいて<br>もらえんか?|
+|VRAM1|D080|500|04C82747B707C240460A8F359A4D6373DCAFF349C171603D1A3951DCFDB9F63B|60|45|130|50|black|#CFFFFFFF|Write it down,<br>it’s my song of wisdom!|わしのうたを<br>メモしとけは"|
+|VRAM1|D080|500|204231FC7928036CA7477D5E285DB7D9A81CA02EB684146F6650DBFCD4F38417|60|45|130|50|black|#CFFFFFFF|You’ll be able to<br>continue from here<br>whenever you like.|ここから<br>また たひ"か"<br>て"きるのし|
+|VRAM1|D080|500|6C299400B751F9BAED3F171D14B083C638D2D661FE2DA7D98982144C37B26383|60|45|130|50|black|#CFFFFFFF|Want to hear it?<br>No (Yes)|と"うし"ゃ<br>きいてくか?|
+|VRAM1|D080|500|CD54EE158A3D2BD86AB5885E6BA5BF1AFA08AABC0EBAF6FEB2192E898535404C|60|45|130|50|black|#CFFFFFFF|Want to hear it?<br>(No) Yes|と"うし"ゃ<br>きいてくか?|
+|VRAM1|D080|500|715B52F78F836DC5FFD180609CB285B2EE91450425DD86A448B773316BFAFB8B|60|45|130|50|black|#CFFFFFFF|Don’t push yourself<br>too hard now!|あまり<br>むりを<br>せんように!|
+|VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF|Well then, be careful<br>on your journey!|て"は<br>こころして<br>ゆくか"よい!|
 
 
 ### Hanasaka Village (1st Part)
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D080|500|4166D8F4876932D7CB28A34FE87228A73FA11EF05582C09569CC985DBE834E5F|60|45|130|50|black|#CFFFFFFF| Momotaro!<br>Press II and strike!|ももたろよ・<br>II ホ"タンを<br>たたけは"|
-|VRAM1|D080|500|827E20F3F1B0ACBCC8728768C4986AFF4F99950DD5D244B034E38244183837DC|60|45|130|50|black|#CFFFFFFF| You can attack the<br>onis this way!|オニを<br>こうけ"き<br>て"きるそ"!!|
-|VRAM1|D080|500|F18723EBC995210B8D81251588CCC675C86FF6F616D4AB9D3ABFB4A45E6EE815|60|45|130|50|black|#CFFFFFFF| A blowgun or bomb gun<br>makes it easy!|ふ"きや<br>ほ"うく"を<br>かっていけは"|
-|VRAM1|D080|500|F2D5B3473B68CC86F8DC8D76A3FF9F7E6D5D61DE4458E2E7C9DCBAC85A62FBDD|60|45|130|50|black|#CFFFFFFF| Boom boom<br>Goes faster that way!|と"んと"ん<br>らくちんに<br>なるのし"ゃ!!|
-|VRAM1|D080|500|5D11DC6DB1253399AF99CBB580FA414E4953722CB7C2DADAF73B39B0D93E3D2D|60|45|130|50|black|#CFFFFFFF| To enter a shop<br>go to the entrance|おみせに<br>はいるには<br>いりく"ちて"|
-|VRAM1|D080|500|271C88DBE5BFE66A973BABBD23C887852F9127FE132BC2E10161D20A6DAF62DE|60|45|130|50|black|#CFFFFFFF| and press the Up button|し"ゅうし"<br>ホ"タンを<br>うえ て"すた"|
-|VRAM1|D080|500|6683FE10AEB7E630D4819F7E312ABD9C35850056361611AA7997397BE6398290|60|45|130|50|black|#CFFFFFFF| Onis may drop chests<br>with|オニを<br>こらしめたら<br>ぶきを かえ|
-|VRAM1|D080|500|D10E21E4E1028FCCE60FE9434CB28A573CF0E8A6BAE9474B51A6BB2587779FE5|60|45|130|50|black|#CFFFFFFF| new weapons, armors<br>and items.<br>Wah-ha-ha!!|ぼうぐ	 かえ<br>どうくぐ	 かえ<br>わっはっは!!|
-|VRAM1|D080|500|2156859412F7B191F074E4B4C1C076116E507F47A7E839482B259331E37EE099|60|45|130|50|black|#CFFFFFFF| Want to check your<br>status?|し"ふ"んの<br>つよさを<br>みたいなら|
-|VRAM1|D080|500|E73D275CD52699F3B3BEF3ECE430F447E747AACF05F2177298B5D63A19AD9788|60|45|130|50|black|#CFFFFFFF| Press Select to see it!|セレクトを<br>おすのて"すよ|
-|VRAM1|D080|500|3473B612576794B08F2F7DECC417DE126073E686586BD5C4A912FB7D09A44E7B|60|45|130|50|black|#CFFFFFFF| The hermit lives atop<br>a high spot|せんにんは<br>たかいとこに<br>すんて"おる!!|
-|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF| ask him for a new skill.|せんし"ゅつを<br>おしえて<br>もらうか"よい|
-|VRAM1|D080|500|947BD23EC8592CC4197DD727486D5660E84217B658D17FFC20A36FCA2FD45EE2|60|45|130|50|black|#CFFFFFFF| Press the Run button|ランホ"タンを<br>おすと|
-|VRAM1|D080|500|C9D50321D84663516EC537B8A14DA6BD97DF6790891FD93C0B16D407B305D2A7|60|45|130|50|black|#CFFFFFFF| to travel instantly!|し"ゅつや<br>と"うく"か"<br>つかえるそ"!!|
-|VRAM1|D080|500|E45490EDDC414043FD691E389C5E1CF3E06244A929EA8845860D00F7ABFFB59F|60|45|130|50|black|#CFFFFFFF| But only if you have<br>the right item!|もっとも<br>もってないと<br>つかえんか"!!|
-|VRAM1|D080|500|BA1B7DF3A85124D1A313B2A74E809BE8CC67064B8D801186EB70439AF9EFAB5A|60|45|130|50|black|#CFFFFFFF| Hold button I to jump,|I ホ"タンて"<br>シ"ャンフ°<br>しなか"ら
-|VRAM1|D080|500|885AF9F0BC11F2A4FD68578EE440E924D41829482FE6D8B7D0D6F64211645B20|60|45|130|50|black|#CFFFFFFF| then press button II<br>to attack in midair!|IIホ"タンて"<br>こうけ"き<br>するのた"!!|
-|VRAM1|D080|500|0038C77213F283744893722C238835457B69CAEA8D129BDE52469923E56FF30A|60|45|130|50|black|#CFFFFFFF| I used this technique|せっしゃも<br>この<br>やりかたて"|
-|VRAM1|D080|500|1BEC5F3D4C26C8361C3730C5152D5224C9C8F5FF946F05EC9960FA147F0EA864|60|45|130|50|black|#CFFFFFFF| and beat up 1000 onis!|オニを<br>1000ひ"き<br>たおしたそ"!!|
+|VRAM1|D080|500|4166D8F4876932D7CB28A34FE87228A73FA11EF05582C09569CC985DBE834E5F|60|45|130|50|black|#CFFFFFFF|Momotaro!<br>Press II and strike!|ももたろよ・<br>II ホ"タンを<br>たたけは"|
+|VRAM1|D080|500|827E20F3F1B0ACBCC8728768C4986AFF4F99950DD5D244B034E38244183837DC|60|45|130|50|black|#CFFFFFFF|You can attack the<br>onis this way!|オニを<br>こうけ"き<br>て"きるそ"!!|
+|VRAM1|D080|500|F18723EBC995210B8D81251588CCC675C86FF6F616D4AB9D3ABFB4A45E6EE815|60|45|130|50|black|#CFFFFFFF|A blowgun<br>or bomb gun<br>makes it easy!|ふ"きや<br>ほ"うく"を<br>かっていけは"|
+|VRAM1|D080|500|F2D5B3473B68CC86F8DC8D76A3FF9F7E6D5D61DE4458E2E7C9DCBAC85A62FBDD|60|45|130|50|black|#CFFFFFFF|Boom boom<br>Goes faster that way!|と"んと"ん<br>らくちんに<br>なるのし"ゃ!!|
+|VRAM1|D080|500|5D11DC6DB1253399AF99CBB580FA414E4953722CB7C2DADAF73B39B0D93E3D2D|60|45|130|50|black|#CFFFFFFF|To enter a shop<br>go to the entrance|おみせに<br>はいるには<br>いりく"ちて"|
+|VRAM1|D080|500|271C88DBE5BFE66A973BABBD23C887852F9127FE132BC2E10161D20A6DAF62DE|60|45|130|50|black|#CFFFFFFF|and press the Up<br>button|し"ゅうし"<br>ホ"タンを<br>うえ て"すた"|
+|VRAM1|D080|500|6683FE10AEB7E630D4819F7E312ABD9C35850056361611AA7997397BE6398290|60|45|130|50|black|#CFFFFFFF|Beat onis, and<br>you can buy<br>weapons,|オニを<br>こらしめたら<br>ぶきを かえ|
+|VRAM1|D080|500|D10E21E4E1028FCCE60FE9434CB28A573CF0E8A6BAE9474B51A6BB2587779FE5|60|45|130|50|black|#CFFFFFFF|armors and items.<br>Wah-ha-ha!!|ぼうぐ かえ<br>どうくぐ	 かえ<br>わっはっは!!|
+|VRAM1|D080|500|2156859412F7B191F074E4B4C1C076116E507F47A7E839482B259331E37EE099|60|45|130|50|black|#CFFFFFFF|Want to check your<br>status?|し"ふ"んの<br>つよさを<br>みたいなら|
+|VRAM1|D080|500|E73D275CD52699F3B3BEF3ECE430F447E747AACF05F2177298B5D63A19AD9788|60|45|130|50|black|#CFFFFFFF|Press Select to see it!|セレクトを<br>おすのて"すよ|
+|VRAM1|D080|500|3473B612576794B08F2F7DECC417DE126073E686586BD5C4A912FB7D09A44E7B|60|45|130|50|black|#CFFFFFFF|The hermit lives atop<br>a high spot|せんにんは<br>たかいとこに<br>すんて"おる!!|
+|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF|ask him for a new skill.|せんし"ゅつを<br>おしえて<br>もらうか"よい|
+|VRAM1|D080|500|947BD23EC8592CC4197DD727486D5660E84217B658D17FFC20A36FCA2FD45EE2|60|45|130|50|black|#CFFFFFFF|Press the Run button|ランホ"タンを<br>おすと|
+|VRAM1|D080|500|C9D50321D84663516EC537B8A14DA6BD97DF6790891FD93C0B16D407B305D2A7|60|45|130|50|black|#CFFFFFFF|to travel instantly!|し"ゅつや<br>と"うく"か"<br>つかえるそ"!!|
+|VRAM1|D080|500|E45490EDDC414043FD691E389C5E1CF3E06244A929EA8845860D00F7ABFFB59F|60|45|130|50|black|#CFFFFFFF|But only if you have<br>the right item!|もっとも<br>もってないと<br>つかえんか"!!|
+|VRAM1|D080|500|BA1B7DF3A85124D1A313B2A74E809BE8CC67064B8D801186EB70439AF9EFAB5A|60|45|130|50|black|#CFFFFFFF|Hold button I to jump,|I ホ"タンて"<br>シ"ャンフ°<br>しなか"ら
+|VRAM1|D080|500|885AF9F0BC11F2A4FD68578EE440E924D41829482FE6D8B7D0D6F64211645B20|60|45|130|50|black|#CFFFFFFF|then press button II<br>to attack in midair!|IIホ"タンて"<br>こうけ"き<br>するのた"!!|
+|VRAM1|D080|500|0038C77213F283744893722C238835457B69CAEA8D129BDE52469923E56FF30A|60|45|130|50|black|#CFFFFFFF|I used this technique|せっしゃも<br>この<br>やりかたて"|
+|VRAM1|D080|500|1BEC5F3D4C26C8361C3730C5152D5224C9C8F5FF946F05EC9960FA147F0EA864|60|45|130|50|black|#CFFFFFFF|and beat up 1000 onis!|オニを<br>1000ひ"き<br>たおしたそ"!!|
 
 
 ### Weapon Shop
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|7600|780|DA5307D27E829C6A72C440702ED85CE115ADC15B1C5C6A9575ADC428611BAFAD|60|43|130|28|black|#DFFFFFFF| Welcome! You should<br>buy a blowgun!|いらっしゃい! ふ"き かっていくと いいと"!|
-|VRAM1|7600|780|0436E142BDC742D9BC6C6D0CD1CC02A6F2C24C70E70C88EAA8D5E7B39FD724C1|60|43|130|28|black|#DFFFFFFF| Not your thing, huh?<br>Come again!|おきに めさなかった ようた"な!また きてくれよなっ!|
-|VRAM1|7600|780|AB74BAA80C5A2E49779933751F9B51F36123797A90D6DA2796A39DEE46E2839A|60|43|130|28|black|#DFFFFFFF| Katana: temp. increases<br>the bullet range!|かたな:たまの とふ"きょりか"<br>すこし なか"くなるた"と"!|
-|VRAM1|7600|780|20724719DF6785C6F2B090621ADDA9951E31CD27697EEC7C242120DFD8F28BC0|60|43|130|28|black|#DFFFFFFF| Hundred Fox Sword:<br>temp. shoots two bullets.|ひ"ゃっこのけん:たまか"<br>2れんしゃに.なるた"と"|
-|VRAM1|7600|780|3D2E8EDD4213B15B157C9D62F5EAB1EE4DF3EC97614AAEEDD59DC7525018679D|60|43|130|28|black|#DFFFFFFF| Too bad! Not enough<br>money. Try again later.|さ"んねん!おかねか".たりないよ.もうひとか"んは"りた"!|
-|VRAM1|7600|780|C5CC978B5639E8C2F4926E6F69AC56B382484C5267A1CF95C38C21CF52D8EE06|60|43|130|28|black|#DFFFFFFF| Thanks! Anything else?|
-|VRAM1|7600|780|EB29AEED33A27290975A18068DBA5BFDFA6B00183797A27BAD00EF05B5B4F3DE|60|43|130|28|black|#DFFFFFFF| There’s no blowgun stronger than this one.<br>It won’t be much use… sorry!|そのふ"きより つよいふ"きはないね やくに たてなくて コ"メンた"と"!|
-|VRAM1|7600|780|6C156F52C272151EB930304246CABBDD5CF3C9086470A694E53E0F8C9DFFBFDE|60|43|130|28|black|#DFFFFFFF| Thanks a lot!<br>Come again!|まいと"ありぃ!<br>また きてくれよなっ!|
+|VRAM1|7600|780|DA5307D27E829C6A72C440702ED85CE115ADC15B1C5C6A9575ADC428611BAFAD|60|43|130|28|black|#DFFFFFFF|Welcome! You should<br>buy a blowgun!|いらっしゃい! ふ"き かっていくと いいと"!|
+|VRAM1|7600|780|0436E142BDC742D9BC6C6D0CD1CC02A6F2C24C70E70C88EAA8D5E7B39FD724C1|60|43|130|28|black|#DFFFFFFF|Not your thing, huh?<br>Come again!|おきに めさなかった ようた"な!また きてくれよなっ!|
+|VRAM1|7600|780|AB74BAA80C5A2E49779933751F9B51F36123797A90D6DA2796A39DEE46E2839A|60|43|130|28|black|#DFFFFFFF|Katana: temp. increases<br>the bullet range!|かたな:たまの とふ"きょりか"<br>すこし なか"くなるた"と"!|
+|VRAM1|7600|780|20724719DF6785C6F2B090621ADDA9951E31CD27697EEC7C242120DFD8F28BC0|60|43|130|28|black|#DFFFFFFF|Hundred Fox Sword:<br>temp. shoots two bullets.|ひ"ゃっこのけん:たまか"<br>2れんしゃに.なるた"と"|
+|VRAM1|7600|780|3D2E8EDD4213B15B157C9D62F5EAB1EE4DF3EC97614AAEEDD59DC7525018679D|60|43|130|28|black|#DFFFFFFF|Too bad! Not enough<br>money. Try again later.|さ"んねん!おかねか".たりないよ.もうひとか"んは"りた"!|
+|VRAM1|7600|780|C5CC978B5639E8C2F4926E6F69AC56B382484C5267A1CF95C38C21CF52D8EE06|60|43|130|28|black|#DFFFFFFF|Thanks! Anything else?|
+|VRAM1|7600|780|EB29AEED33A27290975A18068DBA5BFDFA6B00183797A27BAD00EF05B5B4F3DE|60|43|130|28|black|#DFFFFFFF|There’s no blowgun stronger than this one.<br>It won’t be much use… sorry!|そのふ"きより つよいふ"きはないね やくに たてなくて コ"メンた"と"!|
+|VRAM1|7600|780|6C156F52C272151EB930304246CABBDD5CF3C9086470A694E53E0F8C9DFFBFDE|60|43|130|28|black|#DFFFFFFF|Thanks a lot!<br>Come again!|まいと"ありぃ!<br>また きてくれよなっ!|
 
 
 ### Food Shop
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|7600|780|8F33B016150200A4458BE159031F0634288B3C763C91E7D12A0E159FDA6922B1|60|43|130|28|black|#DFFFFFFF| Welcome!<br>What would you like?|いらっしゃいませ-!<br>なにに なさいますか?|
-|VRAM1|7600|780|173B67CD2BC4765A3582F7DF8F6456D4EC609D902ABBC020992791CE358610EA|60|43|130|28|black|#DFFFFFFF| Karata’s Rice Ball:<br>restores 1 peach HP|からた"のオニギリ: 1コ たべると<br>からだのももが 1コ かいふくよ|
-|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|#DFFFFFFF| Yuki’s Rice Ball: restores<br>1 each of HP and SP!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
-|VRAM1|7600|780|EF48F3102D46A8D32109D3BE85639949D3DC448289B56135A1320AE236E84412|60|43|130|28|black|#DFFFFFFF| Didn’t find anything you<br>liked? Come again!|おきに めさなかったみたいね!<br>また いらしてくた"さいね!|
-|VRAM1|7600|780|162CD072E1B53B338E90DB8F2DAE88CDAA68E22BF554C3BD95BF8F92E0A1B81F|60|43|130|28|black|#DFFFFFFF| Thank you very much!<br>Anything else?|ありがとうございました! まだなにかごいりょうですか?|
+|VRAM1|7600|780|8F33B016150200A4458BE159031F0634288B3C763C91E7D12A0E159FDA6922B1|60|43|130|28|black|#DFFFFFFF|Welcome!<br>What would you like?|いらっしゃいませ-!<br>なにに なさいますか?|
+|VRAM1|7600|780|173B67CD2BC4765A3582F7DF8F6456D4EC609D902ABBC020992791CE358610EA|60|43|130|28|black|#DFFFFFFF|Karata’s Rice Ball:<br>restores 1 HP|からた"のオニギリ: 1コ たべると<br>からだのももが 1コ かいふくよ|
+|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|#DFFFFFFF|Yuki’s Rice Ball: restores<br>1 each of HP and SP!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
+|VRAM1|7600|780|EF48F3102D46A8D32109D3BE85639949D3DC448289B56135A1320AE236E84412|60|43|130|28|black|#DFFFFFFF|Didn’t find anything you<br>liked? Come again!|おきに めさなかったみたいね!<br>また いらしてくた"さいね!|
+|VRAM1|7600|780|162CD072E1B53B338E90DB8F2DAE88CDAA68E22BF554C3BD95BF8F92E0A1B81F|60|43|130|28|black|#DFFFFFFF|Thank you very much!<br>Anything else?|ありがとうございました! まだなにかごいりょうですか?|
 
 
 ### Heremit
@@ -276,8 +281,10 @@ WIP
 |VRAM1|7600|780|DA4BAB25FF3731ECCA964AB63CF1BF7BF94E3DAEB355DF615E47B32D6B4E12B0|60|43|130|28|black|#DFFFFFFF|Please come again!|またおいでくだされ!|
 |VRAM1|7600|780|2AC6B98C97F984509D0C93B779A2988090AD5372EB50B2B24D7F9985918581F5|60|43|130|28|black|#DFFFFFFF|Thank you!<br>Anything else you need?|ありがとうですじゃ!<br>ほかにはどうですじゃ!|
 |VRAM1|7600|780|BD7F8ADB961ED7FCD098411193F4E299CB177F0FA575D42D9036B4A8DE6D3DB7|60|43|130|28|black|#DFFFFFFF|Come again!|またおいでくだされ!|
-|VRAM1|7600|780|CC3DC9B578A01E5C7E66720933C0672722305366106B28E973DC04BCA2934F1D|60|43|130|28|black|#DFFFFFFF| Icicle Shard: flies<br>to strike demons!|ひょうがのつぶて:こおりがとんでオニをなぎたおすのじゃ|
-|VRAM1|7600|780|A5F6BDDEAD5617C8DD786BE489C0D486FDF73420314CDF0A998C3242532EF85D|60|43|130|28|black|#DFFFFFFF| Snowshoes: walk<br> without slipping on ice!|かんじき:こおりのうえでもすべらずにすすめるのじゃ!|
+|VRAM1|7600|780|CC3DC9B578A01E5C7E66720933C0672722305366106B28E973DC04BCA2934F1D|60|43|130|28|black|#DFFFFFFF|Ice Shard: ice flies<br>to strike onis!|ひょうがのつぶて:こおりがとんでオニをなぎたおすのじゃ|
+|VRAM1|7600|780|A5F6BDDEAD5617C8DD786BE489C0D486FDF73420314CDF0A998C3242532EF85D|60|43|130|28|black|#DFFFFFFF|Snowshoes: walk<br> without slipping on ice!|かんじき:こおりのうえでもすべらずにすすめるのじゃ!|
+|VRAM1|7600|780|CC4105597A3944241B01F6680495F29A1EDACD868004CAAC2DADBD361D3869A8|60|43|130|28|black|#DFFFFFFF|Sun Shard: flames<br>fly forth and scorch onis|にちりんのつぶて:ほのおが<br>とんで オニを やきつくすのじゃ|
+|VRAM1|7600|780|77A97214D124D34FD84B7F2E608B8369B55CBCFB15018D4216CF0ECFD1C2302A|60|43|130|28|black|#DFFFFFFF|Kappa Flippers: swim<br>freely through the sea!|カッパのみずかき:うみのなかを<br>じゆうに およげるのじゃ!|
 
 
 ### Kintaro's Village
@@ -315,7 +322,7 @@ WIP
 |VRAM1|7600|780|78A98DB30A870DEAC1F7FB0CF00307684A2B0A853E6A70A16903A6CE205824B2|60|43|130|28|black|#DFFFFFFF|Welcome!<br>How about some armor?|いらっしゃいませ!<br>ぼうくはいかがですか?|
 |VRAM1|7600|780|ECC867B46444CE3B200AAFDD5EC00C8D89943BBE1B2FF7FDBB0CF6FA1E8540A5|60|43|130|28|black|#DFFFFFFF|Red Armor: slightly<br>lower enemy damage!|あかどう:てきの[kana]だめ-じ[kana]が<br>すこし かるく なりますよ!|
 |VRAM1|7600|780|2DE15970C4CAF79ED81938BBE5F41307CC33F09BEF4E411B14F611877B624D07|60|43|130|28|black|#DFFFFFFF|Satsuki Armor: enemy<br>damage halved!|さつきのどう:てきの[kana]だめ-じ[kana]が はんぶんに なりますよ!|
-|VRAM1|7600|780|530B2E19DFF4C7029F17128B9DE430EC29FC8423256D43E2E4A96D625ECA7B11|60|43|130|28|black|#DFFFFFFF|Seems it wasn’t to your<br>liking. Please come again!|おきにめさなかったようですね<br>またのおこしをまっています!|
+|VRAM1|7600|780|530B2E19DFF4C7029F17128B9DE430EC29FC8423256D43E2E4A96D625ECA7B11|60|43|130|28|black|#DFFFFFFF|Seems it wasn’t to your<br>liking. Come again!|おきにめさなかったようですね<br>またのおこしをまっています!|
 
 
 ### Rice ball Shop
@@ -351,9 +358,9 @@ WIP
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|29533F2D3B2FB6FF92DCA275E86B0618154DF3B9DBCD13D407C34211C935AF61|60|55|125|30|black|#DFFFFFFF| Well done coming, Momotaro!<br>How about a little exercise?! |おおよくきた ももたろうよ!<br>かるい うんどうでもどうぢゃ!|
-|VRAM1|D700|C00|69705DD68F67AE7DE45090C0F0DFE77914F4B4BEE912CEE77C1F3D6BB2E109FE|60|55|125|30|black|#DFFFFFFF| Dodge the falling poop!<br>Wahaha! |おちてくるウンチをよけるのちゃ! ウヒャヒャ!|
-|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|125|30|black|#DFFFFFFF| Head right to the goal!<br>Ready? Start!|
+|VRAM1|D700|C00|29533F2D3B2FB6FF92DCA275E86B0618154DF3B9DBCD13D407C34211C935AF61|60|55|125|30|black|#DFFFFFFF|Well done coming, Momotaro!<br>How about a little exercise?! |おおよくきた ももたろうよ!<br>かるい うんどうでもどうぢゃ!|
+|VRAM1|D700|C00|69705DD68F67AE7DE45090C0F0DFE77914F4B4BEE912CEE77C1F3D6BB2E109FE|60|55|125|30|black|#DFFFFFFF|Dodge the falling poop!<br>Wahaha! |おちてくるウンチをよけるのちゃ! ウヒャヒャ!|
+|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|125|30|black|#DFFFFFFF|Head right to the goal!<br>Ready? Start!| |
 
 
 ### Hermit 2
@@ -373,7 +380,7 @@ WIP
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D080|500|1A3F28FACB6D896C8E4E81C75DFC95C08EB9C84B6828F2ACA6BD1100E737AA8D|60|45|130|50|black|#CFFFFFFF|With a few stones<br>from Nichirin!|にちりんの<br>つぶて<br>さえあれば|
+|VRAM1|D080|500|1A3F28FACB6D896C8E4E81C75DFC95C08EB9C84B6828F2ACA6BD1100E737AA8D|60|45|130|50|black|#CFFFFFFF|With a few Sun Shards|にちりんの<br>つぶて<br>さえあれば|
 |VRAM1|D080|500|297F30F15DB2854BD67A6AC53664F1DBE8A1704DC22A57FDC48200D1C124919D|60|45|130|50|black|#CFFFFFFF|The onis around<br>here aren’t that scary.|ここらへんの<br>オニは<br>こわくないぞ|
 |VRAM1|D080|500|9838AC4529D95449BCC25191301DD1D22DB8E84EB55F761565ED0BCC466BCE22|60|45|130|50|black|#CFFFFFFF|This is Netaro’s village.|ここは<br>ねたろうの<br>むら|
 |VRAM1|D080|500|56436D704C500BAC148DD8B39FAF2EDD73157FF99FE74660736CD8E087C5D5B1|60|45|130|50|black|#CFFFFFFF|Where the ground<br>is frozen…|じめんが<br>こおっている<br>ところは|
@@ -412,43 +419,43 @@ TODO: winning messages
 #|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Thank you, Momotaro!<br>Very, very good!|サンキュー ミスターももたろう ベリーベリーグッドですよ!|
 #|VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF|Go, Momo-chan!<br>Push, Momo-chan! Yay!|いけいけ ももちゃん!<br>おせおせ ももちゃん! ワーイ!|
 
+//|VRAM1|D080|500||60|45|130|50|black|#CFFFFFFF|Got Yuki’s Rice Ball |ユキの オニギリを  てにいれた|
 
-//|VRAM1|D080|500||60|45|130|50|black|#CFFFFFFF| Got Ice Fang |ひょうがの....てに いれた |
-//|VRAM1|D080|500||60|45|130|50|black|#CFFFFFFF| Got Yuki’s Rice Ball |ユキの オニギリを  てにいれた|
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D080|500|5A607355781A7FD6459FBCF2B0791423B79248B09539DFEFC608F5D4A98F5B87|60|45|130|50|black|#CFFFFFFF| Got the Cloak of<br>Invisibility|かくれみの....てに いれた |
-|VRAM1|D080|500|AF0252BECB8614875E92A472ED929635CAB92E9086BA3A02D0DADC6B82D0097E|60|45|130|50|black|#CFFFFFFF| Got a Rice Ball|からだの<br>オニギリを<br>てにいれた|
-|VRAM1|D080|500|5C849659504CB4EC564CC25421196BBF424343A373AE1D31192EE162B6C1CA46|60|45|130|50|black|#CFFFFFFF| Got a Dumpling|きびたんこを<br>てにいれた|
-|VRAM1|D080|500|E35F6CBBBE48CDAE60EC74D8DFCFFBA44D623C5C020CD57B47625CB3C81B979B|60|45|130|50|black|#CFFFFFFF| Got a Dumpling|きびたんこを<br>てにいれた|
-|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF| Momotaro took a dog<br>with him.|ももたろうは<br>いぬを<br>おともにした|
-|VRAM1|D080|500|CE0738D5C3A326C1110A2CCB94A3A1BD43AF21864274566B5DB40958323643B7|60|45|130|50|black|#CFFFFFFF| Momotaro got 10 ryo|ももたろうは<br>10両を<br>てにいれた|
-|VRAM1|D080|500|458444F9B30F0CF03340FE721D5F2AF99E05204C6F37A5B4F464D2CF70208AC7|60|45|130|50|black|#CFFFFFFF| Momotaro got 30 ryo|ももたろうは<br>30両を<br>てにいれた|
-|VRAM1|D080|500|DDBACD045983EF459A5707421A23DB44B38661C8F8C8CFEA4BB9317609903F47|60|45|130|50|black|#CFFFFFFF| Momotaro got 100 ryo|ももたろうは<br>100両を<br>てにいれた|
-|VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF| Momotaro took a<br>pheasant with him.|ももたろうは<br>きじを<br>おともにした|
-|VRAM1|D080|500|B9C5C50C31BEF7D80D6D9F763B6CDCFBB984F38E24F436166CF7E13D6E14FC05|60|45|130|50|black|#CFFFFFFF| Got Peach Fall.|ももふれ<br>ボウズを<br>てにいれた|
-|VRAM1|D080|500|1EB758291E5BDD57874DFCB70FD6458F0A4572BA66520FFE88AC0010870BF650|60|45|130|50|black|#CFFFFFFF| Momotaro took a<br>monkey with him.|ももたろう<br>はさるを<br>おともにした|
+|VRAM1|D080|500|6CE3A0317BE508D2CEA67D47E7A1FB7E4394B392BB9FA83E38D253669FB587B0|60|45|130|50|black|#CFFFFFFF|Got Ice Shard|ひょうがのつぶてに  いれた|
+|VRAM1|D080|500|5A607355781A7FD6459FBCF2B0791423B79248B09539DFEFC608F5D4A98F5B87|60|45|130|50|black|#CFFFFFFF|Got the Cloak of<br>Invisibility|かくれみの....てに いれた |
+|VRAM1|D080|500|AF0252BECB8614875E92A472ED929635CAB92E9086BA3A02D0DADC6B82D0097E|60|45|130|50|black|#CFFFFFFF|Got a Rice Ball|からだの<br>オニギリを<br>てにいれた|
+|VRAM1|D080|500|5C849659504CB4EC564CC25421196BBF424343A373AE1D31192EE162B6C1CA46|60|45|130|50|black|#CFFFFFFF|Got a Dumpling|きびたんこを<br>てにいれた|
+|VRAM1|D080|500|E35F6CBBBE48CDAE60EC74D8DFCFFBA44D623C5C020CD57B47625CB3C81B979B|60|45|130|50|black|#CFFFFFFF|Got a Dumpling|きびたんこを<br>てにいれた|
+|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Momotaro took a dog<br>with him.|ももたろうは<br>いぬを<br>おともにした|
+|VRAM1|D080|500|CE0738D5C3A326C1110A2CCB94A3A1BD43AF21864274566B5DB40958323643B7|60|45|130|50|black|#CFFFFFFF|Momotaro got 10 ryo|ももたろうは<br>10両を<br>てにいれた|
+|VRAM1|D080|500|458444F9B30F0CF03340FE721D5F2AF99E05204C6F37A5B4F464D2CF70208AC7|60|45|130|50|black|#CFFFFFFF|Momotaro got 30 ryo|ももたろうは<br>30両を<br>てにいれた|
+|VRAM1|D080|500|DDBACD045983EF459A5707421A23DB44B38661C8F8C8CFEA4BB9317609903F47|60|45|130|50|black|#CFFFFFFF|Momotaro got 100 ryo|ももたろうは<br>100両を<br>てにいれた|
+|VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF|Momotaro took a<br>pheasant with him.|ももたろうは<br>きじを<br>おともにした|
+|VRAM1|D080|500|B9C5C50C31BEF7D80D6D9F763B6CDCFBB984F38E24F436166CF7E13D6E14FC05|60|45|130|50|black|#CFFFFFFF|Got Peach Fall.|ももふれ<br>ボウズを<br>てにいれた|
+|VRAM1|D080|500|1EB758291E5BDD57874DFCB70FD6458F0A4572BA66520FFE88AC0010870BF650|60|45|130|50|black|#CFFFFFFF|Momotaro took a<br>monkey with him.|ももたろう<br>はさるを<br>おともにした|
 
 
 ## Urashima Village
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D080|500|C9B68E6EA905E5D6DD38E5B77F64E81604478566D5F436DB1A9CA6F7C64E4151|60|45|130|50|black|#CFFFFFFF| |ここは<br>うらしまの<br>むら|
-|VRAM1|D080|500|DB8A9380F02594658505ED84C2B5667BE125B084CBE27293DF21220CA352DBD1|60|45|130|50|black|#CFFFFFFF| |わしは<br>むかしは<br>うみで|
-|VRAM1|D080|500|40FC46A0291CE31A62D53EC2CEC1124B20A670FF185C24F57656BF380D4C5F99|60|45|130|50|black|#CFFFFFFF| |ササエなどを<br>とる「 あま」<br>じゃった|
-|VRAM1|D080|500|D2F9F85600F7093B174C59E7E9E2F3116B9E0C416E66E76B0C65355742953C60|60|45|130|50|black|#CFFFFFFF| |うみのなかの<br>ことなら<br>くわしいぞよ|
-|VRAM1|D080|500|A28405B17B0D1F0C76502C37B050C115E3CB8A02F651CABA086260A6C9223B6D|60|45|130|50|black|#CFFFFFFF| |かっぱの<br>みずかきって<br>しってる?|
-|VRAM1|D080|500|2BE98D7A5BB4555DEC6ABD6EE9A1981636AF79D46617E22FA8A905182C88CB95|60|45|130|50|black|#CFFFFFFF| |すいちゅうで<br>じゆうに<br>およげるのよ|
-|VRAM1|D080|500|672FEF9E49D4C54D1E64E8AE90021E75F192477D276801EFAE9C38CFE5B9D3C2|60|45|130|50|black|#CFFFFFFF| |どうぐやさん<br>にあるから|
-|VRAM1|D080|500|971212C391C25DE3005DD62BF1A14452232CF5096AEFBCD5FFBB763C42A9C17C|60|45|130|50|black|#CFFFFFFF| |かっていった<br>ほうが<br>いいわよ!!|
-|VRAM1|D080|500|26BDD4A673C8D6BBC757B7E86B7F0A7B4E6FF8279B0209B3CC0E581A23CB9AF1|60|45|130|50|black|#CFFFFFFF| |カメのこうら<br>がないと|
-|VRAM1|D080|500|34B94D3ED784808588D5AF0ADB8E0F5E0D1F05014071D26007777FE5EE7189CD|60|45|130|50|black|#CFFFFFFF| |うみには<br>もぐれない<br>んだってさ!!|
-|VRAM1|D080|500|EBAC22BA577EF73CC92E5D114AEBD0622B09C2940B4E0A354733FE57BFDA9263|60|45|130|50|black|#CFFFFFFF| |でも<br>どうやったら<br>てにはいるの|
-|VRAM1|D080|500|B7812538AEA9DA9E5C03D773BBDF3DE1323116FA3413C5D4D3A833F62FAB0603|60|45|130|50|black|#CFFFFFFF| |うらしまが<br>おとずれたりゅうぐうも|
-|VRAM1|D080|500|EEDEE9F985883C2DD5FA6024FEEBDB9F2C62170E8E5A3331D4CC5F943829330C|60|45|130|50|black|#CFFFFFFF| |いまでは<br>オニたちの<br>ものに|
-|VRAM1|D080|500|9B61251C2BF1ECC2B694A25282E28020C4AF37BD4883E2076FE5B9880D3D64D4|60|45|130|50|black|#CFFFFFFF| |うみが<br>あれてしもて|
-|VRAM1|D080|500|8A944872281B0958D3CE014E2FE99CA39DFC6002B5310F8BA952DF3D3B09F9EA|60|45|130|50|black|#CFFFFFFF| |りょうにでる<br>ことが<br>できねえ!!|
-|VRAM1|D080|500|CCF4603E194ADA61241ED3BC8EA3B7CFA41FE1838EEAC99310D53DF7FCE30B4A|60|45|130|50|black|#CFFFFFFF| |このままじゃ<br>オラたち<br>しんじまう!!|
-|VRAM1|D080|500|CF96EDDBAF486BA1B6E89123737C61D60D2760BC9E86F7C49DECF9DA9EE4154E|60|45|130|50|black|#CFFFFFFF| |どないすれば<br>いいんじゃ!!|
+|VRAM1|D080|500|C9B68E6EA905E5D6DD38E5B77F64E81604478566D5F436DB1A9CA6F7C64E4151|60|45|130|50|black|#CFFFFFFF|This is Urashima<br>Village|ここは<br>うらしまの<br>むら|
+|VRAM1|D080|500|DB8A9380F02594658505ED84C2B5667BE125B084CBE27293DF21220CA352DBD1|60|45|130|50|black|#CFFFFFFF|Long ago<br>I worked at sea|わしは<br>むかしは<br>うみで|
+|VRAM1|D080|500|40FC46A0291CE31A62D53EC2CEC1124B20A670FF185C24F57656BF380D4C5F99|60|45|130|50|black|#CFFFFFFF|Diving for shellfish<br>like turban snails|ササエなどを<br>とる「 あま」<br>じゃった|
+|VRAM1|D080|500|D2F9F85600F7093B174C59E7E9E2F3116B9E0C416E66E76B0C65355742953C60|60|45|130|50|black|#CFFFFFFF|I know lots about life<br>under the sea|うみのなかの<br>ことなら<br>くわしいぞよ|
+|VRAM1|D080|500|A28405B17B0D1F0C76502C37B050C115E3CB8A02F651CABA086260A6C9223B6D|60|45|130|50|black|#CFFFFFFF|Ever heard<br>of Kappa Flippers?|かっぱの<br>みずかきって<br>しってる?|
+|VRAM1|D080|500|2BE98D7A5BB4555DEC6ABD6EE9A1981636AF79D46617E22FA8A905182C88CB95|60|45|130|50|black|#CFFFFFFF|They let you<br>swim freely<br>underwater|すいちゅうで<br>じゆうに<br>およげるのよ|
+|VRAM1|D080|500|672FEF9E49D4C54D1E64E8AE90021E75F192477D276801EFAE9C38CFE5B9D3C2|60|45|130|50|black|#CFFFFFFF|You can find<br>them at the shop|どうぐやさん<br>にあるから|
+|VRAM1|D080|500|971212C391C25DE3005DD62BF1A14452232CF5096AEFBCD5FFBB763C42A9C17C|60|45|130|50|black|#CFFFFFFF|You’d better<br>buy some!!|かっていった<br>ほうが<br>いいわよ!!|
+|VRAM1|D080|500|26BDD4A673C8D6BBC757B7E86B7F0A7B4E6FF8279B0209B3CC0E581A23CB9AF1|60|45|130|50|black|#CFFFFFFF|Without a<br>turtle shell|カメのこうら<br>がないと|
+|VRAM1|D080|500|34B94D3ED784808588D5AF0ADB8E0F5E0D1F05014071D26007777FE5EE7189CD|60|45|130|50|black|#CFFFFFFF|you can’t dive<br>into the sea!!|うみには<br>もぐれない<br>んだってさ!!|
+|VRAM1|D080|500|EBAC22BA577EF73CC92E5D114AEBD0622B09C2940B4E0A354733FE57BFDA9263|60|45|130|50|black|#CFFFFFFF|But how do<br>you even get one?|でも<br>どうやったら<br>てにはいるの|
+|VRAM1|D080|500|B7812538AEA9DA9E5C03D773BBDF3DE1323116FA3413C5D4D3A833F62FAB0603|60|45|130|50|black|#CFFFFFFF|Urashima once<br>visited Dragon<br>Palace too|うらしまが<br>おとずれたりゅうぐうも|
+|VRAM1|D080|500|EEDEE9F985883C2DD5FA6024FEEBDB9F2C62170E8E5A3331D4CC5F943829330C|60|45|130|50|black|#CFFFFFFF|but now<br>it belongs<br>to the onis|いまでは<br>オニたちの<br>ものに|
+|VRAM1|D080|500|9B61251C2BF1ECC2B694A25282E28020C4AF37BD4883E2076FE5B9880D3D64D4|60|45|130|50|black|#CFFFFFFF|The sea’s<br>gone wild|うみが<br>あれてしもて|
+|VRAM1|D080|500|8A944872281B0958D3CE014E2FE99CA39DFC6002B5310F8BA952DF3D3B09F9EA|60|45|130|50|black|#CFFFFFFF|We can’t even<br>go out fishing!!|りょうにでる<br>ことが<br>できねえ!!|
+|VRAM1|D080|500|CCF4603E194ADA61241ED3BC8EA3B7CFA41FE1838EEAC99310D53DF7FCE30B4A|60|45|130|50|black|#CFFFFFFF|At this rate<br>we’ll all perish!!|このままじゃ<br>オラたち<br>しんじまう!!|
+|VRAM1|D080|500|CF96EDDBAF486BA1B6E89123737C61D60D2760BC9E86F7C49DECF9DA9EE4154E|60|45|130|50|black|#CFFFFFFF|What on earth<br>should we do?!|どないすれば<br>いいんじゃ!!|

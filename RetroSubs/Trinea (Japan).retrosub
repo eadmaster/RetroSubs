@@ -13,27 +13,29 @@ compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 
 ## Story Intro
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM|6000|17E0|1D2A35D22EB756EEA117E0FD76E325223FA4BFDE91136C1955DD13501ABF95D2|15|150|220|70|white|#DF000000|Finally, the day has come...|いに この日か未た…<br>|
-|VRAM|6000|17E0|D0534ED916B66951C2159C9149B89AE47C7556A9A3FEAF358439B7D84D3A68FA|15|150|220|70|white|#DF000000|Time, People, Place…<br>Everything is here now!|時 ・ 人物 ・場所...  生てか<br>ここに<br>|
-|VRAM|6000|17E0|18193873DBD9212DF0C554DBFFE00E5ECEE0E936ABDE0735A70D9AB4C6FB4308|15|150|220|70|white|#DF000000|After such a long time...|長き時をこえ<br>|
-|VRAM|6000|17E0|F0E96601E09A31C4F91B26D5AAAE26485752987B24A48DB5385C451A5EAC4008|15|150|220|70|white|#DF000000|Our wishes will come true!!|我らの願いか 現実のものとなる!<br>|
-|VRAM|6000|17E0|58BB711E145A96713A9386B08EFC5F924E31122A723DB9B910E105EBB0BE1B9E|15|150|220|70|white|#DF000000|Now...<br>  With our magical powers,<br>    we can seize the chaos!|きあ 我らか鹿力で その混泣の力壱この手に<br>|
-|VRAM|6000|17E0|7E8C6E6B1433FFCB7D42C96BE4B904ADF6B79FD4FEFB2A35DF76CD7514A35B67|15|150|220|70|#FFFFFFFF|#AF000000|If even one of us falters,<br>our lives will vanish...<br>swallowed by darkness!!|一人でも気がみだれれば<br>我々の命は･･･<br>闇の中に消えてしまうぞ!!|
-|VRAM|6000|17E0|9D44445C7C52A18CF696C4F09E2F1E2D04909B3398CF468FE977B0DAF3FE82E3|15|150|220|70|#FFFFFFFF|#AF000000|O King of Chaos and Darkness...|混沌の闇の王よ･･･|
-|VRAM|6000|17E0|5D999198E66014F93862BA22A3A10A14836E095AD4D8E234BD49F909BEC7F196|15|150|220|70|#FFFFFFFF|#AF000000|O god who rules over evil...|悪の力を司る神よ･･･|
-|VRAM|6000|17E0|6E872560C930575D635D3E986388EE78BCE2B8C96E65A8AB049091EA88783BDD|15|150|220|70|#FFFFFFFF|#AF000000|Now, from your long slumber,<br>awaken before us...!|今その長きねむりより<br>我らの前に目覚める時･･･|
-|VRAM|6000|17E0|FC69B081DCF52C9064F6F71CEBF9E3D1278E11AD3BA178D34156B6186A166795|15|150|220|70|#FFFFFFFF|#AF000000|Here and now...<br>the legendary powers of<br>Water, Nature and Fire become TRINEA...|今ここに･･･<br>【青/緑/紅】の伝説の力が<br>TRINEAとなる･･････。|
-|VRAM|6000|17E0|F36B17BE1DBE6667E0B26429EAEB0443BF78E6D45919B3B1F946D258794E8EBA|15|150|220|70|#FFFFFFFF|#AF000000|With this power of revival,<br>answer our wish!|その復活の力で<br>我らの願いに応えよ!|
-|VRAM|6000|17E0|CB021DB698E4A708685856B21362527AA664E6BA1963C028EC3EB1816FA87142|15|150|220|70|#FFFFFFFF|#AF000000|Is it you...?|お前たちか?|
-|VRAM|6000|17E0|EBDD5267EEBCF3270EBB8E323D894AD3A8A351C3A44562B6529CB093BD571DAE|15|150|220|70|#FFFFFFFF|#AF000000|You who dare summon me<br>from my long sleep...<br>foolish mortals...|我を･･･<br>長き時より呼び出す<br>おろかなる者たちよ･･･････。|
-|VRAM|6000|17E0|F1E4A328AD196D6CF962A0DCB7507A882EB0570FD1CDC2EF392EC7A66B1A935F|15|150|220|70|#FFFFFFFF|#AF000000|In the name of the Dark King of Chaos,<br>who rules TRINEA...<br>let the ancient Oath be sworn here!!|TRINEAを 司る<br>混沌の閣黒大王の名のもとに･･･<br>古の《ちかい≫を今ここで!!|
-|VRAM|6000|17E0|AAED24214775EEB4572279CCECB62D80EADCA16A71C3D6008FAF8FAF118AE5D6|15|150|220|70|#FFFFFFFF|#AF000000|Hah hah hah...<br>Very well! What is your desire?|ハッハッハッ･･････<br>よかろう! 何が のぞみだ?|
-|VRAM|6000|17E0|C584B3CC4349A41D70D357045AC4FA81687451EA606A782570C1D157805061AB|15|150|220|70|#FFFFFFFF|#AF000000|Grant us the power<br>to conquer all living things<br>in this world!!|生きとし生ける物<br>その全てを征服する力を<br>この我らの手にあたえよ!!|
-|VRAM|6000|17E0|5C6AA3B93E1FE7F1487F31AC94ED789D646D738C1F798C575DA2980A05DD10E7|15|150|220|70|#FFFFFFFF|#AF000000|Hah hah hah!!<br>Is that truly all you wish for? So trivial!|ハッハッハッ!!<br>そのようなつまらぬ事でよいのか?|
-|VRAM|6000|17E0|74061CAA7068251FD1E34B078FDF28FC10F01883110D4E19EE83D61707381255|15|150|220|70|#FFFFFFFF|#AF000000|Then so be it...<br>Your wish is granted!!<br>Hah hah hah...|ならば･･･ <br>その願い しかと聞きとげたぞ!!<br>ハッハッハッ･･････|
-|VRAM|6000|17E0|B666F53A01E816B2F828E2D463E4A4370638D753D04335EDF36B67F9825C41BD|15|150|220|70|#FFFFFFFF|#AF000000|Thus the Oath is fulfilled.<br>Let terror and suffering engulf the world!!<br>Kneel before me!|これで《ちかい≫ははたされた。<br>世界に閣と恐怖と苦しみを!!<br>我のもとにひざまずけ!|
+TODO: add padding
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|6000|17E0|1D2A35D22EB756EEA117E0FD76E325223FA4BFDE91136C1955DD13501ABF95D2|10|160|230|50|14|#FFFBF7|#DF000000|Finally, the day has come...|いに この日か未た…<br>|
+|VRAM|6000|17E0|D0534ED916B66951C2159C9149B89AE47C7556A9A3FEAF358439B7D84D3A68FA|10|160|230|50|14|#FFFBF7|#DF000000|Time, People, Place…<br>Everything is here now!|時 ・ 人物 ・場所...  生てか<br>ここに<br>|
+|VRAM|6000|17E0|18193873DBD9212DF0C554DBFFE00E5ECEE0E936ABDE0735A70D9AB4C6FB4308|10|160|230|50|14|#FFFBF7|#DF000000|After such a long time...|長き時をこえ<br>|
+|VRAM|6000|17E0|F0E96601E09A31C4F91B26D5AAAE26485752987B24A48DB5385C451A5EAC4008|10|160|230|50|14|#FFFBF7|#DF000000|Our wishes will come true!!|我らの願いか 現実のものとなる!<br>|
+|VRAM|6000|17E0|58BB711E145A96713A9386B08EFC5F924E31122A723DB9B910E105EBB0BE1B9E|10|160|230|50|14|#FFFBF7|#DF000000|Now...<br>  With our magical powers,<br>    we can seize the chaos!|きあ 我らか鹿力で その混泣の力壱この手に<br>|
+|VRAM|6000|17E0|7E8C6E6B1433FFCB7D42C96BE4B904ADF6B79FD4FEFB2A35DF76CD7514A35B67|10|160|230|50|14|#FFFBF7|#DF000000|If even one of us falters,<br>our lives will vanish...<br>swallowed by darkness!!|一人でも気がみだれれば<br>我々の命は･･･<br>闇の中に消えてしまうぞ!!|
+|VRAM|6000|17E0|9D44445C7C52A18CF696C4F09E2F1E2D04909B3398CF468FE977B0DAF3FE82E3|10|160|230|50|14|#FFFBF7|#DF000000|O King of Chaos and Darkness...|混沌の闇の王よ･･･|
+|VRAM|6000|17E0|5D999198E66014F93862BA22A3A10A14836E095AD4D8E234BD49F909BEC7F196|10|160|230|50|14|#FFFBF7|#DF000000|O god who rules over evil...|悪の力を司る神よ･･･|
+|VRAM|6000|17E0|6E872560C930575D635D3E986388EE78BCE2B8C96E65A8AB049091EA88783BDD|10|160|230|50|14|#FFFBF7|#DF000000|Now, from your long slumber,<br>awaken before us...!|今その長きねむりより<br>我らの前に目覚める時･･･|
+|VRAM|6000|17E0|FC69B081DCF52C9064F6F71CEBF9E3D1278E11AD3BA178D34156B6186A166795|10|160|230|50|14|#FFFBF7|#DF000000|Here and now...<br>the legendary powers of Water,<br>Nature and Fire become TRINEA...|今ここに･･･<br>【青/緑/紅】の伝説の力が<br>TRINEAとなる･･････。|
+|VRAM|6000|17E0|F36B17BE1DBE6667E0B26429EAEB0443BF78E6D45919B3B1F946D258794E8EBA|10|160|230|50|14|#FFFBF7|#DF000000|With this power of revival,<br>answer our wish!|その復活の力で<br>我らの願いに応えよ!|
+|VRAM|6000|17E0|CB021DB698E4A708685856B21362527AA664E6BA1963C028EC3EB1816FA87142|10|160|230|50|14|#FFFBF7|#DF000000|Is it you...?|お前たちか?|
+|VRAM|6000|17E0|EBDD5267EEBCF3270EBB8E323D894AD3A8A351C3A44562B6529CB093BD571DAE|10|160|230|50|14|#FFFBF7|#DF000000|You who dare summon me<br>from my long sleep...<br>foolish mortals...|我を･･･<br>長き時より呼び出す<br>おろかなる者たちよ･･･････。|
+|VRAM|6000|17E0|F1E4A328AD196D6CF962A0DCB7507A882EB0570FD1CDC2EF392EC7A66B1A935F|10|160|230|50|14|#FFFBF7|#DF000000|In the name of the Dark King of<br>Chaos, who rules TRINEA...<br>let the ancient Oath be sworn here!!|TRINEAを 司る<br>混沌の閣黒大王の名のもとに･･･<br>古の《ちかい≫を今ここで!!|
+|VRAM|6000|17E0|AAED24214775EEB4572279CCECB62D80EADCA16A71C3D6008FAF8FAF118AE5D6|10|160|230|50|14|#FFFBF7|#DF000000|Hah hah hah...<br>Very well! What is your desire?|ハッハッハッ･･････<br>よかろう! 何が のぞみだ?|
+|VRAM|6000|17E0|C584B3CC4349A41D70D357045AC4FA81687451EA606A782570C1D157805061AB|10|160|230|50|14|#FFFBF7|#DF000000|Grant us the power<br>to conquer all living things<br>in this world!!|生きとし生ける物<br>その全てを征服する力を<br>この我らの手にあたえよ!!|
+|VRAM|6000|17E0|5C6AA3B93E1FE7F1487F31AC94ED789D646D738C1F798C575DA2980A05DD10E7|10|160|230|50|14|#FFFBF7|#DF000000|Hah hah hah!!<br>Is that truly all you wish for?<br>So trivial!|ハッハッハッ!!<br>そのようなつまらぬ事でよいのか?|
+|VRAM|6000|17E0|74061CAA7068251FD1E34B078FDF28FC10F01883110D4E19EE83D61707381255|10|160|230|50|14|#FFFBF7|#DF000000|Then so be it...<br>Your wish is granted!!<br>Hah hah hah...|ならば･･･ <br>その願い しかと聞きとげたぞ!!<br>ハッハッハッ･･････|
+|VRAM|6000|17E0|B666F53A01E816B2F828E2D463E4A4370638D753D04335EDF36B67F9825C41BD|10|160|230|50|14|#FFFBF7|#DF000000|Thus the Oath is fulfilled.<br>Let terror and suffering engulf<br>the world!! Kneel before me!|これで《ちかい≫ははたされた。<br>世界に閣と恐怖と苦しみを!!<br>我のもとにひざまずけ!|
 
 TODO: translate Tetsuya Mifune, Hornisse stories
 
@@ -42,18 +44,18 @@ TODO: translate Tetsuya Mifune, Hornisse stories
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM|7080|4E0|51DBC28BC5BC5F720E7563FA0A9F5DE7C20DCAD361FA776BAA7C2C363F87C67A|20|15|220|90|#FFFFFFFF|#AF000000|Name: Sara Weathers|名前 《サラ・ウェサ ス》|
-|VRAM|7080|4E0|2EDAB038905443D9DDB7565FDA2A47F55D16EF64FEA15504B35B4000EE78841F|20|15|220|90|#FFFFFFFF|#AF000000|Name: Sara Weathers<br> <br>Deep in a certain forest, a gentle<br>young girl lived happily with her father,<br>loving nature and all the animals around<br>her. Even such a kind girl, however, had<br>a few small worries.<br>|《名前 ≪サラ・ウェザーズ≫<br>あるもりのおくふかくにしぜんをあいしどうぶつ<br>たちをあいしているやさしいしょうじょがちちおや<br>ととてもしあわせにくらしていました。そんなしょ<br>うしょにもすこしだけなやみがありました。しょうじ|
-|VRAM|7080|4E0|D60D87DDE6829AE3202E15E8C42CC5080DC2A1FB8D5E6C9FB4316298CDB8C5DE|20|15|220|90|#FFFFFFFF|#AF000000|Name: Sara Weathers<br> <br>She had grown big wings and large<br>horns on her head, and recently, she<br>had begun to master the control of fire.|名前 ≪サラ・ウェザーズ≫ょにはりっぱなはねがはえていてあたまにはおおきなつのがはえていたこととこのごろほのおをしゆうにあやつれるようになっていたことでした。|
-|VRAM|7080|4E0|3D64104880338E8759C5F255AEB06B8B1EB48CBE80D31B91A158839922CAF0A3|20|15|220|90|#FFFFFFFF|#AF000000|Name: Sara Weathers<br> <br>Favorite saying: “Treasure nature.”<br>Favorite person: “Her father.”<br>Catchphrase: “Am I… strange?”|名前 ≪サラ・ウェザーズ≫ すきなことは『しぜんをたいせっにね』<br>すきなひと 『おとうさん』<br>くちくせ 『わたしおかしいのかなー?』|
-|VRAM|7080|4E0|AE5B70D1012A568908F120702711A8C005A8478555865435DF6396AD4A864734|20|15|220|90|#FFFFFFFF|#AF000000|Name: Tetsuya Mifune |《御船<br>哲也》 |
-|VRAM|7080|4E0|D7B13E54D128A6B8A583D91495584AAA91545D813A9296713EB5CBB42431A982|20|15|220|90|#FFFFFFFF|#AF000000|Name: Tetsuya Mifune<br> <br>He is the fourth member of the elite<br>special defense unit of Neo Edo,<br>famously known as Neo Edo’s strongest<br>corps the “E.S.P. 8.”|ネオ江戸さいきょうぶたいとなだかい ネオ江戸ぼうえいたいだいとくしゅぶたい つうしょう『E・S ・P・8』の4はんめのたいいんてある。|
-|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|20|15|220|90|#FFFFFFFF|#AF000000|Name: Tetsuya Mifune<br> <br>He secretly admires a girl named Ruria<br>Midori Lucia, an American-born member of<br>the team. The two actually like each other,<br>but neither has realized it.|《『緑』にはひそかにあこがれているしょせいがいるなまえは『ルリアみどりルーシア』といい・アメリカけいせいてある。しっはふたりはりょうおもいなのだがふたりともきずいてない。|
-|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|20|15|220|90|#FFFFFFFF|#AF000000|Name: Tetsuya Mifune<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria Midori Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
-|VRAM|7080|4E0|34A336268D08405B6391B79F95E9C7B50DA32EBE08911BD2595C9CE8D7D23A7A|20|15|220|90|#FFFFFFFF|#AF000000|Name: Hornisse|名前 《ホルニッセ》|
-|VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|20|15|220|90|#FFFFFFFF|#AF000000|Name: Hornisse<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 ≪ホルニッセ≫ きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
-|VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|20|15|220|90|#FFFFFFFF|#AF000000|Name: Hornisse<br> <br>In battle, his crimson cape billows as he<br>wields his greatsword, cutting deeply into<br>his foes! He fights with fearless courage.| 名前 ≪ホルニッセ≫ たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
-|VRAM|7080|4E0|BA56E39C48AC0DB1DC5FF6A06B2A8B0AA04836FD1A8554810FEA790775BA01A1|20|15|220|90|#FFFFFFFF|#AF000000|Name: Hornisse<br> <br>Favorite thing: Peace<br>Favorite person: Lisa Weathers<br>Catchphrase: “We must make the world<br>peaceful soon.”<br>s|名前 ≪ホルニッセ≫ すきなことは『へいわ』<br>すきなひと 『リサ・ウェザース』<br>くちくせ 『はやくへいわなよのなかにしなければ』
+|VRAM|7080|4E0|51DBC28BC5BC5F720E7563FA0A9F5DE7C20DCAD361FA776BAA7C2C363F87C67A|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers|名前 《サラ・ウェサ ス》|
+|VRAM|7080|4E0|2EDAB038905443D9DDB7565FDA2A47F55D16EF64FEA15504B35B4000EE78841F|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Deep in a certain forest, a gentle<br>young girl lived happily with her father,<br>loving nature and all the animals around<br>her. Even such a kind girl, however, had<br>a few small worries.<br>|《名前 ≪サラ・ウェザーズ≫<br>あるもりのおくふかくにしぜんをあいしどうぶつ<br>たちをあいしているやさしいしょうじょがちちおや<br>ととてもしあわせにくらしていました。そんなしょ<br>うしょにもすこしだけなやみがありました。しょうじ|
+|VRAM|7080|4E0|D60D87DDE6829AE3202E15E8C42CC5080DC2A1FB8D5E6C9FB4316298CDB8C5DE|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>She had grown big wings and large<br>horns on her head, and recently, she<br>had begun to master the control of fire.|名前 ≪サラ・ウェザーズ≫ょにはりっぱなはねがはえていてあたまにはおおきなつのがはえていたこととこのごろほのおをしゆうにあやつれるようになっていたことでした。|
+|VRAM|7080|4E0|3D64104880338E8759C5F255AEB06B8B1EB48CBE80D31B91A158839922CAF0A3|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Favorite saying: “Treasure nature.”<br>Favorite person: “Her father.”<br>Catchphrase: “Am I… strange?”|名前 ≪サラ・ウェザーズ≫ すきなことは『しぜんをたいせっにね』<br>すきなひと 『おとうさん』<br>くちくせ 『わたしおかしいのかなー?』|
+|VRAM|7080|4E0|AE5B70D1012A568908F120702711A8C005A8478555865435DF6396AD4A864734|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune |《御船<br>哲也》 |
+|VRAM|7080|4E0|D7B13E54D128A6B8A583D91495584AAA91545D813A9296713EB5CBB42431A982|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He is the fourth member of the elite<br>special defense unit of Neo Edo,<br>famously known as Neo Edo’s strongest<br>corps the “E.S.P. 8.”|ネオ江戸さいきょうぶたいとなだかい ネオ江戸ぼうえいたいだいとくしゅぶたい つうしょう『E・S ・P・8』の4はんめのたいいんてある。|
+|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He secretly admires a girl named Ruria<br>Midori Lucia, an American-born member of<br>the team. The two actually like each other,<br>but neither has realized it.|《『緑』にはひそかにあこがれているしょせいがいるなまえは『ルリアみどりルーシア』といい・アメリカけいせいてある。しっはふたりはりょうおもいなのだがふたりともきずいてない。|
+|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria Midori Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
+|VRAM|7080|4E0|34A336268D08405B6391B79F95E9C7B50DA32EBE08911BD2595C9CE8D7D23A7A|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse|名前 《ホルニッセ》|
+|VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 ≪ホルニッセ≫ きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
+|VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>In battle, his crimson cape billows as he<br>wields his greatsword, cutting deeply into<br>his foes! He fights with fearless courage.| 名前 ≪ホルニッセ≫ たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
+|VRAM|7080|4E0|BA56E39C48AC0DB1DC5FF6A06B2A8B0AA04836FD1A8554810FEA790775BA01A1|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>Favorite thing: Peace<br>Favorite person: Lisa Weathers<br>Catchphrase: “We must make the world<br>peaceful soon.”<br>s|名前 ≪ホルニッセ≫ すきなことは『へいわ』<br>すきなひと 『リサ・ウェザース』<br>くちくせ 『はやくへいわなよのなかにしなければ』
 
 
 ### Shop
@@ -61,33 +63,34 @@ TODO: translate Tetsuya Mifune, Hornisse stories
 TODO:
 //|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 //|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-//|VRAM|7440|130|...|30|150|200|50|#FFFFFFFF|#AF000000| | |
+//|VRAM|7440|130|...|30|150|200|50|#FFFBF7|#DF000000| | |
 
 
 ### Save Select, Story Intro
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM|2000|1000|005B2F810A69F10724B29F6A07EBACDDD57643AA4AD0856C9FE9921AEA6B4E12|30|150|200|50|#FFFFFFFF|#AF000000|≪Chronicle of Time≫<br>Let us record the ages!|≪暦者の書》<br>時を書きとめます!|
-|VRAM|2000|1000|1C0AE30C4B115B74A0083E3134D3CFF27A10CBA27A9903C505EEAA6A89BDB5FC|30|150|200|50|#FFFFFFFF|#AF000000|Chronicle 【1】<br>Chronicle 【2】<br>Chronicle 【3】|曆本【1】<br>曆本【2】<br>曆本【3】|
-|VRAM|2000|1000|A681CD8AE3B452E52B219FEF961F281CD3AC4B1A2B0D128825AB4C577217F060|30|150|200|50|#FFFFFFFF|#AF000000|Chronicle 【1】<br>The record has been written!|暦本 【1】<br>時を書きとゆました!!|
-|VRAM|2000|1000|8FF37852BCDF66B2ECB378DB62E21FBAF0F403F523622717E543015731E598EA|30|150|200|50|#FFFFFFFF|#AF000000|Deep within the forest...|もりの奥深く...|
-|VRAM|2000|1000|63069CB27ED76E306B17D042175B6A017B37D260BFAAE187FC98C1D7D7896AED|30|150|200|50|#FFFFFFFF|#AF000000|In a place hidden far inside,<br>a quiet house stood<br>as if one with the forest.|それも  かなり深い所に<br>もりと同調しているように<br>ひっそりとたっている家。|
-|VRAM|2000|1000|7837E85F134B1A64496AC86EDB12CAB7C0A70642AC7FD8CB7EE1CCB45E1B3653|30|150|200|50|#FFFFFFFF|#AF000000|There, a winged girl<br>lived in peace<br>together with her father.|そこに翼を持った<br>少女が父と二人<br>平和に暮らしていました。|
-|VRAM|2000|1000|8A60736F568ECA541E2DBE280209C5F6F93CDCF0A4CEF86F17B0571A8974C206|30|150|200|50|#FFFFFFFF|#AF000000|Her name was...<br>Sara Weathers.|少女の名は...<br>サラ ウェザース。|
-|VRAM|2000|1000|4F236B8A5F8694DD31AF20314933C87628CE396273B6C90E8A888A482CE2AD1E|30|150|200|50|#FFFFFFFF|#AF000000|But even Sara<br>carried three secret worries...|でも サラには<br>人知れず不安な事が<br>3つほどありました･･･。|
-|VRAM|2000|1000|411B0FE33424260D5685063F6F20A53737F3054519DE88C25E981E946F8FB9A7|30|150|200|50|#FFFFFFFF|#AF000000|The first was...<br>her father’s illness.|-つは...<br>父がはやりやまいに<br>かかっている事。|
-|VRAM|2000|1000|36B7839A2ACA6DE0F4C548B1C4DE6DEC0631FFE525F57F34C333D5036D1A8B35|30|150|200|50|#FFFFFFFF|#AF000000|The second was...<br>the wings on her back.|二つ目は...<br>自分に翼がある事。|
-|VRAM|2000|1000|06A007EB61832E007C212D7654C0116C19079290F258E84BADADDE8D13BC406F|30|150|200|50|#FFFFFFFF|#AF000000|And the last...<br>the strange dreams she’d been<br>having.|そして最後は<br>最近見る変なゆめの事。|
-|VRAM|2000|1000|A0202D441AF26E6E574D6CC86EDB96100F0C74582425E6F27DE90861CB20D9D0|30|150|200|50|#FFFFFFFF|#AF000000|Those dreams were...|そのゆめとは...|
-|VRAM|2000|1000|7B0800AE2C8EBB839377CA4D63A4EC46E85E504AB445B5DD0DA30AA055015E86|30|150|200|50|#FFFFFFFF|#AF000000|A dazzling light<br>wrapped around her………|まばゆいほどの光が<br>自分をつつみ込み………|
-|VRAM|2000|1000|947E202C1C51BB5A538B40A018452C6073AAF04F67AE7FFDA0E9B160A828F0CA|30|150|200|50|#FFFFFFFF|#AF000000|From that light,<br>a Red Dragon appeared,<br>calling out to her………|その光の中から<br>レッドドラゴンが現れ<br>自分を呼んでいる………。|
-|VRAM|2000|1000|AAB3B4B83B69EC81056EB252EF02C85A0A52691E103BB0BC8C0667FAF4F9D0A6|30|150|200|50|#FFFFFFFF|#AF000000|Such was her dream.|そんなゆめなのです。|
-|VRAM|2000|1000|66CBF7C256103AD7EDC6A9CE7E26E31E25F0246557B725A1C9A58A338B1411E4|30|150|200|50|#FFFFFFFF|#AF000000|Then one day...|そんなある日の事･･･|
-|VRAM|2000|1000|F3EC1B715D0C4E4115095ABDF83C0ED8328C9BE9562E16AB435DB0D2BFCE3423|30|150|200|50|#FFFFFFFF|#AF000000|As always, Sara set off<br>to town to buy medicine<br>for her father.|サラはいつものように<br>町へ父の素を<br>かいに出かけました。|
-|VRAM|2000|1000|13083AB26A7CB32AB0EF8273203004CF5297A5E010F60BF6387D6DC72B18B061|30|150|200|50|#FFFFFFFF|#AF000000|≪Sara≫<br>Let’s see… not forgetting anything…<br>Alright!|≪サラ≫<br>忘れ物はないわね･･････<br>よしっと。|
-|VRAM|2000|1000|BEDD4D7B32F607975821B342D6A2CB29B0492769FF249C5363C1DB670E64BA63|30|150|200|50|#FFFFFFFF|#AF000000|≪Sara’s Father≫<br>Be careful out there.<br>I can’t help but worry…|≪サラの父》<br>気をつけるんだぞ。<br>どうも心配だな･･････。|
-|VRAM|2000|1000|69046CD58B97384173736B0BE608698B5B2049E3AC4C1DAB0223A9173D139154|30|150|200|50|#FFFFFFFF|#AF000000|≪Sara≫<br>Oh, come on...<br>I’m not a little kid anymore!|≪サラ≫<br>何よォ･･･<br>もう子供じゃないわよ!|
-|VRAM|2000|1000|B3E3895EBD743B4CF40813A149A5D83E3109E5997BC679BA96A45DF69EFEDE24|30|150|200|50|#FFFFFFFF|#AF000000|≪Lilie≫<br>Wait, Sara...<br>Please, be careful.|≪リーリエ≫<br>待って サラ･･････<br>本当に気をつけてね。|
-|VRAM|2000|1000|830C51146645CE3B8FD8C94BDA6F671EF1F0EFA02128C02702F4E37709046D3A|30|150|200|50|#FFFFFFFF|#AF000000|≪Sara≫<br>Oh, really, Lilie... you too?|≪サハラ≫<br>いゃね リーリエまで･･･|
-|VRAM|2000|1000|7E9DC552AE8CC24EAE4E78F33EE988C60AA34831C71E6DDE74769BE4B8ED720E|30|150|200|50|#FFFFFFFF|#AF000000|Anyway, please take good care<br>of Father.|そんな事より お父さんを<br>よろしくねう。|
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|2000|1000|005B2F810A69F10724B29F6A07EBACDDD57643AA4AD0856C9FE9921AEA6B4E12|30|150|200|50|14|#FFFBF7|#DF000000|≪Chronicle of Time≫<br>Let us record the ages!|≪暦者の書》<br>時を書きとめます!|
+|VRAM|2000|1000|1C0AE30C4B115B74A0083E3134D3CFF27A10CBA27A9903C505EEAA6A89BDB5FC|30|150|200|50|14|#FFFBF7|#DF000000|Chronicle 【1】<br>Chronicle 【2】<br>Chronicle 【3】|曆本【1】<br>曆本【2】<br>曆本【3】|
+|VRAM|2000|1000|A681CD8AE3B452E52B219FEF961F281CD3AC4B1A2B0D128825AB4C577217F060|30|150|200|50|14|#FFFBF7|#DF000000|Chronicle 【1】<br>The record has been written!|暦本 【1】<br>時を書きとゆました!!|
+|VRAM|2000|1000|8FF37852BCDF66B2ECB378DB62E21FBAF0F403F523622717E543015731E598EA|30|150|200|50|14|#FFFBF7|#DF000000|Deep within the forest...|もりの奥深く...|
+|VRAM|2000|1000|63069CB27ED76E306B17D042175B6A017B37D260BFAAE187FC98C1D7D7896AED|30|150|200|50|14|#FFFBF7|#DF000000|In a place hidden far inside,<br>a quiet house stood<br>as if one with the forest.|それも  かなり深い所に<br>もりと同調しているように<br>ひっそりとたっている家。|
+|VRAM|2000|1000|7837E85F134B1A64496AC86EDB12CAB7C0A70642AC7FD8CB7EE1CCB45E1B3653|30|150|200|50|14|#FFFBF7|#DF000000|There, a winged girl<br>lived in peace<br>together with her father.|そこに翼を持った<br>少女が父と二人<br>平和に暮らしていました。|
+|VRAM|2000|1000|8A60736F568ECA541E2DBE280209C5F6F93CDCF0A4CEF86F17B0571A8974C206|30|150|200|50|14|#FFFBF7|#DF000000|Her name was...<br>Sara Weathers.|少女の名は...<br>サラ ウェザース。|
+|VRAM|2000|1000|4F236B8A5F8694DD31AF20314933C87628CE396273B6C90E8A888A482CE2AD1E|30|150|200|50|14|#FFFBF7|#DF000000|But even Sara<br>carried three secret worries...|でも サラには<br>人知れず不安な事が<br>3つほどありました･･･。|
+|VRAM|2000|1000|411B0FE33424260D5685063F6F20A53737F3054519DE88C25E981E946F8FB9A7|30|150|200|50|14|#FFFBF7|#DF000000|The first was...<br>her father’s illness.|-つは...<br>父がはやりやまいに<br>かかっている事。|
+|VRAM|2000|1000|36B7839A2ACA6DE0F4C548B1C4DE6DEC0631FFE525F57F34C333D5036D1A8B35|30|150|200|50|14|#FFFBF7|#DF000000|The second was...<br>the wings on her back.|二つ目は...<br>自分に翼がある事。|
+|VRAM|2000|1000|06A007EB61832E007C212D7654C0116C19079290F258E84BADADDE8D13BC406F|30|150|200|50|14|#FFFBF7|#DF000000|And the last...<br>the strange dreams<br>she’d been having.|そして最後は<br>最近見る変なゆめの事。|
+|VRAM|2000|1000|A0202D441AF26E6E574D6CC86EDB96100F0C74582425E6F27DE90861CB20D9D0|30|150|200|50|14|#FFFBF7|#DF000000|Those dreams were...|そのゆめとは...|
+|VRAM|2000|1000|7B0800AE2C8EBB839377CA4D63A4EC46E85E504AB445B5DD0DA30AA055015E86|30|150|200|50|14|#FFFBF7|#DF000000|A dazzling light<br>wrapped around her………|まばゆいほどの光が<br>自分をつつみ込み………|
+|VRAM|2000|1000|947E202C1C51BB5A538B40A018452C6073AAF04F67AE7FFDA0E9B160A828F0CA|30|150|200|50|14|#FFFBF7|#DF000000|From that light,<br>a Red Dragon appeared,<br>calling out to her………|その光の中から<br>レッドドラゴンが現れ<br>自分を呼んでいる………。|
+|VRAM|2000|1000|AAB3B4B83B69EC81056EB252EF02C85A0A52691E103BB0BC8C0667FAF4F9D0A6|30|150|200|50|14|#FFFBF7|#DF000000|Such was her dream.|そんなゆめなのです。|
+|VRAM|2000|1000|66CBF7C256103AD7EDC6A9CE7E26E31E25F0246557B725A1C9A58A338B1411E4|30|150|200|50|14|#FFFBF7|#DF000000|Then one day...|そんなある日の事･･･|
+|VRAM|2000|1000|F3EC1B715D0C4E4115095ABDF83C0ED8328C9BE9562E16AB435DB0D2BFCE3423|30|150|200|50|14|#FFFBF7|#DF000000|As always, Sara set off<br>to town to buy medicine<br>for her father.|サラはいつものように<br>町へ父の素を<br>かいに出かけました。|
+|VRAM|2000|1000|13083AB26A7CB32AB0EF8273203004CF5297A5E010F60BF6387D6DC72B18B061|30|150|200|50|14|#FFFBF7|#DF000000|≪Sara≫<br>Let’s see… not forgetting<br>anything… Alright!|≪サラ≫<br>忘れ物はないわね･･････<br>よしっと。|
+|VRAM|2000|1000|BEDD4D7B32F607975821B342D6A2CB29B0492769FF249C5363C1DB670E64BA63|30|150|200|50|14|#FFFBF7|#DF000000|≪Sara’s Father≫<br>Be careful out there.<br>I can’t help but worry…|≪サラの父》<br>気をつけるんだぞ。<br>どうも心配だな･･････。|
+|VRAM|2000|1000|69046CD58B97384173736B0BE608698B5B2049E3AC4C1DAB0223A9173D139154|30|150|200|50|14|#FFFBF7|#DF000000|≪Sara≫<br>Oh, come on...<br>I’m not a little kid anymore!|≪サラ≫<br>何よォ･･･<br>もう子供じゃないわよ!|
+|VRAM|2000|1000|B3E3895EBD743B4CF40813A149A5D83E3109E5997BC679BA96A45DF69EFEDE24|30|150|200|50|14|#FFFBF7|#DF000000|≪Lilie≫<br>Wait, Sara...<br>Please, be careful.|≪リーリエ≫<br>待って サラ･･････<br>本当に気をつけてね。|
+|VRAM|2000|1000|830C51146645CE3B8FD8C94BDA6F671EF1F0EFA02128C02702F4E37709046D3A|30|150|200|50|14|#FFFBF7|#DF000000|≪Sara≫<br>Oh, really, Lilie... you too?|≪サハラ≫<br>いゃね リーリエまで･･･|
+|VRAM|2000|1000|7E9DC552AE8CC24EAE4E78F33EE988C60AA34831C71E6DDE74769BE4B8ED720E|30|150|200|50|14|#FFFBF7|#DF000000|Anyway, please take good care<br>of Father.|そんな事より お父さんを<br>よろしくねう。|
+

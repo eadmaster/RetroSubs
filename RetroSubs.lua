@@ -69,7 +69,6 @@ function parse_markdown_multi_tables(filename)
 
         -- Detect Lua code block start
         if line:match("^%s*```lua") then
-            print(line)
             executing_lua = true
             lua_lines = {}
             goto continue
@@ -141,7 +140,8 @@ function parse_markdown_multi_tables(filename)
 
             local cols = split_markdown_row(line)
             for i, col in ipairs(cols) do
-                cols[i] = trim(col)
+                --cols[i] = trim(col)
+                cols[i] = col
             end
 
             -- Skip row if fewer columns than header
@@ -173,6 +173,8 @@ function parse_markdown_multi_tables(filename)
                 hash   = hash,
                 text   = text,
             }
+            
+            --check_long_line(text, 32)
 
             for _, name in ipairs(optional_cols) do
                 if header_map[name] then
@@ -218,6 +220,17 @@ function clear_text()
 end
 
 
+function check_long_line(text, MAX_LEN)
+    for line in (text .. "<br>"):gmatch("([^<]+)<br>") do
+        if line then
+            if (line:len() >= MAX_LEN) then
+                print("long line: ", line)
+            end
+        end
+    end
+end
+
+
 function show_text(entry)
     --local height = client.bufferheight()
     --local width = client.bufferwidth()  -- TODO: center by default
@@ -227,8 +240,9 @@ function show_text(entry)
     local fg_color = entry.fg_color or 0xFFFFFFFF  -- default: white
     local height_box = entry.height_box -- optional
     local width_box = entry.width_box -- optional
-    local font_size = entry.font_size -- optional
+    local font_size = entry.font_size or 12 -- optional
     local font_face = entry.font_face or "Arial" -- optional
+    local TEXTBOX_PADDING = 2
     
     --print("X:", x_pos)
     --print("Y:", y_pos)
@@ -250,11 +264,11 @@ function show_text(entry)
         if line then
             -- bizhawk
             -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
-            local curr_y_pos = y_pos + line_count*12
+            local curr_y_pos = y_pos + line_count * font_size
             if (height_box and width_box and height_box > 0 and width_box > 0) then
-                gui.drawString(x_pos, curr_y_pos, line, fg_color , nil, font_size, font_face)
+                gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color , nil, font_size, font_face)
             else
-                gui.drawString(x_pos, curr_y_pos, line, fg_color, bg_color, font_size, font_face)
+                gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color, bg_color, font_size, font_face)
             end
             --gui.text(x_pos + 10, curr_y_pos + 10, line, nil, "topleft" )
         end
