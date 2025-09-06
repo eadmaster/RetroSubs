@@ -15,7 +15,9 @@
 
 
 function detect_emu()
-    if client and type(client.getversion) == "userdata" then
+    if gameinfo and type(gameinfo.getrompath) == "function" then  -- TODO: better detection
+        return "retroarch"
+    elseif client and type(client.getversion) == "userdata" then
         return "bizhawk"
     else
         return nil
@@ -230,7 +232,6 @@ function check_long_line(text, MAX_LEN)
     end
 end
 
-
 function show_text(entry)
     --local height = client.bufferheight()
     --local width = client.bufferwidth()  -- TODO: center by default
@@ -240,9 +241,16 @@ function show_text(entry)
     local fg_color = entry.fg_color or 0xFFFFFFFF  -- default: white
     local height_box = entry.height_box -- optional
     local width_box = entry.width_box -- optional
-    local font_size = entry.font_size or 12 -- optional
+    local font_size = entry.font_size or 12  -- optional  -- client.getconfig().FontSize 
     local font_face = entry.font_face or "Arial" -- optional
     local TEXTBOX_PADDING = 2
+    local LINE_SPACING = font_size
+    
+    -- different defaults for retroarch
+    if CURRENT_EMU == "retroarch" then
+        font_size = 32 + (font_size - 12)  -- * scaling_factor
+        font_face = ""
+    end
     
     --print("X:", x_pos)
     --print("Y:", y_pos)
@@ -264,7 +272,7 @@ function show_text(entry)
         if line then
             -- bizhawk
             -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
-            local curr_y_pos = y_pos + line_count * font_size
+            local curr_y_pos = y_pos + line_count * LINE_SPACING
             if (height_box and width_box and height_box > 0 and width_box > 0) then
                 gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color , nil, font_size, font_face)
             else
