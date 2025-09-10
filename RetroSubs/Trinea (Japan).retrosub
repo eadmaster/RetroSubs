@@ -2,12 +2,21 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: GPL-2.0
-version: 0.1
+version: 0.1.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 ---
 
 # Trinea English fan translation
+
+
+### Title Screen
+
+|region|start|len|hash|x_pos|y_pos|fg_color|bg_color|text|
+|------|-----|---|----|-----|-----|--------|--------|----|
+|VRAM|2000|1000|7F843CFB1A27F8E5C3829294FA9337AFB4F735C44AA58228C1B5B77C76CEF689|70|160|white|black|English Translation v0.1<br>        by eadmaster<br>|
+#|VRAM|7080|4E0|2C253D268F274610134A7A0131FBF74A507BB6726C1B2C37193EFE293C352E2C|70|160|white|black|English Translation v0.1<br>        by eadmaster<br>|
+
 
 ## Intro
 
@@ -29,13 +38,13 @@ TODO: add padding
 |VRAM|6000|17E0|FC69B081DCF52C9064F6F71CEBF9E3D1278E11AD3BA178D34156B6186A166795|10|160|230|50|14|#FFFBF7|#DF000000|Here and now...<br>the legendary powers of Water,<br>Nature and Fire become TRINEA...|今ここに･･･<br>【青/緑/紅】の伝説の力が<br>TRINEAとなる･･････。|
 |VRAM|6000|17E0|F36B17BE1DBE6667E0B26429EAEB0443BF78E6D45919B3B1F946D258794E8EBA|10|160|230|50|14|#FFFBF7|#DF000000|With this power of revival,<br>answer our wish!|その復活の力で<br>我らの願いに応えよ!|
 |VRAM|6000|17E0|CB021DB698E4A708685856B21362527AA664E6BA1963C028EC3EB1816FA87142|10|160|230|50|14|#FFFBF7|#DF000000|Is it you...?|お前たちか?|
-|VRAM|6000|17E0|EBDD5267EEBCF3270EBB8E323D894AD3A8A351C3A44562B6529CB093BD571DAE|10|160|230|50|14|#FFFBF7|#DF000000|You who dare summon me<br>from my long sleep...<br>foolish mortals...|我を･･･<br>長き時より呼び出す<br>おろかなる者たちよ･･･････。|
+|VRAM|6000|17E0|EBDD5267EEBCF3270EBB8E323D894AD3A8A351C3A44562B6529CB093BD571DAE|10|160|230|50|14|#FFFBF7|#DF000000|You who dare summon me<br>from my long sleep...<br>Foolish mortals...|我を･･･<br>長き時より呼び出す<br>おろかなる者たちよ･･･････。|
 |VRAM|6000|17E0|F1E4A328AD196D6CF962A0DCB7507A882EB0570FD1CDC2EF392EC7A66B1A935F|10|160|230|50|14|#FFFBF7|#DF000000|In the name of the Dark King of<br>Chaos, who rules TRINEA...<br>let the ancient Oath be sworn here!!|TRINEAを 司る<br>混沌の閣黒大王の名のもとに･･･<br>古の《ちかい≫を今ここで!!|
-|VRAM|6000|17E0|AAED24214775EEB4572279CCECB62D80EADCA16A71C3D6008FAF8FAF118AE5D6|10|160|230|50|14|#FFFBF7|#DF000000|Hah hah hah...<br>Very well! What is your desire?|ハッハッハッ･･････<br>よかろう! 何が のぞみだ?|
+|VRAM|6000|17E0|AAED24214775EEB4572279CCECB62D80EADCA16A71C3D6008FAF8FAF118AE5D6|10|160|230|50|14|#FFFBF7|#DF000000|Hah hah hah...<br>Very well, what is your desire?|ハッハッハッ･･････<br>よかろう! 何が のぞみだ?|
 |VRAM|6000|17E0|C584B3CC4349A41D70D357045AC4FA81687451EA606A782570C1D157805061AB|10|160|230|50|14|#FFFBF7|#DF000000|Grant us the power<br>to conquer all living things<br>in this world!!|生きとし生ける物<br>その全てを征服する力を<br>この我らの手にあたえよ!!|
 |VRAM|6000|17E0|5C6AA3B93E1FE7F1487F31AC94ED789D646D738C1F798C575DA2980A05DD10E7|10|160|230|50|14|#FFFBF7|#DF000000|Hah hah hah!!<br>Is that truly all you wish for?<br>So trivial!|ハッハッハッ!!<br>そのようなつまらぬ事でよいのか?|
 |VRAM|6000|17E0|74061CAA7068251FD1E34B078FDF28FC10F01883110D4E19EE83D61707381255|10|160|230|50|14|#FFFBF7|#DF000000|Then so be it...<br>Your wish is granted!!<br>Hah hah hah...|ならば･･･ <br>その願い しかと聞きとげたぞ!!<br>ハッハッハッ･･････|
-|VRAM|6000|17E0|B666F53A01E816B2F828E2D463E4A4370638D753D04335EDF36B67F9825C41BD|10|160|230|50|14|#FFFBF7|#DF000000|Thus the Oath is fulfilled.<br>Let terror and suffering engulf<br>the world!! Kneel before me!|これで《ちかい≫ははたされた。<br>世界に閣と恐怖と苦しみを!!<br>我のもとにひざまずけ!|
+|VRAM|6000|17E0|B666F53A01E816B2F828E2D463E4A4370638D753D04335EDF36B67F9825C41BD|10|160|230|50|14|#FFFBF7|#DF000000|Thus the oath is fulfilled.<br>Let terror and suffering engulf<br>the world!! Kneel before me!|これで《ちかい≫ははたされた。<br>世界に閣と恐怖と苦しみを!!<br>我のもとにひざまずけ!|
 
 TODO: translate Tetsuya Mifune, Hornisse stories
 
@@ -44,18 +53,18 @@ TODO: translate Tetsuya Mifune, Hornisse stories
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM|7080|4E0|51DBC28BC5BC5F720E7563FA0A9F5DE7C20DCAD361FA776BAA7C2C363F87C67A|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers|名前 《サラ・ウェサ ス》|
-|VRAM|7080|4E0|2EDAB038905443D9DDB7565FDA2A47F55D16EF64FEA15504B35B4000EE78841F|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Deep in a certain forest, a gentle<br>young girl lived happily with her father,<br>loving nature and all the animals around<br>her. Even such a kind girl, however, had<br>a few small worries.<br>|《名前 ≪サラ・ウェザーズ≫<br>あるもりのおくふかくにしぜんをあいしどうぶつ<br>たちをあいしているやさしいしょうじょがちちおや<br>ととてもしあわせにくらしていました。そんなしょ<br>うしょにもすこしだけなやみがありました。しょうじ|
-|VRAM|7080|4E0|D60D87DDE6829AE3202E15E8C42CC5080DC2A1FB8D5E6C9FB4316298CDB8C5DE|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>She had grown big wings and large<br>horns on her head, and recently, she<br>had begun to master the control of fire.|名前 ≪サラ・ウェザーズ≫ょにはりっぱなはねがはえていてあたまにはおおきなつのがはえていたこととこのごろほのおをしゆうにあやつれるようになっていたことでした。|
-|VRAM|7080|4E0|3D64104880338E8759C5F255AEB06B8B1EB48CBE80D31B91A158839922CAF0A3|20|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Favorite saying: “Treasure nature.”<br>Favorite person: “Her father.”<br>Catchphrase: “Am I… strange?”|名前 ≪サラ・ウェザーズ≫ すきなことは『しぜんをたいせっにね』<br>すきなひと 『おとうさん』<br>くちくせ 『わたしおかしいのかなー?』|
-|VRAM|7080|4E0|AE5B70D1012A568908F120702711A8C005A8478555865435DF6396AD4A864734|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune |《御船<br>哲也》 |
-|VRAM|7080|4E0|D7B13E54D128A6B8A583D91495584AAA91545D813A9296713EB5CBB42431A982|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He is the fourth member of the elite<br>special defense unit of Neo Edo,<br>famously known as Neo Edo’s strongest<br>corps the “E.S.P. 8.”|ネオ江戸さいきょうぶたいとなだかい ネオ江戸ぼうえいたいだいとくしゅぶたい つうしょう『E・S ・P・8』の4はんめのたいいんてある。|
-|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He secretly admires a girl named Ruria<br>Midori Lucia, an American-born member<br>of the team. The two actually like each<br>other, but neither has realized it.|《『緑』にはひそかにあこがれているしょせいがいるなまえは『ルリアみどりルーシア』といい・アメリカけいせいてある。しっはふたりはりょうおもいなのだがふたりともきずいてない。|
-|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|20|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria Midori Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
-|VRAM|7080|4E0|34A336268D08405B6391B79F95E9C7B50DA32EBE08911BD2595C9CE8D7D23A7A|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse|名前 《ホルニッセ》|
-|VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 ≪ホルニッセ≫ きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
-|VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>In battle, his crimson cape billows as he<br>wields his greatsword, cutting deeply<br>into his foes!<br>He fights with fearless courage.| 名前 ≪ホルニッセ≫ たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
-|VRAM|7080|4E0|BA56E39C48AC0DB1DC5FF6A06B2A8B0AA04836FD1A8554810FEA790775BA01A1|20|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>Favorite thing: Peace<br>Favorite person: Lisa Weathers<br>Catchphrase: “We must make the world<br>peaceful soon.”<br>|名前 ≪ホルニッセ≫ すきなことは『へいわ』<br>すきなひと 『リサ・ウェザース』<br>くちくせ 『はやくへいわなよのなかにしなければ』
+|VRAM|7080|4E0|51DBC28BC5BC5F720E7563FA0A9F5DE7C20DCAD361FA776BAA7C2C363F87C67A|17|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers|名前 《サラ・ウェサ ス》|
+|VRAM|7080|4E0|2EDAB038905443D9DDB7565FDA2A47F55D16EF64FEA15504B35B4000EE78841F|17|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Deep in a certain forest, a gentle<br>young girl lived happily with her father,<br>loving nature and all the animals<br>around her. Even such a kind girl,<br>however, had a few small worries.<br>|《名前 ≪サラ・ウェザーズ≫<br>あるもりのおくふかくにしぜんをあいしどうぶつ<br>たちをあいしているやさしいしょうじょがちちおや<br>ととてもしあわせにくらしていました。そんなしょ<br>うしょにもすこしだけなやみがありました。しょうじ|
+|VRAM|7080|4E0|D60D87DDE6829AE3202E15E8C42CC5080DC2A1FB8D5E6C9FB4316298CDB8C5DE|17|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>She had grown big wings and large<br>horns on her head, and recently, she<br>had begun to master the control of fire.|名前 ≪サラ・ウェザーズ≫ょにはりっぱなはねがはえていてあたまにはおおきなつのがはえていたこととこのごろほのおをしゆうにあやつれるようになっていたことでした。|
+|VRAM|7080|4E0|3D64104880338E8759C5F255AEB06B8B1EB48CBE80D31B91A158839922CAF0A3|17|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Favorite saying: “Treasure nature.”<br>Favorite person: “Her father.”<br>Catchphrase: “Am I… strange?”|名前 ≪サラ・ウェザーズ≫ すきなことは『しぜんをたいせっにね』<br>すきなひと 『おとうさん』<br>くちくせ 『わたしおかしいのかなー?』|
+|VRAM|7080|4E0|AE5B70D1012A568908F120702711A8C005A8478555865435DF6396AD4A864734|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune |《御船<br>哲也》 |
+|VRAM|7080|4E0|D7B13E54D128A6B8A583D91495584AAA91545D813A9296713EB5CBB42431A982|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He is the fourth member of the elite<br>special defense unit of Neo Edo,<br>famously known as Neo Edo’s<br>strongest corps, the “E.S.P. 8.”|ネオ江戸さいきょうぶたいとなだかい ネオ江戸ぼうえいたいだいとくしゅぶたい つうしょう『E・S ・P・8』の4はんめのたいいんてある。|
+|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>He secretly admires a girl named Ruria<br>Midori Lucia, an American-born<br>member of the team. The two actually<br>like each other, but neither has realized<br>it.|《『緑』にはひそかにあこがれているしょせいがいるなまえは『ルリアみどりルーシア』といい・アメリカけいせいてある。しっはふたりはりょうおもいなのだがふたりともきずいてない。|
+|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria Midori Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
+|VRAM|7080|4E0|34A336268D08405B6391B79F95E9C7B50DA32EBE08911BD2595C9CE8D7D23A7A|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse|名前 《ホルニッセ》|
+|VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 ≪ホルニッセ≫ きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
+|VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>In battle, his crimson cape billows as<br>he wields his greatsword, cutting<br>deeply into his foes!<br>He fights with fearless courage.| 名前 ≪ホルニッセ≫ たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
+|VRAM|7080|4E0|BA56E39C48AC0DB1DC5FF6A06B2A8B0AA04836FD1A8554810FEA790775BA01A1|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>Favorite thing: Peace<br>Favorite person: Lisa Weathers<br>Catchphrase: “We must make the<br>world peaceful soon.”<br>|名前 ≪ホルニッセ≫ すきなことは『へいわ』<br>すきなひと 『リサ・ウェザース』<br>くちくせ 『はやくへいわなよのなかにしなければ』
 
 
 ### Shop
