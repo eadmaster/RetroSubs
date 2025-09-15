@@ -55,6 +55,7 @@ function parse_markdown_multi_tables(filename)
         return nil
     else
         print("found: ", filename)
+        gui.addmessage("RetroSub loaded")
     end
 
     local header_map = nil

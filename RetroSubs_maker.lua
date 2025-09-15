@@ -69,7 +69,7 @@ local curr_hash = ""
 local CPU_SAVER_INTERVAL = 100
 local last_update = emu.framecount()
 
-local field_names = { "region", "start", "len", "hash", "x_pos", "y_pos", "width_box", "height_box", "fg_color", "bg_color", "text", "jap_text" }
+local field_names = { "region", "start", "len", "hash", "x_pos", "y_pos", "width_box", "height_box", "font_size", "fg_color", "bg_color", "text", "jap_text" }
 local textboxes = {}
 
 function gui_update_from_model()

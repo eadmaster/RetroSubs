@@ -10,7 +10,7 @@ compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 # Trinea English fan translation
 
 
-### Title Screen
+## Title Screen
 
 |region|start|len|hash|x_pos|y_pos|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|--------|--------|----|
@@ -22,7 +22,8 @@ compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 
 ## Story Intro
 
-TODO: add padding
+Text stored @ 0x000A2000
+
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
@@ -46,10 +47,10 @@ TODO: add padding
 |VRAM|6000|17E0|74061CAA7068251FD1E34B078FDF28FC10F01883110D4E19EE83D61707381255|10|160|230|50|14|#FFFBF7|#DF000000|Then so be it...<br>Your wish is granted!!<br>Hah hah hah...|ならば･･･ <br>その願い しかと聞きとげたぞ!!<br>ハッハッハッ･･････|
 |VRAM|6000|17E0|B666F53A01E816B2F828E2D463E4A4370638D753D04335EDF36B67F9825C41BD|10|160|230|50|14|#FFFBF7|#DF000000|Thus the oath is fulfilled.<br>Let terror and suffering engulf<br>the world!! Kneel before me!|これで《ちかい≫ははたされた。<br>世界に閣と恐怖と苦しみを!!<br>我のもとにひざまずけ!|
 
-TODO: translate Tetsuya Mifune, Hornisse stories
-
 
 ### Char Select
+
+Text stored in ROM @ 0x00035400
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
@@ -65,6 +66,8 @@ TODO: translate Tetsuya Mifune, Hornisse stories
 |VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 ≪ホルニッセ≫ きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
 |VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>In battle, his crimson cape billows as<br>he wields his greatsword, cutting<br>deeply into his foes!<br>He fights with fearless courage.| 名前 ≪ホルニッセ≫ たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
 |VRAM|7080|4E0|BA56E39C48AC0DB1DC5FF6A06B2A8B0AA04836FD1A8554810FEA790775BA01A1|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse<br> <br>Favorite thing: Peace<br>Favorite person: Lisa Weathers<br>Catchphrase: “We must make the<br>world peaceful soon.”<br>|名前 ≪ホルニッセ≫ すきなことは『へいわ』<br>すきなひと 『リサ・ウェザース』<br>くちくせ 『はやくへいわなよのなかにしなければ』
+
+TODO: translate Tetsuya Mifune, Hornisse stories
 
 
 ### Shop
