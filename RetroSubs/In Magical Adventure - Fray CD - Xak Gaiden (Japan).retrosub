@@ -2,14 +2,15 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: GPL-2.0
-version: 0.5.5
+version: 0.6
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
 
 # Fray CD - Xak Gaiden English fan translation
 
-## Hacking notes
+
+## Notes
 
 Text encoded in SJIS, stored @ 0x375030 in disc track 2.
 
@@ -21,7 +22,7 @@ Localized names:
  - Arzas Plains, PLAIN OF ARZAS  アーザス平原
  - Samus (サムス)
  - Menea (メネア)
- - Latok Kart (ラトク)
+ - Latok Kart (ラトク) (swordsman, warrior)
  - Major Demus (町長 デムス)
  - Major Zarmof
  - Geela  ジーラ (smith)
@@ -32,13 +33,13 @@ Localized names:
  - Isac (アイザック) (Sorcerer)
  - Valuah (Town) (ヴァルアの町)
  - Leef Potion (リーフの秘薬) -> Leaf Potion?
- - Mill Grard (ミル・グラード) (wizard, former teacher at the magic school)
+ - Mill Grard (ミル・グラード) (wizard, former teacher at the magic academy)
  - Miry (ミリー)
  - Razel ［ラゼル］
  - Ku Or (ク・オル)
  - Badu (バドゥー)
  - sage Ruwel
- - floating Castle Ku-Or (空中城ク・オルじゃと) -> Dark Castle Ku Or?
+ - Flying Castle Ku-Or (空中城ク・オルじゃと) -> Castle in the Sky, Floating Castle, Sky Castle, Dark Castle Ku Or, Castle Caulyan?
  - Seal Key (封印のカギ )
  - Barnas Volcano ( バルナス火山)
  - Mirsia (ミルセイア)
@@ -47,32 +48,42 @@ Localized names:
  - Amadok (アマドゥク)
  - Dragon King (水竜王) (BOSS)
  - Arsides (アルセイデス様) (BOSS)
- - God of Water Laytoun (レイトゥーン様) -> Waterlord?
+ - God of Water Laytoun (レイトゥーン様) -> Waterlord?, Raytoun?
  - Lakelord (BOSS 2)
  - Pularis, GUARDIAN PULARIS (BOSS 3)
- - Rock bird? / FLAMEBIRD (BOSS 4)
- - Seal's Face / SEAL'S FACE (BOSS 5)
- - Wings of the Gods () -> Divine Wings?
-
+ - Wings of the Gods (神々のツバサ) -> Divine Wings?
+ - Seal's Face (BOSS 5)
+ - town of Wanina (ワニナの町) -> Croc-burg? (pun: ワニ皮やおまへんで。ワニナだす)
+ - Feizard (フェイザード)
+ - Darkmare (ダークメア)
+ - Freya Jerbarn (フレイア・ジェルバーン)
+ 
 MSX only:
+
  - TERRACE
  - SKY GOD AIRIA
  - WIND GODDESS SINARY
  - MASTER LUZARC
- - Feares village / Fears Village?
+ - Feares village / Fears Village / town of Fearless
  - Bobby 
  - Alice
  - Milorc
  - Saria Kart
  - smith Dac
- - Demonworld Zekisis
  - towershield
+ - Rock bird? / FLAMEBIRD (BOSS 4)
+ - Ellis
+ - Endora
+ - Zegraya
+ - Zekisis (Demonworld)
  
-sources:
+references:
 
  - https://retro-type.com/xyz/xcharacters.htm
  - https://www.oocities.org/reiszvanadis/guide.htm
  - https://www.generation-msx.nl/software/microcabin/fray---in-magical-adventure/release/1838/
+ - https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0077&lang=en
+ - https://www.retro-type.com/xyz/xak.htm
 
 
 ## Title screen
@@ -87,14 +98,14 @@ sources:
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|3D00|570|4E81752BFACAAFACC719E6451B260676922057207F4A7CA9C71C8DA9E62609C3|10|10|0|0|#ffff00|#EF000000|In the year 753 CE,<br>the world of Xak was in grave danger.|成歴753年<br>さあくかいに危機が訪れた|
+|VRAM1|3D00|570|4E81752BFACAAFACC719E6451B260676922057207F4A7CA9C71C8DA9E62609C3|10|10|0|0|#ffff00|#EF000000|In the year 753 S.E.,<br>the world of Xak was in grave danger.|成歴753年<br>さあくかいに危機が訪れた|
 |VRAM1|3D00|570|6818EF413906CD1696510C0E7BA4F334761768AEB9E4B7B4E63ADE377B82EE2B|10|10|0|0|#ffff00|#EF000000|the time drew near for the<br>resurrection of the fiend Badu,|250年前に先進リュウェルによって封印されたヨーマ・バドウの復活の時が近づいていたのである|
 |VRAM1|3D00|570|FBE462ACB9275C58EC1073E73F4FE290615458639C7E2D41017281DA316BDA22|10|10|0|0|#ffff00|#EF000000|But one young man rose to challenge this fate.|これを祖師線と立ち上がった1人の若者がいた|
 |VRAM1|3D00|570|B5F72105FF0536FF3A45DBC246F12A6A60804C7DF12AE79250AC117200036FBE|10|10|0|0|#ffff00|#EF000000|His name was Latok Kart.<br>Yes… he was none other than the legendary hero,<br>descendant of the sage Ruwel.|その名はラトク・カート<br>そう 彼こそは先進リュウェルの地を引く伝説の勇者なのである|
 |VRAM1|3D00|570|6E239D50B51447CD78E3CC8884FF45CACCCA661EAA4561259ED460C4550E845D|10|10|0|0|#ffff00|#EF000000|Through the hero Latok’s valor,<br>Badu’s return was prevented,<br>and the world was once again embraced by peace.|勇者ラトクの活躍によりバドウの復活は羽ばまれ<br>世界は再び平和に包まれた|
 |VRAM1|3D00|570|2EB75DCEDEE84516D287980FFA681EF62EE50D2BCA205FAA05802840FDBEFAD8|10|10|0|0|#ffff00|#EF000000|During that journey, there was one girl who met him,<br>and from then on, watched over him always.<br> <br>This story is a grand, spectacular fantasy<br>that follows the growth of a girl’s heart as<br>she experiences love for the first time,<br>through an adventure full of love and romance.| その冒険の中で彼と巡り合い<br>以来ずっとその姿を見守り続けている一人の少女がいた<br>この物語は初めて恋をした少女の心の成長を愛とロマンに満ちた冒険でつづる一大スペクタクルファンタジーである。|
-|VRAM1|3D00|570|DE972203BC9838C5FE27A4DF7118E54A045FB584CE3C7F1096D58293B39CC94E|10|10|0|0|#ffff00|#EF000000|Spring, 756 CE|生歴756年 春|
-|VRAM1|3D00|570|A708FA824A1DFD6AC1D0FCFAF180D07C5B54F2DAEE17AA4036D293180C201241|10|10|0|0|#ffff00|#EF000000|This year again, young inexperienced<br>magicians are about to<br>graduate.|今年もまた甘手の若い魔法使いたちが スタッチの時を迎えにとしていた|
+|VRAM1|3D00|570|DE972203BC9838C5FE27A4DF7118E54A045FB584CE3C7F1096D58293B39CC94E|10|10|0|0|#ffff00|#EF000000|Spring, 756 S.E.|生歴756年 春|
+|VRAM1|3D00|570|A708FA824A1DFD6AC1D0FCFAF180D07C5B54F2DAEE17AA4036D293180C201241|10|10|0|0|#ffff00|#EF000000|This year again, young inexperienced<br>mages are about to<br>graduate.|今年もまた甘手の若い魔法使いたちが スタッチの時を迎えにとしていた|
 |VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|0|0|#ffff00|#EF000000|Graduation, huh… it’s already been<br>three years since then.|卒業か、もうあれから3年にもなるのね|
 |VRAM1|3D00|570|382086EFCCDEA6C06ED30E51EFD3D390BC38F4C251C9C1B7CBA4C37553796BB2|10|10|0|0|#ffff00|#EF000000|Are you okay?|大丈夫だい?|
 |VRAM1|3D00|570|5B59773CB0BF991B1EC4A2E941EA202FA661E04759EBEE9792C5B0A651FB9058|10|10|0|0|#ffff00|#EF000000|That was scary!|怖かったー!|
@@ -145,8 +156,8 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 ;```
 
 
-
 ## Dialogues
+
 
 ### Dragon King Boss
 
@@ -161,7 +172,7 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|D9FCCB058B573463859B045570FC852E0C3A1605DF190BD69F16C5DA139A3AA4|9|188|238|35|14|white|#EF000000|Stop at once, or else...|はやくやめんと・・・|
 |VRAM1|3D00|570|67D077A4646BE7BF00DF31BC4A0BC5E40E9A0542838BCC1910F8E51DDC02986F|9|188|238|35|14|white|#EF000000|[Mysterious Voice] I told you many<br>times not to touch it!|[謎の声]だから、あれほどさわるなと言ったではないか！|
 |VRAM1|3D00|570|9D3214B94F44744A6EBEF499D18C54B640B65EF6F93B32CE5D0C6BE671F87295|9|188|238|35|14|white|#EF000000|Blasphemy against the gods is<br>something this Dragon King cannot<br>forgive!|神へのボウトクは、この水竜王が許しておくワケにはいかん。|
-|VRAM1|3D00|570|2F4E1CFDF95AB1BA4EAA2B67262B7A41DED6C0BB4F04B80B153DE7E171708CB8|9|188|238|35|14|white|#EF000000|[Fray] N-no way...|［フレイ］ そ、そんな・・・|
+|VRAM1|3D00|3E0|340902470672F9E347210C058ECF2E83C9E7057592AD5C6EC0E1FF5BA7DBE700|9|188|238|35|14|white|#EF000000|[Fray] N-no way...|［フレイ］ そ、そんな・・・|
 |VRAM1|3D00|570|EA68FC50EFB8B40EE41F1186472BB7897017DC1283EBDBB82149E15FA116A39E|9|188|238|35|14|white|#EF000000|[Dragon King] Yet I, too, serve the<br>gods. I do not relish needless killing.|[水竜王] しかし私とて神に仕えし身、無用の殺生は好まん。|
 |VRAM1|3D00|570|6E9A23F0F39BDBE568844C969E9DE503E0151843BED8257601A4CA11B578EF1C|9|188|238|35|14|white|#EF000000|If you leave here quietly,<br>I will let you go.|おとなしくここを去るのであれば見のがしてもやろう。|
 |VRAM1|3D00|570|68B1749EB3225D32BDD23B089F20623FB85F77E6A309FB4F1D24C4F831CA3CBD|9|188|238|35|14|white|#EF000000|[Fray] That’s a relief.<br>While you’re at it...|［フレイ］  たすかるわ。ついでと言っちゃなんだけど・・・|
@@ -169,32 +180,42 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|15DB295AF2B1492DF913CC666ED2A830C52B7E480647903545D70F97A6007682|9|188|238|35|14|white|#EF000000|[Dragon King] ...Very well.<br>I am broad of heart.|[水竜王]  ・・・よかろう、私は心がひろいからな。|
 |VRAM1|3D00|570|0759F48C1DE6EAB272207596F7562C7ABAD2326D6779BEBDBB0C11B91CF32D88|9|188|238|35|14|white|#EF000000|Step forward a little more.|もうすこしまえへ出るがよい。|
 |VRAM1|3D00|570|5F747D66E5844F2A001CB36414101F03CBD0772769BBA0A68563BD723E50E531|9|188|238|35|14|white|#EF000000|[Fray] Mm, thanks.|［フレイ］ ん、ありがと。|
-|VRAM1|3D00|570|F1827D478822CB057C67BC388FA937774913207710C2302DC97AA4E350C69301|9|188|238|35|14|white|#EF000000|[Dragon King] Once, and now again...|[水竜王]  一度ならず二度までも・・・。|
+|VRAM1|3D00|570|F1827D478822CB057C67BC388FA937774913207710C2302DC97AA4E350C69301|9|188|238|35|14|white|#EF000000|[Dragon King] Once, and now<br>again...|[水竜王]  一度ならず二度までも・・・。|
 |VRAM1|3D00|570|8875AC219E66061E882339420E2DB944A04CF2060D3060C85F7E7FB0D8B25662|9|188|238|35|14|white|#EF000000|I cannot forgive you any longer!<br>Prepare yourself!|もうカンベンならん、カクゴするがよい！|
 |VRAM1|3D00|570|6356D5756792B67E3E341A707E8830609D407C212D85E1E4D7180FF1AE73317B|9|188|238|35|14|white|#EF000000|[Fray] Fine. I suppose this is partly<br>my fault, too.|［フレイ］ わかったわよ。 多少は私の責任でもあるわね。|
 |VRAM1|3D00|570|0858F6F99A2B8D536BEF32BB03D908A05FEE610B36039B03E1085E116876AA65|9|188|238|35|14|white|#EF000000|I’ll pick up the statue later and fix it<br>for you.|像は後でひろって、なおしといてあげるから。|
 |VRAM1|3D00|570|645D21EB6A605B6981C389B6C8BADDFBF12847A1160683EBA995A73AF2B4BF13|9|188|238|35|14|white|#EF000000|[Dragon King] You swear those<br>words are true?|[水竜王] その言葉にウソいつわりはないな。|
 |VRAM1|3D00|570|63F0A7E0B466B0E5D1778AC8FDC3C6851FE099F35847ABF9CD987EFA6268E43B|9|188|238|35|14|white|#EF000000|Very well. As a token, take this with<br>you.|よかろう。ついでだ、コレも持っていくがよい。|
-|VRAM1|3D00|570|714822FCC3742110AA926E356F8E5A00968004DB100CE1BA5923680AB8BCF06E|9|188|238|35|14|white|#EF000000|[Fray] Lucky me!|［フレイ］ らっき!|
+|VRAM1|3D00|3E0|12451233804D06438C3306ED5D6A45A54994918F4E65EF2405FED211FE3A066A|9|188|238|35|14|white|#EF000000|[Fray] Lucky me!|［フレイ］ らっき!|
 |VRAM1|3D00|570|0DAB132E440D092680BE87C4DE024D3E50410D7C7D6BF13BCECAC49642326DC7|9|188|238|35|14|white|#EF000000|[Dragon King] Remember this well,<br>and do not forget.|[水竜王] よいな、しかとわすれるでないぞ。|
 |VRAM1|3D00|570|546F48766F85307A9E26F92AA6E44C7BB5CE6DE6556501363E025C7BD92D0307|9|188|238|35|14|white|#EF000000|[Fray] Hmph! It was broken from the<br>beginning anyway!|［フレイ］  フ〜ンだ！　あんなの最初から壊れてたんじゃない。|
-|VRAM1|3D00|570|C0861070D1E503CBE9A7A9B8840F009D89FBEC941E82D6C62963070235706A72|9|188|238|35|14|white|#EF000000|There’s no way a frail maiden like me<br>could break it by touching!|私みたいなカヨワイ乙女が触っただけで壊れるワケないでしょ！|
+|VRAM1|3D00|570|C0861070D1E503CBE9A7A9B8840F009D89FBEC941E82D6C62963070235706A72|9|188|238|35|14|white|#EF000000|There’s no way a frail maiden like<br>me could break it by touching!|私みたいなカヨワイ乙女が触っただけで壊れるワケないでしょ！|
 |VRAM1|3D00|570|CE8B9CA16C66D5D78F9703388391881B507FB5F6A3DF76EFB5CBD62B2D4F925E|9|188|238|35|14|white|#EF000000|Well then, looks like I’ll have to take<br>a detour.|さ〜ってと、ちょっと回り道しなきゃなんないわね。|
 |VRAM1|3D00|570|2967E251908E7629A7E6B8BF6456DF49E60AE7439804BBFA4C06085EFA8EAD26|9|188|238|35|14|white|#EF000000|I’d better hurry to the town of Arzal.|はやくアーザルの町に行かなくっちゃ。|
+
+TODO: speech dialogues:
+     |VRAM1|3D00|570|B21301583A23720751AD303544827B06A67632E7FB4AB237EF97AB82FD2BBFD7|10|10|0|0|14|#ffff00|#EF000000|Kyaaa! What is this! How cute!<br>You insolent human!<br>Don't touch my body with your<br>impure hands!|キャー！なにこれ！？かわいい！<br>礼をわきまえぬ人間よ！不浄の手でこの身体に触れるでない！|
+     |VRAM1|3D00|3E0|5FF9536B8BA93DAB8B8806F279B3F8AF5E094798C8FA2F1097B37B736D32946F|10|10|0|0|14|#ffff00|#EF000000|Ah! I-it came off...|あっ！と、取れちゃった……|
+     |VRAM1|3D00|3E0|5FF9536B8BA93DAB8B8806F279B3F8AF5E094798C8FA2F1097B37B736D32946F|10|10|0|0|14|#ffff00|#EF000000|Wh-why must I suffer such humiliation!? At this rate, the seal of this curse will…|な、なにゆえ！この私が辱めを受けねばならぬのだ！  <br>このままでは、この制約の楔が……！|
 
 
 ### Town of Arzal
 
+TODO: speech dialogues:
+   Ah, excuse me! Um, have you seen a blue-haired warrior named Latok Kart around here? | あ、すいません!あの、この辺でラトクカートっていう青い髪の選手を見ませんでした?
+   What is this?! It won’t open!|なによこれ! 開かないじゃないの|
+   Flame Magic!|フレームバー!
+   
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|3D00|570|298F8A8D3B36B9B9762E5FA681BFBF83D780F3603B8579BBD7C4F3C9D944FB65|9|188|238|35|14|white|#EF000000|[Samus] Huh?<br>Did that really happen?|[サムス] んあ? いたっけ、 そんなの?|
+|VRAM1|3D00|570|298F8A8D3B36B9B9762E5FA681BFBF83D780F3603B8579BBD7C4F3C9D944FB65|9|188|238|35|14|white|#EF000000|[Samus] Huh?<br>Was there someone like that?|[サムス] んあ? いたっけ、 そんなの?|
 |VRAM1|3D00|570|F098EE630AF5D0A9619C4F9445B1D65E370C1945A7B22C159EC2593F34A697F6|9|188|238|35|14|white|#EF000000|[Menea] Not in this town...|[メネア] この町じゃないけど|
 |VRAM1|3D00|570|05C13F7ADBA5B18733609CDEC9C0CC0F1C67E2756A6646D5A5569D86EA870E19|9|188|238|35|14|white|#EF000000|Wasn’t it that one in the neighboring<br>village, Reigia?|となりのレイジアの村にいたアレじゃない？|
 |VRAM1|3D00|570|DFF4D9E236EB39FB665895ADC7EA73F97CB0276821C6E93189E5C3554D9A0A5C|9|188|238|35|14|white|#EF000000|[Samus] Ah! That one!|[サムス]ああ! アレね!|
 |VRAM1|3D00|570|975BF2D935711A76F9F5D54D352E66E64C0BD527B91D2B48F35F18CA6353CE0D|9|188|238|35|14|white|#EF000000|The guy who kept staring at us from<br>the shadows.|ボクたちのこと、カゲからジロジロ見てたヤツだな。|
 |VRAM1|3D00|570|0A12BF835C18D6ECFF9378E972158756C22264471247F58CCF0721136E713964|9|188|238|35|14|white|#EF000000|He was creepy.|ブキミなやつだったよな。|
 |VRAM1|3D00|570|C492E0C3C1721E023B38EE962C4E72CF558E777EDC74E73D4E9B341FA4486101|9|188|238|35|14|white|#EF000000|[Menea] Maybe...|[メネア] ひょっとすると・・|
-|VRAM1|3D00|570|8F589F6791DB19731E82EC95C79DFD68E041425344C428F3E723A6E575337CD1|9|188|238|35|14|white|#EF000000|Maybe he’s the kidnapper everyone’s<br>been talking about lately.|アイツが近ごろウワサの人さらいだったりして。|
+|VRAM1|3D00|570|8F589F6791DB19731E82EC95C79DFD68E041425344C428F3E723A6E575337CD1|9|188|238|35|14|white|#EF000000|Maybe he’s the kidnapper<br>everyone’s been talking about lately.|アイツが近ごろウワサの人さらいだったりして。|
 |VRAM1|3D00|570|AD1D1EA2DEF94626E5DC1B67A9ACF78F5A10B73CC45C37EA56B0F06B762DBACC|9|188|238|35|14|white|#EF000000|Eek! That’s scary!|キャッ、あたし、こわぁい。|
 |VRAM1|3D00|570|5F29FD320101201F03615229797D7CF4B7C99660A41C9F95426F4E039E6D2C17|9|188|238|35|14|white|#EF000000|[Samus] Don’t worry, Menea.|[サムス] だいじょうぶだよ、メネア。|
 |VRAM1|3D00|570|965ECB35336D6EE15E262C5796892489215E25988E1384D694DF95C490F30D1F|9|188|238|35|14|white|#EF000000|I’ll make sure to protect you.|キミはこのボクがかならず守ってあげるよ。|
@@ -213,7 +234,7 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|E49FF7D3EBAB5DE21C06CEBB48C189A847339D1A54026E07AD37805916DEAC81|9|188|238|35|14|white|#EF000000|If only I could use teleport magic too...|あたしもテレポートの魔法が使えたらねぇ。|
 |VRAM1|3D00|570|35FCDFA77B945BD04101D3D05B0F6A782164738DE88B49E49B4BD94C1F849979|9|188|238|35|14|white|#EF000000|[Man] The Arzas Plain has gotten<br>dangerous lately.|［おじいさん］ 近ごろはアーザス平原もブッソウになったのう。|
 |VRAM1|3D00|570|D4624CD7B2D31442E651FFB66844FC1302AD8ABFDB66BBE83E8F5F31E0CEC022|9|188|238|35|14|white|#EF000000|[Gatekeeper] Nope, nope.<br>This gate stays shut.|[門番] あ〜ダメダメ。その門は開きませんよ。|
-|VRAM1|3D00|570|3CD00E0D9ACC025F3FC51103136525472AFCF5261B6860EE03EE54F0DC468EC0|9|188|238|35|14|white|#EF000000|[Fray] Why not!?|［フレイ］ なんでよぉ！？|
+|VRAM1|3D00|570|3CD00E0D9ACC025F3FC51103136525472AFCF5261B6860EE03EE54F0DC468EC0|9|188|238|35|14|white|#EF000000|[Fray] Why!?|［フレイ］ なんでよぉ！？|
 |VRAM1|3D00|570|9F0DBB03798DA0FBEE04293588118C76CDDCFEFF6ED0DEE60F1DC5BB6E68AFAB|9|188|238|35|14|white|#EF000000|[Gatekeeper] Monsters have been<br>showing up more around here.|[門番] このあたりもモンスターが多くなりましてねぇ。|
 |VRAM1|3D00|570|9ED52A30E5AED5B2CCBE53BDC66FD80D98A508CAC1DC7357224850810FBC1F6E|9|188|238|35|14|white|#EF000000|It’s dangerous, so we usually keep it<br>closed.|危険なので、ふだんは開けないようにしてるんですよ。|
 |VRAM1|3D00|570|6613820385DD298F4D0A861ECB1031FD0E4FFEAA830BCDC10AB8D5CFB2AADA7A|9|188|238|35|14|white|#EF000000|[Fray] But I’m in a hurry!|［フレイ］  私はいそいでんの！|
@@ -239,11 +260,17 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|1200|FA0|922DB75647CEB658BFFB6D534350BB317D42BEDFFEC1D3DF87BF70CD7A00DA8B|121|24|120|63|14|white|#EF000000|Stay & Save<br>Talk<br>Leave<br> <br>                 Money|一晩泊まる<br>話をする<br>店をでる<br>所持金|
+|VRAM1|1200|FA0|F0D4D722658017F75D078BB59AE496E2B283924ADC402AF960CBF1C304146027|121|24|120|63|14|white|#EF000000|Buy<br>Sell<br>Save<br>Leave<br>                 Money|一買う<br>売る<br>記録する<br>やめる<br>所持金|
+|VRAM1|1200|FA0|A87D6953D432CBC898870E357DE73A99F0A582B978C00CA9AD185323A30D51A4|121|24|120|63|14|white|#EF000000|Buy<br>Sell<br>Save<br>Leave<br>                 Money|一買う<br>売る<br>記録する<br>やめる<br>所持金|
 |VRAM1|1200|FA0|0DE95A07CE6DCF0835FBA7BCC01F359E9C5924DDA64994215A982CF85BF9F549|121|24|120|63|14|white|#EF000000|Buy<br>Sell<br>Talk<br>Leave<br>                 Money|買う<br>売る<br>話をする<br>店をでる<br>所持金|
 |VRAM1|1200|FA0|EEEC934D953C7F0BBA52AC25A425256577B04A64E1F4505C5D61B514AE6CD563|121|24|120|63|14|white|#EF000000|Buy Rod<br>Buy Magic<br> <br> <br>                 Money|ロッドを買う<br>魔法を買う<br>所持金|
 |VRAM1|1200|FA0|FBE4F4A141ACDC84DC84D3FE5C500206E9570D093501D0DBB169B9ADF667F0A1|121|24|120|63|14|white|#EF000000|Sell Rod<br>Sell Magic<br> <br> <br>                 Money|ロッドを売る<br>魔法を売る<br>所持金|
 |VRAM1|1200|FA0|77CF4283A7CCEF79BCA8EB83AEA67F1C02D07F38EF0BB1D9B4DE30D182802B11|121|24|120|63|14|white|#EF000000|Buy Shield<br>Buy Item<br> <br> <br>                 Money|盾を買う<br>アイテムを買う<br>所持金|
 |VRAM1|1200|FA0|AC7FD03372CBDBC1B13A471DBD4C61FA0852B228B7C3043B81153C786F55C07A|121|24|120|63|14|white|#EF000000|Sell Shield<br>Sell Item<br> <br> <br>                 Money|盾を売る<br>アイテムを売る<br>所持金|
+|VRAM1|1200|FA0|C185F00963B55D0EE253FB2BECB132B5A8D52012C18546A64B9AB3BB11520ECF|121|24|120|63|14|white|#EF000000|Buy Rod<br>Buy Magic<br>Buy Shield<br>Buy Item<br>| |
+|VRAM1|1200|FA0|D7DF97376F07284E3E3F519442C2B29E93D8CD96C35F8CAE74253F043E106EF0|121|24|120|63|14|white|#EF000000|Buy Rod<br>Buy Magic<br>Buy Shield<br>Buy Item<br>| |
+|VRAM1|1200|FA0|2AAC7104CC362A6705F0CEF75DA2F9708E1BFA27A778319921078B10BE50DF14|121|24|120|63|14|white|#EF000000|Sell Rod<br>Sell Magic<br>Sell Shield<br>Sell Item<br>| |
+|VRAM1|1200|FA0|650CA206B3277CBDB0DC8FBE4C1EA005AEE9C2CF6F801C88DC22DC327B6D5187|121|24|120|63|14|white|#EF000000|Sell Rod<br>Sell Magic<br>Sell Shield<br>Sell Item<br>| |
 |VRAM1|2600|6E0|24EB3209B80DB30F903C1D8324F82380F83EDBF73E6C7ADC4FAF4B2AF6A4B24F|9|118|238|100|14|white|#EF000000|[Sheela] Staying the night?<br>It’s best to rest often, just in case<br>something happens.<br>That’ll be 100G.|[シーラ] お泊まりですか？<br>いざという時のために、こまめにお泊まりになられた方がいいですよ。１００Ｇいただきます。|
 |VRAM1|2600|6E0|0E274BA560BF6DCE728E15CF2AFADE2EAFB15F58D859EDA81E9C520624BEBC65|9|118|238|100|14|white|#EF000000|[Sheela] Oh, this time it’s a young<br>lady! Last time you came in with that<br>handsome fellow, so I was hoping<br>he’d be back… hmph!|[シーラ] あら、今度は女の子のお客様ね。この間はカッコいいカレだったから期待してたんだけどなー。ちぇ。|
 |VRAM1|2600|6E0|09CEC757BE14D62F75963D97285339891C3451C5B37407B2A42AAFFD5A68FF84|9|118|238|100|14|white|#EF000000|[Sara] Staying overnight?<br>We'll record your journey.<br>We'll take 100G.|[サーラ] お泊まりですね。 あなたの旅の記録をとっておきましょう。|
@@ -257,16 +284,16 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|2600|6E0|4EABD318DA4438769556A33C1BCE5202F9D903CA463135DDE08321C4894427F6|9|118|238|100|14|white|#EF000000|Arrow Rod LV2, right?<br>It fires two magic arrows!<br>You can even call it ‘Aro-chan 2.’<br> <br>Price: 2000G<br>Buy it? Yes ★ No|アローロッドLV2ですね。<br>そんなに強力ではありませんが、遠くにいる敵も攻撃できるのが便利ですよ。<br>値段は2000G<br>買いますか? はい  いいえ|
 |VRAM1|2600|6E0|60CC00C1419BD8FD6A47227CA130727A4E1CDDCA04F63F17E84DD385E2C4D211|9|118|238|100|14|white|#EF000000|Thunder Rod LV2.<br>It fires lightning in three directions up<br>front. It doesn’t ride a tricycle,<br>but we call it ‘San-chan 2.’<br> <br>Price: 2200G<br>Buy it? Yes ★ No|サンダーロッドLV2ですね。<br>前３方向にカミナリが飛ぶのよ。三輪車には乗らないけど、「さんちゃん２」って言うの。<br>値段は2200G<br>買いますか? はい  いいえ|
 |VRAM1|2600|6E0|B27C28D54C64C1BF37B0ACD898C49D6E3C0C92415699608CD78D9541E1429E21|9|118|238|100|14|white|#EF000000|3-Way Rod LV1.<br>It’s not very strong, but it fires in<br>three directions up front, which<br>makes it really handy.<br> <br>Price: 1500G<br>Buy it? Yes ★ No|ロッドLV1ですね<br> 威力は弱いけど、前３方向に飛んでとっても便利よ。<br>値段は1500G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|3DE3B6DDD189994602A816D0B9805DBAA2E641CD72BC03D91EC65CDE795A22F3|9|118|238|100|14|white|#EF000000|Fire spell.<br>It shoots out three little flames. <br>Super cute! Won’t you take one?<br> <br>Price: 500G<br>Buy it? Yes ★ No|ファイアーの魔法ね。<br>３つも炎が出て、とってもかわういの。　おひとつ、い・か・が？<br>値段は500G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|F8D5224232DA0AF5A3BF78E1CF968855BA5497BCEFBC5A1319687524D0B65A8E|9|118|238|100|14|white|#EF000000|Thunder spell.<br>I really hate lightning, but this one’s<br>pretty powerful!<br> <br>Price: 600G<br>Buy it? Yes ★ No| サンダーの魔法ね。<br>あたし、カミナリきらい！でも、これでなかなか強力なのよね。<br>値段は600G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|241F7261D090918C481BE8BF2FE0ABC39FF36369DD591304A5C9BF60A36ABF2A|9|118|238|100|14|white|#EF000000|Flame Dragon spell.<br>The dragon looks really cool!<br>You’ll want to show it to your friends<br>when you cast it.<br> <br>Price: 1200G<br>Buy it? Yes ★ No|フレイムドラゴンの魔法ですね。<br>竜さんがとってもカッコいいの。お友達とか呼んだときに見せてあげたいわね。<br>値段は1200G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|3DE3B6DDD189994602A816D0B9805DBAA2E641CD72BC03D91EC65CDE795A22F3|9|118|238|100|14|white|#EF000000|Fire Magic.<br>It shoots out three little flames. <br>Super cute! Won’t you take one?<br> <br>Price: 500G<br>Buy it? Yes ★ No|ファイアーの魔法ね。<br>３つも炎が出て、とってもかわういの。　おひとつ、い・か・が？<br>値段は500G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|F8D5224232DA0AF5A3BF78E1CF968855BA5497BCEFBC5A1319687524D0B65A8E|9|118|238|100|14|white|#EF000000|Thunder Magic.<br>I really hate lightning, but this one’s<br>pretty powerful!<br> <br>Price: 600G<br>Buy it? Yes ★ No| サンダーの魔法ね。<br>あたし、カミナリきらい！でも、これでなかなか強力なのよね。<br>値段は600G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|241F7261D090918C481BE8BF2FE0ABC39FF36369DD591304A5C9BF60A36ABF2A|9|118|238|100|14|white|#EF000000|Fire Dragon Magic.<br>The dragon looks really cool!<br>You’ll want to show it to your friends<br>when you cast it.<br> <br>Price: 1200G<br>Buy it? Yes ★ No|フレイムドラゴンの魔法ですね。<br>竜さんがとってもカッコいいの。お友達とか呼んだときに見せてあげたいわね。<br>値段は1200G<br>買いますか? はい  いいえ|
 |VRAM1|2600|6E0|6B4594136D39124B9D955548E9262826F08513BBE5BF2BFCCBAB6A6A98D3F17A|9|118|238|100|14|white|#EF000000|I’ll take your Normal Rod<br>for 250G.<br>Sell it? Yes  No|ノーマルロッドを<br>250Gで引き取ります<br>売りますか? はい いいえ|
 |VRAM1|2600|6E0|8184FE6D643C944457BF7564AE430C2611A99AD57958541F78071E1661F5778B|9|118|238|100|14|white|#EF000000|[Geela] Take good care of your<br>money, young miss.|[ギルア] お金は大切にするんだぜ、おじょうちゃん。|
 |VRAM1|2600|6E0|E7E8B2D967A0D4751388321BA2726BE23C7B8EE80F3CA8992DF8A0C693BE2028|9|118|238|100|14|white|#EF000000|[Ema] Heading out somewhere?<br>It’s dangerous, so don’t leave town.|[エマ] どこかへお出かけ？ 危険だから、くれぐれも町の外へは出ないようにね。|
 |VRAM1|2600|6E0|F298D53E1ACBBEEBB392D5F2C6915E91AB8B3566294FE45F16AE23AAA3F0AC20|9|118|238|100|14|white|#EF000000|Small Shield, huh?<br>A bit fragile, but still a reliable ally. Well?<br> <br>Price: 1000G<br>Buy it? Yes ★ No|スモールシールドだな。 <br>ちょっとこわれやすいが、心強い味方になると思うぜ。どうだい？<br>値段は 1000G<br>買いますか?<br>はい いいえ|
 |VRAM1|2600|6E0|22D19D6858DB158388A518B7DD755B4B3104E647D86BAD07B31779B5761C9498|9|118|238|100|14|white|#EF000000|Bread, huh?<br>Even small wounds can be healed<br>with just this.<br> <br>Price: 100G<br>Buy it? Yes ★ No|パンだな。<br>ちょっとしたケガなら、これ一つで治っちまうぜ。どうだい？<br>値段は 100G<br>買いますか?<br>はい いいえ|
 |VRAM1|2600|6E0|E77DA9A7C0A7E8ADF3C746E21C8173D99517AAC82D9056C26407BD48FF266B9F|9|118|238|100|14|white|#EF000000|Dried Meat.<br>For deep wounds.<br>You’ll need something with real<br>stamina like this.<br> <br>Price: 500G<br>Buy it? Yes ★ No|ほし肉 。<br>ふかいキズには。<br>ふかいキズには、これぐらいスタミナのあるモンを食わんとな。<br>値段は 500G<br><br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|B89F4BCAB72DA4AB8C351D3C538CF7526C95D7CE1FF16EE698E2E72107A77449|9|118|238|100|14|white|#EF000000|So, a Gemil Potion, huh?<br>Pricey, but I guarantee the effect.<br>Pick one up when you’ve got the gold.<br> <br>Price: 1500G<br>Buy it? Yes ★ No|ゲミルポーションかい。<br>そうとう値ははるが、効果は保証するぜ。　金があるときにでも買ってってくれ<br>値段は 1500G<br><br>買いますか|
+|VRAM1|2600|6E0|B89F4BCAB72DA4AB8C351D3C538CF7526C95D7CE1FF16EE698E2E72107A77449|9|118|238|100|14|white|#EF000000|Gemil Potion, huh?<br>Pricey, but I guarantee the effect.<br>Pick one up when you’ve got the gold.<br> <br>Price: 1500G<br>Buy it? Yes ★ No|ゲミルポーションかい。<br>そうとう値ははるが、効果は保証するぜ。　金があるときにでも買ってってくれ<br>値段は 1500G<br><br>買いますか|
 |VRAM1|2600|6E0|A54E4819388E4C94D4BCF5CED9015DE0796C1E47FCF89F1B2A03CD5D43D53498|9|118|238|100|14|white|#EF000000|I’ll take your Gemil Potion<br>for 750G.<br>Sell it? Yes  No|ゲミルポーションを<br>750Gで引き取ります<br> <br>売りますか? はい  いいえ|
 |VRAM1|2600|6E0|E5E0F1FC2356694CF328FCDCEB9A30F950F524D1AD1C4473C0EAA9268C7A949E|9|118|238|100|14|white|#EF000000|Bought a small shield.|スモールシールドを買いました|
 |VRAM1|2600|6E0|2B8B46703CE0D66FB56692758392A9D041B3AC520355B6BBCA38C7F33DBE67E3|9|118|238|100|14|white|#EF000000|[Mayor] Yes, yes. Oh? I don’t believe<br>I’ve seen you before.<br>I am Demus, mayor of this town of<br>Arzal. What business do you have?|[町長] はいはい。おや？　見かけない方ですな。私は、このアーザルの町の長をつとめるデムスと申します。 なにかご用ですかな？|
@@ -295,14 +322,22 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|3D00|570|94E64DBA2FBF293B19A313A997D9AEBC9ED2EE57338252490439C9467626B689|9|188|238|35|14|#D95594|#EF000000|Got 500 Gold!|500ゴールドを手に入れた!|
 |VRAM1|3D00|570|61C1ABF34DD0E132B54A22879BFD16CD5667CC67A83F06912B41F72D836CBF16|9|188|238|35|14|#D95594|#EF000000|Got Sliced Bread!|パン【■】を手に入れた!|
-|VRAM1|3D00|570|966AB0C7935EF210D0C8BFE13D74AF9D02697F4388CE69488A0CD9DBC3887340|9|188|238|35|14|#D95594|#EF000000|Got Flame Dragon Magic!|フレイムドラゴン 【■】を手に入<br>れた!|
+|VRAM1|3D00|570|966AB0C7935EF210D0C8BFE13D74AF9D02697F4388CE69488A0CD9DBC3887340|9|188|238|35|14|#D95594|#EF000000|Got Fire Dragon Magic!|フレイムドラゴン 【■】を手に入<br>れた!|
 |VRAM1|3D00|570|175E01F9D1C3D03E3CE5D05F3A06CE15B565CB80612500D49C45F0E766936EFC|9|188|238|35|14|#D95594|#EF000000|Got Gemil Potion!|ゲミルポーション【■】を手に入 れた!|
 |VRAM1|3D00|570|CBA608DDF7444C9BA2DB3FD782378FF1F264AFD2732A53FEBF0D5FFEFE974BB5|9|188|238|35|14|#D95594|#EF000000|Got Fire Magic!|サンダー【■】を手に入 れた!|
 |VRAM1|3D00|570|F1200FBC56902CEC54F3564A0519D5C981C4494DC34863C56215994746BDEE02|9|188|238|35|14|#D95594|#EF000000|Got 1500 Gold!|1500ゴールドを手に入れた!|
 |VRAM1|3D00|570|1CB5E7FB7A2093873E1739AF4E9ABDAE76475B33EF052A3E0C7ADBE55E321C97|9|188|238|35|14|#D95594|#EF000000|Got 1000 Gold!|1000ゴールドを手に入れた!|
 |VRAM1|3D00|570|6B42A78549EC9614D29C44CFFD6B0D7D6FBF446ACDD3C1C5DEB4BC4433A19BB3|9|188|238|35|14|#D95594|#EF000000|Got 2000 Gold!|2000ゴールドを手に入れた!|
+|VRAM1|3D00|570|5DD2DB962258070F7AE11C3E5D36ECCF576DFC6FBBDBCF1A127BF0ECD8E355F9|9|188|238|35|14|#D95594|#EF000000|Got 3000 Gold!|3000ゴールドを手に入れた!|
+|VRAM1|3D00|570|E3999D127281FB0CEFA8A0D933BC6820B86A545CCBC2F5C6E8EBDA6C40BC1123|9|188|238|35|14|#D95594|#EF000000|Got 3500 Gold!|3500ゴールドを手に入れた!|
 |VRAM1|3D00|570|BA4A0D09393C84012D3E0E92E2E2552D7A3AF5E1B5398A80A0ECCEA7C4401500|9|188|238|35|14|#D95594|#EF000000|Got Water Dragon Magic!|ウォータードラゴン 【】を手に人れた!!|
 |VRAM1|3D00|570|9BDA79FA3DF2042265799C079B93697812C41DC2399CA46FF659B1B30781495B|9|188|238|35|14|#D95594|#EF000000|Got Dried Meat!|ほし肉 】を手に人れた!|
+|VRAM1|3D00|3E0|C30AAC83212AABE3EEC6AB59A43B58C187838286287A160E288B612AF295790A|9|188|238|35|14|#D95594|#EF000000|Got Shooting Star Magic!|シューティングスター【】を手に入れた!|
+|VRAM1|3D00|3E0|969B71BD5809F868BF2FDB57C26F50703F3CF2FA7358A392100060BBBBF60CEB|9|188|238|35|14|#D95594|#EF000000|Got Fire Bird Magic!|フレイムバード 【】を手に入れた!|
+|VRAM1|3D00|3E0|A302A52B49C3CC23B8C2A61BA012018BC00E84244B7F8AF625AA7E849EB73970|9|188|238|35|14|#D95594|#EF000000|Got Big Wave Magic!|ビッグウェイブ 【】を手に入れた!|
+|VRAM1|3D00|570|FBD812185B7A28EC3560667A5A23768ED964BB81281ADFCEE32CC906EEF69844|9|188|238|35|14|#D95594|#EF000000|Got the surfboard!|サーフボード 【】を手に入れた!|
+|VRAM1|3D00|570|AA955172B1FB60E4D13B4FB0A748C8C6F9F51C0EB526881B19ADAB81EFD96C1C|9|188|238|35|14|#D95594|#EF000000|Got 4000 Gold!|4000ゴールドを手に入れた!|
+|VRAM1|3D00|570|FE2652040B82C0486599751CF533252057D4C71B408DDFD91C2E2A191EF4182A|9|188|238|35|14|#D95594|#EF000000|Got Prison Key!|ろう屋の鍵【】を手に入れた!|
 
 
 ## Boss Arsides
@@ -343,7 +378,7 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|DFB2CAA772CD2DE300B357B4FD40DD4205032ACC8F6950E88608960713BFFA58|9|188|238|35|14|white|#EF000000|How will we survive from now on?|わしらはこれから、どうやって生きていけばええんじゃ。|
 |VRAM1|3D00|570|6C157EEFA79484600ADF7392EB0014950595EE1E5F986A97ACCF921D999BA994|9|188|238|35|14|white|#EF000000|[Man] I've been bored lately because<br>I can't go out on the boat.|［おじさん］ 最近は、船が出せなくてヒマだなぁ。|
 |VRAM1|3D00|570|34EC47768306EA71F33335664828EE4DBB0D7300BB9BFC0E9CE01FD03D134B3C|9|188|238|35|14|white|#EF000000|[Fray] Oh my... there's no way to<br>cross now.|［フレイ］ あらららー・・・・・ これじゃ確かに渡れないわね。|
-|VRAM1|3D00|570|AF89C29B1D543388B9E7EE9D08F79727DA283322FB783EA63008F44DF129BF55|9|188|238|35|14|white|#EF000000|[Frey] What on earth happened?|［フレイ］いったい、何があったんですか？|
+|VRAM1|3D00|570|AF89C29B1D543388B9E7EE9D08F79727DA283322FB783EA63008F44DF129BF55|9|188|238|35|14|white|#EF000000|[Fray] What on earth happened?|［フレイ］いったい、何があったんですか？|
 |VRAM1|3D00|570|FCB81F0622F631E6ED72FEEDF4FF3A92087B96ED66092FD18406C1DE83DEF494|9|188|238|35|14|white|#EF000000|[Young Man] Well, it was two or three<br>days ago…|［おにいさん］ それがよ、２、３ 日くらい前だったかなー・・・|
 |VRAM1|3D00|570|0762DB36802C0D2EDA75C656B0C7E813206142485831C44DD6D1EF1FF7A90874|9|188|238|35|14|white|#EF000000|A blue-haired guy came here, and…|青い髪した兄ちゃんが来て、ここを・・・|
 |VRAM1|3D00|570|82B084FE16C2137410540162254B7C6E1D895B0B6245F2B233281F77AA389D82|9|188|238|35|14|white|#EF000000|[Fray] You’re saying Latok destroyed<br>this bridge!?|［フレイ］ラトクさんが『この橋を壊した』ですってぇ！？|
@@ -532,7 +567,7 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|739E1DC7BD095C8A172FD3B72424447F51DB273AB302038DAE104213C702B3EC|9|188|238|35|14|white|#EF000000|[Miry] If you like, you can change<br>clothes at our place.|［ミリー］よかったらウチで着がえてって。|
 |VRAM1|3D00|570|654FE3FEAC5092CF0C345E23ACBC38FD10FCCE107A003DC9FA9A36D0E3CBA153|9|188|238|35|14|white|#EF000000|[Mill] And who is this girl?|［ミル］こちらの方は？|
 |VRAM1|3D00|570|60E131672483F432BD698827FF3B215AD0E3F0663E289B92C9BAF8A049407EB2|9|188|238|35|14|white|#EF000000|[Fray] This is Miry.|［フレイ］この子はミリー。|
-|VRAM1|3D00|570|609BB54C937054D365F415300B8719BA3B0DE392CCD4F0C65B5CFF8FCAC07E3F|9|188|238|35|14|white|#EF000000|[Fray] And this person was my teacher<br>until just recently.|［フレイ］で、こっちがついこの間まで私の先生だった人で、|
+|VRAM1|3D00|570|609BB54C937054D365F415300B8719BA3B0DE392CCD4F0C65B5CFF8FCAC07E3F|9|188|238|35|14|white|#EF000000|[Fray] And this was my teacher<br>until just recently.|［フレイ］で、こっちがついこの間まで私の先生だった人で、|
 |VRAM1|3D00|570|4A0CFF1743FD72F63FB64C100137693ED582EDDB291669DE71511C2DAA4871A9|9|188|238|35|14|white|#EF000000|His name is Mill Grard.|ミル・グラードって言うの。|
 |VRAM1|3D00|570|11EC8AB5563D96E7D48672BAD2C359F52915642B02B881E414CD4DDB55A1E344|9|188|238|35|14|white|#EF000000|[Miry] Can I just call you "Mill" even<br>though you’re a teacher?|［ミリー］先生なのに呼びすてにしていいの？|
 |VRAM1|3D00|570|654A7646664467B8A6A74C0ECD1793C077BCEEBE988C13D67F0B4B30A566A53E|9|188|238|35|14|white|#EF000000|[Mill] It’s fine, it makes it easier for<br>me.|［ミル］いいんですよ、その方が気が楽ですし。|
@@ -564,13 +599,12 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|8FD66A2380FEED47BB804E85D6EAF9E962CCF8410372E9D5CED4974C412ED1A1|9|188|238|35|14|white|#EF000000|[Mill] And apparently, dark magic<br>is involved, too.|［ミル］で、それにどうも、闇の 魔導が関係しているらしく、|
 |VRAM1|3D00|570|C82CCE09FC74FC35E518C6D05A259EB68835CC0A7621C14E0809DF612B28E429|9|188|238|35|14|white|#EF000000|I got involved in investigating this<br>case.|私もこの事件の調査にくわわることになったんです。|
 |VRAM1|3D00|570|2D97739A1775F307F1B611606748BE07687B8A9DF4E61C82ABD2679BF38EC9F7|9|188|238|35|14|white|#EF000000|[Fray] I wonder… could that really<br>have something to do with Latok?|［フレイ］やっぱそれってラトクさんに関係あるのかしら？|
-|VRAM1|3D00|570|D21F51B42E6D527028CE42A7EF4514E3CF258F1BA6DB847A76AE2D74F0BE1799|9|188|238|35|14|white|#EF000000|[Fray] Huh? Ku-Or…<br>You mean THAT Amaduk's?|［フレイ］えっ、ク・オルって、あのアマドゥクの？|
+|VRAM1|3D00|570|D21F51B42E6D527028CE42A7EF4514E3CF258F1BA6DB847A76AE2D74F0BE1799|9|188|238|35|14|white|#EF000000|[Fray] Huh? Ku-Or…<br>You mean THAT Amadok's?|［フレイ］えっ、ク・オルって、あのアマドゥクの？|
 |VRAM1|3D00|570|88276B1EF6BCE7B0B4ED18982F60FDCF13E829877756A3B871FB2625388FCEC4|9|188|238|35|14|white|#EF000000|[Miry] Hey, explain it so I can get it<br>too!|［ミリー］ねえねえ、あたしにもわかるように説明してよ。|
 |VRAM1|3D00|570|590FAB685239810B3D2510B914B159CCA92147F28C443D2FA82D9BC97B917420|9|188|238|35|14|white|#EF000000|[Mill] In other words, in ancient times,<br>during the Riola civilization…|［ミル］つまりですね。古代、　リオラ文明の時代に名をのこす|
 |VRAM1|3D00|570|8B4B7E547CA5D592B4BBFCCB9A4B9A7F59320FF10A1099C5A45D691183177B6A|9|188|238|35|14|white|#EF000000|The Dark Archmage Amadok is…| 闇の大魔導士アマドゥクが・・|
 |VRAM1|3D00|570|90C8CD0C8E7CD74D8BA7308A8F525DA47B8232F1B7B0B54FD9DA5BF4DA91E376|9|188|238|35|14|white|#EF000000|[Fray] In short, then.| ［フレイ］よーするにね。|
 |VRAM1|3D00|570|1C73A372114FF390BBFD1C653FD5E4405290899A83ACC8CD4F9AB670AF67553E|9|188|238|35|14|white|#EF000000|A long time ago, an evil wizard<br>created a flying castle.| 昔むか〜しの悪い魔法使いさんが作った、空飛ぶお城のことよ。|
-|VRAM1|3D00|570|43FA5D6E504938994F9F1542A586340FADCE9595F116A810C6DD9E8741449E73|9|188|238|35|14|white|#EF000000|[Miry] Hmm.|［ミリー］ふーん。|
 |VRAM1|3D00|3E0|51D187DA7D7A1C91B6621DE39DF82746DAC484C000E17D1AC8DFD5B462344AF6|9|188|238|35|14|white|#EF000000|[Miry] Hmm.|［ミリー］ふーん。|
 |VRAM1|3D00|570|88B07F15D084C10772CE53F2909181986FAD7D9E4EEA79247CC46CBEF59CEFBB|9|188|238|35|14|white|#EF000000|[Fray] By the way… I still can’t see<br>it at all.| ［フレイ］ところで・・・私にはさっきからちっとも見えな いんだけど？|
 |VRAM1|3D00|570|F219A8E88F338349BD86931E9C55864D3EA9C0753010F84C214EF33C83BB25A9|9|188|238|35|14|white|#EF000000|[Mill] It’s understandable.<br>If such a powerful barrier is up,| ［ミル］ムリもありません。あれだけ強力な結界をはっていれば|
@@ -586,7 +620,6 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4|9|188|238|35|14|white|#EF000000|[Mill] Absolutely.|［ミル］そのとおりですよ。|
 |VRAM1|3D00|570|EDD419362BAFAD1FB60CC67881A191F8B4199F27AC361E27AB222B4FD8A7D64C|9|188|238|35|14|white|#EF000000|This could turn into a great danger<br>for the world of Xak…| いや、もしかするとこのサーク界の一大事となるかも・・・。|
 |VRAM1|3D00|570|D032D983E7C65C0404F40C5C3BE83339F352E8715AF8680B5C974F2844B8C78B|9|188|238|35|14|white|#EF000000|We have to do something to stop<br>him.| なんとかしてアイツをくいとめないと。|
-|VRAM1|3D00|570|CF750078C140733172AA11DDD0DFAB43F8E5A95EF68CA0C484F7FA52A3724342|9|188|238|35|14|white|#EF000000|[Fray] Him?| ［フレイ］アイツ？|
 |VRAM1|3D00|3E0|D57500B24328324874531CB3565CF91505A56977C5BA7BDEA8ECDAB460ECF73C|9|188|238|35|14|white|#EF000000|[Fray] Him?|［フレイ］アイツ？|
 |VRAM1|3D00|570|A7AAF39E8BCB65D72A8AEBF91EBEA8A20AB64B0CF32AEE9BBDC674DCC2D5685E|9|188|238|35|14|white|#EF000000|[Miry] Huh? Is that Grandfather’s<br>voice?| ［ミリー］あれ、おじいちゃんの声？|
 |VRAM1|3D00|570|4D5E2F2877A3CE8EAE2E2140305DD7C125D737FA93D61418662D91989E0E361F|9|188|238|35|14|white|#EF000000|[Fray] Oh no, I totally forgot about<br>that.| ［フレイ］いっけなぁ〜い、そのコトすっかり忘れてた。|
@@ -621,23 +654,23 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|2600|6E0|5575FF656D1C982A8E8353768DA4E74CA271557D6B0DE335C3B1DD157278896F|9|118|238|100|14|white|#EF000000|[Old Lady Zera] Oh my, what a cute<br>young lady. You remind me of myself<br>20 years ago.|［ゼラばあさん］お〜お、これは可愛らしいお嬢ちゃんじゃのう。まるで２０年前のワシを見とるようじゃ。|[シーラ] あら、今度は女の子のお客様ね。この間はカッコいいカレだったから期待してたんだけどなー。ちぇ。|
 |VRAM1|2600|6E0|A314D857219C805A50C96A75BE86CB65B768A13C3F697FE8AE6DF89A891C5B84|9|118|238|100|14|white|#EF000000|[Old Lady Zera] Yes, yes, stay as<br>long as you like. Hee hee.<br>That’ll be 100G. |［ゼラばあさん］はいはい、好きなだけ泊まっていってくだされ。いっひっひ。１００Ｇいただきます。|幽川 晩泊まる 麓慧 所持金 3呂5口6 あさん はいはし 好き 昭た荒きま<br>|
 |VRAM1|2600|6E0|C40D4DFD39466F6B77EFF8DBE0328CE963B84D6EBEBA27AF063A77FEC78BF596|9|118|238|100|14|white|#EF000000|[Elma] Lately there have been some<br>disturbing rumors in town.<br>It worries me.|［エルマ］近頃、町の中に物騒な噂が流れてるみたいね。<br>気がかりだわ。|
-|VRAM1|2600|6E0|FBBDB667D0203632F73E074D771490C42F6E0A1C31D13F34D3D00E62512DA5B6|9|118|238|100|14|white|#EF000000|Water Dragon magic. It summons a Water Dragon. Pretty flashy—maybe worth carrying one. Price: 900G. Buy it? Yes / No |ウォータードラゴンの魔法ね。<br>水竜を召喚する魔法よ。<br>けっこうハデだから、１コくらい持っててもいいかしらね。<br>値段は900G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|1C170F71C3BF5A8242DD8D719055F416F577BCC01F3A72254F2B39F7FB30A54C|9|118|238|100|14|white|#EF000000|Flame Dragon magic. Summons a Fire Dragon. Its blazing flames burn passionately. Price: 1200G. Buy it? Yes / No |フレイムドラゴンの魔法ね。<br>これは火炎竜を呼び出す魔法よ。情熱的に燃え上がる炎がたくましいわぁ。値段は1200G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|8167F0270A2D407FE97A8440C4F345561A3BE41C30F334CF87DC71BF36E20239|9|118|238|100|14|white|#EF000000|Big Wave magic. It unleashes a massive tsunami. Don’t worry, it won’t harm homes or nature, so use it freely. Price: 1800G. Buy it? Yes / No |ビッグウェイブの魔法ね。<br>大津波をひき起こすのよ。人家や自然には影響ないから、思いきり使っていいわよ。<br>値段は1800G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|6D729A82FFCBE15CDF539CA7E37E6E7F86E4E598BC005BC62B02B00268140418|9|118|238|100|14|white|#EF000000|Shooting Star magic. It rains down a shower of stars to attack. Kind of surreal, don’t you think? Price: 2000G. Buy it? Yes / No|シューティングスターの魔法ね。いっぱいのお星サマをふらせて攻撃するのよ。けっこうシュールだと思わない？<br>値段は2000G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|FBBDB667D0203632F73E074D771490C42F6E0A1C31D13F34D3D00E62512DA5B6|9|118|238|100|14|white|#EF000000|Water Dragon Magic. It summons a Water Dragon. Pretty flashy—maybe worth carrying one. Price: 900G. Buy it? Yes ★ No |ウォータードラゴンの魔法ね。<br>水竜を召喚する魔法よ。<br>けっこうハデだから、１コくらい持っててもいいかしらね。<br>値段は900G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|1C170F71C3BF5A8242DD8D719055F416F577BCC01F3A72254F2B39F7FB30A54C|9|118|238|100|14|white|#EF000000|Fire Dragon Magic. Summons a Fire Dragon. Its blazing flames burn passionately. Price: 1200G. Buy it? Yes ★ No |フレイムドラゴンの魔法ね。<br>これは火炎竜を呼び出す魔法よ。情熱的に燃え上がる炎がたくましいわぁ。値段は1200G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|8167F0270A2D407FE97A8440C4F345561A3BE41C30F334CF87DC71BF36E20239|9|118|238|100|14|white|#EF000000|Big Wave Magic. It unleashes a massive tsunami. Don’t worry, it won’t harm homes or nature, so use it freely. Price: 1800G. Buy it? Yes ★ No |ビッグウェイブの魔法ね。<br>大津波をひき起こすのよ。人家や自然には影響ないから、思いきり使っていいわよ。<br>値段は1800G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|6D729A82FFCBE15CDF539CA7E37E6E7F86E4E598BC005BC62B02B00268140418|9|118|238|100|14|white|#EF000000|Shooting Star Magic. It rains down a shower of stars to attack. Kind of surreal, don’t you think? Price: 2000G. Buy it? Yes ★ No|シューティングスターの魔法ね。いっぱいのお星サマをふらせて攻撃するのよ。けっこうシュールだと思わない？<br>値段は2000G<br>買いますか?<br>はい いいえ|
 |VRAM1|2600|6E0|F9B7C4C9A2A4881CC91AF93A169014D36403572223C0383F0394F0812D2672DB|9|118|238|100|14|white|#EF000000|[Mayor] Do you need something?<br>[Fray] Um, do you know someone<br>called Latok Kart? |[町長] なにかご用ですかな？<br>［フレイ］あのー、ラトク・カートっていう人を知りませんか？|
 |VRAM1|2600|6E0|0F45F0FAB1291C61F1F61D640C5842130A7CFD44E4E3373B05C2A523AAE60E42|9|118|238|100|14|white|#EF000000|[Mayor] Latok Kart… You mean the<br>hero Lord Latok, who defeated the<br>fiend Badu? |[町長] ラトク・カートというと ・・・妖魔バドゥーを倒された、<br>あの勇者ラトク様？|
 |VRAM1|2600|6E0|D90423CCDD9BC381F938F47FBA7813A0005DCF10AA708DD0838E5C0EEB144D4D|9|118|238|100|14|white|#EF000000|[Fray] Yes, that’s right.<br>[Mayor] Unfortunately, I’ve never met<br>him. Is he here in this town?<br>Haha, surely not. |［フレイ］ ええ、そうです、そうです。<br>[町長] 残念ながら、私はお会いしたことがありませんな。<br>この町にいらしてる？　はは、まさか。|
 |VRAM1|2600|6E0|A9C9B5A64E3D994B3D2314AD65A57C8DA356A79BCA6AF2D4F29B17EB3CCFA501|9|118|238|100|14|white|#EF000000|[Razel] Even Miry is quite the lonely<br>girl. If you don’t mind, could you keep<br>her company?| [ラゼル] ミリーもあれで、人一倍さみしがり屋でな。よかったら話し相手になってやってくれんかの。|
-|VRAM1|2600|6E0|D7BADEF75760D8151E6E3FB8459EF87F09EC9C896C244A0F01029EBF9738A645|9|118|238|100|14|white|#EF000000|A Small Shield, eh.<br>Not too reliable, but better than<br>nothing, I suppose.<br>Price: 1000G<br>Buy it? Yes / No| スモールシールドじゃな。<br>ちょっと心もとないが、ないよりはマシといったところかの。<br>買っていきなさるか？<br>値段は 1000G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|FDDBE4622C9917901087A017499863CF3E44A92C3CF07A3C37F56D17A73C8D3A|9|118|238|100|14|white|#EF000000|Round Shield.<br>It’ll be a reliable ally on dangerous<br>journeys.<br>Price: 1800G<br>Buy it? Yes / No|ラウンドシールドじゃな。<br>危険な旅の心強い味方となってくれるじゃろう。<br>値段は 1800G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|232639503E9077AE37F2856C74EB5EEF517868E9ACBE12F4AA97EC7B21907A67|9|118|238|100|14|white|#EF000000|Bread, eh?<br>Eat it and you’ll feel lively.<br>What do you say?<br>Price: 100G<br>Buy it? Yes / No| パンじゃな。<br>食えば元気が出てくるぞ。どうじゃな。<br>値段は 100G<br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|9BE2A1533C1C1B95C216C10831A4C2FC2701F935CDB66F64CA10E6D84A5FFF62|9|118|238|100|14|white|#EF000000|Dried Meat, eh?<br>As they say, “Better safe than sorry.”<br>Best to always have some on hand.<br>Price: 500G<br>Buy it? Yes / No| ほし肉 じゃな。<br>「そなえあれば、うれいなし」と言うしな。　つねにこれぐらいは持っておいた方がいいじゃろ。<br>値段は 500G<br><br>買いますか?<br>はい いいえ|
-|VRAM1|2600|6E0|3CD5509368A6FBD87AF9CFF040710EA14056F2641F2A48344F00DDD6A2A15386|9|118|238|100|14|white|#EF000000|A Gemil Potion, eh?<br>Costly, but it surely works.<br>Get it? Oh? Not amused?<br>Price: 1500G<br>Buy it? Yes / No| ゲミルポーションじゃな。<br>高価なだけに効果はあるぞなんちてな。おや？お気にめさなんだかの。<br>値段は 1500G<br><br>買いますか|
-|VRAM1|2600|6E0|B74B20D9A78F6158BEB8E919FFAE127F70F5CEF85BE64B4D79001718C7A87B8F|9|118|238|100|14|white|#EF000000|Arrow Rod LV3, eh?<br>Fires three magic arrows.<br>That’s right, three of them!<br>Price: 4000G<br>Buy it? Yes / No| アローロッドLV3ね。<br>魔法の矢が３本も出るの。３本よ、３本！どお？<br>値段は4000G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|7951BDA7989A750766F083EE73741D9520FE0E0CF0492D5B85AB6F3916A08B25|9|118|238|100|14|white|#EF000000|Thunder Rod LV3, eh?<br>Lightning shoots in four directions:<br>up, down, left, right. That piercing<br>feeling is just irresistible!<br>Price: 4500G<br>Buy it? Yes / No| サンダーロッドLV3ね。<br>カミナリが上下左右４方向に飛ぶのよ。この突きさすような感覚がたまんないわぁ。<br>値段は4500G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|BBB91364341DA966F8A9DDD8269D23321C8CD07FAD642080C8C198833F9CFB88|9|118|238|100|14|white|#EF000000|3-Way Rod LV2, eh?<br>Shooting in three directions is<br>fine, but it feels a little lacking.<br>How about for your collection?<br>Price: 2500G<br>Buy it? Yes / No| 3WAYロッドLV2ね<br>３方向に飛ぶのはいいけど、なんだか物足りないわ。<br>コレクションにどう？<br>値段は2500G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|7167FD7E2A99DB35D4927C20C663FF0045838231D0993133E19380E898DC4784|9|118|238|100|14|white|#EF000000|Fire Rod LV2, eh?<br>For those who like wild battles,<br>diving right into the enemy’s chest,<br>Ah, it thrills me!<br>Price: 2400G<br>Buy it? Yes / No|ファイアーロッドLV2ね。<br>敵のフトコロへ飛び込んでいくような、野性的な戦いが好きな人向けね。ああ、シビレルわぁ〜。<br>値段は2400G<br>買いますか? はい  いいえ||
+|VRAM1|2600|6E0|D7BADEF75760D8151E6E3FB8459EF87F09EC9C896C244A0F01029EBF9738A645|9|118|238|100|14|white|#EF000000|A Small Shield, eh.<br>Not too reliable, but better than<br>nothing, I suppose.<br>Price: 1000G<br>Buy it? Yes ★ No| スモールシールドじゃな。<br>ちょっと心もとないが、ないよりはマシといったところかの。<br>買っていきなさるか？<br>値段は 1000G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|FDDBE4622C9917901087A017499863CF3E44A92C3CF07A3C37F56D17A73C8D3A|9|118|238|100|14|white|#EF000000|Round Shield.<br>It’ll be a reliable ally on dangerous<br>journeys.<br>Price: 1800G<br>Buy it? Yes ★ No|ラウンドシールドじゃな。<br>危険な旅の心強い味方となってくれるじゃろう。<br>値段は 1800G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|232639503E9077AE37F2856C74EB5EEF517868E9ACBE12F4AA97EC7B21907A67|9|118|238|100|14|white|#EF000000|Bread, eh?<br>Eat it and you’ll feel lively.<br>What do you say?<br>Price: 100G<br>Buy it? Yes ★ No| パンじゃな。<br>食えば元気が出てくるぞ。どうじゃな。<br>値段は 100G<br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|9BE2A1533C1C1B95C216C10831A4C2FC2701F935CDB66F64CA10E6D84A5FFF62|9|118|238|100|14|white|#EF000000|Dried Meat, eh?<br>As they say, “Better safe than sorry.”<br>Best to always have some on hand.<br>Price: 500G<br>Buy it? Yes ★ No| ほし肉 じゃな。<br>「そなえあれば、うれいなし」と言うしな。　つねにこれぐらいは持っておいた方がいいじゃろ。<br>値段は 500G<br><br>買いますか?<br>はい いいえ|
+|VRAM1|2600|6E0|3CD5509368A6FBD87AF9CFF040710EA14056F2641F2A48344F00DDD6A2A15386|9|118|238|100|14|white|#EF000000|A Gemil Potion, eh?<br>Costly, but it surely works.<br>Get it? Oh? Not amused?<br>Price: 1500G<br>Buy it? Yes ★ No| ゲミルポーションじゃな。<br>高価なだけに効果はあるぞなんちてな。おや？お気にめさなんだかの。<br>値段は 1500G<br><br>買いますか|
+|VRAM1|2600|6E0|B74B20D9A78F6158BEB8E919FFAE127F70F5CEF85BE64B4D79001718C7A87B8F|9|118|238|100|14|white|#EF000000|Arrow Rod LV3, eh?<br>Fires three magic arrows.<br>That’s right, three of them!<br>Price: 4000G<br>Buy it? Yes ★ No| アローロッドLV3ね。<br>魔法の矢が３本も出るの。３本よ、３本！どお？<br>値段は4000G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|7951BDA7989A750766F083EE73741D9520FE0E0CF0492D5B85AB6F3916A08B25|9|118|238|100|14|white|#EF000000|Thunder Rod LV3, eh?<br>Lightning shoots in four directions:<br>up, down, left, right. That piercing<br>feeling is just irresistible!<br>Price: 4500G<br>Buy it? Yes ★ No| サンダーロッドLV3ね。<br>カミナリが上下左右４方向に飛ぶのよ。この突きさすような感覚がたまんないわぁ。<br>値段は4500G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|BBB91364341DA966F8A9DDD8269D23321C8CD07FAD642080C8C198833F9CFB88|9|118|238|100|14|white|#EF000000|3-Way Rod LV2, eh?<br>Shooting in three directions is<br>fine, but it feels a little lacking.<br>How about for your collection?<br>Price: 2500G<br>Buy it? Yes ★ No| 3WAYロッドLV2ね<br>３方向に飛ぶのはいいけど、なんだか物足りないわ。<br>コレクションにどう？<br>値段は2500G<br>買いますか? はい  いいえ|
+|VRAM1|2600|6E0|7167FD7E2A99DB35D4927C20C663FF0045838231D0993133E19380E898DC4784|9|118|238|100|14|white|#EF000000|Fire Rod LV2, eh?<br>For those who like wild battles,<br>diving right into the enemy’s chest,<br>Ah, it thrills me!<br>Price: 2400G<br>Buy it? Yes ★ No|ファイアーロッドLV2ね。<br>敵のフトコロへ飛び込んでいくような、野性的な戦いが好きな人向けね。ああ、シビレルわぁ〜。<br>値段は2400G<br>買いますか? はい  いいえ||
 |VRAM1|3D00|570|84DA8DDE004D91C196DC3F88ECCCA1FEE71505C81391D0FABE8C689CF0B91D8C|9|188|238|35|14|white|#EF000000|[Fray] Huh? No point coming here<br>after all… |［フレイ］あれれ？　こんなトコ来てもしようがないじゃない。|
 |VRAM1|3D00|570|4DBB4DA121D21A737293CB5F0A15450410CAB8CE267E3335D09DF3190E6C5D69|9|188|238|35|14|white|#EF000000|[Fray] Looks like no one lives here. |［フレイ］どうやら、ここには誰も住んでないみたいね。|
 |VRAM1|3D00|570|4416390B6A438AFB520127085C014B84C95F893EBCA3C6CAB4D68C5F4CBDA1E0|9|188|238|35|14|white|#EF000000|[Fray] Aaaah! I thought I was going<br>to die!|［フレイ］あ〜〜〜〜〜、死ぬかと思った。|
@@ -683,8 +716,8 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|34439BC1FF9842AE00930FCED8D7C8D9D17A2984036631813B30EE548CF67BA2|9|188|238|35|14|white|#EF000000|[Fray] Um… Isac… Sir?|［フレイ］あのぉ〜、アイザック・・・先生？|
 |VRAM1|3D00|570|CD6B2F0C6CACBBBBD35039DE954D952257BA5BC44931BFFCB16E1DA1F037D769|9|188|238|35|14|white|#EF000000|[Isac] What is it? Suddenly so formal.|［アイザック］なんじゃな。急にあらたまって。|
 |VRAM1|3D00|570|18920748AC4D0132B184F996F6A4AD08205E8CE7A7A05C079A7A93FF95B749C6|9|188|238|35|14|white|#EF000000|[Fray] Well, here’s what happened…|［フレイ］実は、かくかくしかじかというワケで・・・。|
-|VRAM1|3D00|570|CD6B2F0C6CACBBBBD35039DE954D952257BA5BC44931BFFCB16E1DA1F037D769|9|188|238|35|14|white|#EF000000|[Isac] What!? The floating Castle<br>Ku-Or!?|［アイザック］なんじゃと！空中城ク・オルじゃと！？|
-|VRAM1|3D00|570|FFD82B98E991963FD1E99139F2D5859D5A74B285839BA917A6542F29A877F15C|9|188|238|35|14|white|#EF000000|If that’s true, we must hurry to Valua<br>Town.|それが本当ならば急いでヴァルアの町に向かわねばならん。|
+|VRAM1|3D00|570|CD6B2F0C6CACBBBBD35039DE954D952257BA5BC44931BFFCB16E1DA1F037D769|9|188|238|35|14|white|#EF000000|[Isac] What!? The flying Castle<br>Ku-Or!?|［アイザック］なんじゃと！空中城ク・オルじゃと！？|
+|VRAM1|3D00|570|FFD82B98E991963FD1E99139F2D5859D5A74B285839BA917A6542F29A877F15C|9|188|238|35|14|white|#EF000000|If that’s true, we must hurry to Valuah<br>Town.|それが本当ならば急いでヴァルアの町に向かわねばならん。|
 |VRAM1|3D00|570|88D453E481745729F5937696D13BA2453EFB30552B429F8BFCB50752C21A6DEA|9|188|238|35|14|white|#EF000000|Young lady, are you ready?|娘、用意はいいな？|
 |VRAM1|3D00|570|02CCFDC03938CDFEE2028F7BB4C71DF35F02732D819FDF0095B9CA3FAB3F2940|9|188|238|35|14|white|#EF000000|[Fray] Fine, whatever you want.|［フレイ］もう、どうにでもしてください。|
 |VRAM1|3D00|570|55EB26F9A0B80714DC38FAFB0BE139F5AC8A4B85E6CECCE339A3D97DF32BAFCD|9|188|238|35|14|white|#EF000000|[Isac] Yes. I know it’s asking a lot,<br>but…|［アイザック］うむ。それでは行くぞ。|
@@ -731,8 +764,7 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|2600|6E0|796549201D77A60B99403FD8F0073269E372A21608E6ACE922E17D3ADBF3E546|9|118|238|100|14|white|#EF000000|[Razel] Have you seen Miry around?<br>I was hoping to ask her to run a<br>small errand for me…|[ラゼル] ミリーを見かけんかったかな。ちょっと使いをたのもうと思ったんじゃがなぁ。|
 
 
-
-## Mines and Pularis boss, Valua town again
+## Mines and Pularis boss, Valuah town again
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
@@ -786,19 +818,319 @@ TODO: statically patch village names (used in save/load screen and teleport menu
 |VRAM1|3D00|570|5AD2D21F13AF5617CD3EBAFCF85C821D15C62C92B7E005D93331F2F7B5C79C03|9|188|238|35|14|white|#EF000000|I can’t believe even you were<br>kidnapped!|まさかキミまでがさらわれてしまうなんて！|
 |VRAM1|3D00|570|50220EFD479C3AA68098E78AF2D888B23AFBDEF62DF4A9848A7E1C839BE136BA|9|188|238|35|14|white|#EF000000|Ah, what should I do…<br>what should I do…|ああ、どうしよう、どうしよう。|
 |VRAM1|3D00|570|0713E34D601AAE8607BC97BD60B5532BC371EAE45A744C56389C73016AF1D034|9|188|238|35|14|white|#EF000000|[Fray] …Is there really no one here?|［フレイ］・・・だれもいないのかな？|
-|VRAM1|3D00|570|D55E0B4D9779B49A20FC82DCFE194694977D10BD523F3C8B676D7C41C65E08E4|9|188|238|35|14|white|#EF000000|[Isac] Are you ready?<br>Yes / No|［アイザック］準備はよいか？<br>はい / いいえ|
+|VRAM1|3D00|570|D55E0B4D9779B49A20FC82DCFE194694977D10BD523F3C8B676D7C41C65E08E4|9|188|238|35|14|white|#EF000000|[Isac] Are you ready?<br>Yes ★ No|［アイザック］準備はよいか？<br>はい ★ いいえ|
 |VRAM1|3D00|570|4201F5A232FED661D278EECEF9DD2E16AD97FAA1D572B5822ED22111D42401A9|9|188|238|35|14|white|#EF000000|[Fray] Please go easy on me, Isac.|［フレイ］お手やわらかにおねがいしますね、アイザック先生。|
 |VRAM1|3D00|570|EB0DBDCC1B51AFE2BCE5C6FBA9E3A223A55938D47AA02B284B3F5BFDE3793733|9|188|238|35|14|white|#EF000000|[Isac] I understand.|［アイザック］わかっておる。|
 |VRAM1|3D00|570|585604BA73851FE6589E2526405966800465402B3AAE2F72EFCB77D561848469|9|188|238|35|14|white|#EF000000|[Fray] Um, can we have a little more<br>time…?|［フレイ］あの、もうちょっと時間を・・・。|
 |VRAM1|3D00|570|7C4DAA28EFDB6F7F0B171A4DC3D2017CE307F9FA3EF74D534B91347D7E3D73C1|9|188|238|35|14|white|#EF000000|[Isac] What are you dawdling for!?|［アイザック］なぁ〜にをグズグズしておるか！|
-|VRAM1|3D00|570|71D29E72217B8D0EBEE72A7A0A3971B297A5B83651FA0C0DD3482C713A2FA291|9|188|238|35|14|white|#EF000000|[Mill] Are you ready?<br>Yes / No|［ミル］準備はいいですか？<br>はい / いいえ|
+|VRAM1|3D00|570|71D29E72217B8D0EBEE72A7A0A3971B297A5B83651FA0C0DD3482C713A2FA291|9|188|238|35|14|white|#EF000000|[Mill] Are you ready?<br>Yes ★ No|［ミル］準備はいいですか？<br>はい ★ いいえ|
 |VRAM1|3D00|570|011004EAA63BAD359444F23753D0333FAAE3D4E1EB38C4DA78ECAFA6289BA3C2|9|188|238|35|14|white|#EF000000|[Mill] Fray, hurry up!|［ミル］フレイさん、急いでください！|
 |VRAM1|3D00|570|5A05487A77605CE95C43D228CC7B239DE2FC274F6F3BA15BDCFC2BA2B0C0ABC4|9|188|238|35|14|white|#EF000000|[Fray] Yes. I can’t afford to dawdle.|［フレイ］はい。ぐずぐずしていられません。|
 |VRAM1|3D00|570|D18C5053EA488ED3A60ECE42318038BE10996BD52646620E9D5DD96949582947|9|188|238|35|14|white|#EF000000|Please.|おねがいします。|
-|VRAM1|3D00|570|E1E8BD821DC13435C3A5B418046C639DB9E14BBB0099D2A9A8573FB507F37B6F|9|188|238|35|14|white|#EF000000|[Fray] Amazing! It’s floating in the<br>air!|［フレイ］すご〜い、空に浮いてるわ！|
+|VRAM1|3D00|570|E1E8BD821DC13435C3A5B418046C639DB9E14BBB0099D2A9A8573FB507F37B6F|9|188|238|35|14|white|#EF000000|[Fray] Amazing! I'm flying in the<br>sky!|［フレイ］すご〜い、空に浮いてるわ！|
 |VRAM1|3D00|570|29CEFACBF29C6FCD0BFA8548796A3221BCD1591513940DFA71492B80FF424F53|9|188|238|35|14|white|#EF000000|[Mill] Fray. We’ll help as much as<br>we can.|［ミル］フレイさん。私たちもできるかぎり手助けします。|
 |VRAM1|3D00|570|55082C6F5560960C75FDE5FA52BC35EDEE04E956FAC9B38CFABD44BA4472B0AA|9|188|238|35|14|white|#EF000000|We’ll start preparing some support<br>items transfer.|これから支援アイテムの転送準備にかかります。|
 |VRAM1|3D00|570|FDBBB35DCDB477E24E8301810D6B83B79BBA7A1CE96FD994C513F954C4C7BBD0|9|188|238|35|14|white|#EF000000|Collect them while exploiting gaps<br>in the enemy attacks.|うまく敵の攻撃のスキをついて、受けとってください。|
 |VRAM1|3D00|570|0F50EAED4BE6670E2AA7536F557E9172D5030A74D05FDE574C77F25596468153|9|188|238|35|14|white|#EF000000|[Isac] Watch out for monsters<br>around the castle.|［アイザック］城のまわりのモンスターに気をつけるのじゃぞ。|
 |VRAM1|3D00|570|9409A57FE133BD848BE607B12B181956B260EA34EE4A9DAA153D8E5562B2F6A4|9|188|238|35|14|white|#EF000000|[Fray] Got it.|［フレイ］わかったわ。|
 |VRAM1|3D00|570|920A76B9E94062170CA9804CAB70A81CA9CD404F609E16BA53EA55A856B111EA|9|188|238|35|14|white|#EF000000|Mill, Isac, here we go!|ミル、アイザック先生、行ってきます！|
+
+
+## Flying Castle Ku Or, Terrace
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|3D00|570|2BC53AD960BA759829155D5EBB05FE24951CCB2F5777790C2DF857E478F8E2ED|9|188|238|35|14|white|#EF000000|[Fray] Ouch, ouch, ouch…|［フレイ］いたたたた・・・。|
+|VRAM1|3D00|570|0ACB545C24E0D81CC675C046B87F5062609DA5F2D8F30204892D8E655B4D2F90|9|188|238|35|14|white|#EF000000|Geez, why did my wings suddenly<br>disappear?!|もうっ、どうして急にツバサが消えちゃうのよっ！|
+|VRAM1|3D00|570|387DF328FD5081C9BDDDA852DB99C9DA115372DD1B097EE0DDC7B45A1AF6C3B4|9|188|238|35|14|white|#EF000000|[Suspicious Man] Wh-what the heck<br>are you?!|［アヤシイ男］な、なんでっか、あんさんは！？|
+|VRAM1|3D00|570|D95BDB00C10F2212C0533F86462E3D81B7EA76887625ACB84C8B0E17BBD69BEF|9|188|238|35|14|white|#EF000000|Popping out of the sky all of a<br>sudden like that…|いきなり空からわいてきよってからに。|
+|VRAM1|3D00|570|C2DA61942625AE1D522D41F37F43C8D37BD00954FCF2708407EE311660F7874E|9|188|238|35|14|white|#EF000000|[Fray] A-and what about you?!|［フレイ］そ、そーゆーあなたこそ何よっ！？|
+|VRAM1|3D00|570|1516629ED2D5F36C5E6C88DA7979021DFBBEC39B05B3ACC63FB20F7821BC9405|9|188|238|35|14|white|#EF000000|Don’t tell me you’re the Dark<br>Sorcerer Amadok?!|もしかして、あなたが闇の大魔導士アマドゥク！？|
+|VRAM1|3D00|570|535537619DF16AAE1EC03B2BD465682BFE678C87328933B619AEBB432495B68E|9|188|238|35|14|white|#EF000000|[Suspicious Man] What’re you going<br>on about?|［アヤシイ男］なんでっかいな、それは？|
+|VRAM1|3D00|570|DFF135BCD547A073CEEBF6D1D8AA0DAB31960DAAAC56F3C28558986D0859F151|9|188|238|35|14|white|#EF000000|I’m just a simple merchant.|わてはタダのあきんどだす。|
+|VRAM1|3D00|3E0|8D4C09697B4E999E8FDB765CA72C7D041DD94E46AE419F49E6FC840F6EE62D9F|9|188|238|35|14|white|#EF000000|[Fray] A merchant?|［フレイ］アキンド？|
+|VRAM1|3D00|570|E37C6D52CECA30D4B0984784C9976F9CEB73D4C9D6C1F6299F0237FE9CDA1C94|9|188|238|35|14|white|#EF000000|[Merchant] Yep. I was doing<br>business in the town of Wanina.|［商人］へえ。ワニナの町で商売やっとりましたんや。|
+|VRAM1|3D00|570|27185F183371C5DB7672EC8564457DA4D1588DBDD4AFEEC201B0A811008E88FB|9|188|238|35|14|white|#EF000000|Then somehow I ended up being<br>brought to this place.|それが何やら知らん間に、こんなトコ連れてこられてもうて。|
+|VRAM1|3D00|570|AAA4141BD20E754DAD35BD88A396CDBF082CC5F0B2C279411D117298B747EB54|9|188|238|35|14|white|#EF000000|[Fray] I don’t really get it, but you<br>don’t seem like a bad person.|［フレイ］よくわからないけど、悪い人じゃあなさそうね。|
+|VRAM1|3D00|570|AE072C923A7AF4833C4A44B58180E01199F4DB2C6EC869B6DF9C1AD4C9E72079|9|188|238|35|14|white|#EF000000|[Merchant] Of course not!|［商人］あたりまえでんがな。|
+|VRAM1|3D00|570|281D5CE4E143F39EE7EB76DC8591FAD33110354035E6BFFB7E066BB98B628AD8|9|188|238|35|14|white|#EF000000|More importantly, how about buying<br>something?|それよりあんさん、なんか買うてくれまへんか？|
+|VRAM1|3D00|3E0|93AEA393901FB0AE798E6A14C1139F576954C00D3DC6D6DE67223EC6ABCCDEE5|9|188|238|35|14|white|#EF000000|[Fray] Huh?|［フレイ］はい？|
+|VRAM1|3D00|570|89F218049293EDC91440A6A95FAB693D767B1E60C0A08FC2763DBAEF900A9C99|9|188|238|35|14|white|#EF000000|[Merchant] Hey, are you even<br>listening to me?|［商人］あんさん、わての話、聞いとりまへんのか？|
+|VRAM1|3D00|570|7F274E1C3F0CE92AD7E0E8C560A5C1D61619CA14B90CB05351463EF208E7F776|9|188|238|35|14|white|#EF000000|Since coming here I haven’t had<br>a single customer!|ここへ来てから客がおらんで、商売あがったりなんや。|
+|VRAM1|3D00|570|93914E19CB57903D2031F116DC064218B67457CF4086A3F1ED1FBA6BAF1D2292|9|188|238|35|14|white|#EF000000|So, what’ll it be?|何にしまひょ？|
+|VRAM1|3D00|570|39D45BA5A9137329828B51AA0C78391840D40800E7DF09AC01E1890566B89C9E|9|188|238|35|14|white|#EF000000|[Merchant] Thanks a bunch!|［商人］まいど、おおきに。|
+|VRAM1|3D00|570|0F96CDE0C4C8E7E976EE069226613C1D7B141020CDAC9667C56B8FE3C20FA75C|9|188|238|35|14|white|#EF000000|[Fray] By the way…|［フレイ］それよりあなた、|
+|VRAM1|3D00|570|85E867586E06D3C68F86E99157C0C2FFDD21463F60D7F242A460F0D4DDD0B03F|9|188|238|35|14|white|#EF000000|There should be other people who<br>were brought here. Do you know<br>anything?|ほかにも連れて来られた人たちがいるハズだけど、知らない？|
+|VRAM1|3D00|570|672461F8FAA927C76E2CE2C872500A732AD39D87E91A2607E920F01C6FD9EDD0|9|188|238|35|14|white|#EF000000|[Merchant] Oh, if that’s what you<br>mean, there are plenty in the back.|［商人］ああ、それでしたら奥にぎょうさん、いてはります。|
+|VRAM1|3D00|570|887AA9EC36550EC2AE1ABC1CE0C3634C40A096A3C2211E92E07AADA8AEF13ACB|9|188|238|35|14|white|#EF000000|But they’re all still asleep and won’t<br>wake up.|せやけど、みんな眠ったまんまで起きてくれはりまへんのや。|
+|VRAM1|3D00|570|09FB09F0BECE1E30D77EE8FD146E1A4B560C5B9C767B316F527244A987B5E976|9|188|238|35|14|white|#EF000000|[Fray] …So that must be his doing<br>too, huh?|［フレイ］・・・それもアイツのしわざってことかしら？|
+|VRAM1|3D00|570|7733B877985558EDD349060AD411120491E5CD5A74113EEF84899DA4A3402685|9|188|238|35|14|white|#EF000000|Thanks. I’ll drop by again.|ありがとう、また寄らせてもらうわ。|
+|VRAM1|3D00|570|218C78A27F431BDB20A3F2853E22E5F8B5D3A300DEB88506B3CA6A7BFD103238|9|188|238|35|14|white|#EF000000|[Merchant] Heading deeper in?<br>Be careful.|［商人］奥へ行かはるんでっか？気をつけてな。|
+
+
+## Seal's Face Boss
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|3D00|570|513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40644325844B16FA3005AF|9|188|238|35|14|white|#EF000000|[Mill's voice] Fray! Fray! Can you<br>hear me?|［ミルの声］フレイさん！　フレイさん！　聞こえますか？|
+|VRAM1|3D00|570|09E92509ECC86AC963EAF98DFFC7B56D14597DF767917F2A068D327CB9B75616|9|188|238|35|14|white|#EF000000|[Fray] Mill!? Wh-where are you?|［フレイ］ミル！？　ど、どこにいるのよ？|
+|VRAM1|3D00|570|B22EF099497D8158476D7655387F1D00E9FEDE30FE4450C72AD974D4CDCE7645|9|188|238|35|14|white|#EF000000|[Mill's voice] Good, it sounds like<br>you can hear me.|［ミルの声］よかった、聞こえてるようですね。|
+|VRAM1|3D00|570|61AEF811AD75D5DFA28AF2DEC4940187C1854E46AE70943F7DF9E5A3E32A0FF8|9|188|238|35|14|white|#EF000000|Isac, it looks like my plan worked.|アイザック先生、成功したようです。|
+|VRAM1|3D00|570|9747187FB182D685B11855E5A890AB7BCAD230B346289437BD38EB4C461CC2F2|9|188|238|35|14|white|#EF000000|[Fray] What!? Wait, what does that<br>mean?!|［フレイ］ええっ、ちょっとそれ、どーゆーコトよ！？|
+|VRAM1|3D00|570|CEF13A722363DEF5AA945D637F36BFC1613BF03DA0C3FD4BD5AB686581106337|9|188|238|35|14|white|#EF000000|[Isac's voice] You’re still the same<br>restless girl, aren’t you.|［アイザックの声］あいかわらず落ち着きのない娘じゃのう。|
+|VRAM1|3D00|570|FDD14ABE9D94CDC494C37966805959800370768DDD7110B906139A4841EE904E|9|188|238|35|14|white|#EF000000|We’re speaking to you across the<br>castle’s barrier wall.|わしらは今、城の結界のカベをこえて話しておるのじゃ。|
+|VRAM1|3D00|570|513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40644325844B16FA3005AF|9|188|238|35|14|white|#EF000000|[Mill's voice] Fray, listen closely.|［ミルの声］フレイさん、よく聞いてください。|
+|VRAM1|3D00|570|F6F7B060A8363AF41C3FE99A8B23BA9F17FF83A46C46BAB0F68CF7D0E9D554CA|9|188|238|35|14|white|#EF000000|I can probably get there on my own<br>if things go right.|私ひとりだけでも、そちらへ行くことができそうなんです。|
+|VRAM1|3D00|3E0|4A3B88C5DD6E2E3D5E111A2A6F8CD8C7408E0F352098CE7FF2C3D685CC51115B|9|188|238|35|14|white|#EF000000|[Fray] Really!?|［フレイ］ホント！？|
+|VRAM1|3D00|570|EDC62E421299344003725B6F84972C4A4237BA42AA0263539FEF02D52E455860|9|188|238|35|14|white|#EF000000|[Mill's voice] But the barrier’s still<br>too strong for that.|［ミルの声］ただ、そのためにはまだ結界のカベが厚すぎます。|
+|VRAM1|3D00|570|7170CA8E574ECFD557222C09D9371AC3934D8E9B101420D0097AE6F302D8FBED|9|188|238|35|14|white|#EF000000|So I have a favor to ask of you.|そこでお願いがあるのですが、|
+|VRAM1|3D00|570|64BF320E2C3F235AC572D65886EFB454D4E5120D1B5A4945401C24BC2DE1A1B3|9|188|238|35|14|white|#EF000000|I need you to destroy the core<br>of that barrier.|あなたにその結界の中心部を破壊していただきたいのです。|
+|VRAM1|3D00|570|15A6BFA051E4363566E00CB8152CBA593BE42BE72BE7A5EB66E0A7BF12419635|9|188|238|35|14|white|#EF000000|[Fray] Even if you say that, how am I<br>supposed to find the core?|［フレイ］そう言われても、どれが結界の中心なんだか・・・|
+|VRAM1|3D00|570|80DA5DB9DBF21D299FBE642871665FF25530D8BDE4077C1F6739A09B01C12184|9|188|238|35|14|white|#EF000000|[Isac's voice] There must be<br>something, look.|［アイザックの声］何かあるじゃろう、ホレ。|
+|VRAM1|3D00|570|1B7D7474C6C07ECB6FB60DD4AF37E2AD8E838A457C39F69209D7D50CDE8C01B8|9|188|238|35|14|white|#EF000000|A big shiny stone, or a great tree<br>with lush young leaves.|テカテカ光る大きな石とか、若葉をおいしげらせた大木とか。|
+|VRAM1|3D00|570|69B9D49EDFC012D58580825E4B616B65C28407B3D0E8EF8267CA504CE838C9C0|9|188|238|35|14|white|#EF000000|[Fray] …A great tree…<br>…a tree…|［フレイ］・・・大木・・・<br>・・・木・・・|
+|VRAM1|3D00|570|46374F7A7BCE6D8437E86FDF91283FAC333C5EDFAB2EA569FBDFD7C07E7E8C4C|9|188|238|35|14|white|#EF000000|[Fray] Now that you mention it, there<br>is a tree like that.|［フレイ］言われてみれば、たしかにそんな木があるわね。|
+|VRAM1|3D00|570|D6CC3599263A10EB9D7747EF2DA955601C2986E91A0C00D3CD44A9112082772F|9|188|238|35|14|white|#EF000000|[Mill's voice] Yes, that must be it!<br>Hurry, do that…|［ミルの声］そっ、それに違いありません！　早くそれを・・・|
+|VRAM1|3D00|570|10F5628D058285FD4559A461FEC405E232F90687AF13CEF94C983878AAEAE84A|9|188|238|35|14|white|#EF000000|[Fray] Wh-what, being told that<br>out of the blue…|［フレイ］きゅ、急にそう言われたってねぇ・・・|
+|VRAM1|3D00|570|963A9F5EF02A22505C9AE9C1270DA5AB8AD8AF5635A651F8E9439D5566D90625|9|188|238|35|14|white|#EF000000|[Fray] O-oof… oof oof oof…|［フレイ］い、いたたたたた・・|
+|VRAM1|3D00|570|513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40644325844B16FA3005AF|9|188|238|35|14|white|#EF000000|[Mill's voice] Fray, what’s wrong!?<br>Fray…|［ミルの声］フレイさん、どうしました！？　フレイさ・・・|
+|VRAM1|3D00|570|9C0466405851D72D71C59E1E7D76253982D462CE095761B0DA1F4E2D0855922D|9|188|238|35|14|white|#EF000000|[Fray] Eh… wait, Mill!? Mill!!|［フレイ］え・・・ちょっと、<br>ミル！？　ミル！！|
+|VRAM1|3D00|570|67F61D31BDBD712804FCCF93FA3B5081B422F5716A8F03D8F2A8E4C1572ABB6A|9|188|238|35|14|white|#EF000000|…It’s cut off…|・・・きれちゃった・・・|
+|VRAM1|3D00|570|BA7275AD0A3385520BF54397638D829A7D6C21D44D075B6D9BE9197474667E2F|9|188|238|35|14|white|#EF000000|[Old Tree] So, you intend to interfere<br>with my barrier?|［老木］オマエか、ワシの結界に干渉してくるのは。|
+|VRAM1|3D00|570|7C285BCB5F1A7238B814A46A6A2CBCD1284C1D295F13BAE46731DC0B2D970BBE|9|188|238|35|14|white|#EF000000|What do you think you’re doing?|どういうつもりだ。|
+|VRAM1|3D00|570|F937BE829EAA0235F7116282AFE187A82E72B6CEE32FE115226F90C3B16E43D3|9|188|238|35|14|white|#EF000000|[Fray] It’s not like that…|［フレイ］つもりも何も・・・。|
+|VRAM1|3D00|570|3E43030BBAC289FD6BBD9F1D3244FD5BC13507E35E4101E6306AFCB1DDA40AC0|9|188|238|35|14|white|#EF000000|You lot are causing us nothing but<br>trouble.|あなたたちのせいで、こっちはいい迷惑よ。|
+|VRAM1|3D00|570|20AB0B7C39B74101E0C36FD1AFBFB7DF8CA778AD7A2F662CAEEF7E23C0957759|9|188|238|35|14|white|#EF000000|If you don’t want to get hurt, then<br>take down the barrier quickly.|痛い目にあわされるのがヤなら、さっさと結界をといてよね。|
+|VRAM1|3D00|570|37884E1F4F07A7BFE922436DAB356FFBBEB94C0437A4E110C67C40DBD128F81E|9|188|238|35|14|white|#EF000000|[Fray] Bleegh, no big deal at all!|［フレイ］べぇぇぇ〜つぅぅぅにぃぃぃ〜〜〜。|
+|VRAM1|3D00|570|0A76C8A3FF6F60A62663122778F467D27394C68F0CB0B65CDD6660B9674B3AD6|9|188|238|35|14|white|#EF000000|Because there’s one of those near<br>where I live, too!|だって、ウチの近くにも似たのがいるモン！|
+|VRAM1|3D00|570|0057134BE058ECF25C4F2F82EDB83D838F88246109953A9E2C4DFF672A2405D8|9|188|238|35|14|white|#EF000000|[Feizard] …!|［フェイザード］・・・・・っ！|
+|VRAM1|3D00|570|E64C615745D2EECD27A3350B5CBE588783C75F525D1956893B7A1B20130B7FBF|9|188|238|35|14|white|#EF000000|I don’t know exactly what that thing<br>is…|そ、そやつがなにモノかは知らんがな・・・|
+|VRAM1|3D00|570|DD4CFA354518AD25106636DB52EBDEAB76BABC8DEB3D114A84DF495F6F7DA61D|9|188|238|35|14|white|#EF000000|Don’t lump me together with just<br>any old tree around here!|このワシとそこらヘンの木を、いっしょにするでないっ！|
+|VRAM1|3D00|570|3A7DB72E4B13E57A2A3F43551E36941C881A55F1E68E6A6A7F0416977F6EC29C|9|188|238|35|14|white|#EF000000|…Very well.|・・・よかろう。|
+|VRAM1|3D00|570|99F5208A3314366014F4107321C702A702CCA5D180EAA827231ED3093F56CB36|9|188|238|35|14|white|#EF000000|If you insist, I will show you my<br>power!|そこまで言うなら、ワシの力を見せてくれようぞ！|
+|VRAM1|3D00|570|650F8E8B00448B9D17768219E14649654507C64AD90340FA3CA2E69D5E7B0F47|9|188|238|35|14|white|#EF000000|[Feizard] I never thought that this<br>would happen to me...|［フェイザード］よもや、このワシが|
+|VRAM1|3D00|570|E7801BD2534CEC3D6BC9C328342F096A69EB66C4A42B3A8778D2EE5E59200D5D|9|188|238|35|14|white|#EF000000|To be defeated by a human girl!|人間の娘にたおされようとは。|
+|VRAM1|3D00|570|E6D40009A3071C73DE9539B429EDD081B76950037C9DDEE4AAAE81FD0225C2FB|9|188|238|35|14|white|#EF000000|...Master, forgive me for failing<br>to fulfill the pact...|・・・主よ、盟約を果たせなんだワシを許してくれ・・・|
+|VRAM1|3D00|570|44778AFDBCC4ED58832227B04D7154A8A47B7D12A42647567A54BE8D45A1FFDE|9|188|238|35|14|white|#EF000000|[Mill’s voice] ...Frey! Frey!|［ミルの声］・・・レイさん！　フレイさん！|
+|VRAM1|3D00|570|C8930ED5B66C0A70C35D2938DB19D3E57DA0BF1616AD37C2620B7B0D0525988C|9|188|238|35|14|white|#EF000000|[Fray] Mill! What happened just<br>now!?|［フレイ］ミル！　さっきはどうしたのよ！？|
+|VRAM1|3D00|570|DA2B82E38CDD3259442A396F3A0D8310F69B63D4FA06F3DC6F94F9B02914B73E|9|188|238|35|14|white|#EF000000|[Mill’s voice] I don't understand...|［ミルの声］わかりません。|
+|VRAM1|3D00|570|3E05142A528A1F96F5AABC118C52568353B610539F0F7F536ADACADD320AA96B|9|188|238|35|14|white|#EF000000|Somehow, the barrier suddenly<br>seems stronger.|なぜか急に結界が強くなったみたいです。|
+|VRAM1|3D00|570|717182086BB78AFE9C73C12A5B09EB574265687BC1CD7206460F6CC7661267BF|9|188|238|35|14|white|#EF000000|[Fray] But I've defeated the core<br>of the barrier...|［フレイ］とりあえず結界の中心らしきモノは倒したわ。|
+|VRAM1|3D00|570|D0088F63C2A3D249D23A2D2B6D8BE0CDD1AD5BCB8E0FCA75C99F5BC92409E567|9|188|238|35|14|white|#EF000000|You can reach us soon, right?|すぐこっちへ来れるんでしょ。|
+|VRAM1|3D00|570|2E782523EA47AA34BCEC4ED8E3373AC6DDD949AFE43A98F17539A74251AB8A90|9|188|238|35|14|white|#EF000000|[Isaac’s voice] It’s not that easy.|［アイザックの声］そうカンタンにいくもんではないわい。|
+|VRAM1|3D00|570|4B4B222F1C9AC554B1164A379302691DB80E36088EB159BB7A9C96EC47B7DC85|9|188|238|35|14|white|#EF000000|We'll need a little more time to send<br>him over there.|こやつをそっちへ送るには、もう少し時間が必要じゃな。|
+|VRAM1|3D00|570|46777B560A6002E9FE69CFB75DFBDADDD48B85E87FF0E9DCBCB59A02007A6DE0|9|188|238|35|14|white|#EF000000|[Mill’s voice] That's what it seems<br>to be.|［ミルの声］ということだそうです。|
+|VRAM1|3D00|570|06F27A650AA86165AFCB9C2549FC9AEC8E6B55AE6BD60B216CA6F370D825C6A2|9|188|238|35|14|white|#EF000000|Please wait a little longer.|もうしばらく待ってください。|
+|VRAM1|3D00|570|47D82803F5C67BD0ACF479DCF9E3AB73402B960614FAD7BE09A1E9FE2531E9F8|9|188|238|35|14|white|#EF000000|[Fray] If we wait, Miry will...|［フレイ］そんなコト言ってたらミリーが・・・。|
+|VRAM1|3D00|570|DC19C71B94DCB4402AD79671A4223CF11C02CE35F3B23C841C76127C753623D6|9|188|238|35|14|white|#EF000000|I must move ahead...|私はどんどん先に|
+|VRAM1|3D00|570|818D9945D26D075B3A5AFE7A4B460EBCD57CB01D485271D9C8052A0E9BC370A1|9|188|238|35|14|white|#EF000000|...and keep going...|進む・・・わ・・・。|
+|VRAM1|3D00|570|513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40644325844B16FA3005AF|9|188|238|35|14|white|#EF000000|[Mill’s voice] Fray, what’s wrong?|［ミルの声］フレイさん、どうしたんですか？|
+|VRAM1|3D00|570|C6AE7EF1197F0764B46C51ABB0822AA257035FF92E1A6F13491B53B3204F9677|9|188|238|35|14|white|#EF000000|[Fray] Ah… not again…!|［フレイ］あ、あらたなキョーフ・・・・・。|
+|VRAM1|3D00|570|3DF0437FAA4A106B85E7E32B94AB02BF8463667531A24452EFA7C5E3D7EEE95E|9|188|238|35|14|white|#EF000000|You see, I had no choice earlier,<br>so...|あ・・・あのね、さっきはああするしかなかったのよ。だ、だから・・・|
+|VRAM1|3D00|3E0|41E3BBD73DCC498D853737B4D7DEA6206C3BE9177BAE65DAFBA9653517FD94B9|9|188|238|35|14|white|#EF000000|   (SLIP☆)|（ずるっ☆）|
+|VRAM1|3D00|570|2FE278BE98C488466943B97586FC177A97D5E80A7F7AB5C2C1E65DF66661C976|9|188|238|35|14|white|#EF000000|[Fray] Ugh, why does one thing<br>after another keep happening...|［フレイ］うううっ、どうしてこう次から次へと・・・|
+|VRAM1|3D00|570|267856B49A5AC25F37DAEEB4205BD11DDE25F60369065D2E2A24805663023B29|9|188|238|35|14|white|#EF000000|[Fray] I keep getting involved in<br>all sorts of things.|［フレイ］いろんなコトに巻き込まれなきゃなんないのよ。|
+|VRAM1|3D00|570|D699144359C9289E2614EBFE16DAE97C1837ABE23D9E0155F1B4F100F9F90E16|9|188|238|35|14|white|#EF000000|[Fray] I still can’t find Miry, and...|［フレイ］ミリーはさっぱり見つかんないし、|
+|VRAM1|3D00|570|4E56ED25EEC3B517F2B45F2E9EDFE432E33986D2FCD928B78A1CA3186D6C1A07|9|188|238|35|14|white|#EF000000|I have no info on the fake Latok<br>either.|ラトクさんのニセモノだって、まったく情報がつかめないし。|
+|VRAM1|3D00|570|4585591AEA7FE31B173B8E583FAC3AA0D2C0FAD520CE509C93DE36021BECDF2A|9|188|238|35|14|white|#EF000000|[Fray] Now, what should I do?|［フレイ］これから、どーしたらいいんだろ？|
+|VRAM1|3D00|3E0|493A1F34C4665011758B7DA382F026E0E5373B7AD100F1CCD5E0365A7BAD84AC|9|188|238|35|14|white|#EF000000|[Fray] Huh?|［フレイ］ん？|
+|VRAM1|3D00|570|0142CD6292CFB50FACA823A46553176FA791514B26ABC09A1BCDAB40E6A7D169|9|188|238|35|14|white|#EF000000|[Fray] Whaaaaaaat!?|［フレイ］んんんんんんんんんんんん！？|
+|VRAM1|3D00|570|41FDA60C6176F106CD2A97E731F3589C7F8D29A01593ADFB34F2350C947CE9EF|9|188|238|35|14|white|#EF000000|[Fray] Yay! A huge treasure chest!!|［フレイ］わぁ〜い、おっきな宝箱ぉ！！|
+|VRAM1|3D00|570|6A9F72D9F98EDC8271F5F11CB449265FFFB456F966A7AE78E331BF5D67E3755F|9|188|238|35|14|white|#EF000000|I wonder what’s inside, so excited!!|なぁにが入ってるのかなっ、わくわくわくっ！！|
+|VRAM1|3D00|570|2D55D6E38906729B26448306D32A712259BBE2B15146FCE15984E58AEC9BFF13|9|188|238|35|14|white|#EF000000|[Fray] ......!?|［フレイ］・・・・・・！？|
+|VRAM1|3D00|570|2A272A8856C0A085F2CBD522ECD104BD6D7D246147EC1FACD6A2396150F5A03B|9|188|238|35|14|white|#EF000000|[Merchant] Yuuuuh!! Everyone,<br>ready to party?|［商人］ゆぅえ〜〜〜〜〜い！！みなはん、ノッてまっかー？|
+|VRAM1|3D00|570|5EF1E934F456DCBF14857ECBE91F0226EBED19170208E5A390F0867BCE7CA3DE|9|188|238|35|14|white|#EF000000|[Fray] Ugh......|［フレイ］う゛ー・・・・・・|
+|VRAM1|3D00|570|A159A3C7D01EB405564766E43B948122DECA362848D2A859E190E7A26F94ED89|9|188|238|35|14|white|#EF000000|[Merchant] Well, what should I do<br>today?|［商人］さてさて、今日は何にしまひょ？|
+|VRAM1|3D00|570|3D66203FAA6E4DF44EDE313350759B57C0A72B0DAB68D3F77BC6A9A102E9863B|9|188|238|35|14|white|#EF000000|[Fray] Whatever. But why were you<br>in that place anyway!?|［フレイ］どーでもいーけど。どうして、わざわざそんなトコに入ってたのよ！？|
+|VRAM1|3D00|570|973A2D16170615902B8952564886A2BA761358E49EB5FC414FFE4EF1387C703A|9|188|238|35|14|white|#EF000000|[Merchant] Just selling stuff?<br>Anyone can do that.|ただ、モノ売るだけやったら、だれでもできます。|
+|VRAM1|3D00|570|9F97EC3DAE95656D950598DBDC8F5B98ECD3997D1AF453D9767008C31149BA98|9|188|238|35|14|white|#EF000000|I'm here because I want my<br>customers to enjoy their shopping.|わてはお客さんに楽しんで買い物してほしい思うとりますねん。|
+|VRAM1|3D00|570|38F4A585FB5CE1E6544ECEDDB380691E8D5D4305E16219E2BE8A695CA17FA6B5|9|188|238|35|14|white|#EF000000|[Fray] ...Well, business is tough.<br>Better remember that.|［フレイ］・・・しょ、商売ってむずかしーのね。おぼえとこ。|
+|VRAM1|3D00|570|7D1FA1D042A3964DFC0A341F0612981538C1B645A1DBD2B98C5DEF1E6CE636DF|9|188|238|35|14|white|#EF000000|[Fray] I don’t think I can climb<br>here.|［フレイ］ここはちょっと、のぼれそうにないわね。|
+|VRAM1|2600|6E0|6BC4CE3F699E924C7F7EE1B10FF132F9E87260F608BC1B6BB9C5DB7E1A2736CB|9|118|238|100|14|white|#EF000000|Arrow Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 4000G.<br>Buy it? Yes ★ No|アローロッドLV3でっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は4000G<br>買いますか? はい ★ いいえ|
+|VRAM1|2600|6E0|33C4998FFB9BDEE80CF493EB703D31E29DC6C7B5E3723A09D635E5849EE21BC6|9|118|238|100|14|white|#EF000000|Thunder Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 4500G.<br>Buy it? Yes ★ No|サンダーロッドLVLV3でっか<br>いやぁ、お目が高い!<br>勉強させてもらいますよって、 どんどん買うてってや。<br>値段は4500G<br>買いますか? はい ★ いいえ|
+|VRAM1|2600|6E0|8440CE3A1620375DBB70D64962BF047FDC164B86AB8C73E769C6EA30F555AD59|9|118|238|100|14|white|#EF000000|3-Way Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 5000G.<br>Buy it? Yes ★ No|3WAYロッドLV3でっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は5000G<br>買いますか? はい ★ いいえ|
+|VRAM1|2600|6E0|3C05DEE8A6E736CCC9C499C3F59A53900A8D3D4B791CC0CAF871CCCFDA53414F|9|118|238|100|14|white|#EF000000|Fire Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 7500G.<br>Buy it? Yes ★ No|ファイアーロッドLV3でっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は7500G<br>買いますか? はい ★ いいえ|
+|VRAM1|2600|6E0|10256B8955E28E61B02CB43AD6B005BEAAE3AA2CF2E5C62C4462DBAF53773928|9|118|238|100|14|white|#EF000000|Fire Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 500G.<br>Buy it? Yes ★ No|ファイアーでっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は500G<br>買いますか? はい ★ いいえ||
+|VRAM1|2600|6E0|BE3C94938CB70759FE70309C2CEAC0C165770A26D5B67C0BD615965DEC340365|9|118|238|100|14|white|#EF000000|Thunder Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 600G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|457AB8413BEC7368A27228BE106E0EB33B4A6AEF55CD97C6958D22C599598127|9|118|238|100|14|white|#EF000000|Water Dragon Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 900G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|B6D82380523BA19B8C1EDE51416CA0F1AE7FF05C72AA384BDBB7090944E5813F|9|118|238|100|14|white|#EF000000|Fire Dragon Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1200G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|D37363C81FBC5927763B91745311D036D64064457B17A74B35C805FF2FC0C963|9|118|238|100|14|white|#EF000000|Big Wave Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1800G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|F6D950AF34EB7D0A60C5FAC000461BA7DFD89BDE7503BF5AF96B69F4BC5AA99A|9|118|238|100|14|white|#EF000000|Shooting Star Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 2000G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|0FB1CB1A0FD2998131D64D9606D1A6027F283B38A68F5C7007A7160FA6DAE26B|9|118|238|100|14|white|#EF000000|Fire Bird Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 3000G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|17D2BD53806B1C2AF1687766E4FD076CC22FDD85B30E1242421AC00E08094E1D|9|118|238|100|14|white|#EF000000|Small Shield.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1000G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|B4442BCD5B933EC570F30E5C91E0B2866B9483A668D324A86769D9E6FC1EF3AA|9|118|238|100|14|white|#EF000000|Round Shield.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1800G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|BFBE5F9047778B1B6473339677387A07130AC980AB4849DB7D4B63B993D77D0F|9|118|238|100|14|white|#EF000000|Knight Shield.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 4800G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|6111F98321753A67CDCED9DB8C4D66D94BCE3132F5FB1623F24C5CEA90568C2B|9|118|238|100|14|white|#EF000000|Bread.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 100G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|CDBB7D06C2C9906B8F25F386ACB25A75E1B4666B7D53C823BF5C665978CA8FC2|9|118|238|100|14|white|#EF000000|Dried Meat.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 500G.<br>Buy it? Yes ★ No| |
+|VRAM1|2600|6E0|2D832BFC9D2C465913F664E9654A9609EFE11DE925220CBDB16E8DB41DAD6588|9|118|238|100|14|white|#EF000000|Gemil Potion.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1500G.<br>Buy it? Yes ★ No| |
+
+TODO: fix lines with repeated hash: 513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40644325844B16FA3005AF
+
+
+## Flying Castle Ku Or, Dungeon
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|3D00|570|8487C63FA2E5142E151A08D8BB1E71A046A13C469F05D576ED48BAEE0E147AAA|9|188|238|35|14|white|#EF000000|[Fray] You...!!|［フレイ］あなたは・・・っ！！|
+|VRAM1|3D00|570|DAA4C8F0E1CF839004BEF4194C3E0848A4B0BE491410F5FBA1D6196BC50F98F1|9|188|238|35|14|white|#EF000000|[Merchant] It's not crocodile skin.<br>It's from Wanina!|［商人］ワニ皮やおまへんで。ワニナだす。|
+|VRAM1|3D00|570|B54BB20AF91D1DDF0F497BCC4056F3CA4EE222421AE3F943DA1D7016F23DBD88|9|188|238|35|14|white|#EF000000|[Fray] Ugh... S-so anyway...|［フレイ］う゛。と、ところで|
+|VRAM1|3D00|570|253E9C56ACA27323D8E97CBA42F4578FB562A07561CF5C8EC2E52AE58EDC4294|9|188|238|35|14|white|#EF000000|Are you saying you can somehow<br>handle this mess?|あなたならこの状況をなんとかできるって言うの？|
+|VRAM1|3D00|570|E9DEBF3972069479B0798B75738ABD8120B7282B7E58453C417918BFDC30EB7D|9|188|238|35|14|white|#EF000000|[Merchant] Of course I can.<br>...Here you go.|［商人］もちろんでおま。<br>・・・これだす。|
+|VRAM1|3D00|570|4E65D6581D7284AC1B5159C65EC74AB6B44586AEA811F628DBB5EB1F4D465831|9|188|238|35|14|white|#EF000000|[Merchant] With this surfboard,<br>there will be no problem.|［商人］この『さーふぼーど』さえあれば問題あらしまへん。|
+|VRAM1|3D00|570|4E092E83D841640027DDF6C3B869BE150F08B274B031989BB48F8DD6A618A3A0|9|188|238|35|14|white|#EF000000|[Fray] Gimme one of those!|［フレイ］それ一枚ちょーだい！|
+|VRAM1|3D00|570|1FF322323B2EF8CE6673D1C2FE8A5FC41CC102696AAB06A37A9502E4A541C409|9|188|238|35|14|white|#EF000000|[Merchant] “Gimme”? Ya sure ‘bout<br>that?|［商人］ちょうだい、でっか？|
+|VRAM1|3D00|570|6E92FF534A5DFE9FC5F9C190B7258C43C83CE6E39B99478E26582639D8726B6A|9|188|238|35|14|white|#EF000000|This here’s still for sale, you know.|これも一応、売りモンなんやけどなぁ。|
+|VRAM1|3D00|570|1A52EF8CCB0ED1427D136EB432530CE1FE5980D5A2963D1D4722004E698D69A5|9|188|238|35|14|white|#EF000000|Well, since you been buying a bunch<br>already,|まあ、あんさんにはいろいろと買うてもろうとるさかい、|
+|VRAM1|3D00|570|9DAD702FA3141460F4C16987972E7884DA8EFB5969B0E5615391E74AACEDA947|9|188|238|35|14|white|#EF000000|I’ll cut you a special deal.|特別にサービスさせてもらいますわ。|
+|VRAM1|3D00|570|4E0A9428B1D7D4632FB7270EF0D6A63E1C3EA0C6E87622091AE41CFC6AF6612A|9|188|238|35|14|white|#EF000000|[Merchant] Take care now. Next<br>time, buy something more, eh?|［商人］ほな、お気をつけて。今度はまたなんか買うてってや。|
+|VRAM1|3D00|570|229C68CECACB92D7D37C22704F8AC8EB20FBCAA2DE72E58042794EF5EE6C1F32|9|188|238|35|14|white|#EF000000|[Fray] Why on earth are YOU here!?|［フレイ］どうして、あなたが　ここにいるのよ！？|
+|VRAM1|3D00|570|5356C903E27937BFB01600A9B6FAB2DF603F6CB9C9B0DB5483496D06E88B858F|9|188|238|35|14|white|#EF000000|[Merchant] Aw now, don’t sweat the<br>small stuff.|［商人］まあまあ、細かいコト気にしとったらあきまへん。|
+|VRAM1|3D00|570|00CAD172C92BECD8130F92C23C606CCD8B232202DF217459AC0E2C1B8AFC32CB|9|188|238|35|14|white|#EF000000|More important, how about you buy<br>something again?|それより、またなんか買うてってや。|
+|VRAM1|3D00|570|8C624E1C2C0D369D3873CAFD4A968E0F36DE8FD64EFBFB787DB02E0CACA00A4D|9|188|238|35|14|white|#EF000000|[Merchant] Up ahead you’ll find<br>some folks,|［商人］この先の方に行ったら、人がおりますけど、|
+|VRAM1|3D00|570|AA6F4208096E4B332365A95C9DB4A7F14E8A3D80E9100BA923B7C090645DF607|9|188|238|35|14|white|#EF000000|but none of ’em will talk to you.|だれも口聞いてくれはりまへんのや。|
+|VRAM1|3D00|570|B4A283346E87DCD7D38E941F0E6D48829E4E3115DC8880B567FBC982E72DC091|9|188|238|35|14|white|#EF000000|[Fray] They must’ve been put to<br>sleep with magic.|［フレイ］きっと魔法で眠らされてるのね。|
+|VRAM1|3D00|570|8185F44DE14269CE4F0811994586A99727AC45078B4E311010A35D5AAEB49729|9|188|238|35|14|white|#EF000000|Don’t worry, I’ll take care of it.|だいじょうぶ、私がなんとかしてみせるわ。|
+|VRAM1|3D00|570|6AF73721A291899FF885D179AD7C77F1BDB303906ED5589E85BE9FA91157D3A3|9|188|238|35|14|white|#EF000000|[Fray] Huh? Is this door locked?|［フレイ］れ？　カギがかかってんのかしら？|
+|VRAM1|3D00|570|238035EA4B06CFA8B7EDBA9B7FCF74D2EE8662A01F2D4E2E16CB495DF4C5488C|9|188|238|35|14|white|#EF000000|[Fray] Maybe there’s a door this key<br>unlocks.|［フレイ］どこかに、このカギで開く扉があるのかしら？|
+|VRAM1|3D00|3E0|290B7374684099747EFAC935ED202A56254D54DFD848567823FBB25B38D4EDFB|9|188|238|35|14|white|#EF000000|It’s empty.|からっぽだった。|
+|VRAM1|3D00|570|2E2E96D1BD117D0AFEA3C7E874860687002EC28DAB2D9FCFF2AE0E122AD28027|9|188|238|35|14|white|#EF000000|Right, I’ll try using that key I found<br>earlier.|そうだ、さっき見つけたカギを使ってみよっと。|
+|VRAM1|3D00|570|F12E4587FFC6B20DCABFA2741F5A4FAC2E45C79B1D01214EBAE1F19ABE6D1860|9|188|238|35|14|white|#EF000000|[Sleep talk] ZZZZZ...|［ねごと］ＺＺＺＺＺ・・・|
+|VRAM1|3D00|570|E5F14D7E2F7FB88F20C02310653198EFC4BDD56E352284D9C1BAC786D3F15E35|9|188|238|35|14|white|#EF000000|[Fray] Doesn’t look like I can wake<br>him.|［フレイ］ちょっと起こせそうにないわね。|
+|VRAM1|3D00|570|214ADA9C1321344F015A38588C48C880C56C3C4BD4F2CCD4A087CC7E63DE3776|9|188|238|35|14|white|#EF000000|[Sleep talk] I’m homeee!|［ねごと］今かえったぞー！|
+|VRAM1|3D00|570|33B564DE7965A9722823D96A32400645F0EB66D29935343E3513F26CD22D1C12|9|188|238|35|14|white|#EF000000|What, dinner’s not ready yet!?|なにぃ、メシの用意ができてないだぁ！？|
+|VRAM1|3D00|570|3A5EE11C0ACA3DB34EC063F826AEE36A7F8C050EEE5D99A69EB99E0D06294C0E|9|188|238|35|14|white|#EF000000|Don’t screw with me!! What do you<br>think I am, your husband!?<br>Whack whack!|ふざけんな！！　亭主をなんだと思ってる！　びしびしっ！|
+|VRAM1|3D00|570|16213188BE32E3F7BB3F0EF922DEAAF8D24B963BCCD48A946063E7DB29BEE05A|9|188|238|35|14|white|#EF000000|...mumble mumble...|・・・むにゃむにゃ。|
+|VRAM1|3D00|570|661EC5618090C96CBA525F3AB925134870750459FDB91D228F12770B74D74BCD|9|188|238|35|14|white|#EF000000|[Fray] Pent-up stress?<br>He’s still so young...|［フレイ］日ごろの反動かしら？まだ若いのに・・・。|
+|VRAM1|3D00|570|EB5546ECB0158F83F65B08C54A02A642D23B22A3F00C0B27BC03CD38A90A152A|9|188|238|35|14|white|#EF000000|[Sleep talk] Nnggggghhh...<br>snoooore... sniiiiirk...|［ねごと］んがががががごごお。すぴーーーすぴょぴょぴょ。|
+|VRAM1|3D00|570|6D11468298245B05AB2486CDA2FC04264B2A51DAE30EC1218A5604AEC19A1EC8|9|188|238|35|14|white|#EF000000|[Sleep talk] Uhihihi...<br>Uhihihihihi...|［ねごと］うひ、うひひひひひ。うひひうひひひひひひ。|
+|VRAM1|3D00|570|31C805DCDAEB924B37AC7BD7DA5B7F369406D06439628A060D643C8FD8335617|9|188|238|35|14|white|#EF000000|...uhi.|・・・うひ。|
+|VRAM1|3D00|570|F6B38AC504EE994ACEE7B0717A2244A42D04AD290D2F088A46F3F4660C5EEFAC|9|188|238|35|14|white|#EF000000|[Sleep talk] (Grind grind grind grind...)|［ねごと］（ギリギリギリギリギリギリギリギリギリギリ）|
+|VRAM1|3D00|570|0B0B288E6218FE0AEC8F1D34A44A2BD79B9E16914947E33669FEECF4795C57A3|9|188|238|35|14|white|#EF000000|[Fray] Ugh... brutal teeth grinding...|［フレイ］う゛っ。すさまじい歯ぎしり・・・。|
+|VRAM1|3D00|570|400252FEBD1E8E1067B7D9FBE5BED8047941E495BF20089B3EDC066A36CC7138|9|188|238|35|14|white|#EF000000|[Sleep talk] Dad... Mom... ZZZZZ...|［ねごと］父さん、母さん・・。ＺＺＺＺＺ・・・。|
+|VRAM1|3D00|570|F756B2A20885E6AAA2E7767F8D8ED2233ED557CC2C488187561DD38FAC491CFA|9|188|238|35|14|white|#EF000000|[Sleep talk] Ummm, like, I’m the<br>kinda girl who...|［ねごと］んーっとぉ、あたしってぇ・・・なヒトだしぃ、|
+|VRAM1|3D00|570|AC1737018E28F8A1CC29EE330F76AEC08D61D5201AB093DDAA6A455432086756|9|188|238|35|14|white|#EF000000|...y’know, sorta like that... zzz...|・・・が・・・で、みたいな。　・・・すぴすぴ。|
+|VRAM1|3D00|570|D16BDE4EF94B1E39EBB69709894B3F47FE3B1E2896E0FAA622D628E643A28226|9|188|238|35|14|white|#EF000000|[Sleep talk] Zzz...|［ねごと］ぐぅぐぅ・・・。|
+|VRAM1|3D00|570|267229798928C40CB0BCB776CBCEA54297E0360BD68D377FDB64C060CD20355C|9|188|238|35|14|white|#EF000000|[Fray] Hellooo!!|［フレイ］もしもぉーし！！|
+|VRAM1|3D00|570|8FD7038620321AC919CFB7B60CEAABE0EE4DCF8FBBD522FEB974F5EB0358D72B|9|188|238|35|14|white|#EF000000|[Sleep talk] snooore... snore-snore...|［ねごと］すぴょすぴょ・・・。|
+|VRAM1|3D00|570|7D6BCC212E6348ED4E9A4412A701BFF48BCEDA3D4BAC080BA3145032F0DD11D8|9|188|238|35|14|white|#EF000000| …No good. |［フレイ］・・・ダメか。|
+|VRAM1|3D00|570|61680515C18A53ADC39242DAA26C535A76875D636D1A7287BD36E610E8492823|9|188|238|35|14|white|#EF000000|[Sleep-talking] One slime…<br>two slimes… |［ねごと］スライムが１ぴき、スライムが２ひき・・・。|
+|VRAM1|3D00|570|056224531F79D99879BF50F362C9E8F54DB30AD0DEBF0BD605DBA1D694287D67|9|188|238|35|14|white|#EF000000|Three slimes…<br>Four slimes… |スライムが３びき、<br>スライムが４ひき・・・。|
+|VRAM1|3D00|570|287722A52A1B0987B103AD7A065B8AA1527A694A6F2093935734BB30E4B6CB49|9|188|238|35|14|white|#EF000000|Waaah, I can’t sleep…<br>...*mumble mumble* |え〜ん、ねむれないよぉ。<br>・・・・・・むにゃむにゃ。| 
+|VRAM1|3D00|570|89DC1FEA3DBEFC87311ECFD1A17391CEA175019B31487B124C0F71AF4D2F33BA|9|188|238|35|14|white|#EF000000|[Sleep-talking] Mmm… I can’t eat<br>that much… *mumble* |［ねごと］うぅ〜ん、そんなに食べらんないわよぉ。むにゃ。|
+|VRAM1|3D00|570|CC800549B48C9B9D71E35FB27349B39DBF12ECA44C3CE7D8A3769D74F84F2206|9|188|238|35|14|white|#EF000000|[Sleep-talking] Kyahahahahahahaha… |［ねごと］きゃははははははははははははははははははははは。|
+|VRAM1|3D00|570|7B44CE0CC27F7B4B1A5357E6097F60A99BF9F668AD340001028B836BE2ABDCDD|9|188|238|35|14|white|#EF000000| …*mumble mumble* |・・・むにゃむにゃ。|
+|VRAM1|3D00|570|CD0D5A0D72659C04E03B012D2867A5DA88892193CC0FA1F770C36DD5FB5BED35|9|188|238|35|14|white|#EF000000|[Samus, sleep-talking]<br>…Menea.|［サムスのねごと］・・・・・・メネア。||
+|VRAM1|3D00|570|25EF26C552ABD4D3BFAE1BEEEEAD42A1A2E6ACE2E58A6E9DFF14BB7C90E157AA|9|188|238|35|14|white|#EF000000|I came… to save you…<br>*mumble mumble*|キミをたすけに来たよ・・・<br>むにゃむにゃ。|
+|VRAM1|3D00|570|EBA181F4EA7C21615E05BF63B4D1E0B86A3C2692343520F3027EB930D601CBD1|9|188|238|35|14|white|#EF000000|[Menea, sleep-talking]<br>…Ah, Samus…|［メネアのねごと］・・・ああ、サムス。|
+|VRAM1|3D00|570|EC7E36E8661D45D6445FB7BB62BEB6166332948BF7018D509A205D943EE49DED|9|188|238|35|14|white|#EF000000|You came to save me. <br>....snooze....|たすけに来てくれたのね。<br>・・・くーすぴーーー・・・。|
+|VRAM1|3D00|570|18BC0988C0DE53865D09BD252FF7B170DF9D27EFDC234A7649B2D08647DEF76F|9|188|238|35|14|white|#EF000000|[Fray] Hm? There’s something<br>written inside the lid.|［フレイ］ん？　フタのうらに　何か書いてある。|
+|VRAM1|3D00|3E0|661B353D772CDB4EF6ADF5AE54F32381DD682CB2107D163BB222326524B16F61|9|188|238|35|14|#D95594|#EF000000|Better safe than sorry.|ころばぬ先のツエ。|
+|VRAM1|3D00|570|227474F384571C4D018560A81CE5931A16841FBC9A0E081BA555B5B777367318|9|188|238|35|14|#D95594|#EF000000|“Just this much”<br>That thought invites death. |「これくらい」　その考えが死をまねく。|
+|VRAM1|3D00|570|FE52038C5C0B577F3C7080FD48FC13F9174BC8F6D24C49829641CA8863C367E4|9|188|238|35|14|#D95594|#EF000000|Even after you fall,<br>you still need support.|ころんだ後にもツエはいる。|
+|VRAM1|3D00|570|1031A1E8D14D77F94C6744881EABDFB6B3ECE507F0E2E0C2B88EBF6C5E394A12|9|188|238|35|14|white|#EF000000|Your inventory is full. You can’t carry any more. |持ち物がいっぱいで持てません。|
+|VRAM1|3D00|570|BED23A46EC644C62E4A3E4F498AF87099F59637548A312F1C31B7BC37098A612|9|188|238|35|14|white|#EF000000|[Voice of Reason]<br>Don’t be fooled, Fray!|［理性の叫び］だまされちゃダメよ、フレイ！|
+|VRAM1|3D00|570|400640D1EA190D37176A930550C09C0E21D7CA54E3846615E0BE2B207D90B30C|9|188|238|35|14|white|#EF000000|He looks like Latok, but he’s a fake,<br>an evil impostor! |ラトクのカッコしてるけど、そいつはニセモノ、極悪人なのよ！|
+|VRAM1|3D00|570|7717E5F266481350FA4F08AC49773928767B18B5EB89A3987083B3BCAF5FF7F3|9|188|238|35|14|white|#EF000000|[Fray] Y-yeah, you’re right.|［フレイ］そっ、そうね。|
+|VRAM1|3D00|570|54D94A3C6FB46B396364A4304D3808F4CC648B09ECD209954C54A26170A2364D|9|188|238|35|14|white|#EF000000| I almost fell right into their trap. |あやうく敵の術中に落ちるところだったわ。|
+|VRAM1|3D00|3E0|C77647A2D06DC79B2FAD04197CD42D295B4BCA6089AFAA48059D22A5FF65A7C7|9|188|238|35|14|white|#EF000000|[Fray] So it’s you… |［フレイ］あなたね、| 
+|VRAM1|3D00|570|073F199E100FD6E7EA8D3E8A4BBD237CF0E502541064A1493515FCFEF42F713E|9|188|238|35|14|white|#EF000000|…the one pretending to be Latok<br>and doing all these terrible things! |私のラトクさんに化けて悪いコトばかりしてるのは！|
+|VRAM1|3D00|570|52BFEC0FDF1B2CAE7BBA22B32D08FC5122836F6D48D00E8049B155E5E66D7468|9|188|238|35|14|white|#EF000000|[Fake Latok] Who the heck are you? |［ラトクのにせもの］なんだオメェはぁ？|
+|VRAM1|3D00|570|F32D9407546EB7FEDED7F3B6568E67D4B5F2A7E789F418DC1357464525C9D5AB|9|188|238|35|14|white|#EF000000|You just pop up out of nowhere,<br>spouting nonsense! |いきなり出てきて、ワケのわかんねえコトほざきやがって。|
+|VRAM1|3D00|570|A463107110ECD3B059F107A907CD7971E4DEE29219147A6B7D280D444B42D5CD|9|188|238|35|14|white|#EF000000|[Fray] Don’t think you can play dumb<br>with me! |［フレイ］シラを切ろうったってそうはいかないわよ！|
+|VRAM1|3D00|570|52BFEC0FDF1B2CAE7BBA22B32D08FC5122836F6D48D00E8049B155E5E66D7468|9|188|238|35|14|white|#EF000000|[Fake Latok] …… |［ラトクのにせもの］・　・　・　・　・　・　。|
+|VRAM1|3D00|570|1AD822BC172293DC3C9A0297A1998D60FC2B34DE104B95B9D53489A5D0B210CD|9|188|238|35|14|white|#EF000000|[Fray] Yeah. Now you won’t be able<br>to cause any more trouble for a while. |［フレイ］うん。これでしばらくは、悪いコトもできないわね。|
+|VRAM1|3D00|570|28AE23BBA948FC9FB260FDEBAACD84EF190A730694B5825851485F94E8470CC4|9|188|238|35|14|white|#EF000000|[Mill] Fray, sorry I’m late.|［ミル］フレイさん、遅くなって申しわけありません。|
+|VRAM1|3D00|570|0A3C762FFB2FF2582C4A90348BF1BDDEADE1F6F0B288420968399EA73754F3B6|9|188|238|35|14|white|#EF000000|[Fray] Mill! Looks like you managed<br>to break through the barrier.|［フレイ］ミル！　どうにか結界をこえられたみたいね。|
+|VRAM1|3D00|570|264F49B1658D3A6FACD370B852BF1B57006D444DFDE2346C7B8DE9CB7ECE905E|9|188|238|35|14|white|#EF000000|[Mill] Hm? That’s… Latok!?|［ミル］おや、そこにいるのは・・・ルトクさん！？|
+|VRAM1|3D00|570|1F628AE88EC9ACFBCAF4A6F0AACFC6AD10CEE978FE3899B662E62D103946EF4C|9|188|238|35|14|white|#EF000000|[Fray] …Eh!?|［フレイ］・・・・・え゛？|
+|VRAM1|3D00|570|A19A4FCFDCB8BA1E23083C6A1CFAC4401676878AD9FF43199300695D1ECF1049|9|188|238|35|14|white|#EF000000|[Mill] This is Mr. Latok Kart,|［ミル］この方はルトク・ハートさんと言いまして、|
+|VRAM1|3D00|570|3CB40D2B360ABB3D9A6229E8E11740A9189B2DB678FBAC9705BC8BCDDCB2CB98|9|188|238|35|14|white|#EF000000|He was investigating this case at<br>our guild’s request.|私たち魔法ギルドの依頼で事件を調査してもらっていたんです。|
+|VRAM1|3D00|570|376ADB12E40667FBA3E35C184429F177C004264AA0ED3083A1DD137737BE6627|9|188|238|35|14|white|#EF000000|Just who could have done something<br>so cruel…|いったい、だれがこんなムゴイことを・・・。|
+|VRAM1|3D00|570|5A3D2C4D0F8509E2B7D5CD41DB688EACC7254C93432F45E1A67F1DBCABCF351D|9|188|238|35|14|white|#EF000000|[Fray] H-ha… so, so then…|［フレイ］は、はは・・・。<br>じゃ、じゃあ・・・|
+|VRAM1|3D00|570|FDAE7A7ACB46421523B2283B022B403762AA2FB75CE9197AADEA7BAC7E78FC7D|9|188|238|35|14|white|#EF000000|[Latok] Ugh… oww…|［ルトク］・・・・・う〜ん、いてててて・・・|
+|VRAM1|3D00|570|DD16C72507300047295335092FBAD610EE4460F0A5E11502BA9AD6596E2CE39F|9|188|238|35|14|white|#EF000000|[Latok] Ah! You!!|［ルトク］あっ！　テメェ！|
+|VRAM1|3D00|570|D32A3B741CE1A155B7C439811B2856D5003CD4DCDE6CC003491FB6CBAE47982A|9|188|238|35|14|white|#EF000000|[Fray] Waaah! Latok, thank<br>goodness you’re alive!!|［フレイ］うわぁぁ〜ん。ルトク無事でよかったぁ〜！！|
+|VRAM1|3D00|570|4A2BF64F270CBA3A10C209D226B254D5C79AE0D5CF9CC6831BB3FD0DD32B34B9|9|188|238|35|14|white|#EF000000|*Sniff sniff*, who could have done<br>this to you?|しくしく、いったい、だれがあなたをこんな目に？|
+|VRAM1|3D00|570|F80CB283B52808985F0F43DF00A14C95B829E3D532936311DCFBE279BE62054B|9|188|238|35|14|white|#EF000000|[Latok] You did, you!!|［ルトク］オメェだ、オメェ！！|
+|VRAM1|3D00|570|99E8DA4B28B5660649A0D57AA46E90E04F87EEFCF9D9338124DB79EB9401F94B|9|188|238|35|14|white|#EF000000|[Fray] Oh, poor Latok…|［フレイ］まあ、ルトクかわいそうに・・・。|
+|VRAM1|3D00|570|AA143CFC72DA591245D335D22C89359E0193EDD26818D4D14252786094279870|9|188|238|35|14|white|#EF000000|He must have been attacked by<br>monsters and panicked.|モンスターにやられて、パニックを起こしてるのね。|
+|VRAM1|3D00|570|DCDA85FA2A34586CABB90F6683170E0059B5811465A9185DDC483C12E1641795|9|188|238|35|14|white|#EF000000|So, Mill, please carry Latok<br>somewhere safe.|というわけでミル。ルトクを安全なトコまで運んであげて。|
+|VRAM1|3D00|570|01C402AD5FCC889CB5CE3A1FCDC731CFDA6F490154A5B55C6A1B8398F2E7084A|9|188|238|35|14|white|#EF000000|[Mill] Understood.<br>By the way, where is Miry…?|［ミル］わかりました。<br>ところでミリーさんは・・・？|
+|VRAM1|3D00|570|73682DD181E6BC26912285308DCC5351710A8C3BBC7696AC9B3ED4794C684793|9|188|238|35|14|white|#EF000000|[Fray] Ugh… I-I forgot…|［フレイ］う゛っ。<br>わ、わすれてた・・・。|
+|VRAM1|3D00|570|8C9EA74D13EAC3993909E62A93B31A573DC4163F39D1D19A5BBE9A4FEC4CAE5E|9|188|238|35|14|white|#EF000000|[Fray] Hey, Latok,|［フレイ］ねえルトク、|
+|VRAM1|3D00|570|B285CF4E6B95A86CCAC2D9670ED46A654D780DCC42F5F6E076E583AEFE52AE94|9|188|238|35|14|white|#EF000000|did you see a girl who looked like<br>this?|こうこう、こういった感じの女の子を見なかった？|
+|VRAM1|3D00|570|59AC8929C0931106933F97CD0D7E104E3D137866617A6F2D4C60B1A7F610ABE0|9|188|238|35|14|white|#EF000000|[Latok] Yeah, I did see a brat like<br>that.|［ルトク］おう、たしかにそんなガキを見たっけなあ。|
+|VRAM1|3D00|570|411514D7E1FB26DA209FED78B893B3F8BA457C4970184226286F95269CD484AE|9|188|238|35|14|white|#EF000000|Some shady guy carried her off<br>deeper inside.|あやしいヤツにかかえられて、奥の方へ行ったぜ。|
+|VRAM1|3D00|570|50194E3BE85BAFB736B50636798293B35C9DAAACBD4E55E5CA28F27855696883|9|188|238|35|14|white|#EF000000|More importantly…|それよりなぁ・・・。|
+|VRAM1|3D00|570|22CF49A8FC98044D84B814EEA75030181B69B88296FD358ADD770C8956D185AB|9|188|238|35|14|white|#EF000000|[Fray] Thanks, Latok.|［フレイ］ありがとう、ルトク。|
+|VRAM1|3D00|570|7EC30D8C412A20653AFD7381A306166DF9A0D20334B35B5894EA03191D10234F|9|188|238|35|14|white|#EF000000|…So anyway, Mill.<br>I’ll leave Latok to you.|・・・というワケで、ミル。<br>ルトクをおねがいね。|
+|VRAM1|3D00|570|4CA33EB0D9DB6C3B75CED7D55D490D8F09F6A4C4376A84E98B723A1B5AF90B03|9|188|238|35|14|white|#EF000000|[Latok] I said wait, damn it!|［ルトク］待てって言ってんだろ！|
+|VRAM1|3D00|570|382D9A81B7B6C70CEFA1B1B6067FEB8C55182BF904428D9E552F89A58C85457B|9|188|238|35|14|white|#EF000000|[Latok] I can still fight!|［ルトク］オレはまだ戦えるぜ。|
+|VRAM1|3D00|570|633B4651C0BD6380B6562D1C32EC51615835B3F57EB9CAB488ED1D7FAC5C3FCA|9|188|238|35|14|white|#EF000000|How could I just fall back and leave<br>it to a lady!?|このまま女に任せて、引きさがれるかってんだ。|
+|VRAM1|3D00|570|B01D9A44201E55082302AFF51776C2FB6A9E126DC74834D0C123FDF3BFD0781A|9|188|238|35|14|white|#EF000000|[Mill] I must ask you as well, please.|［ミル］私からもぜひおねがいします。|
+|VRAM1|3D00|570|72FAE3D43932749631551B291A31C7A93918DB1727E3EC4911056F6A45D759E0|9|188|238|35|14|white|#EF000000|I have to escort the prisoners|私は牢屋にいる人たちを、|
+|VRAM1|3D00|570|36F0A696D7336B1BF61DB1B38E6A5DDB0119BAB6BA53D99A59D33F703A83EC36|9|188|238|35|14|white|#EF000000|back up to the surface.|地上へ送り届けなければなりませんので。|
+|VRAM1|3D00|570|AF3EA601A0CF483FE5FF914D574B3CB26877642C0A07669AFBB56A57F8DFB83A|9|188|238|35|14|white|#EF000000|[Mill] And also, please lend me your<br>Teleport spell.|［ミル］それから、テレポートの魔法を貸してください。|
+|VRAM1|3D00|570|8AAE326819CEBD20D31EF0E0C4A50432076D54B6CE8C28B6A41056C77071B72B|9|188|238|35|14|white|#EF000000|With my power, I can’t carry anyone<br>up to the surface.|私の力では人を連れて、地上までは飛べませんので。|
+|VRAM1|3D00|570|B3094104B52631362E6FBECD305B142BD96F90193E6A194B9854A7374A0C8E73|9|188|238|35|14|white|#EF000000|I’m not asking for it immediately,<br>but please do it as soon as possible.|今すぐにとは言いませんが、なるべく早くおねがいします。|
+|VRAM1|3D00|570|289F3F937E0367604725220F270E641C7E6C2786A4B17EE12B3B6607E0520FDB|9|188|238|35|14|white|#EF000000|[Latok] That old man is saying<br>something.|［ルトク］このオッサンが、何か言ってるぜ。|
+|VRAM1|3D00|570|896ECA42247AEF25E23EDC6FC07E2503DE46A28BB5E45644A51107DADF17B83D|9|188|238|35|14|white|#EF000000|[Mill] Could you lend me the<br>teleportation magic?|［ミル］テレポートの魔法を貸していただけますか？|
+|VRAM1|3D00|570|E7B488898ABF3948CF39DC9D3CBF58DFA07B88D7A4A58C96BBE89A316A1A53A1|9|188|238|35|14|white|#EF000000|Could you?<br>Yes ★ No|ていただけますか?<br>はい / たいいえ|
+|VRAM1|3D00|570|8BE0B8A310D11D1B653BD9B100F32C39BAC5671A2CE7F67F152F27DBC27EDA13|9|188|238|35|14|white|#EF000000|[Mill] If you need to get ready,<br>now’s the time.|［ミル］装備をととのえるなら、今のうちですよ。|
+|VRAM1|3D00|570|F490B6CC3898410A421FE57939789508B8C8BBA9DD3CD6F4C93D5BF509BFDD7C|9|188|238|35|14|white|#EF000000|[Mill] Fray, are you listening to me?|［ミル］フレイさん、私の話を　聞いてますか？|
+|VRAM1|3D00|570|E341E99F3093DDFE1C5DA7BE9FCAF542CDC3AFF900EE2BCD25E63772D05F3C54|9|188|238|35|14|white|#EF000000|[Fray] I know that. Wait a minute.|［フレイ］わかってるってば。　ちょっと待ってよ。|
+|VRAM1|3D00|570|F42D023F9629B3460CDEF74BC871ED542C427DAB8767CE2EDE2FF140536F8462|9|188|238|35|14|white|#EF000000|[Fray] Okay. Here you go.<br>Don’t lose it.|［フレイ］はい。じゃ、これ。なくさないでよ。|
+|VRAM1|3D00|570|84C3E938314EE391EADA12A142F29A69A1FB0EC9CCB9C9AF3E4DE30AD43DAB87|9|188|238|35|14|white|#EF000000|[Mill] I know, I know. I don’t lose<br>things that often.|［ミル］わかってます。そうそう何度もなくしたりしませんよ。|
+|VRAM1|3D00|570|6615A68C9249F4C84BC85B98D1F52C537655581131AE8A657A5363FCFEB0FA84|9|188|238|35|14|white|#EF000000|[Fray] So you HAVE lost it a few<br>times, huh?|［フレイ］じゃあ、以前にも何度かなくしたコトがあるのね。|
+|VRAM1|3D00|570|10DE639B7F0EA219CF599B2339DD1F0E50A0ABF89F5BBB90D58F6D03A4733651|9|188|238|35|14|white|#EF000000|[Mill] Then, take care, both of you.|［ミル］それでは、２人ともお気をつけて。|
+|VRAM1|3D00|570|2221F92CB24BA11E06003FED41D3FC74ECBA56F9523A66E1136AA624CD948C00|9|188|238|35|14|white|#EF000000|[Latok] Hey, what’s with that worried<br>face?|［ルトク］なに、心配そうな顔してんだ。|
+|VRAM1|3D00|570|4AD826F8854EFB7E30EA9200D9BA711B20DFAE74FA9828B57F24E68A7F340DAF|9|188|238|35|14|white|#EF000000|Don’t worry, I’m with you. Let’s go.|オレがついてるから安心しな。　さあ、行こうぜ。|
+|VRAM1|3D00|570|F4F5907EC862602666AEBFB3B3E22D8C7A1832FBC0AA6D7EBE28BF7A67538F59|9|188|238|35|14|white|#EF000000|[Fray] Ugh, I don’t feel reassured<br>at all…|［フレイ］ふ、不安だわ・・・|
+|VRAM1|3D00|570|DDE530783249EC4587BCE5FEF8265445CCA8F9E508AA3E5E5ADE8A0D66B50EBE|9|188|238|35|14|white|#EF000000|[Fray] Oh, right, I never properly<br>introduced myself.|［フレイ］そう言えば、自己紹介がまだだったわね。|
+|VRAM1|3D00|570|01F71948B10E06F327CF0DF6D8234ECD0111013EE768A42410BE8C8504D1F943|9|188|238|35|14|white|#EF000000|My full name is Freya Jerbarn.|フルネームは、フレイア・ジェルバーン。|
+|VRAM1|3D00|570|425D24FA5573C8701E3BFD56176968429A814BDB2195D469A4F44C18DE44C175|9|188|238|35|14|white|#EF000000|As you can see, I’m a magic warrior.|見てのとおり、魔法戦士よ。|
+|VRAM1|3D00|570|ED8420E1C32ADC227B1E8B631E8EA3D2C5F830482B5424A89BA6B469A05C0C1A|9|188|238|35|14|white|#EF000000|[Latok] My name is Latok Kart.<br>Nice to meet you!|［ルトク］オレの名前は<br>ルトク・ハート。ヨロシクな。|
+|VRAM1|3D00|570|770023BE7CB6DC44D31686A14FEF8DE7EC99310EC86A34AD68C876F7A0157346|9|188|238|35|14|white|#EF000000|I’m a warrior wandering from place<br>to place.|あちこち渡り歩いている戦士ってトコだな。|
+|VRAM1|3D00|570|6C417C64872B39FA4D6E4782798757A8668713472DD7491912396B9C5EE38BF5|9|188|238|35|14|white|#EF000000|By the way…|ところでオェ・・・|
+|VRAM1|3D00|570|49E518B3EFEE1D5CBAD806679F257771233432BACFFF5FF16853DE471ED4ED0E|9|188|238|35|14|white|#EF000000|Earlier, it seemed you mistook me<br>for someone else.|さっき、オレを誰かとカンちがいしてたようだったが、|
+|VRAM1|3D00|570|D043300BA86CED150091FA1AA1C36C65B238586942114C4BD7D0672293755BD8|9|188|238|35|14|white|#EF000000|Could it be…<br>This guy of yours?|ひょっとして・・・<br>オメェのコレかい？|
+|VRAM1|3D00|3E0|0EC73FB97A5E4E4BC848B1B3AE035103E77C12182A9423489BB72AD8B982841C|9|188|238|35|14|white|#EF000000|   (Snap)|　　（ぴきっ）|
+|VRAM1|3D00|570|C03D7FD1507591A4982EA767FC3191DE364DF99B8B42FC9458AA35B6F7825469|9|188|238|35|14|white|#EF000000|[Fray] Th-that’s none of your<br>business!!|［フレイ］そっ、そんなのあなたには関係ないでしょ！！|
+|VRAM1|3D00|570|028D34E314DEEDA361C30E27BE06B7FE9CE6A9FDD4656F3387039B45B43463DA|9|188|238|35|14|white|#EF000000|[Latok] Forget that guy, how about<br>becoming my lady instead?|［ルトク］そんなヤツよりさ、<br>オレの女にならねえか？|
+|VRAM1|3D00|570|5502888BDC8474DF861849AC179CD876C6A9996A934A749EB8ECF21CD3B4DEAE|9|188|238|35|14|white|#EF000000|I promise I won’t bore you.|タイクツさせねぇぜ。|
+|VRAM1|3D00|570|3C5DE9252FE5FBB5DA0077FEC9398302EBA22738788A269604051A3E9EEE656A|9|188|238|35|14|white|#EF000000|[Fray] Wh-who would ever want…<br>someone like you!!|［フレイ］だ、だぁれが、あなたなんか・・・！|
+|VRAM1|3D00|570|92D2317D9DA57A5AFE38A599DAFC511BEA12B0445C9A0444AEE3EC22303E671F|9|188|238|35|14|white|#EF000000|Honestly! If you dawdle,<br>I’ll leave you behind!|もうっ、グズグズしてるとおいてくわよっ！|
+|VRAM1|3D00|570|0942D5B0974739065F47F8EB076B6FE569EC8E546BD7D217EB743FB8F456DBA6|9|188|238|35|14|white|#EF000000|[Latok] Playing hard to get, huh?<br>What a cutie.|［ルトク］ムリしちゃって。<br>かーいい女だぜ。|
+|VRAM1|3D00|570|55FB3E9C39591AAB5C34323299A40F0BF33872DB689389A1E5005BCB2A1C7580|9|188|238|35|14|white|#EF000000|…Ah, hey, wait up!|・・・あっ、おい、待てよ！|
+|VRAM1|3D00|570|2F4E1CFDF95AB1BA4EAA2B67262B7A41DED6C0BB4F04B80B153DE7E171708CB8|9|188|238|35|14|white|#EF000000|[Fray] N-no way…|［フレイ］そ、そんな・・・。|
+|VRAM1|3D00|570|C01EC6C3C775CEDD05315F1A37E04BDF2F82208463E3D6D4261024708850BDEC|9|188|238|35|14|white|#EF000000|[Amadok] I warned you!<br>This was a foolish move.|［アマドゥク］言ったハズだ！ ダなことだ、とな。|
+|VRAM1|3D00|570|93FB519EEE66813E4E6AFA34EA5EE487ED766A5D5BC824E81B72B25E9184CEC3|9|188|238|35|14|white|#EF000000|Then, I’ll strike first.|では、こちらから行くぞ。|
+|VRAM1|3D00|3E0|EEFA6B8BD772A7409E5E00984C2CE795C6AA34471E6AA70EE9A343582EEAC517|9|188|238|35|14|white|#EF000000|[Fray] Mill!!|［フレイ］ミル！！|
+|VRAM1|3D00|570|DA04B718C7BEBF823DBC669C5E49A4B38540E048118C79562811226C077D0EBB|9|188|238|35|14|white|#EF000000|[Amadok] Ugh… y-you…!|［アマドゥク］うぐぐっ、<br>キ、キサマ・・・！|
+|VRAM1|3D00|570|9A9ACC725122171AC3BC969B77198BED3FAB1CE23CE9513B41D36F3EFE72F806|9|188|238|35|14|white|#EF000000|[Amadok]… Remember this.<br>I will have my revenge…|［アマドゥク］・・覚えておれ。この借りはかならず・・・。|
+|VRAM1|3D00|570|E2DD520CD726448018D15CA4C8EAC69D35648BA420A865368F225C2C6E7C4CC7|9|188|238|35|14|white|#EF000000|[Fray] Mill, are you okay?|［フレイ］ミル、だいじょうぶ？|
+|VRAM1|3D00|570|E76F2D7E67854074618D78CE1CF46185469C983FC002C434D6C48393E6D13300|9|188|238|35|14|white|#EF000000|[Mill] Yes, somehow… But we need<br>to stop that guy quickly…|［ミル］ええ、なんとか・・。それより、はやくヤツの・・・|
+|VRAM1|3D00|570|EADBA1128E85EA09C3D52FF0FCCFECBF91950235E01E181438B383C41A407AA9|9|188|238|35|14|white|#EF000000|We must stop Amadok’s ritual…|アマドゥクの儀式を止めなければ・・・。|
+|VRAM1|3D00|570|D55B29F627869F32BF3762997FBE14FFF7DCA259E25454EE497B2BA7B4840852|9|188|238|35|14|white|#EF000000|[Fray] A ritual… for what?|［フレイ］儀式・・ってなんの？|
+|VRAM1|3D00|570|631AA813DCC0E82E9D49FFD95F4D4C0092623E094D2D62ADA6F1FD92A012A045|9|188|238|35|14|white|#EF000000|[Mill] You know that all people in<br>this world…|［ミル］この世界の人々がみな|
+|VRAM1|3D00|570|1638DDF7D62D8FB21D48C040A1343916C94AE8515EFC48E51DD53497A5314576|9|188|238|35|14|white|#EF000000|possess some amount of Xak power,<br>right?|少なからずサークの力を持っていることはごぞんじですね？|
+|VRAM1|3D00|570|54F9E88BE3AB6410D91032A9174385474F646B080341E9213FE7C1E1F48A90B1|9|188|238|35|14|white|#EF000000|[Fray] Yes… And that power<br>manifests as magic.|［フレイ］ええ・・・。その力が具現化したものが魔法よね。|
+|VRAM1|3D00|570|1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4|9|188|238|35|14|white|#EF000000|[Mill] Exactly.|［ミル］そのとおりです。|
+|VRAM1|3D00|570|4B301ACD0EB8193EE9ED639EC1436E2549070E8F0E502956751D994BE37BA8FC|9|188|238|35|14|white|#EF000000|Amadok absorbs people’s Xak<br>power,|アマドゥクは、人々のサークの力を吸収し、|
+|VRAM1|3D00|570|A1408F4284B4565B6C18FFA0B7E0D0F73C991D82F9F5A79D00988F97E34CB652|9|188|238|35|14|white|#EF000000|and is trying to summon the<br>otherworldly god Darkmare.|異界の神『ダークメア』を召喚しようとしているのです。|
+|VRAM1|3D00|570|9D6FB40C493C4AFC153E74DE5E57A2973EFF80D8AC275F74CE00C6AC1C935786|9|188|238|35|14|white|#EF000000|[Fray] If that happens…!|［フレイ］そんなコトになったら・・・！|
+|VRAM1|3D00|570|0CBAB986ACA3DBDF72662F521284AEA38A734690D29C84D819A3209D48AEDA74|9|188|238|35|14|white|#EF000000|Mill, take Latok and return to the<br>surface first.|ミル、あなたはルトクを連れて、先に地上へもどって。|
+|VRAM1|3D00|570|AAD237040CF9164B8BAD43DF2E7D88D9480581FD9795B714BA542874FF5FF0CB|9|188|238|35|14|white|#EF000000|[Mill] Are you okay on your own…?|［ミル］だいじょうぶですか？あなたひとりで・・・|
+|VRAM1|3D00|570|04C125050449A67CC0A85F7A9FEB2F1A9EA9B6088239D4BC45477ABA840E7DCB|9|188|238|35|14|white|#EF000000|[Fray] …|［フレイ］・・・だって、|
+|VRAM1|3D00|570|7CBB5D652DA1E105B7EB87911DCB72233354587EF499B7C7AD9EC3DC4E0D5C16|9|188|238|35|14|white|#EF000000|Because right now I can’t help<br>Latok…|今の私じゃ、ルトクを助けてあげられないから・・・|
+|VRAM1|3D00|570|6894957017A5D8918B6DE308FCC29670F231F2045B1B37C909C0AD91830BD606|9|188|238|35|14|white|#EF000000|I have no choice but to handle this<br>myself!|私がアイツをなんとかするしか、他にないじゃない！|
+|VRAM1|3D00|570|2B1A7627577B5495946B0E029674F06EA119192ABF42C5910C5F713FF8E3D3BF|9|188|238|35|14|white|#EF000000|[Mill] …Understood.<br>I leave everything to you.|［ミル］・・・わかりました。全てをあなたにゆだねます。|
+|VRAM1|3D00|570|A03B15F9AD926BE3C2F3B58B0E7CC8C2848C01A81C34AA6BEBA230B9173ACEAE|9|188|238|35|14|white|#EF000000|…Oh, right. Actually, I brought this<br>with me.|・・・と、そうだ。実はこういうモノをもってきたんですが。|
+|VRAM1|2600|6E0|E1F45C11B4A394D79061C1D747B927694F06BC8571F7534C448C71EEC52F5D35|9|118|238|100|14|white|#EF000000|[Mill] The record scroll!!<br>[Fray] Record scroll? |［ミル］ 記　録　の　巻　物！！<br>［フレイ］記録の巻物？|
+|VRAM1|2600|6E0|49A2D6368B05749AF6842A6AB68A80ABA0BB888EB69B927A733A4F6FB95B9511|9|118|238|100|14|white|#EF000000|[Mill] Yes. It’s a brand-new item<br>from the magic academy.<br>Just focus on this scroll, and you<br>can return here anytime.|［ミル］ ええ。魔法学校でつくられたばかりのアイテムなんですけどね。この巻物にむかって念じるだけで、いつでもあなたは、ここへ戻ってくることができます。|
+|VRAM1|2600|6E0|3C1CB3C98F5C85596E2991DDB2F42C431BE2D40B024F365BDAA49AC27DD08AAE|9|118|238|100|14|white|#EF000000|[Fray] Huh, convenient!<br>[Mill] Now, Fray, please focus on<br>this scroll. |［フレイ］へぇ、ベンリねぇ。<br>［ミル］ 貂さあ、フレイさん。この巻物にむかって念じてください。|
+|VRAM1|1200|FA0|9213804557438CA5D26E1374324B023DB209477DAEFD7CA61060D8923C4F3964|121|24|120|63|14|white|#EF000000|Pray to the scroll<br>Leave|巻物に念じる<br>やめる|
+|VRAM1|3D00|570|01EB02D0695785A77C104A126FC8B6C9422952A92AFADCF1F27DD62B1F28069B|9|188|238|35|14|white|#EF000000|[Mill] Right now, you’re our only<br>hope. Do your best! |［ミル］今はあなただけがたよりです。がんばってください。|
+|VRAM1|3D00|570|6FB19D67A720507835F8EBF5EF0505B7E1E5C302685CC6FA2918A8F454B57283|9|188|238|35|14|white|#EF000000|[Fray] Got it, leave it to me! |［フレイ］ええ、まかせといて！|
+|VRAM1|3D00|570|61C9F11A94F756C017D308CCCEABB477E2B425460BA4671F81EA762B2A744C13|9|188|238|35|14|white|#EF000000|[Fray] Mill…<br>Please take care of Latok.|［フレイ］ミル・・・・・<br>ルトクをおねがいね。|
+
