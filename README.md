@@ -12,7 +12,7 @@ The current implementation is based on SHA-1 memory hashes stored in Markdown fi
  
 Text appeareance can be customized to fit the game native UI.
 
-Currently only [Bizhawk](https://tasvideos.org/Bizhawk) is supported, since it is the only emulator providing a [`memory.hash_region` Lua function](https://tasvideos.org/Bizhawk/LuaFunctions).
+Currently only [Bizhawk](https://tasvideos.org/Bizhawk) is supported, since it is the only emulator providing a [memory hashing function](https://tasvideos.org/Bizhawk/LuaFunctions).
 
 
 ## [Setup Guide](https://github.com/eadmaster/RetroSubs/wiki/Setup-Guide)
