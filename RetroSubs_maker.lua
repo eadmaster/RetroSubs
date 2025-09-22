@@ -15,18 +15,12 @@
 
 
 -- script for quick retrosubs creation
--- press this hotkey
+
+-- user settings:
 local SCREENSHOT_HOTKEY = "S"
--- to capture a screenshot in this dir:
 local SCREENSHOT_BASE_PATH = "/tmp/r/"
--- then perform OCR and add a new table entry
 local OCR_CMD="easyocr --lang ja --detail 0 --paragraph 1 --file "
 --local OCR_CMD="tesseract "shot.png" stdout -l jpn_vert+jpn+eng --psm 5 --oem 1"
-
-
-function copy_to_clipboard(text)
-        io.popen('pbcopy','w'):write(text):close()
-end
 
 
 function get_memory_hash(region, start, len)
@@ -48,7 +42,10 @@ local filename = "RetroSubs/" .. gameinfo.getromname() .. ".retrosub"
 -- read all lines
 local lines = {}
 for line in io.lines(filename) do
-    table.insert(lines, line)
+    -- skip empty lines, code blocks, and comments
+    if line ~= "" and line:find("#") ~= 1 and not line:find(";") ~= 1 and not line:find("`") ~= 1 then
+        table.insert(lines, line)
+    end
 end
 
 -- get last line
@@ -120,7 +117,11 @@ function gui_init()
             end
         end
 
-        btn = forms.button(main_window, "Draw Overlay", draw_overlay, xform, yform)
+        btn = forms.button(main_window, "Clear overlay", clear_overlay, xform, yform)
+        forms.setproperty(btn, "AutoSize", true)
+        yform = yform + delta_y
+        
+        btn = forms.button(main_window, "Draw overlay", draw_overlay, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
         yform = yform + delta_y
         
@@ -128,12 +129,11 @@ function gui_init()
         forms.setproperty(btn, "AutoSize", true)
         yform = yform + delta_y
         
-        btn = forms.button(main_window, "Copy new line", add_table_line, xform, yform)
+        btn = forms.button(main_window, "Copy to clipboard", copy_table_line, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
-        
         yform = yform + delta_y
         
-        btn = forms.button(main_window, "Clear overlay", clear_overlay, xform, yform)
+        btn = forms.button(main_window, "Append to file", add_table_line, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
         
 end
@@ -151,10 +151,10 @@ function draw_overlay()
     local y_pos = tonumber(fields[6])
     local width_box = tonumber(fields[7])
     local height_box = tonumber(fields[8])
-    local fg_color = fields[9]
-    local bg_color = fields[10]
-    local text = fields[11]
-    local font_size = 12 -- optional
+    local font_size = tonumber(fields[9])
+    local fg_color = fields[10]
+    local bg_color = fields[11]
+    local text = fields[12]
     local font_face = "Arial" -- optional
     
     if (height_box and width_box and height_box > 0 and width_box > 0) then
@@ -185,8 +185,10 @@ end
 
 
 function try_ocr()
-        last_update = emu.framecount()
+        print("ocring...")
 
+        last_update = emu.framecount()
+        
         -- save a screenshot
         last_shot_path = SCREENSHOT_BASE_PATH .. last_update .. ".png"
         client.screenshot(last_shot_path)
@@ -211,11 +213,10 @@ function try_ocr()
         --fields[#fields-1] = forms.gettext(textbox)
         --fields[#fields-1] = " ... " 
         --fields[#fields-1] = "New English text here<br>Another line?" 
-
 end
 
 
-function add_table_line()
+function get_new_table_line()
         gui_write_to_model()
         
         if not fields[1] or not fields[2] or not fields[3] then
@@ -232,9 +233,7 @@ function add_table_line()
                 print("invalid last table entry. Update and reload the script manually")
                 return
         end
-        
-        print("ocring...")
-        
+       
         -- add new hash
         fields[4] = curr_hash
         print(curr_hash)
@@ -245,19 +244,35 @@ function add_table_line()
             newLine = newLine .. f .. "|"
         end
 
-        -- append to file
-        --local file = io.open(filename, "a")
-        --file:write("\n" .. newLine)
-        --file:close()
-        
-        -- copy to clipboard
-        copy_to_clipboard(newLine)
+        --print("new row:")
+        --print(newLine)
+
+        -- clean current text
+        fields[12] = " "  -- text
+        fields[13] = " "  -- jap_text
         
         gui_update_from_model()
 
-        print("Added new row:")
-        print(newLine)
+        return newLine
 end
+
+
+function copy_table_line()
+    newLine = get_new_table_line()
+
+    -- copy to clipboard
+    io.popen('pbcopy','w'):write(newLine):close()
+end
+
+function add_table_line()
+    newLine = get_new_table_line()
+    
+    -- append to file
+    local file = io.open(filename, "a")
+    file:write("\n" .. newLine)
+    file:close()
+end
+
 
 -- main loop
 gui_init()

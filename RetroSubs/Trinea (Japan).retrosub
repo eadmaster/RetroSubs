@@ -1,11 +1,14 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.1.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 ---
+
+<!-- vim: syntax=Markdown -->
+
 
 # Trinea English fan translation
 
@@ -23,7 +26,6 @@ compatible_hashes: [ "c20419ec", "8622b25466d1cf31e8a8771838b02ca7" ]
 ## Story Intro
 
 Text stored @ 0x000A2000
-
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|

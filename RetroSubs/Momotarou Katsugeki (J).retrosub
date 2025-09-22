@@ -1,11 +1,14 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.6
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
+
+<!-- vim: syntax=Markdown -->
+
 
 # Momotarou Katsugeki English fan translation
 
@@ -14,6 +17,15 @@ compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 Most text is stored in ROM @ 1f078 and @ 42f45.
 
 See abcde table: `Momotarou Katsugeki (J).tbl`
+
+
+## Title screen
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
+|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|60|90|0|0|#ffff00|black| Momotaro’s Adventure<br>English Translation v0.6<br>          by eadmaster<br> <br> <br> <br> <br>         Start    Continue| |
+
+ALT.: Peach Boy Adventure
 
 
 ## Status menu
@@ -35,7 +47,7 @@ See abcde table: `Momotarou Katsugeki (J).tbl`
 
 ## Item menu
 
-statically patched into the ROM:
+Statically patched into the ROM:
 
 ```lua
 -- Item menu
@@ -104,18 +116,8 @@ memory.write_bytes_as_array(0x0004376B, {string.byte('KATAKATAYA',1,10)}, "ROM")
 memory.write_bytes_as_array(0x000437EE, {string.byte('ISSUNBOSH',1,9)}, "ROM") -- いっすんぼうし村
 memory.write_bytes_as_array(0x00043777, {string.byte('ISSUNBOSH',1,9)}, "ROM") -- いっすんぼうし村
 memory.write_bytes_as_array(0x00043792, {string.byte('STATUE   ',1,9)}, "ROM") -- さいごのしぞう
--- たけとりの村 
+-- たけとりの村  = Tahitachi Village
 ```
-
-
-
-## Title screen
-
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|60|90|0|0|#ffff00|black| Momotaro’s Adventure<br>English Translation v0.6<br>          by eadmaster<br> <br> <br> <br> <br>         Start    Continue| |
-
-ALT.: Peach Boy Adventure
 
 
 ## Intro
@@ -162,31 +164,18 @@ TODO: add all the values for the money
 
 ## Map
 
-|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|font_size|text|jap_text|
-|------|-----|---|----|-----|-----|---------|----------|--------|--------|---------|----|--------|
-|VRAM1|D700|C00|8CE2AA6F552A84CC4DB84126B8EC089C5F5C36270476A72C0FF98C5CF0B7B027|15|161|60|20|black|#DFFFFFFF|10|Hanasaka<br>Village|はなさかの村|
-|VRAM1|D700|C00|054ABA0282762E63547969D7C2AB160A0ECACF9D8353F56DB7BD126ABB2ACFB4|100|120|60|18|black|#DFFFFFFF|10|Kintaro's<br>Village|きんたろうの村|
-|VRAM1|D700|C00|697791AD51BF898E76B78AC93672E0E589C0D0405260EFF8C7CD2EE26013DF6D|70|50|68|18|black|#DFFFFFFF|10|Issunboshi<br>Village|いっすんぼうし村|
-|VRAM1|D700|C00|C44A56CE098456BE0D8ABB6665EB0838EC459FAECA2D840DEBD662E61291EDE1|45|100|68|18|black|#DFFFFFFF|10|Katakatayama<br>Village|カチカチやまの村|
-|VRAM1|D700|C00|7B645B1F43C6BE20C7DC41198EF161FA7A6AE5AE59A6180E48F895475C9ACB41|160|90|60|18|black|#DFFFFFFF|10|Urashima<br>Village|うらしまの村|
+;|region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|font_size|text|jap_text|
+;|------|-----|---|----|-----|-----|---------|----------|--------|--------|---------|----|--------|
+;|VRAM1|D700|C00|8CE2AA6F552A84CC4DB84126B8EC089C5F5C36270476A72C0FF98C5CF0B7B027|15|161|60|20|black|#DFFFFFFF|10|Hanasaka<br>Village|はなさかの村|
+;|VRAM1|D700|C00|054ABA0282762E63547969D7C2AB160A0ECACF9D8353F56DB7BD126ABB2ACFB4|100|120|60|18|black|#DFFFFFFF|10|Kintaro's<br>Village|きんたろうの村|
+;|VRAM1|D700|C00|697791AD51BF898E76B78AC93672E0E589C0D0405260EFF8C7CD2EE26013DF6D|70|50|68|18|black|#DFFFFFFF|10|Issunboshi<br>Village|いっすんぼうし村|
+;|VRAM1|D700|C00|C44A56CE098456BE0D8ABB6665EB0838EC459FAECA2D840DEBD662E61291EDE1|45|100|68|18|black|#DFFFFFFF|10|Katakatayama<br>Village|カチカチやまの村|
+;|VRAM1|D700|C00|7B645B1F43C6BE20C7DC41198EF161FA7A6AE5AE59A6180E48F895475C9ACB41|160|90|60|18|black|#DFFFFFFF|10|Urashima<br>Village|うらしまの村|
     
-    
-TODO:
-    Tahitachi Village|たびだちの村
-68900
-
-2448両
-
-うつくしい
-
-さくらが
-
 
 ## Banners
 
 ;|VRAM1,FC00,C00,...,GAME START
-
-WIP
 
 
 ## Dialogues
@@ -217,7 +206,7 @@ WIP
 |VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF|Well then, be careful<br>on your journey!|では<br>こころして<br>ゆくがよい!|
 
 
-### Initial Village
+### Starting Village
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
@@ -484,11 +473,6 @@ WIP
 
 ### Item box messages
 
-TODO: winning messages
-#|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Thank you, Momotaro!<br>Very, very good!|サンキュー ミスターももたろう ベリーベリーグッドですよ!|
-#|VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF|Go, Momo-chan!<br>Push, Momo-chan! Yay!|いけいけ ももちゃん!<br>おせおせ ももちゃん! ワーイ!|
-
-
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|D080|500|6CE3A0317BE508D2CEA67D47E7A1FB7E4394B392BB9FA83E38D253669FB587B0|60|45|130|50|black|#CFFFFFFF|Got Ice Shard|ひょうがのつぶてに  いれた|
@@ -506,6 +490,13 @@ TODO: winning messages
 |VRAM1|D080|500|9201AE73493D124C67E3EB23975E2E77DD32AF719E1B467E633533044CB813FA|60|45|130|50|black|#CFFFFFFF|Got Yuki’s Rice Ball|ユキの オニギリを  てにいれた|
 |VRAM1|D080|500|3F3A56CACD8C538528333B57DC28EAA6AA4B5C79E08831BD63F2ADA350D1B584|60|45|130|50|black|#CFFFFFFF|Got Fart Powder|オナラのもとを  てにいれた|
 |VRAM1|D080|500|D8F6D263E78DAE7C2BD0AA82A32378DB9154FFE76E090DB839AABE95FA9295AC|60|45|130|50|black|#CFFFFFFF|Momotaro got a<br>turtle shell|ももたろうは こうらを てにいれた|
+
+
+### Boss victory messages
+
+TODO:
+#|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Thank you, Momotaro!<br>Very, very good!|サンキュー ミスターももたろう ベリーベリーグッドですよ!|
+#|VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF|Go, Momo-chan!<br>Push, Momo-chan! Yay!|いけいけ ももちゃん!<br>おせおせ ももちゃん! ワーイ!|
 
 
 ### Katakatayama Village

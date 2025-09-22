@@ -1,13 +1,18 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.3
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [2837bbad, dad037696e80543845c56a218dc2571d]
 ---
 
+<!-- vim: syntax=Markdown -->
+
+
 # Densetsu no Stafy 4 English fan translation
+
+## Notes
 
 Localized Names:
 
@@ -21,11 +26,12 @@ Localized Names:
  - Ruby = ハデヒラリ  (Hadehirari)
  - Old Man Lobber = ロブじいさん (Robu jiisan)
 
+text dump from
+Opiter09_Stafy4-Translation-Tools/0014_textFiles/152820_158900.txt
+https://www.starfywiki.org/wiki/Densetsu_no_Starfy_4/Text_dump#Part_9    
+
 
 ## Opening
-
-text dump from Opiter09_Stafy4-Translation-Tools/0014_textFiles/152820_158900.txt
-https://www.starfywiki.org/wiki/Densetsu_no_Starfy_4/Text_dump#Part_9    
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|orig_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|---------|

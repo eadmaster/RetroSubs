@@ -1,11 +1,14 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.6
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
+
+<!-- vim: syntax=Markdown -->
+
 
 # Fray CD - Xak Gaiden English fan translation
 
@@ -1133,4 +1136,3 @@ TODO: fix lines with repeated hash: 513B310E50BFD5A0CB7D3BC49B660FC8F5A6A30AEA40
 |VRAM1|3D00|570|01EB02D0695785A77C104A126FC8B6C9422952A92AFADCF1F27DD62B1F28069B|9|188|238|35|14|white|#EF000000|[Mill] Right now, you’re our only<br>hope. Do your best! |［ミル］今はあなただけがたよりです。がんばってください。|
 |VRAM1|3D00|570|6FB19D67A720507835F8EBF5EF0505B7E1E5C302685CC6FA2918A8F454B57283|9|188|238|35|14|white|#EF000000|[Fray] Got it, leave it to me! |［フレイ］ええ、まかせといて！|
 |VRAM1|3D00|570|61C9F11A94F756C017D308CCCEABB477E2B425460BA4671F81EA762B2A744C13|9|188|238|35|14|white|#EF000000|[Fray] Mill…<br>Please take care of Latok.|［フレイ］ミル・・・・・<br>ルトクをおねがいね。|
-
