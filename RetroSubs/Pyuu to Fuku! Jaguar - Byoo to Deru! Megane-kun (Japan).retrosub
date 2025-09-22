@@ -1,13 +1,17 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.2
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "1F67BD36", "09BDBC2B8190566335B4C27CD20C8B8E"  ]
 ---
 
+<!-- vim: syntax=Markdown -->
+
+
 # Pyuu to Fuku! Jaguar - Byoo to Deru! Megane-kun English fan translation
+
 
 ## Hacking notes
 

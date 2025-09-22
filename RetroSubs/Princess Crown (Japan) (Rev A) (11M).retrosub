@@ -1,12 +1,15 @@
 ---
 format: RetroSubs Version 2.0
 author: eadmaster
-license: GPL-2.0
+license: CC-BY-NC-SA
 version: 0.1
 repository: https://github.com/eadmaster/RetroSubs
 compatible_content: [ "Princess Crown (Japan) (Rev A) (11M)", "Princess Crown (Japan) (1M)" ]
 compatible_hashes: [ EB03C59DC22496376817D3CE0A18D13B, EE159C630B40547EA0F06FB8A83293B5 ]
 ---
+
+<!-- vim: syntax=Markdown -->
+
 
 # Princess Crown English fan translation
 

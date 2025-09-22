@@ -97,7 +97,7 @@ references:
 ;|VRAM1|3D00|570|241F397EC383C8DF17C97463C6FCE80B37CFEB63882A99D65EB2439DA8B56C57|70|130|#ffff00|black|English Translation v0.6<br>          by eadmaster|
 
  
-## Intro FMV sub
+## Intro cutscene
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
