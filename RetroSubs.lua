@@ -14,6 +14,9 @@
 --  If not, see <http://www.gnu.org/licenses/>.
 
 
+DEBUG_RETROSUB = false
+MAX_LINE_LEN=37
+
 function detect_emu()
     if gameinfo and type(gameinfo.getrompath) == "function" then  -- TODO: better detection
         return "retroarch"
@@ -177,7 +180,9 @@ function parse_markdown_multi_tables(filename)
                 text   = text,
             }
             
-            --check_long_line(text, 32)
+            if DEBUG_RETROSUB then
+                check_long_line(text) 
+            end
 
             for _, name in ipairs(optional_cols) do
                 if header_map[name] then
@@ -191,6 +196,12 @@ function parse_markdown_multi_tables(filename)
 
             local key1 = region .. ":" .. start .. ":" .. len
             entries[key1] = entries[key1] or {}
+            
+            -- check if duplicate
+            if DEBUG_RETROSUB and entries[key1][hash] ~= nil then
+                console.log("warning: duplicate hash found (prev line overwritten): " .. hash)
+            end
+            
             entries[key1][hash] = curr_entry
         end
 
@@ -223,10 +234,10 @@ function clear_text()
 end
 
 
-function check_long_line(text, MAX_LEN)
+function check_long_line(text)
     for line in (text .. "<br>"):gmatch("([^<]+)<br>") do
         if line then
-            if (line:len() >= MAX_LEN) then
+            if (line:len() >= MAX_LINE_LEN) then
                 print("long line: ", line)
             end
         end
