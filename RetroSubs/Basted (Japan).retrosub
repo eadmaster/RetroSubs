@@ -1,0 +1,31 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+
+# Basted Fan Translation
+
+
+## Notes
+
+Text encoded in SJIS on disc track 2.
+  
+Hashed memory regions:
+
+ - |VRAM1|E000|780|  -> auto-scrolling pre-battle dialogues
+ - |VRAM1|7400|1760|  -> windowed dialogues
+ 
+
+## Dialogues
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|7400|1760|8487C63FA2E5142E151A08D8BB1E71A046A13C469F05D576ED48BAEE0E147AAA|9|188|238|35|14|white|black|English text here|Jap text here|

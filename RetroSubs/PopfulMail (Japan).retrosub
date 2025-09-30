@@ -1,0 +1,44 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+# Popful Mail fan translation
+
+
+## Notes
+
+Text encoded in SJIS on disc track 2.
+
+Localized names:
+
+ - https://segaretro.org/Popful_Mail
+  
+Hashed memory regions:
+
+ - |VRAM1|A980|1940| -> dialogues
+ - |VRAM1|C040|6A0| -> action menu opened
+
+
+## Dialogues
+
+
+### Slick meeting
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|A980|1940|2A3798D11D3027FCF980F60129F122CAAC88A8AA7AC02A05629F0B29F62CBFBA|22|50|200|60|14|white|#0024da|Slick<br>Please.<br>Take me to town. If you can...|ブラッキィ<br>頼むよ。<br>僕を、町まで連れてってくれよ。もし、連れてってくれたら|
+|VRAM1|A980|1940|0B0B55FDF56600D872C9D95E72966EAFD944422A38B91040580861AEE0364819|22|50|200|60|14|white|#0024da|I'll pay you<br>a fair price.|それなりの金は、払うからさぁ。|
+|VRAM1|A980|1940|F5DEC03233DB64864A22EF18FF771134608E14E8F72E0A3CBDE9BA04E361E2C2|22|50|200|60|14|white|#0024da|Mail<br>Hmm. Actually, I’m a bounty<br>hunter. The reason I came to<br>this forest...|メイル<br>ふうん。実はあたし、賞金稼ぎなのよ。<br>このジャングルに来た訳も|
+|VRAM1|A980|1940|C3D87FA2410E48B34BFC4BE948CFAAA67D6D620F99FD1E9E68149C634E979E83|22|50|200|60|14|white|#0024da|...is because I'm<br>looking for Muttonhead,<br>a wanted criminal.|賞金首になっているマテリアルを探しているからなの。|
+|VRAM1|A980|1940|5BAB390A0F09C5FE223E3BD1AD7AD3C16CA0069F6CE51CA3C36610383D250959|22|50|200|60|14|white|#0024da|Mail<br>If you’re offering<br>more than the bounty,<br>I might consider it.|メイル<br>あんたがその賞金よりも、<br>もし、多く金を出してくれるっていうのなら、考えてもいいわ。|
+|VRAM1|A980|1940|2881BBE5C7886F0603A45FA55A8E0AEE2848B326E1D7DB2068C6444096FE1A26|22|50|200|60|14|white|#0024da|Slick<br>Y-you’ve gotta be kidding!<br>I don’t have that kind of money!!|ブラッキィ<br>じょ、冗談じゃない！<br>そんなに、持ってるわけない<br>だろ！！ |
+|VRAM1|A980|1940|C18FE6BE037E118C580C5554A45C00ACF98370CA7174BFD4727669277EE1F30A|22|50|200|60|14|white|#0024da|Slick<br>Fine…<br>I’ll give up on going to town.|ブラッキィ<br>仕方がない。<br>町にいくのはあきらめるよ。|
+|VRAM1|A980|1940|3B99A8621BB6DBDFFCE3F3066B8B3326CADA146B30A5CD8F353B2F8DDFB2293E|22|50|200|60|14|white|#0024da|But at least go<br>get help quickly.<br>I don’t want to stay<br>stuck here forever.|そのかわり早く助けを呼んできてくれないか。<br>いつまでも、こんな所にいたくたく<br>ないからね。|

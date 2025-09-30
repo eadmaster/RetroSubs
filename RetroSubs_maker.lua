@@ -17,7 +17,7 @@
 -- script for quick retrosubs creation
 
 -- user settings:
-local SCREENSHOT_HOTKEY = "S"
+--local SCREENSHOT_HOTKEY = "S"
 local SCREENSHOT_BASE_PATH = "/tmp/r/"
 local OCR_CMD="easyocr --lang ja --detail 0 --paragraph 1 --file "
 --local OCR_CMD="tesseract "shot.png" stdout -l jpn_vert+jpn+eng --psm 5 --oem 1"
@@ -125,9 +125,9 @@ function gui_init()
         forms.setproperty(btn, "AutoSize", true)
         yform = yform + delta_y
         
-        btn = forms.button(main_window, "Try OCR", try_ocr, xform, yform)
-        forms.setproperty(btn, "AutoSize", true)
-        yform = yform + delta_y
+        --btn = forms.button(main_window, "Try OCR", try_ocr, xform, yform)
+        --forms.setproperty(btn, "AutoSize", true)
+        --yform = yform + delta_y
         
         btn = forms.button(main_window, "Copy to clipboard", copy_table_line, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
@@ -293,10 +293,10 @@ while true do
     
     -- CPU SAVER
 	--if (emu.framecount() - last_update) > CPU_SAVER_INTERVAL  then
-    local pressed_keys = input.get()
-    if pressed_keys["S"] then  -- TODO: debounce?
-        add_table_line()
-    end
+    --local pressed_keys = input.get()
+    --if pressed_keys[SCREENSHOT_HOTKEY] then  -- TODO: debounce?
+    --    copy_table_line()
+    --end
     
 	emu.frameadvance();
 end  -- while
