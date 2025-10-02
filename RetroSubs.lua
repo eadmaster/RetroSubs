@@ -180,9 +180,9 @@ function parse_markdown_multi_tables(filename)
                 text   = text,
             }
             
-            if DEBUG_RETROSUB then
-                check_long_line(text) 
-            end
+            --if DEBUG_RETROSUB then
+            --    check_long_line(text) 
+            --end
 
             for _, name in ipairs(optional_cols) do
                 if header_map[name] then
@@ -301,7 +301,11 @@ end
 local parsed_markdown = parse_markdown_multi_tables("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
 if parsed_markdown == nil then
     -- try to load from content dir
-    local curr_rom_path = gameinfo.getrompath()  -- retroarch-only
+    local curr_rom_path = nil
+    
+    if gameinfo and type(gameinfo.getrompath) == "function" then 
+        curr_rom_path = gameinfo.getrompath()  -- retroarch-only
+    end
     
     local config = client.getconfig()    -- bizhawk-only
     if config.RecentRoms and config.RecentRoms[0] then
@@ -315,7 +319,7 @@ if parsed_markdown == nil then
     end
     
     if parsed_markdown == nil then
-        print("parsing failed or retrosub file not found")
+        print("parsing failed or retrosub file not found: " .. curr_rom_path)
         return
     end
 end

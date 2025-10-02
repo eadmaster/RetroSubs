@@ -87,6 +87,7 @@ function gui_destroyall()
         forms.destroyall()
 end
 
+
 function gui_init()
         local xform, yform, delta_x, delta_y = 0, 4, 120, 20
         -- forms.newform([int? width = nil], [int? height = nil], [string title = nil], [nluafunc onclose = nil])
@@ -185,7 +186,7 @@ end
 
 
 function try_ocr()
-        print("ocring...")
+        gui.addmessage("ocring...")
 
         last_update = emu.framecount()
         
@@ -221,16 +222,26 @@ function get_new_table_line()
         
         if not fields[1] or not fields[2] or not fields[3] then
                 print("invalid last table entry. Update and reload the script manually")
+                gui.addmessage("invalid last table entry. Update and reload the script manually")
                 return
         end
         
         region = fields[1]
         start = tonumber(fields[2], 16)
         len = tonumber(fields[3], 16)
+        
+        -- check empty fields
+        if region == "" or start == nil or len == nil then
+            --msg_dialog("memory region field empty")
+            gui.addmessage("ERROR: empty memory region field")
+            return
+        end
+
         curr_hash = get_memory_hash(region, start, len)
 
         if not curr_hash then
                 print("invalid last table entry. Update and reload the script manually")
+                gui.addmessage("invalid last table entry. Update and reload the script manually")
                 return
         end
        
