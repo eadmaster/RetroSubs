@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.7
+version: 0.8
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -12,18 +12,32 @@ compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 
 # Momotarou Katsugeki English fan translation
 
+## Translation notes
+
+TODO: revise localized names:
+
+https://momotaro.fandom.com/wiki/Momotaro_Densetsu_1%E2%86%922
+ 
+
 ## Hacking notes
 
 Most text is stored in ROM @ 1f078 and @ 42f45.
 
 See abcde table: `Momotarou Katsugeki (J).tbl`
 
+Memory regions hashed:
 
+ - |VRAM1|D700|C00| -> intro
+ - |VRAM1|D080|500| -> village dialogues
+ - |VRAM1|7600|780| -> shops
+ - |VRAM1|C000|680| -> ending
+ 
+ 
 ## Title screen
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|60|90|0|0|#ffff00|black| Momotaro’s Adventure<br>English Translation v0.7<br>          by eadmaster<br> <br> <br> <br> <br>         Start    Continue| |
+|VRAM1|D700|C00|E6F5EADB318129F6CD53CADF4AA59B1160F7B26C324A438C8FB672B40EBEE36F|60|90|0|0|#ffff00|black| Momotaro’s Adventure<br>English Translation v0.8<br>          by eadmaster<br> <br> <br> <br> <br>         Start    Continue| |
 
 ALT.: Peach Boy Adventure
 
@@ -634,7 +648,7 @@ TODO: all the questions
 |VRAM1|D080|500|CAC7F9DF3B8B06F87C21ED847FE89098C4FFAD9714829BE803CC4E81AA318B7E|60|45|130|50|12|black|#CFFFFFFF|We’re all<br>counting on you!!|たよりで	<br>ごわす!!|
 |VRAM1|D080|500|EBBBBFC62EFBABDA6A5504D265C03548425589D86F0B29BEDBBB499C2D8CB1A1|60|45|130|50|12|black|#CFFFFFFF|With your<br>strength, please<br>defeat Enma…|あんたの<br>ちからで<br>えんまを|
 |VRAM1|D080|500|4047105CA382612C408E801235496D47D8815AF2BA3F709A520277A45A161B8C|60|45|130|50|12|black|#CFFFFFFF|…and put<br>an end to him!!|たおして<br>くだせ-!!<br>で ごわす|
-|VRAM1|D080|500|55CEAFBC3241184F05B53FB0DD623689EEC45FD560FCBC21C614822F8C5E7C6F|60|45|130|50|12|black|#CFFFFFFF|No good!!<br>I can’t take<br>this anymore!!|だめだあ!!<br>オラ もう<br>たえれねえ!!|
+|VRAM1|D080|500|55CEAFBC3241184F05B53FB0DD623689EEC45FD560FCBC21C614822F8C5E7C6F|60|45|130|50|12|black|#CFFFFFFF|No good!!<br>I can’t take<br>it anymore!!|だめだあ!!<br>オラ もう<br>たえれねえ!!|
 |VRAM1|D080|500|5815E91E565AF9F534373E5478A6BC3CF15F0EAED6FDA4CDCBC0AE873ADD8E8D|60|45|130|50|12|black|#CFFFFFFF|Living in<br>a place like this…|こんなとこで<br>くらしてちゃ|
 |VRAM1|D080|500|8CEC592B05A3D9D366658F01B0C342CFB54F75AAD8EA33B5D16DC461ADE4C36E|60|45|130|50|12|black|#CFFFFFFF|…will drive me<br>crazy!!|おかしく<br>なっちまうだ|
 |VRAM1|D080|500|04270A7D70906CDFCE145FA58F81CF77BF089D927EAF05F1C0968E0D554084E0|60|45|130|50|12|black|#CFFFFFFF|Momotaro,<br>I just knew<br>you’d come…|ももたろサン<br>あんたが<br>きっと|
@@ -654,7 +668,7 @@ TODO: all the questions
 |VRAM1|D080|500|613AF28ADCD4677E4626C2421CAF28F72597ACDB42174CC2FE2DD1528C081485|60|45|130|50|12|black|#CFFFFFFF|You can do it,<br>Momotaro!!| がんばってね<br>ももたろうの<br>おにいちゃん|
 |VRAM1|D080|500|AD845208A21BF2C3501CEA334BCA6F6BA3589BAB720B325869B2885BDC51889B|60|45|130|50|12|black|#CFFFFFFF|After many<br>years of<br>study…|ながねんの<br>けんきゅうの<br>けっか|
 |VRAM1|D080|500|9D48EE6209E2CB2C294B8B4144125E9873406989D98314214DBF26EE0A0D26E8|60|45|130|50|12|black|#CFFFFFFF|…we found<br>Enma’s<br>weakness…|えんまの<br>じゃくてんは|
-|VRAM1|D080|500|CA05818486C5F4FB5D8CD742996F6775F0F05D84A7FD3F19A94C8E034CA537B2|60|45|130|50|12|black|#CFFFFFFF|…and sure<br>enough, it’s<br>his target!|やっは°り<br>まとじゃった|
+|VRAM1|D080|500|CA05818486C5F4FB5D8CD742996F6775F0F05D84A7FD3F19A94C8E034CA537B2|60|45|130|50|12|black|#CFFFFFFF|…and sure<br>enough, it<br>was the target!|やっは°り<br>まとじゃった|
 |VRAM1|D080|500|F70E4823E2E55A45BB179308B46A4DB94F405E8771D510A0EF763459E600F62D|60|45|130|50|12|black|#CFFFFFFF|The target<br>is inside<br>his mouth!!|まとは<br>くちのなかに<br>ある!!|
 |VRAM1|D080|500|36B5FE6AAAC17E20B31C014174CD0517108D6BFE48CE598E5EB40E594D81FEA5|60|45|130|50|12|black|#CFFFFFFF|But still…|だが<br>それも|
 |VRAM1|D080|500|FE2EECAC3EF6EBDA26399E1E513A28BC0E3A736F437DD5AD6E05EDE1AE0E1BC2|60|45|130|50|12|black|#CFFFFFFF|…you’ll have<br>to reach<br>Enma first!|えんまの<br>ところまで<br>いければだ|
@@ -663,6 +677,60 @@ TODO: all the questions
 |VRAM1|D080|500|CE1A85BBEFFF4EF8015D7B4AEB81A7D03D1797286105284B978C75C122FB9E1F|60|45|130|50|12|black|#CFFFFFFF|Momotaro!!|ももたろう!!|
 |VRAM1|D080|500|C52D0185216D168962FCFC9D9A359C3E81ACFB1BF0F58F0F007AC4487B0CAAC5|60|45|130|50|12|black|#CFFFFFFF|The hopes<br>of the people<br>rest on you!|ひとびとの<br>きたいは<br>おまえに|
 |VRAM1|D080|500|F7840CE09D235D50C768ED99D1A5A6F05C25AB39D2F69CD36DEC17CF3C48E350|60|45|130|50|12|black|#CFFFFFFF|…all gathered<br>into one!!|あつまって<br>おる!!|
-|VRAM1|D080|500|93A5540BBD39E39037EA4B0679EBAB2ED2F2669296DD9B914BA0BA6163FD693B|60|45|130|50|12|black|#CFFFFFFF|Please,<br>punish Enma…|どうか<br>えんまを<br>こらしめ|
+|VRAM1|D080|500|93A5540BBD39E39037EA4B0679EBAB2ED2F2669296DD9B914BA0BA6163FD693B|60|45|130|50|12|black|#CFFFFFFF|Please,<br>defeat Enma…|どうか<br>えんまを<br>こらしめ|
 |VRAM1|D080|500|9FD59F314526493E77522AE03E1BF123DB00132DA77B44D146AC3ED575D4264D|60|45|130|50|12|black|#CFFFFFFF|…and bring<br>peace back<br>to the world!|よのなかに<br>へいわを<br>もたらすのだ|
 |VRAM1|D080|500|C0F3E4B6914E02E36DA8E228FFC48FD583B4569E43D7F0BAD43E4CA259FEE66F|60|45|130|50|12|black|#CFFFFFFF|Go forth!!<br>Momotaro!!|ゆけ!!<br>ももたろう!!|
+
+
+## Ending
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|--------|--------|----|-----|--------|
+|VRAM1|C000|680|0EEB71DFCEB214CDB8DE85BDA2094FACB61336F25BA368587FEC14F044C98B95|60|45|130|50|12|black|#CFFFFFFF|Congratulations! You’ve<br>cleared Momotaro’s<br>Adventure!|おめ"てとう! あなたは<br>ももたろうかつ"けき クリアです!|
+|VRAM1|C000|680|62C64330A16B6C32711D663FE4488F839355B2F2B729604CB15FA4CA7498C7DE|60|45|130|50|12|black|#CFFFFFFF|As a true Action Game<br>master, go and…|アクションゲームの めい"しん<br>として おおいに みんなに|
+|VRAM1|C000|680|060028C16698745665D7A8D6D3192D299A154B08B1A0B2EB63D7F1FFFE86928E|60|45|130|50|12|black|#CFFFFFFF|…boast proudly<br>to everyone!|として おおいに みんなに<br>じまんして ぐたさい!|
+|VRAM1|C000|680|8B062A18D0499F3EDD324A89DF09ABDB2B0FABC0190A1868C1CF3531B890C927|60|45|130|50|12|black|#CFFFFFFF|Now then, let’s take<br>a moment to meet<br>the enemy cast!|それでは このばを かりまして<br>てきキャラをしょうかいします!|
+|VRAM1|C000|680|A21D22CD3819834A4A9774395327EEC92B41AA40232F75952379D755937537CB|60|45|130|50|12|black|#CFFFFFFF|Treasure Oni: always<br>happy if rice balls<br>were inside!|オニギリ"か はいってて<br>うれしかった つづらオニくん!|
+|VRAM1|C000|680|D1C41DCD7D59C066429BD7B30DF7B4107B3D8AD3AA8E198AEA1493897FC8E0F4|60|45|130|50|12|black|#CFFFFFFF|Pointless wanderer…<br>Walking Oni!|いみなく あるくだけだった<br>あるきオニくん!|
+|VRAM1|C000|680|2976BF40DE2EFD2A3B997EA90EA1A3A6D98A9B12BA6E1FD3B80D65B71FDBC952|60|45|130|50|12|black|#CFFFFFFF|Clingy little guy:<br>Mushroom Oni!|へばりつくような あるきかだか<br>かわいかった きのこオニくん!|
+|VRAM1|C000|680|0E1A1C3D8B45683E8C1BF367C10969CB154012EFD0300CD6CA81B00C9AABA8E8|60|45|130|50|12|black|#CFFFFFFF|Why so many dentures?<br>Denture Oni!|なんで いくつも いればを<br>もってるんだろ いればオニくん!|
+|VRAM1|C000|680|E18E1F8808E2919042520E296B101AA1FE97E820BF6679BE7A1174E8A425B596|60|45|130|50|12|black|#CFFFFFFF|Weird ones who<br>never even attacked:<br>Line Dance Onis!|こう"けきしてこない へんなやつらラインダンスオニくんたち!|
+|VRAM1|C000|680|30BF7B707367F668771D1F488B3AC2504E2ECAFAFE05CDA1A3B5833DC4C5D84C|60|45|130|50|12|black|#CFFFFFFF|Couldn’t be beaten<br>while spinning:<br>Spin Oni!|まわっているとき たおれない<br>いやなやつ!グルグルオニくん!|
+|VRAM1|C000|680|F7636CA0B9761A643C7BB4117CE098254F7C68059EAAA54B31551AB94E277DB6|60|45|130|50|12|black|#CFFFFFFF|Reminded us of<br>a tin toy:<br>Robot Oni!|ブリキのおもちゃを おもいだす<br>ロボット・オニくん!|
+|VRAM1|C000|680|0E154C4BDBB529828E993EACD424C120D95C10CE40A985212FDE4930A1219758|60|45|130|50|12|black|#CFFFFFFF|Riding the ball<br>was tough at first:<br>Ball Oni!|さいしょは タマに のるのが<br>つらかった タマだしオニくん!|
+|VRAM1|C000|680|CA80E25B6D0D3627097FE9BECB6A9F2017E40D7E74043B7654F5E9FD4DFFDE6E|60|45|130|50|12|black|#CFFFFFFF|If only his breath<br>was shorter:<br>Fire-Breathing Oni!|もうすこし み"しかい ひ なら<br>よかった? ひふきオニくん!|
+|VRAM1|C000|680|568C9094FF51F4DAC4C0271A7295EF16CFCC36BF81CB9CA2157BD0F100469CE4|60|45|130|50|12|black|#CFFFFFFF|Where did they vanish?<br>Mystery Oni!|どこへ きえていくのか ふじきな<br>うざきどひオニくん!|
+|VRAM1|C000|680|42D6CD059C56E42755D0B5209B559B1C2CE91CA15D32007933AB125FC7462AB3|60|45|130|50|12|black|#CFFFFFFF|So happy hopping<br>all around:<br>Hopping Oni!|うれしそうに ちがつくな!<br>ホッピングオニくん!|
+|VRAM1|C000|680|76A7AECFCC4A969E7BA11A00C00F8BAFD4D8D0CC21818B13183CDCE6735DD564|60|45|130|50|12|black|#CFFFFFFF|Those horn missiles<br>were nasty:<br>Robot Oni!|つのミサイルが いやらしかった<br>ロボット・オニくん!|
+|VRAM1|C000|680|5B6B43974A716B5F4A82C5765E2E769E1831B6C5A44DDA5FF2D518A7A691C548|60|45|130|50|12|black|#CFFFFFFF|That fiend who<br>snatched Kishi:<br>Ajikara Mountain<br>Oni!|ギシを とらえてた にくいやつ!<br>あじからやまオニくん!|
+|VRAM1|C000|680|51FC011DD6C4A2C78CDB121C22EBBE4AB4D340632DE7435597EFD5E7EA0AF76D|60|45|130|50|12|black|#CFFFFFFF|Don’t come out<br>of nowhere:<br>Skating Oni!|いきなり くるなよ!<br>スケ-ト・オニくん!|
+|VRAM1|C000|680|7F1279C774F47F21EBF705ADE1E0E9F7490EDDA99E745484C39F2E776574F7F1|60|45|130|50|12|black|#CFFFFFFF|Beat him before<br>he split:<br>Cossack Oni!|ぶんれつする まえに たおせた?<br>コサックダンス・オニくん!|
+|VRAM1|C000|680|2EEF9E61245CDDBD33093031167A56CE4BAC9FB40D09F303F334D286D61CADD1|60|45|130|50|12|black|#CFFFFFFF|Not fireballs but<br>ice orbs:<br>Snow Woman!|ひのたまじゃなくて こおりのたまなげてきた ゆきおんなサン|
+|VRAM1|C000|680|5ED4C228AD0B47A74FAFBA1517BC90BEFAFF8F425CA800D3C26B138D306AA14C|60|45|130|50|12|black|#CFFFFFFF|Cute but deadly<br>in groups:<br>Snowball Boys!|かわいいわりに しゅうだんの<br>つよさ! ごともゆぎたるまクン|
+|VRAM1|C000|680|C211AD5BDD8776682B7EA0B490743D5CE4268B95F855548CC51790A5EA909012|60|45|130|50|12|black|#CFFFFFFF|Don’t bounce around<br>so much!:<br>Big Snowman!|あっち こっち う"こくな!<br>おおゆぎたるまクン!|
+|VRAM1|C000|680|C5A9EAD784C39695FD17C23B5DD594B769C0634B9A0565B7583A947743723E54|60|45|130|50|12|black|#CFFFFFFF|Looked just like<br>Enomoto, age 36!<br>Tako Oni!|えのもと36さいに にてだそ!<br>たこオニくん!|
+|VRAM1|C000|680|4F3835C072B14EE62A87B7B7DCA4EEF4AA7725C84BFB91E568EBDAB241BB3DF1|60|45|130|50|12|black|#CFFFFFFF|Those little bubbles<br>were such a pain:<br>Kani Oni!|ちいさなアワが じゃまだった<br>かにオニくん!|
+|VRAM1|C000|680|DE7EFF38FA0202A1F3A155B7FDC0550493009F50DDBBD42E35EA15DA0A66923E|60|45|130|50|12|black|#CFFFFFFF|Always mindful of<br>undersea safety:<br>Diver Oni!|うみの じけんを たいせつに<br>ダイバ-・オニくん!|
+|VRAM1|C000|680|8EFEB7D9B9F65108E0D73F9AB0DE9DFFE0B5CDAC60E93E4B1F4F9174F79E0C54|60|45|130|50|12|black|#CFFFFFFF|Too wild to keep up:<br>Clueless Streaker Oni!|かつげぎて いぢはん まぬけな<br>ふりちんオニくん!|
+|VRAM1|C000|680|3A5AA7C1CB2F4CADF91946E92188CA0F9C28D8A1D20E6A7E0B2F367E8D13C139|60|45|130|50|12|black|#CFFFFFFF|Don’t go spreading<br>that net around!<br>Giant Octo Oni!|マトを みせ"ひらかすんじゃない!<br>おおだこオニくん!|
+|VRAM1|C000|680|18AE4C8D244A982A6020FC839B59A57534B468848C0A955C2001B000C47130B3|60|45|130|50|12|black|#CFFFFFFF|Burning man?<br>Kachikachi Mountain<br>Oni!|もえる おとこ?<br>カチカチやまオニくん!|
+|VRAM1|C000|680|1C22DF83FCA6B60B508B45BF066095882C8434E3E333BE316DD329AFC18371B4|60|45|130|50|12|black|#CFFFFFFF|Such fancy footwork,<br>so beautiful!<br>Some-no-suke Oni!|あしの うごぎか ビュ-ティ!<br>そめのすけオニくん!|
+|VRAM1|C000|680|5A364E500856EA8C428F7049124077D4012BE64F8F38CE8100A82FE5DD8D1E3D|60|45|130|50|12|black|#CFFFFFFF|Throw something<br>better, will ya!<br>Head-Throwing Oni!|もっと いいもの なげろ!<br>くびなげオニくん!|
+|VRAM1|C000|680|82BD80141A72A2E57E0D320CA19DFDB11CCFDB9C0CFF17C6D7048D72A5CB1F6D|60|45|130|50|12|black|#CFFFFFFF|Let’s limbo:<br>dong, dong, dong!<br>Fire Dance Oni!|レッツ リンボ- ドンドンドン!<br>ファイヤ-・ダンス・オニくん!|
+|VRAM1|C000|680|95DF5D356FE3ED9561E0109296CAD74D035E2F4E8B5467CCF31D40D03016612C|60|45|130|50|12|black|#CFFFFFFF|What kind of body<br>is that, anyway?<br>Split Oni!|どういう からだ してんだ?<br>ぶんれつオニくん!|
+|VRAM1|C000|680|CDC4298A08D7270B8E4E6B82C6BDC30388B6030FAA8CC96FAC89E46BB8EB56EC|60|45|130|50|12|black|#CFFFFFFF|A serious guy with<br>a helmet on!<br>Skater Oni!|ヘルメットつけた まじめなやつ!<br>スケボ-・オニ>くん!|
+|VRAM1|C000|680|96CFCB8C1010890D0A61844853BB228EE5C10E3733CCCC496307E951DDFA5661|60|45|130|50|12|black|#CFFFFFFF|Every class had<br>a guy like this:<br>Fatso Oni!|クラスに ひとりは にてるやつがいるばすだ! でぶオニくん!|
+|VRAM1|C000|680|44D47F7106A9F29E3397C01BF19C484BE1A58E4BAA63D9C0704FAD9A2E1C404E|60|45|130|50|12|black|#CFFFFFFF|9.85! Pretty good!<br>Gymnastics Oni!|9・85! なかなか おじょうず<br>しんたいそうオニさん!|
+|VRAM1|C000|680|2E6E0419D9949DA710425094818BAC938506BFC0A62070347403C794F4B592B7|60|45|130|50|12|black|#CFFFFFFF|Was he maybe<br>a robot after all?<br>Bat Oni!|ロボットだったのかな?<br>コウモリオニくん!|
+|VRAM1|C000|680|25534078E0D2E949718B9155B583E729F372634674051805D4D40741E83B854E|60|45|130|50|12|black|#CFFFFFFF|That thunderbolt<br>was a nuisance:<br>Raijin!|カミナリが じゃまだった<br>らいじんくん!|
+|VRAM1|C000|680|C1DC61CF70079EE374473EA704EF9BDD449FFA0DA09D3D3CBB988F97FF9FA5BD|60|45|130|50|12|black|#CFFFFFFF|What was the deal<br>with that ring anyway?<br>Wing Oni!|その わっかは いったい<br>なんだったんだ! はねオニくん!|
+|VRAM1|C000|680|DDC44C5EF3F40634F31C55C84F1F687B7CEFC218448D7F010C89A96CFBB9F433|60|45|130|50|12|black|#CFFFFFFF|Did you know it’s<br>fun to ride him?<br>Divekick Oni!|こいつに のると たのしいの<br>しってた? どびけりオニくん!|
+|VRAM1|C000|680|01FF5B0C4CCBB88D2619A3D2247FBE2128481F635E451AC1AD0DDBB72CB1E6F2|60|45|130|50|12|black|#CFFFFFFF|Toilet paper coming<br>out his butt!?<br>Loincloth Oni!|トイレットペ-パ-おしりから<br>だしてる? ふんどしオニくん!|
+|VRAM1|C000|680|5CE776CC4F1AF7F5270967031C28BDAD547BF9BD85A3ADE1EE956E236A740020|60|45|130|50|12|black|#CFFFFFFF|Messed up the timing<br>of his explosions:<br>Balloon Oni!|ばくはつの タイミングで<br>あぞへたね! ふうせんオニくん!|
+|VRAM1|C000|680|0015DD8D9D92A9B38E2D77998698754C6AF6CBB0A44D0FC7C2D1577CFC8C4455|60|45|130|50|12|black|#CFFFFFFF|If you got this far,<br>you’re a real pro!<br>Tough old Fujin!|ここまで きたら ゲ-ムめいじん<br>てごわいやつだった ふうじんクン|
+|VRAM1|C000|680|F729737A4D3C0EF06D27BB8740C0BD417A754CECF3192C63EAD315476B785B65|60|45|130|50|12|black|#CFFFFFFF|Now, let's introduce<br>the Momotaro’s<br>Adventure game staff!|ももたろうかつげきザフ・スタッフ<br>を しょうかいします!|
+|VRAM1|C000|680|E9193617F49D14810D5CFFB06F6BBA47C57642242FF24AF9DF5754A687CE7DA5|60|45|130|50|12|black|#CFFFFFFF|Thank you so much, everyone!|みなさん ほんとうに ありがとういつまでも ももたろうの よ|
+|VRAM1|C000|680|FA1B0509765B8945D3D00A36B0BC1D350E0987E6B4F62B3F3756A19DD5719F79|60|45|130|50|12|black|#CFFFFFFF|Please never forget<br>Momotaro's love<br>and kindness!| あいと ゆうきを<br>わすれないでください!|
+|VRAM1|C000|680|52F37F45295CE7995BC7D45C55C8CDC00AF5B26BE7AE3F7656DAE8591E12E97E|60|45|130|50|12|black|#CFFFFFFF|I hope to see you<br>again someday.| また どこがて おあいしましょう|
+|VRAM1|C000|680|5BEEBB799E8EE1F2169DD948B4F8B97F6F8D56EC756E8CE654B32BAFA42B3F8C|60|45|130|50|12|black|#CFFFFFFF|Presented by<br>HUDSON SOFT| せいさく HUDSON SOFT|
+|VRAM1|C000|680|1C594926D437170D092770F738C661F84848454A17C3E09A1758E30405366C20|60|45|130|50|12|black|#CFFFFFFF|Presented by<br>HUDSON SOFT| せいさく HUDSON SOFT|
