@@ -24,8 +24,31 @@ Hashed memory regions:
  - |VRAM1|7400|1760|  -> windowed dialogues
  
 
-## Dialogues
+## Menu
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|7400|1760|8487C63FA2E5142E151A08D8BB1E71A046A13C469F05D576ED48BAEE0E147AAA|9|188|238|35|14|white|black|English text here|Jap text here|
+|VRAM1|7400|1760|5D6C4FF0CD6F7FB3AF240C7BB2F2DAE06592D6550C741C8B56748DEDF4CF5D3C|20|25|50|25|14|white|#0000b6|>Check<br>Save| 調べる<br>セーブ|
+|VRAM1|7400|1760|8267783CC599FDC260390B40E124D75DD3415823643CDB54B73614FBE5C4A53C|20|25|50|25|14|white|#0000b6|Check<br>> Save| 調べる<br>セーブ|
+|VRAM1|7400|1760|520D12C8014AC7BB486932D93EF9F219E235DA5654D745BED239ACF214ECC48F|20|15|220|60|14|white|#0000b6|(Anita)<br>There's nothing.|（アニタ）なにもないわよ。|
+|VRAM1|7400|1760|66B7C33F87FADC4B5514E80B0970A15DC788174A3DA5DBA894E903595EB6DFB2|20|15|220|60|14|white|#0000b6|> Return to game<br>1: Not used<br>2: Not used<br>3: Not used| ゲームへ戻る<br>1:使用されていません<br>2:使用されていません<br>3:使用されていません|
+|VRAM1|7400|1760|3E82363C1C302B75AC89F7802AD976BF118B91234BDEC27FE7036CFEAC714EB4|20|15|220|60|14|white|#0000b6|Return to game<br>> 1: Not used<br>2: Not used<br>3: Not used|ゲームへ戻る<br>1:使用されていません<br>2:使用されていません<br>3:使用されていません|
+|VRAM1|7400|1760|A4065A0AEF4279FF887F93273F8EBB437A300825B9E2C15CF33CEC15FA696334|20|15|220|60|14|white|#0000b6|Return to game<br>1: Not used<br>> 2: Not used<br>3: Not used|ゲームへ戻る<br>1:使用されていません<br>2:使用されていません<br>3:使用されていません|
+|VRAM1|7400|1760|116A706F243F6B404D187D79FC1785D2315F22D4EE69016463C8E8698D41BE43|20|15|220|60|14|white|#0000b6|Return to game<br>1: Not used<br>2: Not used<br>> 3: Not used|ゲームへ戻る<br>1:使用されていません<br>2:使用されていません<br>3:使用されていません|
+
+
+## Battle Dialogues
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|E000|780|21F51F9CAFAD2A27F4BFFA39669F8F8FDC3842E3C3F8A88851DB15CC33C3CE2D|97|60|130|50|16|white|#DF000000|You came...<br>Dog!|出たわね・・<br>イヌ！|
+|VRAM1|E000|780|46AD4B11A5CB147360E8466DA7304408AC1D365A15D42597964A30D0F7C15B1B|97|60|130|50|16|white|#DF000000|Sigh...| もう・・・|
+|VRAM1|E000|780|6CDCF9958549C2B23CE1EBED5A5D3F286D231E7558D9D7B792A87946F3D4E7B7|97|60|130|50|16|white|#DF000000|I'm not a dog,<br>I'm a Kobold.| イヌじゃなくて<br>コボルドよ|
+|VRAM1|E000|780|B58A9F3CC5FDA3A9B4E40CD85864DE116278ABA69E700A9E29A2CDB082D7D07F|97|60|130|50|16|white|#DF000000|Well, you're still<br>a grunt.| まあ、ザコには<br>かわりないけど　|
+|VRAM1|E000|780|DC560A5C32A2C4CDC12E1840531501D5A7A703BF65B8BDF2C77322107B231C6B|97|60|130|50|16|white|#DF000000|Alright, at this<br>pace we'll| よーし、この調子<br>でバシバシ　|
+|VRAM1|E000|780|002D6C451DC80DAE345CBE9822AEA6BC4B5176FA34EE8DE7088BF4B915AD1A48|97|60|130|50|16|white|#DF000000|beat them all,<br>Anita| やっつけていくよ<br>アニタ|
+|VRAM1|E000|780|863386A47C898E67FACD333CDAB86DA2A7BD14E7F11E9EAFFAA3D6B8554715FD|97|60|130|50|16|white|#DF000000|Sounds fun,<br>Ryeza| 楽しそうね、<br>ライザ|
+|VRAM1|E000|780|F323E134EE50D6BE7E2E2555FA6FFF5543EBCEDB9520318E5FE6B2224AE50435|97|60|130|50|16|white|#DF000000|I-It's n-not<br>like that!|そ、そんなこと<br>ないわよ|
+|VRAM1|E000|780|AA76160008A81D352C1B12FBBFE7C929C98C5659BB5977B3B64A25783876CC48|97|60|130|50|16|white|#DF000000|Well,<br>that's fine...|まぁ<br>いいけど・・・ |
+|VRAM1|E000|780|54351D6F5470542E1D9EF108A4A6B44B3A35BB42A4133912A2594F6E71FAC1D6|97|60|130|50|16|white|#DF000000|You're here<br>again... Dog!| また出たわね・・<br>イヌ！|
+|VRAM1|E000|780|AF3988A0E934750EB285885194B174403C6A434F4C63FDA8EF41D4FCA8E1A80A|97|60|130|50|16|white|#DF000000|Sigh... I said<br>I'm a Kobold!| もう・・・だからコボルドだって|

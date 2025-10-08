@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.8
+version: 0.8.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
@@ -94,7 +94,7 @@ references:
 
 ## Hacking Notes
 
-Text encoded in SJIS, stored @ 0x375030 on disc track 2.
+Text encoded in SJIS, stored on disc track 2.
 
 Hashed memory regions:
 
@@ -119,7 +119,6 @@ TODO: fix duplicate hashes: -> redo with longer memory region lenght
  - (1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4)
 
 
-
 ## Title screen
 
 |region|start|len|hash|x_pos|y_pos|fg_color|bg_color|text|
@@ -128,16 +127,18 @@ TODO: fix duplicate hashes: -> redo with longer memory region lenght
 ;|VRAM1|3D00|570|241F397EC383C8DF17C97463C6FCE80B37CFEB63882A99D65EB2439DA8B56C57|70|130|#ffff00|black|English Translation v0.8<br>          by eadmaster|
 
  
-## Intro cutscene
+## Opening cutscene
 
 |region|start|len|hash|x_pos|y_pos|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|--------|-------|---|--------|
-|VRAM1|3D00|570|4E81752BFACAAFACC719E6451B260676922057207F4A7CA9C71C8DA9E62609C3|10|10|14|#ffff00|#EF000000|In the year 753 S.E.,<br>the world of Xak was in grave danger.|成歴753年<br>さあくかいに危機が訪れた|
-|VRAM1|3D00|570|6818EF413906CD1696510C0E7BA4F334761768AEB9E4B7B4E63ADE377B82EE2B|10|10|14|#ffff00|#EF000000|the time drew near for the<br>resurrection of the fiend Badu,|250年前に先進リュウェルによって封印されたヨーマ・バドウの復活の時が近づいていたのである|
-|VRAM1|3D00|570|FBE462ACB9275C58EC1073E73F4FE290615458639C7E2D41017281DA316BDA22|10|10|14|#ffff00|#EF000000|But one young man rose to challenge this fate.|これを祖師線と立ち上がった1人の若者がいた|
-|VRAM1|3D00|570|B5F72105FF0536FF3A45DBC246F12A6A60804C7DF12AE79250AC117200036FBE|10|10|14|#ffff00|#EF000000|His name was Latok Kart.<br>Yes… he was none other than the legendary hero,<br>descendant of Duel.|その名はラトク・カート<br>そう 彼こそは先進デュエルの地を引く伝説の勇者なのである|
-|VRAM1|3D00|570|6E239D50B51447CD78E3CC8884FF45CACCCA661EAA4561259ED460C4550E845D|10|10|14|#ffff00|#EF000000|Through the hero Latok’s valor,<br>Badu’s return was prevented,<br>and the world was once again embraced by peace.|勇者ラトクの活躍によりバドウの復活は羽ばまれ<br>世界は再び平和に包まれた|
-|VRAM1|3D00|570|2EB75DCEDEE84516D287980FFA681EF62EE50D2BCA205FAA05802840FDBEFAD8|10|10|14|#ffff00|#EF000000|During that journey, he met a girl<br>who has been watching over him ever since.<br> <br>This story follows the growth of a girl<br>who falls in love for the first time,<br>through an adventure full of love and romance.<br>A spectacular fantasy tale.| その冒険の中で彼と巡り合い<br>以来ずっとその姿を見守り続けている一人の少女がいた<br>この物語は初めて恋をした少女の心の成長を愛とロマンに満ちた冒険でつづる一大スペクタクルファンタジーである。|
+|VRAM1|3D00|570|A1BE7E3F9FAB48D363CDBD5AF4A8C8C24CC09F9E43C540F027D071C72A86B6E0|10|10|14|#ffff00|#EF000000|In the year 753 S.E.,<br>the world of Xak was in grave danger.|成歴753年<br>さあくかいに危機が訪れた|
+|VRAM1|3D00|570|4E81752BFACAAFACC719E6451B260676922057207F4A7CA9C71C8DA9E62609C3|10|10|14|#ffff00|#EF000000|The time drew near for the<br>resurrection of the demon Zemo Badu,|250年前に先進リュウェルによって封印された|
+|VRAM1|3D00|570|860E83D2C6FE1BA7BEC1DC2BAC6F9041D139E7F8B63263CC7CF4F4D2AD2D2B15|10|10|14|#ffff00|#EF000000|who was sealed away by Duel 250 years ago.|ヨーマ・バドウの復活の時が近づいていたのである|
+|VRAM1|3D00|570|6818EF413906CD1696510C0E7BA4F334761768AEB9E4B7B4E63ADE377B82EE2B|10|10|14|#ffff00|#EF000000|But one young man rose to challenge this fate.|これを祖師線と立ち上がった1人の若者がいた|
+|VRAM1|3D00|570|FBE462ACB9275C58EC1073E73F4FE290615458639C7E2D41017281DA316BDA22|10|10|14|#ffff00|#EF000000|His name was Latok Kart.<br>Yes, he was none other than the legendary<br>hero, descendant of Duel.|その名はラトク・カート<br>そう 彼こそは先進デュエルの地を引く伝説の勇者なのである|
+|VRAM1|3D00|570|B5F72105FF0536FF3A45DBC246F12A6A60804C7DF12AE79250AC117200036FBE|10|10|14|#ffff00|#EF000000|Through the hero Latok’s valor,<br>Badu’s return was prevented,<br>and the world was once again<br>embraced by peace.|勇者ラトクの活躍によりバドウの復活は羽ばまれ<br>世界は再び平和に包まれた|
+|VRAM1|3D00|570|6E239D50B51447CD78E3CC8884FF45CACCCA661EAA4561259ED460C4550E845D|10|10|14|#ffff00|#EF000000|During that journey, he met a girl<br>who has been watching over him ever since.| その冒険の中で彼と巡り合い<br>以来ずっとその姿を見守り続けている一人の少女がいた|
+|VRAM1|3D00|570|2EB75DCEDEE84516D287980FFA681EF62EE50D2BCA205FAA05802840FDBEFAD8|10|10|14|#ffff00|#EF000000|This story follows the growth of a girl<br>who falls in love for the first time,<br>through an adventure full of love and romance.<br>A spectacular fantasy tale.|この物語は初めて恋をした少女の心の成長を愛とロマンに満ちた冒険でつづる一大スペクタクルファンタジーである。|
 |VRAM1|3D00|570|DE972203BC9838C5FE27A4DF7118E54A045FB584CE3C7F1096D58293B39CC94E|10|10|14|#ffff00|#EF000000|Spring, 756 S.E.|生歴756年 春|
 |VRAM1|3D00|570|A708FA824A1DFD6AC1D0FCFAF180D07C5B54F2DAEE17AA4036D293180C201241|10|10|14|#ffff00|#EF000000|This year again, young inexperienced<br>mages are about to<br>graduate.|今年もまた甘手の若い魔法使いたちが スタッチの時を迎えにとしていた|
 |VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|14|#ffff00|#EF000000|Graduation, huh… it’s already been<br>three years since then.|卒業か、もうあれから3年にもなるのね|
@@ -157,6 +158,8 @@ TODO: change hashed region + fix buggy lines -> System Bus|2000|...
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load save<br>From start|ロード<br>最初から|
 |VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load save|ステージの最初から<br>セーブした場所から|
+
+TODO: fix loading with multiple saves
 
 
 ## Status menu
@@ -179,7 +182,7 @@ TODO: change hashed region + fix buggy lines -> System Bus|2000|...
 |VRAM1|3D00|3E0|7D9EB1B51A8E6B6D3F8FEFD35CB4DE5FA1F1E9A28237FB5429F7A948A512D280|15|10|0|0|white|#EF000000|Status<br> <br>                           IT HURTS!~ <br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 |VRAM1|3D00|3E0|AEB69128BB199BFE7D04AADA094F19ECA55CA1082E4578279D6331AD061797D0|15|10|0|0|white|#EF000000|Status<br> <br>                           I’M DONE FOR...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 
-TODO: statically patch village names (used in save/load screen and teleport menu)
+TODO: statically patch village names? (used in save/load screen and teleport menu)
 
  - アーザルの町 = Town of Arzal
  - レイジアの村 = Reigia Village
@@ -552,12 +555,12 @@ TODO: speech dialogues:
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|3D00|570|1D137014F0E17FBADBD8D2AD4F7F5F5EB1F7EE57EEC00E2535D1DEB5F600156E|9|188|238|35|14|white|#EF000000|[Miry] Wow, just as I thought,<br>you are a mage!|［ミリー］ わあ、やっぱりぃ！ あたしが思ったとおりだ。|
-|VRAM1|3D00|570|C25D05B450009E05011ADD2327622798338131199C454DF72C8A09A4FD6CA3EF|9|188|238|35|14|white|#EF000000|Hi, I am Miry.|あのね、あたしミリーって言うんだけど。|
-|VRAM1|3D00|570|1C97842EE7163390152E0866853A8616F18CB76DC9F312FC94D1139BA2A3CF42|9|188|238|35|14|white|#EF000000|I want to be a mage too, you know.|実はあたしも魔法使いになりたいの。|
+|VRAM1|3D00|570|1D137014F0E17FBADBD8D2AD4F7F5F5EB1F7EE57EEC00E2535D1DEB5F600156E|9|188|238|35|14|white|#EF000000|[Miry] Wow, just as I thought,<br>you're a mage!|［ミリー］ わあ、やっぱりぃ！ あたしが思ったとおりだ。|
+|VRAM1|3D00|570|C25D05B450009E05011ADD2327622798338131199C454DF72C8A09A4FD6CA3EF|9|188|238|35|14|white|#EF000000|You know, I'm Miry,|あのね、あたしミリーって言うんだけど。|
+|VRAM1|3D00|570|1C97842EE7163390152E0866853A8616F18CB76DC9F312FC94D1139BA2A3CF42|9|188|238|35|14|white|#EF000000|I want to be a mage too.|実はあたしも魔法使いになりたいの。|
 |VRAM1|3D00|570|BC3F3D5D8846CE20A2009142593B5997AA210411640B6AE936C9B49E61E40152|9|188|238|35|14|white|#EF000000|Can’t you use your powers to help<br>me out?|おねえちゃんの力でなんとかならない？|
 |VRAM1|3D00|570|E513BB97F938F02189A76BFDA8BE2F36030B03AEC82BB5E0DBA1B7D2D5078421|9|188|238|35|14|white|#EF000000|[Fray] Um, well…|［フレイ］え、えーと・・・|
-|VRAM1|3D00|570|7B041505DFA9C70B9AF83FAA945589646BF062F5B418F5AC008235A7BCBC5440|9|188|238|35|14|white|#EF000000|[Miry] I know it’s arrogant to say it<br>myself, but,|［ミリー］自分でゆーのも、おこがましいとは思うけど、|
+|VRAM1|3D00|570|7B041505DFA9C70B9AF83FAA945589646BF062F5B418F5AC008235A7BCBC5440|9|188|238|35|14|white|#EF000000|[Miry] I know it's not nice to brag, but,|［ミリー］自分でゆーのも、おこがましいとは思うけど、|
 |VRAM1|3D00|570|50B8035B751AFC5304AE5568EAC7358558298F18FA2EA5CCA9F503C6795AD4F4|9|188|238|35|14|white|#EF000000|Sometimes I think I might actually be<br>a genius…|ときどき、あたしってば天才なんじゃないかって思うぐらい・・|
 |VRAM1|3D00|570|50C8FF63280BD271CB5DDD2F6C395EC0C6731A3306E292E57A291086A57A7364|9|188|238|35|14|white|#EF000000|[Fray] S-Sorry, Little Miry.<br>|［フレイ］ちょ、ちょ〜っとゴメンね、ミリーちゃん。|
 |VRAM1|3D00|570|42884446F161288BF7F9C75F4736385B2BBB7AE0B5AD2C5056E0CD43A8A2928E|9|188|238|35|14|white|#EF000000|I’m in a hurry, let’s talk later.|急いでるから、また後でね。|
@@ -951,7 +954,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|650F8E8B00448B9D17768219E14649654507C64AD90340FA3CA2E69D5E7B0F47|9|188|238|35|14|white|#EF000000|[Feizard] I never thought that this<br>would happen to me...|［フェイザード］よもや、このワシが|
 |VRAM1|3D00|570|E7801BD2534CEC3D6BC9C328342F096A69EB66C4A42B3A8778D2EE5E59200D5D|9|188|238|35|14|white|#EF000000|To be defeated by a human girl!|人間の娘にたおされようとは。|
 |VRAM1|3D00|570|E6D40009A3071C73DE9539B429EDD081B76950037C9DDEE4AAAE81FD0225C2FB|9|188|238|35|14|white|#EF000000|...Master, forgive me for failing<br>to fulfill the pact...|・・・主よ、盟約を果たせなんだワシを許してくれ・・・|
-|VRAM1|3D00|570|44778AFDBCC4ED58832227B04D7154A8A47B7D12A42647567A54BE8D45A1FFDE|9|188|238|35|14|#DA9148|#EF000000|[Mill’s voice] ...Frey! Frey!|［ミルの声］・・・レイさん！　フレイさん！|
+|VRAM1|3D00|570|44778AFDBCC4ED58832227B04D7154A8A47B7D12A42647567A54BE8D45A1FFDE|9|188|238|35|14|#DA9148|#EF000000|[Mill’s voice] ...Fray! Fray!|［ミルの声］・・・レイさん！　フレイさん！|
 |VRAM1|3D00|570|C8930ED5B66C0A70C35D2938DB19D3E57DA0BF1616AD37C2620B7B0D0525988C|9|188|238|35|14|white|#EF000000|[Fray] Mill! What happened just<br>now!?|［フレイ］ミル！　さっきはどうしたのよ！？|
 |VRAM1|3D00|570|DA2B82E38CDD3259442A396F3A0D8310F69B63D4FA06F3DC6F94F9B02914B73E|9|188|238|35|14|#DA9148|#EF000000|[Mill’s voice] I don't understand...|［ミルの声］わかりません。|
 |VRAM1|3D00|570|3E05142A528A1F96F5AABC118C52568353B610539F0F7F536ADACADD320AA96B|9|188|238|35|14|#DA9148|#EF000000|Somehow, the barrier suddenly<br>seems stronger.|なぜか急に結界が強くなったみたいです。|
@@ -1178,7 +1181,7 @@ TODO: speech dialogues:
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|3D00|570|E09D39DBC1035E26F62F9A0B71DF0FE700D151EE6F0E9DBF1197C1469380EE53|9|188|238|35|14|white|#EF000000|[Fray] …No way!?|［フレイ］・・・・・まさか！？|
-|VRAM1|3D00|570|FE1AE937E2B6FECF11C0583EE88967333C8FBEE8179CAB77D05B433A5361A2A4|9|188|238|35|14|white|#EF000000|[Amadok] You can have her now!|［アマドゥク］受け取れ！|
+|VRAM1|3D00|570|FE1AE937E2B6FECF11C0583EE88967333C8FBEE8179CAB77D05B433A5361A2A4|9|188|238|35|14|white|#EF000000|[Amadok] Take her!|［アマドゥク］受け取れ！|
 |VRAM1|3D00|570|5DC5F0DE45C748A1FC343F937097C732E63ED626E7CE64C177A45A0F26D040C8|9|188|238|35|14|white|#EF000000|[Amadok] The time has come!|［アマドゥク］時は満てり！|
 |VRAM1|3D00|570|D46F8071EB57104041EC9D6F653FA9E7A02BF374D4F07912DF86D7FB7E12BFA9|9|188|238|35|14|white|#EF000000|The great god descends, and this<br>rotting world shall…|偉大な神は降りたち、くさりきったこの世界は、|
 |VRAM1|3D00|570|76E108E4A91C3280EBC8D9EDFF043B289F41BE64415B0BD6C20DD221C31E377D|9|188|238|35|14|white|#EF000000|…be reborn in my hands!|私の手の中で生まれかわるのだ！|
@@ -1290,7 +1293,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|3DF06348BE40BC9FBFD3890F106C11958D45B948A5C397BDC0B39EB442E80FCA|9|188|238|35|14|white|#EF000000|[Man] I'm glad everyone is safe.|［おじさん］ みんな無事でなによりだ。|
 |VRAM1|3D00|570|1F68A56BCB47F97B9BC240531A082297B9C2521F571BACBB8352C02B189375F1|9|188|238|35|14|white|#EF000000|[Young Man] Let's go all out, all out!|おにいさん］パァーッといこうやパァーッと！|
 |VRAM1|3D00|570|118FB745CEEB56E104D7BF36F4D0C185A1AF969EEFE459E2CB164D4327464635|9|188|238|35|14|white|#EF000000|[Razel] ... Now, I wonder what<br>Miry has to say.|［ラゼル］・・・さて、ミリーがなんと言うかのう。|
-|VRAM1|3D00|570|6EFFCBB023552832AE59601E79B4E0F3ED94A086EB1BA3F973DD03AE3C0D5774|9|188|238|35|14|white|#EF000000| ...Whew...<br>Anyway, I’ll talk with her tonight.|・・・ふぅ・・・<br>ともかく今夜、話してみるか。|
+|VRAM1|3D00|570|6EFFCBB023552832AE59601E79B4E0F3ED94A086EB1BA3F973DD03AE3C0D5774|9|188|238|35|14|white|#EF000000|...Whew...<br>Anyway, I’ll talk with her tonight.|・・・ふぅ・・・<br>ともかく今夜、話してみるか。|
 |VRAM1|3D00|570|A0224F00F36ECACF2F8AD709071031CDCA51EE92F97950683C01F79CC4E7CBCB|9|188|238|35|14|white|#EF000000|[Woman] The young mage over<br>there....|［おねえさん］あそこにいる魔法使いのおにいさんだけど。|
 |VRAM1|3D00|570|2FEBBDAD3CB3F144E5CA467F765A39981AB4370817887ED497A973449FA6F3C4|9|188|238|35|14|white|#EF000000|Don't you think he's cool?| カッコいいと思わない？|
 |VRAM1|3D00|570|84BB7C280B2339B6BECFDC100C3A6DD943D09C627BC88AF68D87D42A6A88A431|9|188|238|35|14|white|#EF000000|[Old Man] Hahaha,<br>there are no dancers here.|［おじいさん］ほっほっほっ、<br>踊り子さんはおらんかいのう。|
@@ -1309,7 +1312,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|533FEF22E1FAAB0CA6C7C7088691B8F42B12193F78D7472701BD4CBE5A9D3212|9|188|238|35|14|white|#EF000000|[Old woman Zera] Oww… my chronic<br>back pain’s acting up…|［ゼラばあさん］あ、あだだ、持病のシャクが・・・。|
 |VRAM1|3D00|570|B13C10DE1B0DA51028814958A7ABA5DC2489FD99554F5F3CBE8D238DECD4410E|9|188|238|35|14|white|#EF000000|I… I wanna go where there’s lots<br>of young men…|わ、わだすも若い男がぎょうさんおる所へ行きてぇ・・・|
 |VRAM1|3D00|570|6B1723B30A6C69E07DD2B64DA25680C902EAD7C2E7C87741939E77855C5F2280|9|188|238|35|14|white|#EF000000|[Woman] Finally, things are settling<br>down a bit.|［おばさん］やっと一段落ついたわね。|
-|VRAM1|3D00|570|4F669AC0BCCF5BA10D6886605B162C044E102C858E959643FF91D74AA6D26ABF|9|188|238|35|14|white|#EF000000|[Woman] The men, honestly—|［おばさん］男どもときたら、|
+|VRAM1|3D00|570|4F669AC0BCCF5BA10D6886605B162C044E102C858E959643FF91D74AA6D26ABF|9|188|238|35|14|white|#EF000000|[Woman] The men, honestly,|［おばさん］男どもときたら、|
 |VRAM1|3D00|570|0D74C7ABA2E006431A0643C5B7251C205A2AD82B78E5CB5D9909E54A86994191|9|188|238|35|14|white|#EF000000|Going on about running out of drink<br>and snacks.|酒が足りんだの、ツマミが切れただのと。|
 |VRAM1|3D00|570|393023BA30669C198FADAD25694A3977AAE87C43F93BF0FF1A70AB1D447AEA5E|9|188|238|35|14|white|#EF000000|[Woman] Amazing how they can whine<br>and complain like that.|［おばさん］よくまぁ、あれだけすき勝手が言えたもんだね。|
 |VRAM1|3D00|570|C41E79E8EADD56661CB5A857AA6C4100CE8DDA22A829255323ED213A6B9BD42F|9|188|238|35|14|white|#EF000000|[Woman] What do they take us women<br>for, I wonder…|［おばさん］女のあたしらを、なんだと思ってるんだろうねぇ。|
@@ -1319,11 +1322,41 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|3B07DC8D3B8A9CB241B36B5205743776B9B30FEE53A38DB229B798DDC7E79FA3|9|188|238|35|14|white|#EF000000|For you, I’d dive into fire<br>or water itself.|キミのためなら、『たとえ火の中水の中』さ。|
 |VRAM1|3D00|570|ADD6FE5270A5853499879B8CE37D04933DC4029DC4F2170AEB3E1B730430948A|9|188|238|35|14|white|#EF000000|[Menea] Oh, Samus…!|［メネア］ああ、サムス・・・！|
 |VRAM1|3D00|570|B03ADAAB7C13A74FC0E854DC5B8A9F06F3B7B929990981E865FE862F6EC83E29|9|188|238|35|14|white|#EF000000|[Samus] Menea!!|［サムス］メネア！！|
-|VRAM1|3D00|570|E905334E24244EAC79A7CE3644E81DBB1487D6DD6AB139494CDF1A3E924DEE44|9|188|238|35|14|white|#EF000000|　　　   - The Next Day -| 　　　　−　次の日　−|
 
 
 ## Ending cutscene
 
-TODO: transcribe from track 18
-;|region|start|len|hash|x_pos|y_pos|font_size|fg_color|bg_color|text|jap_text|
-;|------|-----|---|----|-----|-----|---------|--------|-------|---|--------|
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|3D00|570|E905334E24244EAC79A7CE3644E81DBB1487D6DD6AB139494CDF1A3E924DEE44|9|188|238|35|14|white|#EF000000|　　　    - The Next Day -| 　　　　−　次の日　−|
+|VRAM1|3D00|570|9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok, you’re leaving already?<br>[Latok] Yeah. I got what I came for,<br>so it’s time to find the next job.<br>Don’t look so sad. It’s not like we’ll never see<br>each other again.<br>[Fray] Who’s sad!? I’m perfectly fine, thank you!|ルト君、もう行っちゃうの？<br>うん。もらうももらったから、また次の仕事を探さなきゃなんねしな。<br>そんな悲しい顔すんなよ。もう二度と会えなくなるわけじゃねぇんだからよ。<br>誰が悲しい顔してるのよ！私は、ウレオネーちゃん！|
+|VRAM1|3D00|570|CD7E6AC19C8B0348D717FDFB389929955EF8A1915B252DAAD0BEA10630DC4019|10|10|0|0|14|#ffff00|#EF000000|[Miry] Big sis' Fray!| |
+|VRAM1|3D00|570|DA8D35A18403B1E5D97FCAC8FA6B8188D5CCE391B401E29783591BE3636A4146|10|10|0|0|14|#ffff00|#EF000000|[Fray] Miry, what happended?<br>[Miry] Guess what! I’m going to magic school!<br>[Fray] Really? That’s wonderful, Miry!| ミリー、どうしたの？そんなに急いで。<br>あるあるね。私、魔法学校に行くことになったの。<br>本当に？おめでとう、ミリ|
+|VRAM1|3D00|570|5224B7EA6022C26F41765BEC37777C51515421BCAEF8E1F4377A7DBD8032A0F0|10|10|0|0|14|#ffff00|#EF000000|[Grandpa] Still, it’ll be lonely without you around.<br>[Isac] We at the Magic Academy will take good<br>care of your granddaughter.<br>[Mill] Miry, training at the Academy is quite strict,<br>you know. Isn’t that right, Fray?|ミリーがいなくなると、寂しくなるの。<br>おまごさんは、魔法学校が責任もってお預かりいたします。<br>ミリーさん、魔法学校の修行は厳しいですよ。ね、フレイさん|
+|VRAM1|3D00|570|5D6E79C06B6852A08CB7BFF6440C0D9A043BBBF6A72D57CC8809DDFA1123E77E|10|10|0|0|14|#ffff00|#EF000000|[Miry] No problem! I’m a genius, after all!| 大丈夫！なんてたって、私は天才なんだから！|
+|VRAM1|3D00|570|1F493C383AD5442F72490C94B030E631F0D5F846B5E5AECDDC0A2395D9A31850|10|10|0|0|14|#ffff00|#EF000000|Hahaha!| ははははは！|
+|VRAM1|3D00|570|455FA011073C65D5A57CAF4396BFF51716B4A7A6C554FA6019DBDA887EB9867E|10|10|0|0|14|#ffff00|#EF000000|[Latok] Well then, I guess I should get going.<br>[Fray] All right, but don’t go chasing after every<br>girl you see!| じゃあ、俺はそろそろ行くぜ<br> ええ、じゃあ、うとく、女の人ばっか追いかけまわしちゃだめよ|
+|VRAM1|3D00|570|8F41F362B6F872DE3412A005831E49D3AF085F5F8DD758CE73943B592812451C|10|10|0|0|14|#ffff00|#EF000000|[Latok] Hah, nothing else you wanna say<br>before I go?| 最後ぐらい他に言うことねえのかよ|
+|VRAM1|3D00|570|A1BBEF74AC40F907DDEE3F3D4FF8949DFEDA70DD0077522078BB69328144A6A2|10|10|0|0|14|#ffff00|#EF000000|[Fray] Then… goodbye.| じゃあ、さよなら|
+|VRAM1|3D00|570|1D2A3324917FCE230F066DA02E97B55B27F79844B28C3BE90243CD483B9A7ADB|10|10|0|0|14|#ffff00|#EF000000|[Latok] Huh?| お|
+|VRAM1|3D00|570|99E28EE9324F29383AB01283EBDD477FADD494AF7B11B4678563DC0B0F853AC6|10|10|0|0|14|#ffff00|#EF000000|[Major] Wait, please!| 待ってください|
+|VRAM1|3D00|570|51C5F3BF00E444D79A46BA623FCEDC2E58B0AB80BCB193A1FE17B67FB6D030A6|10|10|0|0|14|#ffff00|#EF000000|[Miry] Huh? Major?| あれ、ちょうちょうさん|
+|VRAM1|3D00|570|81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1|10|10|0|0|14|#ffff00|#EF000000|[Major] Great news! We found him!<br>[Fray] Found him? Who?<br>[Major] The blue-haired warrior you were searching for!| よかった マリアッター フルエイザー 居たんですよ<br>居たって 誰が?<br>あなたが探していた 青い髪の戦士ですよ|
+|VRAM1|3D00|570|372FF60B4DAB638EB015900475D881611A4CE2C343D6F9D6DE41481BA69F733F|10|10|0|0|14|#ffff00|#EF000000|[Fray] It’s all right… you don’t have to worry<br>about Latok anymore.<br>[Mayor] Wait—Latok!?| あなたが探していた 青い髪の戦士ですよ<br>そう その ラトク|
+|VRAM1|3D00|570|81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1|10|10|0|0|14|#ffff00|#EF000000|[Major] Someone said they saw a man named<br>Latok Cart!<br>[Fray] What!? Really!? Where!?<br>[Major] In a town called Valuah.<br>They say a warrior of Duel’s blood is fighting<br>demons there!<br>[Fray] That’s it! It has to be him!<br>Wow—Latok! I’m coming for you!| ラトクカートって人 見かけたんですって<br>はっ! ホントに! 特で!<br>きっ! 来たり向かったところにある バノアの街って<br>精神リュエルの血を引く戦士が 妖魔と戦ってるって<br>それよ! 間違いないわ!<br>うわー! ラトクさん! 待っててね!|
+|VRAM1|3D00|570|615F8C65B8A9603ADD74CA599CCCDDD8F54ACA0947C6C5C06C04996F50127143|10|10|0|0|14|#ffff00|#EF000000|[Mill] Huh? Wait, Fray!| あ? 待って! プレイさん!|
+|VRAM1|3D00|570|CE21DBFD4712819CCB1C9903E617A9BA505694A668BF1B66C92FF9445F1C2EE1|10|10|0|0|14|#ffff00|#EF000000|[Fray] Sorry, Mill! I’ll come back for sure later!| ごめんね エミル! 後で必ず行くからね!|
+|VRAM1|3D00|570|1363E4EEB36384ED5794BA97333F7F6A93C8F1B00E59D8F8D3926CFF462DA11A|10|10|0|0|14|#ffff00|#EF000000|[Miry] She’s gone…|行っちゃったね|
+|VRAM1|3D00|570|795E9E76E37E8399625DDF44FC85D8B8D74AEED20CBC409B35E1BD030932924F|10|10|0|0|14|#ffff00|#EF000000|[Latok] She’s changed, hasn’t she?|変わってね アイツ|
+|VRAM1|3D00|570|BA2F04519516CB17ED36960BCE9E718F293817CA48992066BB5D53D2694724B8|10|10|0|0|14|#ffff00|#EF000000|[Fray] “How are you, Mill?<br>I’m writing this letter on my journey to the town<br>of Valuah.”| 「お元気ですか?ミル先生。今、バノアの町へ向かう旅の途中で、この手紙を書いています」|
+|VRAM1|3D00|570|F32C345A78360FBFC2E4F7018FE5F5755DCB27A3AA27B2ECDC7969760A7861B8|10|10|0|0|14|#ffff00|#EF000000|“Has anything changed over there since I left?”| 「その後、そちらで変わったこととかありませんか?」|
+|VRAM1|3D00|570|84BF28FD4BD41A91B111A31D56B38835B486DBF45DB67E9643E3FF18009153FB|10|10|0|0|14|#ffff00|#EF000000|“Is Miry doing well?<br>I hope she isn’t feeling lonely thinking about<br>her grandfather.”<br>“And Professor Isac, sorry for saying mean<br>things about you before.<br>You did save my life, after all.<br>Please take care of yourself.”| 「ミルは元気でやってますか?おじいさんのことを思い出して、旅しくしていることありませんか?」<br>「アイジャク先生、いろいろ悪口ってごめんなさい。なんたって、命の恩人だもんね。お体には気をつけてくださいね」|
+|VRAM1|3D00|570|9145BEB9FF48C0DE9E3CF239EE7DF32A406CBE7DE36ABC09314E594EAAEF0061|10|10|0|0|14|#ffff00|#EF000000|“By the way, have you seen Latok since then?<br>I thought we parted ways in Banuwa,<br>but I wonder where he is now and what he’s<br>doing.”| 「ところで、あれからルドクに見ました?私もバルアの町では分かれた気になんだけど、どこで何をしているのかしら」|
+|VRAM1|3D00|570|9D845426F7D8EF5CF9FEEED4AFC4FAAD06BC3AF1038E85A7CF36FFBB35BED5A6|10|10|0|0|14|#ffff00|#EF000000|“Lastly, Mill, I’m sorry for always being selfish.<br>Next time, I’ll make sure to visit and properly<br>thank you.<br>I’ll never forget my days at the magic academy.<br>Until the day we meet again. Fray.”<br>“Ah, gees. I forgot to write about myself.<br>As for me...”| 「最後に、ミル先生、わがままばかりってごめんなさい。今度、必ずそちらへご挨拶に伺います」<br>「魔法学校での生活はきっと忘れません」<br>いつか、また会う日まで、くれい」<br>きぃーす。私のことを書くのを忘れてしまいました。わたしはー|
+|VRAM1|3D00|570|2D22D552150D8A148A6D5604ECCE5CF50E72E6F2217085971EA4B81144A53F92|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok!| |
+
+TODO: better lines splitting:
+ 
+ - 9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC
+ - 81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1
+
