@@ -1,0 +1,67 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "e989a4ae" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+
+# Pinobee & Phoebee Fan Translation
+
+
+## Notes
+
+See `Pinobee & Phoebee (Japan).tbl` for the custom 16-bit encoding used for the text.
+It's similar to https://github.com/SuperDisk/Translimeation/blob/master/Slime_Small.tbl
+
+  
+Hashed memory regions:
+
+ - |VRAM|10000|21F0|  -> cutscene subs
+ - |VRAM|C020|1420|  -> windowed dialogues, pause menu
+ 
+
+## Opening
+
+;|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+;|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+;|VRAM|10000|21F0|5D6C4FF0CD6F7FB3AF240C7BB2F2DAE06592D6550C741C8B56748DEDF4CF5D3C|20|25|50|25|14|white|#0000b6|>Check<br>Save| 調べる<br>セーブ|
+
+
+## Intro
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|C020|1420|12D02AAFB4D6789C71562666FAFD54729F4C28150B17D1E8ECF31C84D0BF494F|30|91|180|61|14|black|#ffefce|Now, I'll briefly teach<br>you the controls, so listen<br>carefully!|それでは かんたんに<br>そうさほうほうを おしえるぞい<br>よく きくのじっゃ|
+|VRAM|C020|1420|C714838B0B2795B8D5889A9D2B17DE080FA2B8D82A9E2CE781B11889874CB6EB|30|91|180|61|14|black|#ffefce|Move with Left and Right,<br>hold Down to crouch, and<br>the A Button is Jump!| みぎと ひだりで いどうして<br>したに いれると しゃがんで<br>Aボタンが バジンャじゃ|
+|VRAM|C020|1420|344E18CC02C5AE662AE230C7E20EB836EECAF45DF8421F48C7A41FF09E221077|30|91|180|61|14|black|#ffefce|Hold Up to float, and press<br>A at that time to Dash!<br>But beware, it consumes<br>Flowers!| うえに いれると うかんで<br>このときに Aボタンで<br>ボザシズが でるぞい!<br>ただし フラワ~が へるんじゃ|
+|VRAM|C020|1420|2BA8A714A708A5B9BE9654F1F4682004298B765A7FFFD259E80BE367B1C028B2|30|91|180|61|14|black|#ffefce|If you run out of Flowers,<br>you'll become exhausted,<br>and lose power, so be<br>careful!| フラワ~が なくなると<br>ハラュコに なょてしまい<br>ちからが でなくなるんで<br>きをつけるのじゃ|
+|VRAM|C020|1420|6B67C84EEE8423753F985E1E8319C159C3CF1F76D2B7012AFF187B808105E986|30|91|180|61|14|black|#ffefce|Also, you can only use<br>the Dash while<br>you are floating.| そうそう ボザシズは<br>くうちゃうに いれば<br>だせるのじゃ|
+|VRAM|C020|1420|CFF7EAE9AF109DFD10EED41DF1D160DAC1659460C93CCA0958380CC44B34E839|30|91|180|61|14|black|#ffefce|Pinobee's strength is his<br>high Health, but his<br>Dash count is low.| ピノビィ~の とくちょうは<br>たいりょくは おおいが<br>ダッシズが すくないんじゃ|
+|VRAM|C020|1420|5D286256152EA98904F325BB279C47033F575A5CEDE4C97CD5D18EB934E34556|30|91|180|61|14|black|#ffefce|Phoebee's strength is her<br>Dash count, but her<br>Health is low.| フィ~ビィ~の とくちょうは<br>たいりょくは すくないが<br>ダッシズが おおいんじゃ|
+|VRAM|C020|1420|CEE753F1B55A85F395BBD24FBF58D9E54F07E9603D167905C63981D7B369E4CC|30|91|180|61|14|black|#ffefce|By the way, on the stages<br>you'll be going through,<br>you'll sometimes find<br>objects shaped like this.| ところで これから すすむ<br>ステ~ヅは こういょた<br>かたちをした ものが おかれて<br>いることが ある|
+|VRAM|C020|1420|8057E4ABBC23492D2DA110AD34A0CA3DEAECC4E7B74471D37DE74E51B1E57954|30|91|180|61|14|black|#ffefce|This is a Checkpoint!<br>If either of you is defeated,<br>you can restart from here!| これは やりなおしポイントじゃ<br>ふたりが やられてしまょたとき<br>ここから やりなおすことが<br>できるんじゃ|
+|VRAM|C020|1420|24A65CC0BA9BB50932722AD17752520FA986EDACB84866CA9101107FCC4A9280|30|91|180|61|14|black|#ffefce|However, it doesn't Save,<br>so if you turn off the power,<br>you'll return to the start!| ただし セ~ブは しないから<br>でんげんを きってしまうと<br>さいしっに もどってしまうぞ|
+|VRAM|C020|1420|E58D0138C7B4F20D7A116EFBCC12DEBA88ADE5F324E23B36AF4D94C887DEA3CE|30|91|180|61|14|black|#ffefce|This is a Change Pad!<br>Stand on it and crouch to<br>switch between Pinobee<br>and Phoebee!| これは チェンヅパッドじゃ<br>うえにのって しゃがむと<br>ピノビィ~と フィ~ビィ~を<br>こうたい できるんじゃ|
+|VRAM|C020|1420|B7F8F31E8ED71E35F975600274B6E65B3DCF843368D82CE20B7222E8A767BEB2|30|91|180|61|14|black|#ffefce|Now, before you set off,<br>I'll tell you about the<br>adventure stages!| さて しゃっぱつ するまえに<br>ぼうけんの ステ~ヅについて<br>おしえると するかの|
+|VRAM|C020|1420|5D84B30CF54F5E4C4BEB4B7A1637401893517BC068F55F0A89E5F20CC80C6C73|30|91|180|61|14|black|#ffefce|Starting from Stage 1 of<br>'Ukkiuki no Hana' to the<br>left of here will be easier!| ここから ひだりに ある<br>『うきうきのはな』の<br>1ステ~ヅから はじめると<br>かんたんじゃ|
+|VRAM|C020|1420|03D2B8629FB3ED662E29B5CEA3246B3819FA96DA9F8EDADBFA5EB471AEA495F3|30|91|180|61|14|black|#ffefce|The 'Poyoyon Village'<br>to the right of here<br>is much more difficult!| ここから みぎに ある<br>『ポヨヨンむら』は<br>むずかしく なっておる|
+|VRAM|C020|1420|539A5E23620FE2F93B61F391283CB857570DD9754149BC62111420B975B3C715|30|91|180|61|14|black|#ffefce|Now, go find the Heart Shards<br>and recover your power!<br>Be careful on your journey,<br>Pinobee! Phoebee!| では ハ~トのかけらを みつけ<br>ちからを とりもどすんじゃ<br>きをつけて ゆくんじゃぞ<br>ピノビィ~! フィ~ビィ~!|
+|VRAM|C020|1420|78A75A90618FF54EB6B45643109A2B75005385547CC3FF5F554F384D3C8C8DCD|30|91|180|61|14|black|#ffefce|Oh, welcome!<br>Now, I'll briefly teach<br>you the controls, so listen<br>carefully!|おう よくきてくれたのう<br>それでは かんたんに<br>そうさほうほうを おしえるぞい<br>よく きくのじゃ|
+|VRAM|C020|1420|D63793616074F9CBD9D495ADE26708067E8B68BB503C2559388817F0FC1CDA62|30|91|180|61|14|black|#ffefce|Right, I should give you<br>one final good tip.<br>"It begins with Exhaustion,<br>and ends with Exhaustion."| そうじゃ さいごに いいことを<br>おしえて やるかの<br>『ハラュコに はじまり<br> ハラュコに おわる』|
+|VRAM|C020|1420|401FD9140D0FBD4D7A4CB603E3523CF281B2113FBB9B2035B3E849DED28A1A9B|30|91|180|61|14|black|#ffefce|That's a saying my grandpa<br>used to tell me.<br>He said there's a certain<br>power in being exhausted.<br>I wonder what it means?| わしの じいさんが むかし<br>いっていた ことばじゃ<br>ハラュコの ばかぢからが<br>でるそうじゃ なんのことかのう|
+
+## Pause
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|C020|1420|49D6203C840FDBE0212231D54FF7804E4BA887250F59DD110A8C2A03E9A5ADEA|95|67|60|45|14|white|#DF000000|Back<br>Sleep<br>Give up| もどる<br>スリーフ<br>あきらめる|
+|VRAM|C020|1420|3BF595FE449B83C70E4CDF5BB924DE845BC88214A471CC24EF6EDA6FF4DBC8A0|95|67|60|45|14|white|#DF000000|Back<br>Sleep<br>Give up| もどる<br>スリーフ<br>あきらめる|
+|VRAM|C020|1420|E68F70462DB588997690D61D91BAA33819E52F6869386AB79FC62E0029AC07B2|95|67|60|27|14|white|#DF000000|Yes<br>No|もどる<br>スリーフ<br>あきらめる|
+|VRAM|C020|1420|C3CC28A2F2A5770498B758F643E52766321BD5EB4073D192FF0AF16FD5E992FD|95|67|60|27|14|white|#DF000000|Yes<br>No|もどる<br>スリーフ<br>あきらめる|
+

@@ -1,0 +1,57 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "D915CCEA", "C84DB150A3174EFE4548BA1B3F7C7D2132149D87" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+# Moonlight Lady fan translation
+
+
+## Hacking Notes
+
+All text is stored on track 2 starting at offset 0x362800.
+The kanjis are encoded in SJIS, kanas and symbols are using a custom 1-byte encoding (see `Moonlight Lady (Japan).tbl`).
+
+Hashed memory regions:
+
+ - |VRAM1|2E00|900| -> dialogues
+ - |VRAM1|2000|...| -> menu
+ - |VRAM1|FE20|80| -> detect/cleanup speech dialogues
+
+
+## Dialogues
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|2E00|10A0|B4A2C1AB9084BA465623BB23AC7A6BF03B638D4BFB58B238DDE5E5DBBED2421E|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“MOOOM!!”|[日和子]<br>『おかぉさぉｰん! 』|
+|VRAM1|2E00|10A0|1AB8633731B9B71497BCA139CFAE08724F37674F2D4FE621E80F336295158E53|28|153|195|55|14|white|#DF000091|[Mother]<br>“What is it, Hiyoriko?<br>Why are you shouting like<br>that?”|[お母さん]<br>『どうしたのよ日和子?<br>大声張り上げて｡』|
+|VRAM1|2E00|10A0|00A449C33FA5536B3E8314EFCD0B19DA7ECAD941DEA63A9EC5D86F7F2A8BF182|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“O-OVER BY THE EMPTY LOT<br>...I-I SAW SOME KIND OF<br>GHOST LIGHT...!”|[日和子]<br>『あ､空き地にぃ･･･<br>ひ､人魂みたいのがぉ･･･! 』|
+|VRAM1|2E00|10A0|2228834ACD8BDC42EA9D7ED72DE94B0B00311A860CBDB7711F96BABC17AC4E73|28|153|195|55|14|white|#DF000091|[Mother]<br>“Don’t say such silly things...|[お母さん]<br>『何ばかな事言ってるのよ･･･|
+|VRAM1|2E00|10A0|47E31A30D3E920FF1538211B585AC91E9458DD75723D38A1F8A9868F8011A454|28|153|195|55|14|white|#DF000091|You probably stayed late again,<br>and after thinking too hard,<br>you started daydreaming on<br>the way home!”|また居残りさせられて･･･<br>頭使ったんで､歩きながら<br>夢でも見てたんじゃないの!? 』|
+|VRAM1|2E00|10A0|A14F8A277134D98E43A56B0D9DC8121204CB9660E7DF07D7F1A0E150710B3ADE|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“W-what!?<br>Is that what you say to your<br>own daughter!?|[日和子]<br>『な､何よぉ!<br>それが自分の娘に言う事!?|
+|VRAM1|2E00|10A0|60D50AE147342AB0D223A3988614AA102E40DB87709F0BFD390D20A2575B72B9|28|153|195|55|14|white|#DF000091|That’s so mean!”|ひどいじゃないのぉ! 』|
+|VRAM1|2E00|10A0|646A477BDA5FA2A6D4C6578CB6A6F8DB1819AA4B896B2A2475A31569701AEA65|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“UWAAAAH!!”|[日和子]<br>『うわぉｰんっ!! 』|
+|VRAM1|2E00|10A0|FBBCA675C99F47ADFF3A9A371D774EA4F13906643A9FF326A601E23B8880709E|28|153|195|55|14|white|#DF000091|[Mother]<br>“See? You haven’t done<br>anything that would make<br>someone hate you, right?|[お母さん]<br>『ほら､あなた人に恨まれる様な事<br>してないでしょ?|
+|VRAM1|2E00|10A0|DA93993E52B6F4E31FF4FA1A66C12D55B735A91482AAFD3D89633D31B464DF87|28|153|195|55|14|white|#DF000091|Then there’s nothing to worry<br>about, it’s gone now.”|だったら大丈夫､<br>もう いないわよ｡』|
+|VRAM1|2E00|10A0|E9198D33D6ADD6EAE6BCBE174A912CD83707935BF2DFB8EB0FE2F3A696C97E62|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Y-you’re right.”|[日和子] 『そｰよねっ｡』|
+|VRAM1|2E00|900|E54D127611551232DB00322994F2C2077D1D456002BE17117BDDE2782BBF6365|28|153|195|55|14|white|#DF000091|[Mother]<br>“I’m making dinner, so don’t<br>get in the way.”|[お母さん]<br>『お夕飯の仕度してるんだから､<br>邪魔しないでちょうだい｡』|
+|VRAM1|2E00|900|470B38431DB6CA61566B8CB281E8F5CCA3BD44439AB2F187EA013F7F6DB317CB|28|153|195|55|14|white|#DF000091|[Mother]<br>“You’re a young lady too, aren’t<br>you? Don’t you ever feel like<br>helping out around here?”| [お母さん]<br>『あなたも女の子でしょう?<br>こっちに来て手伝おうって気に|
+|VRAM1|2E00|900|A4DAE4C414C6B339E01D0FF679BF695DEF159D0CA04CD575CFD4C36819FE48A2|28|153|195|55|14|white|#DF000091|“Not even a little!?”| ならないの!? 』|
+|VRAM1|2E00|900|4D6C1618DCA0D082ACD2EBAAB4BDA03E38CD5AC69BCCE6263C1B6DA2B618D965|28|153|195|55|14|white|#DF000091|[Father]<br>“Good grief...<br>So noisy the moment I get<br>home!”| [お父さん]<br>『全く･･･<br>帰って来る早々騒がしいな! 』|
+|VRAM1|2E00|3A0|922C61760B1ED126686589550FD6D7E8F128C76135EB27060A5391E2D4672D63|28|153|195|55|14|white|#DF000091|[Father]<br>“You’re already in your third<br>year of middle school, try to<br>calm down a bit!”| [お父さん]<br>『もう中3なんだから､<br>少しは落ち着きなさい! 』|
+|VRAM1|2E00|3A0|374E8EFD1F2B120753AC4632A8C75C484561114B5265556790E69343506645A3|28|153|195|55|14|white|#DF000091|[Father]<br>“Oh! You’re helping out at the<br>shop?”| [お父さん]<br>『おっ! 店を手伝うのか? 』|
+|VRAM1|2E00|3A0|35BE4A2BFA2D82A03CFCC56E0819C6AD3F976688FD930268050EA3A200E74B0C|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“I just got back from school...<br>no way I’m doing that!”| [日和子]<br>『学園から帰ったばかりだもん<br>やだよぉ! 』|
+|VRAM1|2E00|900|A96B6E23D1D2D3D60A8D26ABAB365B40FADAFDCFE99EF5FD51C28C6D9C87C22A|28|153|195|55|14|white|#DF000091|[Father]<br>“Then go to your room.”| [お父さん]『だったら､自分の部屋へ<br>行ってなさい｡』|
+|VRAM1|2E00|900|B6F84423F48FE1C2565C30104F7E654DB3066F8E08463C9402C3D44B0D2FC5C8|28|153|195|55|14|white|#DF000091|[Mother]<br>“You just got back!<br>Are you going to hang out<br>already?”|[お母さん]<br>『今帰って来たばかりでしょ!<br>もう遊びに行こうっていうの? 』|
+|VRAM1|2E00|900|8479BD53DC6AC7CA91D6045D4AC937815C3B5FB036B6971E28144B8CE2999543|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“I’m sorry...”|[日和子]<br>『ごめんなさい･･･』|
+|VRAM1|2E00|900|920756D8C4ACA8007ED4EDE5A21AC25153D4A8C8D9B3F8716594CFBEAEE24E69|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“She’s such a terrible mom...”|[日和子]<br>『ひっどい母親だわ･･･』|
+|VRAM1|2E00|900|903A20AB3FDE3E5A1961EA3BE023B1EE7C40FD837A38660C8A7F1615FF850387|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Next time I’ll really study<br>ahead, and show Miss Ayako<br>and the others what I can do,|[日和子]<br>『今度こそちゃぉｰんと予習して､<br>亜矢子先生たちを見返して|
+|VRAM1|2E00|900|C99E3BC23D0CF886EA565B7B143E05CED19082DC32C2F921A5CC0F66DB9E9AF1|28|153|195|55|14|white|#DF000091|“just you watch!”| やるんだからぉ! 』|
+|VRAM1|2E00|900|9DA05357D3463AE13026F359F156B12D23579BAC72429B2AE10099BCF1507FC4|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Hmm...”|日和子<br>『うーん・・・|
+|VRAM1|FE20|80|38723A2E5E8A17AA7950DC008209944E898F69A7BD10A23C839D341E935FD5CA|20|20|0|0|14|white|#DF000091|<clear>||

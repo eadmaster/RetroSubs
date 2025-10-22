@@ -228,7 +228,6 @@ end
 
 
 function clear_text()
-    -- bizhawk
     gui.cleartext()
     gui.clearGraphics()
 end
@@ -280,9 +279,8 @@ function show_text(entry)
     local line_count = 0
     for line in (entry.text .. "<br>"):gmatch("([^<]+)<br>") do
         --console.log(line)
-        
-        if line then
-            -- bizhawk
+    
+        if line then           
             -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
             local curr_y_pos = y_pos + line_count * LINE_SPACING
             if (height_box and width_box and height_box > 0 and width_box > 0) then
@@ -294,6 +292,22 @@ function show_text(entry)
         end
         
         line_count = line_count + 1
+        
+        if (line:find("clear>") ~= nil) then
+            clear_text()
+            --print("clear")
+            return
+        end
+        --if (line:find("clear-on-input>") ~= nil) then
+        --    while true do
+        --        if input.get() then
+        --            break
+        --        end
+        --        emu.frameadvance();
+        --    end
+        --    clear_text()
+        --    return
+        --end
     end
 end
 
