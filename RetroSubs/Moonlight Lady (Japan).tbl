@@ -7,6 +7,9 @@ B0=ｰ
 
 33=3
 3C34=<color=pink>
+3C32=<katakana>
+3C31=<hiragana>
+3C33=<color=green>
 
 A1=｡
 A2=『
@@ -15,6 +18,8 @@ A4=､
 A5=･
 A6=を
 A7=ぉ
+AA=ぇ
+AD=ュ
 
 71=ア
 72=イ

@@ -295,7 +295,9 @@ function show_text(entry)
         
         if (line:find("clear>") ~= nil) then
             clear_text()
-            --print("clear")
+            if DEBUG_RETROSUB then
+                console.log("debug: <clear> triggered")
+            end
             return
         end
         --if (line:find("clear-on-input>") ~= nil) then

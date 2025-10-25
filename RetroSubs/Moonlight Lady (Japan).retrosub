@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.1
+version: 0.1.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "D915CCEA", "C84DB150A3174EFE4548BA1B3F7C7D2132149D87" ]
 ---
@@ -10,9 +10,23 @@ compatible_hashes: [ "D915CCEA", "C84DB150A3174EFE4548BA1B3F7C7D2132149D87" ]
 <!-- vim: syntax=Markdown -->
 
 
-# Moonlight Lady fan translation
+# Moonlight Lady English fan translation
 
 
+## Translation Notes
+
+Localized names:
+
+ - Hiyoko (日和子)
+ - Nike (ニケ)
+ - Conversion Jewel (コンバージョン・ジュエル)
+ ...
+ 
+sources:
+
+ - https://gamefaqs.gamespot.com/turbocd/563702-moonlight-lady/faqs/72613
+ 
+ 
 ## Hacking Notes
 
 All text is stored on track 2 starting at offset 0x362800.
@@ -20,38 +34,89 @@ The kanjis are encoded in SJIS, kanas and symbols are using a custom 1-byte enco
 
 Hashed memory regions:
 
- - |VRAM1|2E00|900| -> dialogues
- - |VRAM1|2000|...| -> menu
- - |VRAM1|FE20|80| -> detect/cleanup speech dialogues
+ - |VRAM1|3400|200| -> dialogues (2nd line upper part)
+ - |VRAM1|3D00|140| -> dialogues (3rd line upper part)
+ - |VRAM1|FE20|80| -> detect/cleanup stuck speech dialogues
+
+TODO:  - |VRAM1|2000|...| -> menu, cutscenes
+
+> [!NOTE]
+> Could not use a single memory region for the dialogues because the buffer its not cleared after each use.
 
 
 ## Dialogues
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|2E00|10A0|B4A2C1AB9084BA465623BB23AC7A6BF03B638D4BFB58B238DDE5E5DBBED2421E|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“MOOOM!!”|[日和子]<br>『おかぉさぉｰん! 』|
-|VRAM1|2E00|10A0|1AB8633731B9B71497BCA139CFAE08724F37674F2D4FE621E80F336295158E53|28|153|195|55|14|white|#DF000091|[Mother]<br>“What is it, Hiyoriko?<br>Why are you shouting like<br>that?”|[お母さん]<br>『どうしたのよ日和子?<br>大声張り上げて｡』|
-|VRAM1|2E00|10A0|00A449C33FA5536B3E8314EFCD0B19DA7ECAD941DEA63A9EC5D86F7F2A8BF182|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“O-OVER BY THE EMPTY LOT<br>...I-I SAW SOME KIND OF<br>GHOST LIGHT...!”|[日和子]<br>『あ､空き地にぃ･･･<br>ひ､人魂みたいのがぉ･･･! 』|
-|VRAM1|2E00|10A0|2228834ACD8BDC42EA9D7ED72DE94B0B00311A860CBDB7711F96BABC17AC4E73|28|153|195|55|14|white|#DF000091|[Mother]<br>“Don’t say such silly things...|[お母さん]<br>『何ばかな事言ってるのよ･･･|
-|VRAM1|2E00|10A0|47E31A30D3E920FF1538211B585AC91E9458DD75723D38A1F8A9868F8011A454|28|153|195|55|14|white|#DF000091|You probably stayed late again,<br>and after thinking too hard,<br>you started daydreaming on<br>the way home!”|また居残りさせられて･･･<br>頭使ったんで､歩きながら<br>夢でも見てたんじゃないの!? 』|
-|VRAM1|2E00|10A0|A14F8A277134D98E43A56B0D9DC8121204CB9660E7DF07D7F1A0E150710B3ADE|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“W-what!?<br>Is that what you say to your<br>own daughter!?|[日和子]<br>『な､何よぉ!<br>それが自分の娘に言う事!?|
-|VRAM1|2E00|10A0|60D50AE147342AB0D223A3988614AA102E40DB87709F0BFD390D20A2575B72B9|28|153|195|55|14|white|#DF000091|That’s so mean!”|ひどいじゃないのぉ! 』|
-|VRAM1|2E00|10A0|646A477BDA5FA2A6D4C6578CB6A6F8DB1819AA4B896B2A2475A31569701AEA65|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“UWAAAAH!!”|[日和子]<br>『うわぉｰんっ!! 』|
-|VRAM1|2E00|10A0|FBBCA675C99F47ADFF3A9A371D774EA4F13906643A9FF326A601E23B8880709E|28|153|195|55|14|white|#DF000091|[Mother]<br>“See? You haven’t done<br>anything that would make<br>someone hate you, right?|[お母さん]<br>『ほら､あなた人に恨まれる様な事<br>してないでしょ?|
-|VRAM1|2E00|10A0|DA93993E52B6F4E31FF4FA1A66C12D55B735A91482AAFD3D89633D31B464DF87|28|153|195|55|14|white|#DF000091|Then there’s nothing to worry<br>about, it’s gone now.”|だったら大丈夫､<br>もう いないわよ｡』|
-|VRAM1|2E00|10A0|E9198D33D6ADD6EAE6BCBE174A912CD83707935BF2DFB8EB0FE2F3A696C97E62|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Y-you’re right.”|[日和子] 『そｰよねっ｡』|
-|VRAM1|2E00|900|E54D127611551232DB00322994F2C2077D1D456002BE17117BDDE2782BBF6365|28|153|195|55|14|white|#DF000091|[Mother]<br>“I’m making dinner, so don’t<br>get in the way.”|[お母さん]<br>『お夕飯の仕度してるんだから､<br>邪魔しないでちょうだい｡』|
-|VRAM1|2E00|900|470B38431DB6CA61566B8CB281E8F5CCA3BD44439AB2F187EA013F7F6DB317CB|28|153|195|55|14|white|#DF000091|[Mother]<br>“You’re a young lady too, aren’t<br>you? Don’t you ever feel like<br>helping out around here?”| [お母さん]<br>『あなたも女の子でしょう?<br>こっちに来て手伝おうって気に|
-|VRAM1|2E00|900|A4DAE4C414C6B339E01D0FF679BF695DEF159D0CA04CD575CFD4C36819FE48A2|28|153|195|55|14|white|#DF000091|“Not even a little!?”| ならないの!? 』|
-|VRAM1|2E00|900|4D6C1618DCA0D082ACD2EBAAB4BDA03E38CD5AC69BCCE6263C1B6DA2B618D965|28|153|195|55|14|white|#DF000091|[Father]<br>“Good grief...<br>So noisy the moment I get<br>home!”| [お父さん]<br>『全く･･･<br>帰って来る早々騒がしいな! 』|
-|VRAM1|2E00|3A0|922C61760B1ED126686589550FD6D7E8F128C76135EB27060A5391E2D4672D63|28|153|195|55|14|white|#DF000091|[Father]<br>“You’re already in your third<br>year of middle school, try to<br>calm down a bit!”| [お父さん]<br>『もう中3なんだから､<br>少しは落ち着きなさい! 』|
-|VRAM1|2E00|3A0|374E8EFD1F2B120753AC4632A8C75C484561114B5265556790E69343506645A3|28|153|195|55|14|white|#DF000091|[Father]<br>“Oh! You’re helping out at the<br>shop?”| [お父さん]<br>『おっ! 店を手伝うのか? 』|
-|VRAM1|2E00|3A0|35BE4A2BFA2D82A03CFCC56E0819C6AD3F976688FD930268050EA3A200E74B0C|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“I just got back from school...<br>no way I’m doing that!”| [日和子]<br>『学園から帰ったばかりだもん<br>やだよぉ! 』|
-|VRAM1|2E00|900|A96B6E23D1D2D3D60A8D26ABAB365B40FADAFDCFE99EF5FD51C28C6D9C87C22A|28|153|195|55|14|white|#DF000091|[Father]<br>“Then go to your room.”| [お父さん]『だったら､自分の部屋へ<br>行ってなさい｡』|
-|VRAM1|2E00|900|B6F84423F48FE1C2565C30104F7E654DB3066F8E08463C9402C3D44B0D2FC5C8|28|153|195|55|14|white|#DF000091|[Mother]<br>“You just got back!<br>Are you going to hang out<br>already?”|[お母さん]<br>『今帰って来たばかりでしょ!<br>もう遊びに行こうっていうの? 』|
-|VRAM1|2E00|900|8479BD53DC6AC7CA91D6045D4AC937815C3B5FB036B6971E28144B8CE2999543|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“I’m sorry...”|[日和子]<br>『ごめんなさい･･･』|
-|VRAM1|2E00|900|920756D8C4ACA8007ED4EDE5A21AC25153D4A8C8D9B3F8716594CFBEAEE24E69|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“She’s such a terrible mom...”|[日和子]<br>『ひっどい母親だわ･･･』|
-|VRAM1|2E00|900|903A20AB3FDE3E5A1961EA3BE023B1EE7C40FD837A38660C8A7F1615FF850387|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Next time I’ll really study<br>ahead, and show Miss Ayako<br>and the others what I can do,|[日和子]<br>『今度こそちゃぉｰんと予習して､<br>亜矢子先生たちを見返して|
-|VRAM1|2E00|900|C99E3BC23D0CF886EA565B7B143E05CED19082DC32C2F921A5CC0F66DB9E9AF1|28|153|195|55|14|white|#DF000091|“just you watch!”| やるんだからぉ! 』|
-|VRAM1|2E00|900|9DA05357D3463AE13026F359F156B12D23579BAC72429B2AE10099BCF1507FC4|28|153|195|55|14|white|#DF000091|[Hiyoriko]<br>“Hmm...”|日和子<br>『うーん・・・|
-|VRAM1|FE20|80|38723A2E5E8A17AA7950DC008209944E898F69A7BD10A23C839D341E935FD5CA|20|20|0|0|14|white|#DF000091|<clear>||
+|VRAM1|FE20|80|38723A2E5E8A17AA7950DC008209944E898F69A7BD10A23C839D341E935FD5CA|20|20|0|0|14|white|#DF000091|<clear>| |
+|VRAM1|3400|200|9A5E556A9F3565B3399B4B491B2F77B5B5C82201C1714A9BCC8CDB0D182CE421|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“MOOOM!!”|[日和子]<br>『おかぉさぉｰん! 』|
+|VRAM1|3400|200|AD3F1696558D81A09E1622ED4B2E23ED70976FB101A4C68D4BDBD2FE9B333602|28|153|195|55|14|white|#DF000091|[Mother]<br>“What is it, Hiyoko?<br>Why are you shouting like<br>that?”|[お母さん]<br>『どうしたのよ日和子?<br>大声張り上げて｡』|
+|VRAM1|3400|200|090D56EEF9F41B72CE3936F0FCB251CC1F29DBBE762AB49FFFCA2D1E55788E44|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“O-OVER BY THE EMPTY LOT<br>...I-I SAW SOME KIND OF<br>GHOST LIGHT...!”|[日和子]<br>『あ､空き地にぃ･･･<br>ひ､人魂みたいのがぉ･･･! 』|
+|VRAM1|3400|200|5A6C8F7CDF7BEAB98F63889E3633F33F207472B1AEC76CF53970B8C21889A1F7|28|153|195|55|14|white|#DF000091|[Mother]<br>“Don’t say such silly things...|[お母さん]<br>『何ばかな事言ってるのよ･･･|
+|VRAM1|3400|200|1C2F19CFCA816D128D433A9B0FBFE28770F84ADA6828F27D0475CF302ABD41FB|28|153|195|55|14|white|#DF000091|You probably stayed late again,<br>and after thinking too hard,<br>you started daydreaming on<br>the way home!”|また居残りさせられて･･･<br>頭使ったんで､歩きながら<br>夢でも見てたんじゃないの!? 』|
+|VRAM1|3400|200|322ED5F69B62FB67CF0945403B54DFF8488FC3BAFBD4D28A0ADDF8D068D023E3|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“W-what!?<br>Is that what you say to your<br>own daughter!?|[日和子]<br>『な､何よぉ!<br>それが自分の娘に言う事!?|
+|VRAM1|3D00|140|57F458E1AD9F6125DE8F1AB685CA6C26F1C738C47FB778A7EB59F0811D5C02A9|28|213|195|55|14|white|#DF000091|That’s so mean!”|ひどいじゃないのぉ! 』|
+|VRAM1|3400|200|81364249C1789AF3A6F4E80E9C0B025A24E69748839598B05C5440E062744575|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“UWAAAAH!!”|[日和子]<br>『うわぉｰんっ!! 』|
+|VRAM1|3400|200|E8D895A9ABD728DC4F48483E730FE2CD786740BFC6028D935BBE6DE2C48C2F24|28|153|195|55|14|white|#DF000091|[Mother]<br>“See? You haven’t done<br>anything that would make<br>someone hate you, right?|[お母さん]<br>『ほら､あなた人に恨まれる様な事<br>してないでしょ?|
+|VRAM1|3400|200|7F08E70D8136438D8780933DDA4C56E5703B6AD0C5C831CBB78095439C21AACF|28|153|195|55|14|white|#DF000091|Then there’s nothing to worry<br>about, it’s gone now.”|だったら大丈夫､<br>もう いないわよ｡』|
+|VRAM1|3400|200|7C4218B79FC571D29872A7861A0FF886012BD4B5CD81B2FB3E5E62CDA21B5D0B|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Y-you’re right.”|[日和子] 『そｰよねっ｡』|
+|VRAM1|3400|200|C13B1F6BEF9972A495046D61BF4AC7605C8F36F3E39AFC6A9E6C55623205A8F7|28|153|195|55|14|white|#DF000091|[Mother]<br>“I’m making dinner, so don’t<br>get in the way.”|[お母さん]<br>『お夕飯の仕度してるんだから､<br>邪魔しないでちょうだい｡』|
+|VRAM1|3400|200|C256AB14A10301647280592E518AED234C2D82914923ED065BEDAC12EA5C83D9|28|153|195|55|14|white|#DF000091|[Mother]<br>“You’re a young lady too, aren’t<br>you? Don’t you ever feel like<br>helping out around here?”| [お母さん]<br>『あなたも女の子でしょう?<br>こっちに来て手伝おうって気に|
+|VRAM1|3D00|140|D685407B66EBEA695F8B187057EB45C782953F242776919D78E2D77431160CB5|28|213|195|55|14|white|#DF000091|“Not even a little!?”|  ならないの!? 』|
+|VRAM1|3400|200|9336461E374B57A9DB3727AC3B7A2085F771D694FE7A09C8916A22EF82BDE65E|28|153|195|55|14|white|#DF000091|[Father]<br>“Good grief...<br>So noisy the moment I get<br>home!”| [お父さん]<br>『全く･･･<br>帰って来る早々騒がしいな! 』|
+|VRAM1|3400|200|C67BF01A345849AF40EE426A6D31FF88E7DD121C387CC7800A9E7830F0B53FD5|28|153|195|55|14|white|#DF000091|[Father]<br>“You’re already in your third<br>year of middle school, try to<br>calm down a bit!”| [お父さん]<br>『もう中3なんだから､<br>少しは落ち着きなさい! 』|
+|VRAM1|3400|200|9995BD11C1C58837623B9E88E939039B795C60E292452C68B93571EA9FE0A35A|28|153|195|55|14|white|#DF000091|[Father]<br>“Oh! You’re helping out at the<br>shop?”| [お父さん]<br>『おっ! 店を手伝うのか? 』|
+|VRAM1|3400|200|CF294CA1AD826240283A95DBE78F7B39B81D44B88BB0F9E2636E5E17C7F45BAD|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“I just got back from school...<br>no way I’m doing that!”| [日和子]<br>『学園から帰ったばかりだもん<br>やだよぉ! 』|
+|VRAM1|3400|200|89B6549DEA275C443062CFE3BAB8B3FE362E6EFA39AC0F215AB366A3084D75DF|28|153|195|55|14|white|#DF000091|[Father]<br>“Then go to your room.”| [お父さん]『だったら､自分の部屋へ<br>行ってなさい｡』|
+|VRAM1|3400|200|B9FDDDF95CBB303445B8D61830D724CB2D3F2ECAC01A494F8E46571EAE58BCF8|28|153|195|55|14|white|#DF000091|[Mother]<br>“You just got back!<br>Are you going to hang out<br>already?”|[お母さん]<br>『今帰って来たばかりでしょ!<br>もう遊びに行こうっていうの? 』|
+|VRAM1|3400|200|DE0F63771E37974BA67893155B60F0A1813F9AA5E53307453FC59AEB1BE87EF8|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“I’m sorry...”|[日和子]<br>『ごめんなさい･･･』|
+|VRAM1|3400|200|C384BFA123BB4678DEE73AECF2138F123FD5B9B498093F6514AEC6AFFA634062|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“She’s such a terrible mom...”|[日和子]<br>『ひっどい母親だわ･･･』|
+|VRAM1|3400|200|B6010226EC525403F7B060BFD9AD6BD9B3A68A83888DEA2D3B5343D3698673C5|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Next time I’ll really study<br>ahead, and show Miss Ayako<br>and the others what I can do,|[日和子]<br>『今度こそちゃぉｰんと予習して､<br>亜矢子先生たちを見返して|
+|VRAM1|3D00|140|1B300D85EB5A499A6BC39CD65687CFFA5229F9EFCFCE4F721220DAE4844F6FA9|28|213|195|55|14|white|#DF000091|“just you watch!”| やるんだからぉ! 』|
+|VRAM1|3400|200|AEBFDBB04EBF404884D796DDAB4A9D448A7EBAD895A39CA34538499BC619EA9B|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Hmm...”|日和子<br>『『うｰん･･･』|
+|VRAM1|3400|200|97DA6B99A9254A219C41F3E94E7FC386138D4550B42D5A7C56584167B2C855E3|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“That’s not it!<br>The window was open and...”|日和子<br>『ちがうわよ!<br>だって窓が開いてて･･･』|
+|VRAM1|3400|200|63621D4A42401EEBA49B36EEA48C8877EC573700681BCBC456428485520FE0EE|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Huh...?”|日和子<br>『あれっ･･･? 』|
+|VRAM1|3400|200|40B72B7446D53BC0657E57BCE636DACB17165804AA57F2DA3130E2BACFB32E74|28|153|195|55|14|white|#DF000091|[Father]<br>“There’s nothing there, see?<br>You must’ve been dreaming.”|お父さん<br>『何もいないじゃないか?<br>夢でも見てたんだろ? 』|
+|VRAM1|3400|200|E5935957DF1D005E85A61E21E584465C222783512E8E4E1000C383EF394E9CFE|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“That’s strange...”|日和子<br>『変だなぉ･･･? 』|
+|VRAM1|3400|200|DD83C667FB2B5B87719CEC2612946959E9DF87615A19B51C52EEAAEA21FF3E32|28|153|195|55|14|white|#DF000091|cutscene|cutscene|
+|VRAM1|3400|200|CC4C52B9F1132CA004598072A63A461AABDBDF80CB35D25D3CAB761DF7C92849|28|153|195|55|14|white|#DF000091|[Nike]<br>“Listen when someone’s<br>talking to you!”|ニケ<br>『ひとの話を聞きなさい! 』|
+|VRAM1|3400|200|E35C8B9F033EC4F6F16B6F6BADD3C073D1B1B6374723144C95194F56884FED20|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Y-yes sir!”|日和子<br>『は､はいっ! 』|
+|VRAM1|3400|200|DFFC8201948D19F24B404EABC61BF8FC6073CBBE647EF645895B914A0F720A07|28|153|195|55|14|white|#DF000091|[Nike]<br>“You could see me, right?”|ニケ<br>『あなた私の事見えたわよね? 』|
+|VRAM1|3400|200|2A03C97780623EE695450150D4B539529F8E574C78AD684806830AF971AA69A1|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“A stuffed toy...?”|日和子<br>『ぬいぐるみ･･･? 』|
+|VRAM1|3400|200|999ED68DB3037C21009E630D6BB3F9D42137BA520E8D33970C91E4F47BB4A51A|28|153|195|55|14|white|#DF000091|[Nike]<br>“No, not that!<br>I mean when I was that<br>ball of light!”|ニケ<br>『ちがうわよ!<br>光の球の時の私の事よ!|
+|VRAM1|3400|200|C36BF61D045907AF5C6CF38956D0876247193CC0E9740B20D30CB37052012A2A|28|153|195|55|14|white|#DF000091|“The fact that you could see<br>me means you’re a girl who’s<br>received the baptism of light.”|私の姿が見えたって事は<br>あなたは光の洗礼を受けて<br>いる娘なのよ｡』|
+|VRAM1|3400|200|1905F198466E107F026E9411ACCD437236D38643AD8B7B2097698F6F27C488A7|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Baptism... of light?”|日和子<br>『ひかりの･･･? 』|
+|VRAM1|3400|200|692C6709008350DB68CF5F6BA61F1FE3F8A31090BC8B5ECBF66452A34D3E1F83|28|153|195|55|14|white|#DF000091|[Nike]<br>“That’s right, one who brings<br>light into the darkness, the<br>‘Moonlight Lady’.”|ニケ<br>『そう､闇に光をもたらす者､<br>“ムーンライト・レディ”<$3C><$31>になれる|
+|VRAM1|3400|200|6EC04E73EB556B78F30832F78B0035D5342E670950FC2B88B3499FDE904AED18|28|153|195|55|14|white|#DF000091|“You possess the gift for it,<br>you are the Moonlight Lady of<br>Light,‘Artemis!’”|資格を持っているって事<br>あなたは光<$3C><$31>のムーンライト・レディ<br>“アルテミス”なのよ!! 』|
+|VRAM1|3400|200|77A5D9D2D10BA7B0783CA5635D476C988EC76E8FB63E6611AB8B44C141C8F742|28|153|195|55|14|white|#DF000091|[Nike]<br>“Here, take this.”|ニケ<br>『はい､受け取って｡』|
+|VRAM1|3400|200|A6528572D8C0E4EBB4A319EC194BE2B1562F643A0032DA6133652A731B58EACF|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“!? What is this?”|日和子<br>『!? 何コレ? 』|
+|VRAM1|3400|200|B9B1D2EA98EF503663524CA40F1B9ED9EC9A031F7B499D40C0831948370F0ADF|28|153|195|55|14|white|#DF000091|[Nike]<br>“That’s called a<br>‘Conversion Jewel’”|ニケ<br>『それはね､<br>“コンバージョン・ジュエル”<$3C><$31>って|
+|VRAM1|3400|200|EE99F9257EF4BDFC7B0CBED0C497EFA58E9D73358E5773F83874D14C20C6C792|28|153|195|55|14|white|#DF000091|“It’s what you need to transform<br>into the Moonlight Lady.<br>It’s Artemis’s guardian stone,|言って､ムｰンライト･レディに<br>変身する時に必要な物で､<br>アルテミスの守護石である<br>|
+|VRAM1|3400|200|4441DE12BF915B4D6A452C1760000940327C499491B264E66EA0AED2AA939D38|28|153|195|55|14|white|#DF000091|and it’s made from the<br>‘Moon Stone.’”|“ムｰン･ストｰン”で出来て<br>いるのよ｡』|
+|VRAM1|3400|200|CB09D83129F334588A41BF3ED89069D765EF7FB00C59768EE0FE2140C767B71F|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Huh???”|日和子<br>『????･･･』|
+|VRAM1|3400|200|DA2C99A4E2DD67F6FCF42919C6E40985AE6D12157875CE619FEF5C44A1B8601C|28|153|195|55|14|white|#DF000091|[Nike]<br>“You really don’t get any of this,<br>do you...”|ニケ<br>『全く解って無いみたいね･･･』|
+|VRAM1|3400|200|5B2E59911B78F4F2C5420A8D350C7BD73190FB3AD6EBAF64E4123C1F36D9D498|28|153|195|55|14|white|#DF000091|[Nike]<br>“Anyway, just having that jewel<br>will protect you from all kinds<br>of things,”|ニケ<br>『とにかく､その宝石は<br>持っているだけで､色々な事から|
+|VRAM1|3400|200|3629D4AD94642BF68313746D8B1815A9EB12650F39F1A8A91685E9CABA132EF5|28|153|195|55|14|white|#DF000091|so whatever you do, don’t<br>lose it!”|日和子ちゃんを守ってくれるから､<br>絶対に無くしちゃダメよ! 』|
+|VRAM1|3400|200|26F6392960E4E60802B40B6F4EF6DFBEC1A978F1A744B23D0BEE71473B71A906|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“O-okay.”|日和子<br>『う､うん｡』|
+|VRAM1|3400|200|95E20F56D8A30F1B46CADC727F6154C11A2A6CFCC414F54986164DEFF700BF4E|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Wah!! I-it’s glowing!!<br>What is this thing!? ”|日和子<br>『わぉっ!! ひ､光ったぉ!!<br>何よコレぇ!! 』|
+|VRAM1|3400|200|D9C62B2AEE71258B56D213EC58DE7CC72385266CABA4E3D08077CEE7DC21143E|28|153|195|55|14|white|#DF000091|[Nike]<br>“There’s a monster nearby!<br>Hiyoko, let’s go!”|ニケ<br>『近くに魔物がいるのよ!<br>日和子ちゃん､行くわよ! 』|
+|VRAM1|3400|200|7DED3819D122A7143217786B2237957B01F6B26B43E77B7A92807E0A329AAB71|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“W-what!? A monster!?”|日和子<br>『な､何よぉ! 魔物って!? 』|
+|VRAM1|3400|200|59FAC5AC85C1E53DE7EA5FDC7DB7A4579F2013F503D3987859CB31E84651F12E|28|153|195|55|14|white|#DF000091|[Nike]<br>“That’s the enemy<br>you must fight.|ニケ<br>『あなたが戦わなくてはいけない<br>相手よ｡|
+|VRAM1|3400|200|066DDCB79B11A0001849EB6BD89359D0778BA8FA3E31474866CFC4AAE533CBE4|28|153|195|55|14|white|#DF000091|I’ll explain the details on the<br>way. Now let's go! ”|くわしい事は途中で話すから､<br>ほら､行くの! 』|
+|VRAM1|3400|200|3461E3CF92D8386CCDADBEA540CD7F0E942653481F13EF6671576BA4D56409DC|28|153|195|55|14|white|#DF000091|[Mother]<br>“Oh my,<br>what’s with that bird? ”|お母さん<br>『あら､<br>どうしたの､その鳥? 』|
+|VRAM1|3400|200|58156E505BB2515680F7F8DD45C333FDFA7B9A55062243FD87792F52E5AE091D|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Uh, well…<br>It wandered into my room.|日和子<br>『あ､あのね･･･<br>あたしの部屋に迷い込んで来たの｡|
+|VRAM1|3D00|140|F7655790551AD6012AE24641723C7BB7A36F3ACB7BD4C02DF5D71323422266BA|28|213|195|55|14|white|#DF000091|Can I… keep it, please? ”|ねぇ､飼ってもいいでしょっ? 』|
+|VRAM1|3400|200|E59B96F088218226F5B3A1F2B3C96775E7AF91A0B29E28D5ABA3931066420885|28|153|195|55|14|white|#DF000091|[Nike]<br>“K-keep me…? ”|ニケ<br>『か､飼うって･･･? 』|
+|VRAM1|3400|200|96CAAB20D631FF91C13331BC094498F23DD83251ADCB53345C8B0BEA8543CD5A|28|153|195|55|14|white|#DF000091|[Mother]<br>“You’ll have to take care of it<br>yourself…』|お母さん<br>『自分で世話するのよ･･･』|
+|VRAM1|3400|200|ECBF1270174714B800DB70604F53A80939EA73069433BB7412EB801BE3FFEBAB|28|153|195|55|14|white|#DF000091|[Father]<br>“What an ugly-looking bird! ”|お父さん<br>『なんだ不細工な鳥だな!? 』|
+|VRAM1|3400|200|9C5FF5BF7371DA12F38EABFE09521DEA66A82B15502D69EC9A01132052C2FB99|28|153|195|55|14|white|#DF000091|[Nike]<br>“That’s mean…”|ニケ<br>『ひどい･･･』|
+|VRAM1|3400|200|D0E91BEA3F4AC274BB4CF10C6528C9593810BB4EB053C30591089017B809274D|28|153|195|55|14|white|#DF000091|[Father]<br>“Make sure you take good<br>care of it! ”|お父さん<br>『ちゃんと面倒みるんだぞ! 』|
+|VRAM1|3400|200|749CE2B00FDA415A467EEB521E7A67F97C13B6B28A7FB1FBC779F3B2F57DE590|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“Nooo!<br>I left my diary out!!”| 日和子<br>『やだぉっ!<br>日記帳出しっぱなしだぉっ! 』|
+|VRAM1|3400|200|FAEFFBEBBEDD1827A6F7230273494817AE7EC2316D95640029997E8B66C284AF|28|153|195|55|14|white|#DF000091|[Nike]<br>“Oh? Hiyoko, you keep a diary?| ニケ<br>『あら日和子ちゃんって日記<br>つけてるの?|
+|VRAM1|3400|200|F7E592135C48D54112B8EF5E5BFAF6F5739BB53D271750E2B950A637DF28EDCB|28|153|195|55|14|white|#DF000091|But… you probably don’t keep<br>it up for more than three days,<br>right?”| でも､３日と続かないんじゃない<br>のかしら? 』|
+|VRAM1|3400|200|7B32E1B074199C3498EC4D0A4BDDFD7305D53DB4C55354687038F41CA591508A|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>“How rude! I write in it every<br>single day, you know!!”| 日和子<br>『失礼ね! ちゃんと毎日つけて<br>ますよｰだ!! 』|
+|VRAM1|3D00|140|E2D601C92B8061597F43A9758461F1E421978343B4BCD5C6CFAEBAA5AC737932|28|213|195|55|14|white|#DF000091|Do you want to write in your<br>diary?<br> <br>     Yes   No| 日記をつけますか?<br><br>    う ん   や だ|
+|VRAM1|3400|200|2CEA6D93735677A23CAEC044F5C79F8CB56ECA4BD5CE219C5C50E4850C7DDB46|28|153|195|55|14|white|#DF000091|There’s a diary here.<br>Do you want to write in it?<br>              Yes         No| 日記帳があります｡<br>日記をつけますか?<br><br>    う ん   や だ|
+|VRAM1|3400|200|1AB337467EF898444282766DEC2CB96D33FBBCF99DF7C34EBA126FD545879E51|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>I found a <br>‘Potpourri Herb’|日和子は<br>“ハーブポプリ”<br>         を見つけた|
+
+TODO: Diary written.| 日記をつけました｡|

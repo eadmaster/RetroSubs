@@ -1,3 +1,7 @@
+<p align="center">
+![logo](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/main/logo.png)
+</p>
+
 # RetroSubs
 
 Render subtitles in old retro games based on memory context.

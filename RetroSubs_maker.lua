@@ -223,7 +223,7 @@ function get_new_table_line()
         if not fields[1] or not fields[2] or not fields[3] then
                 print("invalid last table entry. Update and reload the script manually")
                 gui.addmessage("invalid last table entry. Update and reload the script manually")
-                return
+                return ""
         end
         
         region = fields[1]
@@ -234,7 +234,7 @@ function get_new_table_line()
         if region == "" or start == nil or len == nil then
             --msg_dialog("memory region field empty")
             gui.addmessage("ERROR: empty memory region field")
-            return
+            return ""
         end
 
         curr_hash = get_memory_hash(region, start, len)
@@ -242,7 +242,7 @@ function get_new_table_line()
         if not curr_hash then
                 print("invalid last table entry. Update and reload the script manually")
                 gui.addmessage("invalid last table entry. Update and reload the script manually")
-                return
+                return ""
         end
        
         -- add new hash
@@ -272,7 +272,9 @@ function copy_table_line()
     newLine = get_new_table_line()
 
     -- copy to clipboard
-    io.popen('pbcopy','w'):write(newLine):close()
+    if newLine then
+        io.popen('pbcopy','w'):write(newLine):close()
+    end
 end
 
 function add_table_line()
