@@ -1,5 +1,5 @@
 <p align="center">
-![logo](https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/main/logo.png)
+ <img src="https://raw.githubusercontent.com/eadmaster/RetroSubs/refs/heads/main/logo.png">
 </p>
 
 # RetroSubs
