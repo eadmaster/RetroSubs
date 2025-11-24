@@ -15,7 +15,7 @@
 
 
 DEBUG_RETROSUB = false
-MAX_LINE_LEN=37
+DEBUG_MAX_LINE_LEN=37
 
 function detect_emu()
     if gameinfo and type(gameinfo.getrompath) == "function" then  -- TODO: better detection
@@ -236,7 +236,7 @@ end
 function check_long_line(text)
     for line in (text .. "<br>"):gmatch("([^<]+)<br>") do
         if line then
-            if (line:len() >= MAX_LINE_LEN) then
+            if (line:len() >= DEBUG_MAX_LINE_LEN) then
                 print("long line: ", line)
             end
         end
