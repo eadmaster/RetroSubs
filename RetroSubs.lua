@@ -280,36 +280,53 @@ function show_text(entry)
     for line in (entry.text .. "<br>"):gmatch("([^<]+)<br>") do
         --console.log(line)
     
-        if line then           
-            -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
-            local curr_y_pos = y_pos + line_count * LINE_SPACING
-            if (height_box and width_box and height_box > 0 and width_box > 0) then
-                gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color , nil, font_size, font_face)
+        --line_with_tags = line
+        --line = line:gsub("<[^>]*>", "")
+        --console.log(line)
+        
+        if line then
+        
+            -- check more tags
+            if (line:find("clear>") ~= nil) then
+                clear_text()
+                if DEBUG_RETROSUB then
+                    console.log("debug: <clear> triggered")
+                end
+                return
+            --if (line:find("clear-on-input>") ~= nil) then
+            --    while true do
+            --        if input.get() then
+            --            break
+            --        end
+            --        emu.frameadvance();
+            --    end
+            --    clear_text()
+            --    return
+            elseif (line == "sleep>") then
+                -- todo: parse arg: duration in ms
+                duration = 60  -- 1 sec
+                timer_start = emu.framecount()
+                if DEBUG_RETROSUB then
+                    console.log("debug: <sleep> triggered")
+                end
+                while (emu.framecount() - timer_start < duration) do
+                    --console.log(emu.framecount() - timer_start)
+                    emu.frameadvance();
+                end
             else
-                gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color, bg_color, font_size, font_face)
+                -- draw current line
+                -- gui.drawString(int x, int y, string message, [luacolor forecolor = nil], [luacolor backcolor = nil], [int? fontsize = nil], [string fontfamily = nil], [string fontstyle = nil], [string horizalign = nil], [string vertalign = nil], [string surfacename = nil])
+                local curr_y_pos = y_pos + line_count * LINE_SPACING
+                if (height_box and width_box and height_box > 0 and width_box > 0) then
+                    gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color , nil, font_size, font_face)
+                else
+                    gui.drawString(x_pos + TEXTBOX_PADDING, curr_y_pos, line, fg_color, bg_color, font_size, font_face)
+                end
+                --gui.text(x_pos + 10, curr_y_pos + 10, line, nil, "topleft" )
             end
-            --gui.text(x_pos + 10, curr_y_pos + 10, line, nil, "topleft" )
         end
         
         line_count = line_count + 1
-        
-        if (line:find("clear>") ~= nil) then
-            clear_text()
-            if DEBUG_RETROSUB then
-                console.log("debug: <clear> triggered")
-            end
-            return
-        end
-        --if (line:find("clear-on-input>") ~= nil) then
-        --    while true do
-        --        if input.get() then
-        --            break
-        --        end
-        --        emu.frameadvance();
-        --    end
-        --    clear_text()
-        --    return
-        --end
     end
 end
 

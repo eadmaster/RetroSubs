@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9
+version: 0.9.2
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
@@ -14,6 +14,11 @@ compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 
 
 ## Translation Notes
+
+Missing:
+
+ - shop puchases confirmation lines
+ - voiced dialogues subs
 
 Localized names:
 
@@ -55,7 +60,7 @@ Localized names:
  - Pularis, GUARDIAN PULARIS (ピュラリス) (BOSS 3) 
  - Wings of the Gods (神々のツバサ) -> Divine Wings?
  - Seal's Face (BOSS 5)
- - town of Wanina (ワニナの町) -> Croc-burg? (pun: ワニ皮やおまへんで。ワニナだす)
+ - town of Crocburg (ワニナの町) (lit. "Wanina", pun: ワニ皮やおまへんで。ワニナだす)
  - Feizard (フェイザード)
  - Darkmare (ダークメア, ダーク・メア) -> Nightmare?
  - Riola civilization (リオラ文明)
@@ -94,7 +99,7 @@ references:
 
 ## Hacking Notes
 
-Text encoded in SJIS, stored on disc track 2.
+All text is encoded in SJIS on disc track 2.
 
 Hashed memory regions:
 
@@ -103,6 +108,9 @@ Hashed memory regions:
  - |VRAM1|3D00|9C0| -> dialogues (longer region to avoid hash dupes)
  - |VRAM1|1200|FA0| -> shop menus
  - |VRAM1|2600|6E0| -> shop items description, fulscreen dialogues
+
+> [!NOTE]
+> Could not use a single memory region for the dialogues because the animated text cursor makes the hashes to rotate.
 
 TODO: fix duplicate hashes: -> redo with longer memory region lenght
 
@@ -114,6 +122,7 @@ TODO: fix duplicate hashes: -> redo with longer memory region lenght
  - (2D55D6E38906729B26448306D32A712259BBE2B15146FCE15984E58AEC9BFF13)
  - (E341E99F3093DDFE1C5DA7BE9FCAF542CDC3AFF900EE2BCD25E63772D05F3C54)
  - (1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4)
+ - (8487C63FA2E5142E151A08D8BB1E71A046A13C469F05D576ED48BAEE0E147AAA) (sub)
 
 
 ## Title screen
@@ -901,7 +910,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|535537619DF16AAE1EC03B2BD465682BFE678C87328933B619AEBB432495B68E|9|188|238|35|14|white|#EF000000|[Suspicious Man] What’re you going<br>on about?|［アヤシイ男］なんでっかいな、それは？|
 |VRAM1|3D00|570|DFF135BCD547A073CEEBF6D1D8AA0DAB31960DAAAC56F3C28558986D0859F151|9|188|238|35|14|white|#EF000000|I’m just a simple merchant.|わてはタダのあきんどだす。|
 |VRAM1|3D00|3E0|8D4C09697B4E999E8FDB765CA72C7D041DD94E46AE419F49E6FC840F6EE62D9F|9|188|238|35|14|white|#EF000000|[Fray] A merchant?|［フレイ］アキンド？|
-|VRAM1|3D00|570|E37C6D52CECA30D4B0984784C9976F9CEB73D4C9D6C1F6299F0237FE9CDA1C94|9|188|238|35|14|white|#EF000000|[Merchant] Yep. I was doing<br>business in the town of Wanina.|［商人］へえ。ワニナの町で商売やっとりましたんや。|
+|VRAM1|3D00|570|E37C6D52CECA30D4B0984784C9976F9CEB73D4C9D6C1F6299F0237FE9CDA1C94|9|188|238|35|14|white|#EF000000|[Merchant] Yep. I was doing<br>business in the town of Crocburg.|［商人］へえ。ワニナの町で商売やっとりましたんや。|
 |VRAM1|3D00|570|27185F183371C5DB7672EC8564457DA4D1588DBDD4AFEEC201B0A811008E88FB|9|188|238|35|14|white|#EF000000|Then somehow I ended up being<br>brought to this place.|それが何やら知らん間に、こんなトコ連れてこられてもうて。|
 |VRAM1|3D00|570|AAA4141BD20E754DAD35BD88A396CDBF082CC5F0B2C279411D117298B747EB54|9|188|238|35|14|white|#EF000000|[Fray] I don’t really get it, but you<br>don’t seem like a bad person.|［フレイ］よくわからないけど、悪い人じゃあなさそうね。|
 |VRAM1|3D00|570|AE072C923A7AF4833C4A44B58180E01199F4DB2C6EC869B6DF9C1AD4C9E72079|9|188|238|35|14|white|#EF000000|[Merchant] Of course not!|［商人］あたりまえでんがな。|
@@ -1026,7 +1035,7 @@ TODO: speech dialogues:
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|3D00|570|8487C63FA2E5142E151A08D8BB1E71A046A13C469F05D576ED48BAEE0E147AAA|9|188|238|35|14|white|#EF000000|[Fray] You...!!|［フレイ］あなたは・・・っ！！|
-|VRAM1|3D00|570|DAA4C8F0E1CF839004BEF4194C3E0848A4B0BE491410F5FBA1D6196BC50F98F1|9|188|238|35|14|white|#EF000000|[Merchant] It's not crocodile skin.<br>It's from Wanina!|［商人］ワニ皮やおまへんで。ワニナだす。|
+|VRAM1|3D00|570|DAA4C8F0E1CF839004BEF4194C3E0848A4B0BE491410F5FBA1D6196BC50F98F1|9|188|238|35|14|white|#EF000000|[Merchant] I'm not a crocodile,<br>I'm from Crocburg!|［商人］ワニ皮やおまへんで。ワニナだす。|
 |VRAM1|3D00|570|B54BB20AF91D1DDF0F497BCC4056F3CA4EE222421AE3F943DA1D7016F23DBD88|9|188|238|35|14|white|#EF000000|[Fray] Ugh... S-so anyway...|［フレイ］う゛。と、ところで|
 |VRAM1|3D00|570|253E9C56ACA27323D8E97CBA42F4578FB562A07561CF5C8EC2E52AE58EDC4294|9|188|238|35|14|white|#EF000000|Are you saying you can somehow<br>help me?|あなたならこの状況をなんとかできるって言うの？|
 |VRAM1|3D00|570|E9DEBF3972069479B0798B75738ABD8120B7282B7E58453C417918BFDC30EB7D|9|188|238|35|14|white|#EF000000|[Merchant] Of course I can.<br>...Here you go.|［商人］もちろんでおま。<br>・・・これだす。|
@@ -1098,7 +1107,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|264F49B1658D3A6FACD370B852BF1B57006D444DFDE2346C7B8DE9CB7ECE905E|9|188|238|35|14|white|#EF000000|[Mill] Hm? That’s… Latok!?|［ミル］おや、そこにいるのは・・・ルトクさん！？|
 |VRAM1|3D00|570|1F628AE88EC9ACFBCAF4A6F0AACFC6AD10CEE978FE3899B662E62D103946EF4C|9|188|238|35|14|white|#EF000000|[Fray] …Eh!?|［フレイ］・・・・・え゛？|
 |VRAM1|3D00|570|A19A4FCFDCB8BA1E23083C6A1CFAC4401676878AD9FF43199300695D1ECF1049|9|188|238|35|14|white|#EF000000|[Mill] This is Mr. Latok Kart,|［ミル］この方はルトク・ハートさんと言いまして、|
-|VRAM1|3D00|570|3CB40D2B360ABB3D9A6229E8E11740A9189B2DB678FBAC9705BC8BCDDCB2CB98|9|188|238|35|14|white|#EF000000|He was investigating this case at<br>our guild’s request.|私たち魔法ギルドの依頼で事件を調査してもらっていたんです。|
+|VRAM1|3D00|570|3CB40D2B360ABB3D9A6229E8E11740A9189B2DB678FBAC9705BC8BCDDCB2CB98|9|188|238|35|14|white|#EF000000|he was investigating this case at<br>our guild’s request.|私たち魔法ギルドの依頼で事件を調査してもらっていたんです。|
 |VRAM1|3D00|570|376ADB12E40667FBA3E35C184429F177C004264AA0ED3083A1DD137737BE6627|9|188|238|35|14|white|#EF000000|Just who could have done<br>something so cruel…|いったい、だれがこんなムゴイことを・・・。|
 |VRAM1|3D00|570|5A3D2C4D0F8509E2B7D5CD41DB688EACC7254C93432F45E1A67F1DBCABCF351D|9|188|238|35|14|white|#EF000000|[Fray] Ha ha… <br>So, so then…|［フレイ］は、はは・・・。<br>じゃ、じゃあ・・・|
 |VRAM1|3D00|570|FDAE7A7ACB46421523B2283B022B403762AA2FB75CE9197AADEA7BAC7E78FC7D|9|188|238|35|14|white|#EF000000|[Latok] Ugh…<br>Oww…|［ルトク］・・・・・う〜ん、いてててて・・・|
@@ -1112,7 +1121,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|01C402AD5FCC889CB5CE3A1FCDC731CFDA6F490154A5B55C6A1B8398F2E7084A|9|188|238|35|14|white|#EF000000|[Mill] Understood.<br>By the way, where is Miry…?|［ミル］わかりました。<br>ところでミリーさんは・・・？|
 |VRAM1|3D00|570|73682DD181E6BC26912285308DCC5351710A8C3BBC7696AC9B3ED4794C684793|9|188|238|35|14|white|#EF000000|[Fray] Ugh…<br>I-I forgot…|［フレイ］う゛っ。<br>わ、わすれてた・・・。|
 |VRAM1|3D00|570|8C9EA74D13EAC3993909E62A93B31A573DC4163F39D1D19A5BBE9A4FEC4CAE5E|9|188|238|35|14|white|#EF000000|[Fray] Hey, Latok,|［フレイ］ねえルトク、|
-|VRAM1|3D00|570|B285CF4E6B95A86CCAC2D9670ED46A654D780DCC42F5F6E076E583AEFE52AE94|9|188|238|35|14|white|#EF000000|did you see a girl who looked like<br>this?|こうこう、こういった感じの女の子を見なかった？|
+|VRAM1|3D00|570|B285CF4E6B95A86CCAC2D9670ED46A654D780DCC42F5F6E076E583AEFE52AE94|9|188|238|35|14|white|#EF000000|did you see a little girl like this?|こうこう、こういった感じの女の子を見なかった？|
 |VRAM1|3D00|570|59AC8929C0931106933F97CD0D7E104E3D137866617A6F2D4C60B1A7F610ABE0|9|188|238|35|14|white|#EF000000|[Latok] Yeah, I did see a brat like<br>that.|［ルトク］おう、たしかにそんなガキを見たっけなあ。|
 |VRAM1|3D00|570|411514D7E1FB26DA209FED78B893B3F8BA457C4970184226286F95269CD484AE|9|188|238|35|14|white|#EF000000|Some shady guy carried her off<br>deeper inside.|あやしいヤツにかかえられて、奥の方へ行ったぜ。|
 |VRAM1|3D00|570|50194E3BE85BAFB736B50636798293B35C9DAAACBD4E55E5CA28F27855696883|9|188|238|35|14|white|#EF000000|More importantly…|それよりなぁ・・・。|
@@ -1305,7 +1314,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|67774B54CE53535A51AA8355BA8FF1290D9A1ED12B09D843C0109C4CF37FEF99|9|188|238|35|14|white|#EF000000|[Man] There's nothing better than<br>a free booze.|［おじさん］いやいや、やっぱ　タダで飲む酒はうめぇや。|
 |VRAM1|3D00|570|3DF06348BE40BC9FBFD3890F106C11958D45B948A5C397BDC0B39EB442E80FCA|9|188|238|35|14|white|#EF000000|[Man] I'm glad everyone is safe.|［おじさん］ みんな無事でなによりだ。|
 |VRAM1|3D00|570|1F68A56BCB47F97B9BC240531A082297B9C2521F571BACBB8352C02B189375F1|9|188|238|35|14|white|#EF000000|[Young Man] Let's go all out, all out!|おにいさん］パァーッといこうやパァーッと！|
-|VRAM1|3D00|570|118FB745CEEB56E104D7BF36F4D0C185A1AF969EEFE459E2CB164D4327464635|9|188|238|35|14|white|#EF000000|[Razel] ...I wonder what Miry<br>has to say.|［ラゼル］・・・さて、ミリーがなんと言うかのう。|
+|VRAM1|3D00|570|118FB745CEEB56E104D7BF36F4D0C185A1AF969EEFE459E2CB164D4327464635|9|188|238|35|14|white|#EF000000|[Razel] ...Now, I wonder what Miry<br>will say.|［ラゼル］・・・さて、ミリーがなんと言うかのう。|
 |VRAM1|3D00|570|6EFFCBB023552832AE59601E79B4E0F3ED94A086EB1BA3F973DD03AE3C0D5774|9|188|238|35|14|white|#EF000000|...Whew...<br>Anyway, I’ll talk with her tonight.|・・・ふぅ・・・<br>ともかく今夜、話してみるか。|
 |VRAM1|3D00|570|A0224F00F36ECACF2F8AD709071031CDCA51EE92F97950683C01F79CC4E7CBCB|9|188|238|35|14|white|#EF000000|[Woman] The young mage over<br>there....|［おねえさん］あそこにいる魔法使いのおにいさんだけど。|
 |VRAM1|3D00|570|2FEBBDAD3CB3F144E5CA467F765A39981AB4370817887ED497A973449FA6F3C4|9|188|238|35|14|white|#EF000000|Don't you think he's cool?| カッコいいと思わない？|

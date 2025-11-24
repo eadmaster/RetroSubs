@@ -1,14 +1,15 @@
+--
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.1
+version: 0.2
 repository: https://github.com/eadmaster/RetroSubs
-compatible_hashes: [ "" ]
+compatible_hashes: [ "7B63AB01", "8F47CA114F9A921DD37EBC3F073D3E3752B98CC9" ]
 ---
 
 <!-- vim: syntax=Markdown -->
 
 
-# Tokimeki Memorial Fan Translation
+# Tokimeki Memorial PCECD English Fan Translation
 
 
 ## Translation Notes
@@ -37,33 +38,33 @@ TODO: menus, cutscenes
 
 ## Dialogues
 
-TODO: add a delay after each line
+### Opening
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|E8A0|1700|7F4D75B9071FFA51E5589427E8AB116240AB37C0F793C70EA165C0D651166A72|48|166|250|50|14|white|#246d00|Naoto: "My name is Naoto Takami.<br>I'm a freshman at Kirameki Private<br>High School."|「俺の名前は茅ヶ崎京。<br>ここ、私立きらめき高校の新入生だ。|
-|VRAM1|E8A0|1700|925CDEC956FC6ED84F5202B5C287413BECC9B265425919D1FB6D16F948721EC3|48|166|250|50|14|white|#246d00|Naoto: "It was my first-choice school,<br>and I thought it was impossible,<br>but I was lucky enough to pass."|「無理だと思っていた<br>第一志望だったが、<br>運良く合格することができた。|
-|VRAM1|E8A0|1700|E3E409FD8A60C316BD94800DCBAF0A6D055E12570742CB60DC8C3A763BCA952B|48|166|250|50|14|white|#246d00|Naoto: "I feel amazing! I got into<br>the same school as Shiori Fujisaki,<br>who I've secretly had a crush on."| 「最高の気分だぜ。<br>密かに想っている、<br>藤崎詩織と同じ学校に<br>入学できたんだから。|
-|VRAM1|E8A0|1700|E107443EE47224DBB07458E86738988B80AE890D07FFF06E7A25CD4A41F4C95C|48|166|250|50|14|white|#246d00|Naoto: "Actually... she and I have been<br>childhood friends since elementary<br>school, and our houses are next door..."| 「実は…。<br>　彼女とは小学校からの<br>幼なじみで、<br>家も隣りどうしなんだけど…。|
-|VRAM1|E8A0|1700|EE0A04ECC4E7C4F8F3CBE07643554AB6457356F7337075B48A6DE7E3BA82316A|48|166|250|50|14|white|#246d00|Naoto: "Compared to her, I'm worlds<br>apart. So, even now, we're still<br>only friends, nothing more."| 「俺と比べて、月とスッポン。<br>だから、いまだに友達以上の<br>関係には…。|
-|VRAM1|E8A0|1700|ECA0956F9409182EB02B8942551DAC4C1C6071EC2D2038D57C64519A3E763F0C|48|166|250|50|14|white|#246d00|Yoshi: "Yo.<br>What's with the gloomy face?"|好雄 「よう。<br>何しけた面してんだよ。|
-|VRAM1|E8A0|1700|A9A493728F967C6674B2A8FEE779264DB1181463553116A3CB768D020D73C1C0|48|166|250|50|14|white|#246d00|Naoto: "Ah, oh...<br>Nothing, really.<br> (What a pushy guy...)"| 「あ、あぁ…。<br>別に…。<br>（なれなれしい奴だなぁ…。）|
-|VRAM1|E8A0|1700|E8BCD61782563CD44B98585424EBF5B86648C9DEAD8915E7DCE931AFF053976E|48|166|250|50|14|white|#246d00|Yoshi: "I'm Yoshio Saotome. Nice to<br>meet you. What's your name?"| 「俺、早乙女好雄。<br>これからよろしくな。<br>お前は何ていうんだ？|
-|VRAM1|E8A0|1700|A7F12B533673FB03308B88120E838ADC1E8FE17A4C9DC432816F9223968DC6AC|48|166|250|50|14|white|#246d00|Naoto: "I'm Naoto Takami.<br>Pleased to meet you too."| 「俺は、茅ヶ崎京.<br>こっちこそよろしくな。|
-|VRAM1|E4A0|7A0|C7D96AE6047E6907C9950DF20EAFF02B68E241904B79CA6883528FE4D91E434A|48|166|250|50|14|white|#246d00|Girl A: "Oh, she's here."| 女子Ａ 「あっ、来たわよ。|
-|VRAM1|E4A0|7A0|0B2BC053BB2C3DEFCE210C7E288438A4544BBB59B355EC8831A9D28070F16ECA|48|166|250|50|14|white|#246d00|Girl B: "So dreamy..."| 女子Ｂ「素敵〜。|
-|VRAM1|E8A0|1700|F5C658B43271CC8105250000B07772E8D86C90F5C317CCEB5B6FFC767020518E|48|166|250|50|14|white|#246d00|Yoshi: ""What's going on?<br>The girls suddenly started<br>making a fuss."| 「何だ？<br>急に女子が騒ぎだしたぞ。|
-|VRAM1|E8A0|1700|E8D4B85BE8D34988E1D25AB5908F46868368BBE11A1032D6DFDFE3A83C963426|48|166|250|50|14|white|#246d00|Ijuuin: "Hello, everyone.<br>Did I keep you waiting?"| 伊集院「やあ、諸君。<br>待たせたね。|
-|VRAM1|E8A0|1700|E5E4E986372F8479535ED8772E39087F28DF72BF2075FA0B924240DF0129EBA3|48|166|250|50|14|white|#246d00|Ijuuin: "I don't think there's anyone<br>who doesn't know who I am...<br>I'm Rei Ijuuin, the Chairman's grandson."| 伊集院「この僕の事を知らない者は<br>いないと思うが…。<br>僕が理事長の孫の　伊集院レイだ。|
-|VRAM1|E8A0|1700|7E287F19C72CF9AA778FA9963C47BBB76BFAD1448580BCBBD06AB97F8228A04D|48|166|250|50|14|white|#246d00|Ijuuin: "My apologies to the men in<br>this class, but... well, let's all try to<br>get along."| 伊集院「同じクラスの男性諸君には<br>悪いが…。ま、仲良くやって<br>いこうじゃないか。|
-|VRAM1|E8A0|1700|43824DE74C692C7FA522E681C091529C0BD18423B50627AF23160FD50F7D986F|48|166|250|50|14|white|#246d00|Yoshi: "Ijuuin? The rich kid...<br>What a terrible class<br>this turned out to be."| 「伊集院って、<br>あの金持ちのか…。<br>嫌なクラスに<br>なっちまったなぁ。|
-|VRAM1|E4A0|7A0|62BB31433BE22E46EF2F14E21CE092915E11EA232685371452A44E4C40A0F85B|48|166|250|50|14|white|#246d00|Naoto: "Y-yeah, you're right..."| 「そ、そうだな…。|
-|VRAM1|E8A0|1700|B017FB266669D56C9F162FE2DF1A827AF6B265762D2D52DB8C04CAA397C74D39|48|166|250|50|14|white|#246d00|Naoto: (Ah, it looks like it's Shiori's<br>turn for her introduction.)| （あっ、次は詩織の<br>自己紹介みたいだ。）|
-|VRAM1|E8A0|1700|05EB589C773C1F57E57D9FD89C8F355FB80EE27F4A430475FF7C6738E6E941BB|48|166|250|50|14|white|#246d00|Shiori: "Hello, everyone. My name<br>is Shiori Fujisaki."| 「みなさんはじめまして。<br>名前は藤崎詩織です。|
-|VRAM1|E8A0|1700|0CD0CBFA22CE04BF0BFD27A8E4164B1C8FD59B6DCEAE88B8A103EDB445AACD86|48|166|250|50|14|white|#246d00|Shiori: "My hobby is listening to music,<br>and I often listen to classics."| 「趣味は音楽鑑賞で、<br>クラシックとかを<br>良く聴きます。|
-|VRAM1|E8A0|1700|65A845EB6E6991803C2C4D201A78F54AC4F0BADC1DADCEBFF84C764709DA09E9|48|166|250|50|14|white|#246d00|Shiori: "I hope we can all<br>get along from now on."| みなさんこれから、<br>よろしくお願いします。|
-|VRAM1|E8A0|1700|1E3571B8E0ACE41CB56DF9AAD1E4717B9443E3140DD51E65959C3A7EEB0760CC|48|166|250|50|14|white|#246d00|Yoshi: "Sh-she's so cute!<br>Shiori Fujisaki...<br>I'm glad I'm in this class!"| 「か、かわいいー。<br>藤崎詩織ちゃんか…。<br>このクラスでよかったぜ。|
-|VRAM1|E8A0|1700|B271BD3028F547416F15C186459C7AD55234CA2A0C4B657ECCC1FD3BC07A3A5E|48|166|250|50|14|white|#246d00|Naoto: (He just said he hated<br>this class earlier...)| （さっきは、嫌だって<br>言ってたくせに…。）|
-|VRAM1|E8A0|1700|56794671E5E8850B7BF0E4B2B7D1724552BDF3E3F65984F5BE3F965DEE1EF334|48|166|250|50|14|white|#246d00|Yoshi: "Hey, she just looked at you!<br>Do you know her?"| 「あっ、今、お前の事見たぜ。<br>あの娘知ってるのか？|
-|VRAM1|E8A0|1700|7AF26AA44A104C869A4FD047DF46C1BF99857B6E4D41F524D7C326E594193931|48|166|250|50|14|white|#246d00|Naoto: "Of course I know her,<br>she's my childhood friend."| 「知ってるも何も、<br>俺の幼なじみだよ。|
-|VRAM1|E8A0|1700|1049EB1917EE2F1747F33981C0E8DD03D59D7CD2BBC4EDCF81C88996051C8D68|48|166|250|50|14|white|#246d00|Yoshi: "Oh, really? Is that so...<br>Then what's her<br>birthday?"| 「へぇ、そうなのか…。<br>じゃあ、<br>彼女の誕生日は？|
+|VRAM1|E8A0|1700|7F4D75B9071FFA51E5589427E8AB116240AB37C0F793C70EA165C0D651166A72|48|166|250|50|14|white|#246d00|Naoto: "My name is Naoto Takami.<br>I'm a freshman at Kirameki Private<br>High School."<br><sleep><br><sleep><br><sleep>|「俺の名前は茅ヶ崎京。<br>ここ、私立きらめき高校の新入生だ。|
+|VRAM1|E8A0|1700|925CDEC956FC6ED84F5202B5C287413BECC9B265425919D1FB6D16F948721EC3|48|166|250|50|14|white|#246d00|Naoto: "It was my first-choice school,<br>and I thought it was impossible,<br>but I was lucky enough to pass."<br><sleep><br><sleep><br><sleep>|「無理だと思っていた<br>第一志望だったが、<br>運良く合格することができた。|
+|VRAM1|E8A0|1700|E3E409FD8A60C316BD94800DCBAF0A6D055E12570742CB60DC8C3A763BCA952B|48|166|250|50|14|white|#246d00|Naoto: "I feel amazing! I got into<br>the same school as Shiori Fujisaki,<br>who I've secretly had a crush on."<br><sleep><br><sleep><br><sleep>| 「最高の気分だぜ。<br>密かに想っている、<br>藤崎詩織と同じ学校に<br>入学できたんだから。|
+|VRAM1|E8A0|1700|E107443EE47224DBB07458E86738988B80AE890D07FFF06E7A25CD4A41F4C95C|48|166|250|50|14|white|#246d00|Naoto: "Actually... she and I have been<br>childhood friends since elementary<br>school, and our houses are next door..."<br><sleep><br><sleep><br><sleep>| 「実は…。<br>　彼女とは小学校からの<br>幼なじみで、<br>家も隣りどうしなんだけど…。|
+|VRAM1|E8A0|1700|EE0A04ECC4E7C4F8F3CBE07643554AB6457356F7337075B48A6DE7E3BA82316A|48|166|250|50|14|white|#246d00|Naoto: "Compared to her, I'm worlds<br>apart. So, even now, we're still<br>only friends, nothing more."<br><sleep><br><sleep><br><sleep>| 「俺と比べて、月とスッポン。<br>だから、いまだに友達以上の<br>関係には…。|
+|VRAM1|E8A0|1700|ECA0956F9409182EB02B8942551DAC4C1C6071EC2D2038D57C64519A3E763F0C|48|166|250|50|14|white|#246d00|Yoshi: "Yo.<br>What's with the gloomy face?"<br><sleep><br><sleep><br><sleep>|好雄 「よう。<br>何しけた面してんだよ。|
+|VRAM1|E8A0|1700|A9A493728F967C6674B2A8FEE779264DB1181463553116A3CB768D020D73C1C0|48|166|250|50|14|white|#246d00|Naoto: "Ah, oh...<br>Nothing, really.<br> (What a pushy guy...)"<br><sleep><br><sleep><br><sleep>| 「あ、あぁ…。<br>別に…。<br>（なれなれしい奴だなぁ…。）|
+|VRAM1|E8A0|1700|E8BCD61782563CD44B98585424EBF5B86648C9DEAD8915E7DCE931AFF053976E|48|166|250|50|14|white|#246d00|Yoshi: "I'm Yoshio Saotome. Nice to<br>meet you. What's your name?"<br><sleep><br><sleep><br><sleep>| 「俺、早乙女好雄。<br>これからよろしくな。<br>お前は何ていうんだ？|
+|VRAM1|E8A0|1700|A7F12B533673FB03308B88120E838ADC1E8FE17A4C9DC432816F9223968DC6AC|48|166|250|50|14|white|#246d00|Naoto: "I'm Naoto Takami.<br>Pleased to meet you too."<br><sleep><br><sleep><br><sleep>| 「俺は、茅ヶ崎京.<br>こっちこそよろしくな。|
+|VRAM1|E4A0|7A0|C7D96AE6047E6907C9950DF20EAFF02B68E241904B79CA6883528FE4D91E434A|48|166|250|50|14|white|#246d00|Girl A: "Oh, she's here."<br><sleep><br><sleep><br><sleep>| 女子Ａ 「あっ、来たわよ。|
+|VRAM1|E4A0|7A0|0B2BC053BB2C3DEFCE210C7E288438A4544BBB59B355EC8831A9D28070F16ECA|48|166|250|50|14|white|#246d00|Girl B: "So dreamy..."<br><sleep><br><sleep><br><sleep>| 女子Ｂ「素敵〜。|
+|VRAM1|E8A0|1700|F5C658B43271CC8105250000B07772E8D86C90F5C317CCEB5B6FFC767020518E|48|166|250|50|14|white|#246d00|Yoshi: "What's going on?<br>The girls suddenly started<br>making a fuss."<br><sleep><br><sleep><br><sleep>| 「何だ？<br>急に女子が騒ぎだしたぞ。|
+|VRAM1|E8A0|1700|E8D4B85BE8D34988E1D25AB5908F46868368BBE11A1032D6DFDFE3A83C963426|48|166|250|50|14|white|#246d00|Ijuuin: "Hello, everyone.<br>Did I keep you waiting?"<br><sleep><br><sleep><br><sleep>| 伊集院「やあ、諸君。<br>待たせたね。|
+|VRAM1|E8A0|1700|E5E4E986372F8479535ED8772E39087F28DF72BF2075FA0B924240DF0129EBA3|48|166|250|50|14|white|#246d00|Ijuuin: "I don't think there's anyone<br>who doesn't know who I am...<br>I'm Rei Ijuuin, the Chairman's grandson."<br><sleep><br><sleep><br><sleep>| 伊集院「この僕の事を知らない者は<br>いないと思うが…。<br>僕が理事長の孫の　伊集院レイだ。|
+|VRAM1|E8A0|1700|7E287F19C72CF9AA778FA9963C47BBB76BFAD1448580BCBBD06AB97F8228A04D|48|166|250|50|14|white|#246d00|Ijuuin: "My apologies to the men in<br>this class, but... well, let's all try to<br>get along."<br><sleep><br><sleep><br><sleep>| 伊集院「同じクラスの男性諸君には<br>悪いが…。ま、仲良くやって<br>いこうじゃないか。|
+|VRAM1|E8A0|1700|43824DE74C692C7FA522E681C091529C0BD18423B50627AF23160FD50F7D986F|48|166|250|50|14|white|#246d00|Yoshi: "Ijuuin? The rich kid...<br>What a terrible class<br>this turned out to be."<br><sleep><br><sleep><br><sleep>| 「伊集院って、<br>あの金持ちのか…。<br>嫌なクラスに<br>なっちまったなぁ。|
+|VRAM1|E4A0|7A0|62BB31433BE22E46EF2F14E21CE092915E11EA232685371452A44E4C40A0F85B|48|166|250|50|14|white|#246d00|Naoto: "Y-yeah, you're right..."<br><sleep><br><sleep><br><sleep>| 「そ、そうだな…。|
+|VRAM1|E8A0|1700|B017FB266669D56C9F162FE2DF1A827AF6B265762D2D52DB8C04CAA397C74D39|48|166|250|50|14|white|#246d00|Naoto: (Ah, it looks like it's Shiori's<br>turn for her introduction.)<br><sleep><br><sleep><br><sleep>| （あっ、次は詩織の<br>自己紹介みたいだ。）|
+|VRAM1|E8A0|1700|05EB589C773C1F57E57D9FD89C8F355FB80EE27F4A430475FF7C6738E6E941BB|48|166|250|50|14|white|#246d00|Shiori: "Hello, everyone. My name<br>is Shiori Fujisaki."<br><sleep><br><sleep><br><sleep>| 「みなさんはじめまして。<br>名前は藤崎詩織です。|
+|VRAM1|E8A0|1700|0CD0CBFA22CE04BF0BFD27A8E4164B1C8FD59B6DCEAE88B8A103EDB445AACD86|48|166|250|50|14|white|#246d00|Shiori: "My hobby is listening to music,<br>and I often listen to classics."<br><sleep><br><sleep><br><sleep>| 「趣味は音楽鑑賞で、<br>クラシックとかを<br>良く聴きます。|
+|VRAM1|E8A0|1700|65A845EB6E6991803C2C4D201A78F54AC4F0BADC1DADCEBFF84C764709DA09E9|48|166|250|50|14|white|#246d00|Shiori: "I hope we can all<br>get along from now on."<br><sleep><br><sleep><br><sleep>| みなさんこれから、<br>よろしくお願いします。|
+|VRAM1|E8A0|1700|1E3571B8E0ACE41CB56DF9AAD1E4717B9443E3140DD51E65959C3A7EEB0760CC|48|166|250|50|14|white|#246d00|Yoshi: "Sh-she's so cute!<br>Shiori Fujisaki...<br>I'm glad I'm in this class!"<br><sleep><br><sleep><br><sleep>| 「か、かわいいー。<br>藤崎詩織ちゃんか…。<br>このクラスでよかったぜ。|
+|VRAM1|E8A0|1700|B271BD3028F547416F15C186459C7AD55234CA2A0C4B657ECCC1FD3BC07A3A5E|48|166|250|50|14|white|#246d00|Naoto: (He just said he hated<br>this class earlier...)<br><sleep><br><sleep><br><sleep>| （さっきは、嫌だって<br>言ってたくせに…。）|
+|VRAM1|E8A0|1700|56794671E5E8850B7BF0E4B2B7D1724552BDF3E3F65984F5BE3F965DEE1EF334|48|166|250|50|14|white|#246d00|Yoshi: "Hey, she just looked at you!<br>Do you know her?"<br><sleep><br><sleep><br><sleep>| 「あっ、今、お前の事見たぜ。<br>あの娘知ってるのか？|
+|VRAM1|E8A0|1700|7AF26AA44A104C869A4FD047DF46C1BF99857B6E4D41F524D7C326E594193931|48|166|250|50|14|white|#246d00|Naoto: "Of course I know her,<br>she's my childhood friend."<br><sleep><br><sleep><br><sleep>| 「知ってるも何も、<br>俺の幼なじみだよ。|
+|VRAM1|E8A0|1700|1049EB1917EE2F1747F33981C0E8DD03D59D7CD2BBC4EDCF81C88996051C8D68|48|166|250|50|14|white|#246d00|Yoshi: "Oh, really? Is that so...<br>Then what's her<br>birthday?"<br><sleep><br><sleep><br><sleep>| 「へぇ、そうなのか…。<br>じゃあ、<br>彼女の誕生日は？|

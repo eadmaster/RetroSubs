@@ -12,7 +12,15 @@ compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 
 # Momotarou Katsugeki English fan translation
 
+
 ## Translation notes
+
+Missing:
+
+ - Password screen
+ - Some hermit quiz questions
+ - Boss victory banners
+ - Other hidden minigames?
 
 TODO: revise localized names:
 
@@ -21,13 +29,13 @@ https://momotaro.fandom.com/wiki/Momotaro_Densetsu_1%E2%86%922
 
 ## Hacking notes
 
-Most text is stored in ROM @ 0x1f078 and @ 0x42f45.
-See abcde table: `Momotarou Katsugeki (J).tbl`
+Most text is stored in ROM starting @ 0x1f078 and @ 0x42f45.
+See the table: `Momotarou Katsugeki (J).tbl`
 
 Memory regions hashed:
 
  - |VRAM1|D700|C00| -> intro
- - |VRAM1|D080|500| -> village dialogues
+ - |VRAM1|D080|500| -> dialogues (variable screen position)
  - |VRAM1|7600|780| -> shops
  - |VRAM1|C000|680| -> ending
  - |VRAM1|FEC0|130| -> detect empty dialogs
@@ -777,7 +785,7 @@ TODO: all the questions
 |VRAM1|D080|500|C0F3E4B6914E02E36DA8E228FFC48FD583B4569E43D7F0BAD43E4CA259FEE66F|60|45|130|50|12|black|#CFFFFFFF|Go forth!!<br>Momotaro!!|ゆけ!!<br>ももたろう!!|
 
 
-## Boss victory messages
+## Boss victory banners
 
 WIP
 
