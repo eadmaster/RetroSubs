@@ -4,7 +4,7 @@ author: eadmaster
 license: CC-BY-NC-SA
 version: 0.1
 repository: https://github.com/eadmaster/RetroSubs
-compatible_hashes: [ "e989a4ae" ]
+compatible_hashes: [ "E989A4AE", "39BF2BBB87FB25E3C4DF8475EE527199", "E5CB92C2ADB0B1715CE80D7562B562E527EE2E1F" ]
 ---
 
 <!-- vim: syntax=Markdown -->
@@ -14,7 +14,7 @@ compatible_hashes: [ "e989a4ae" ]
 # Pinobee & Phoebee Fan Translation
 
 
-## Notes
+## Hacking Notes
 
 See `Pinobee & Phoebee (Japan).tbl` for the custom 16-bit encoding used for the text.
 It's similar to https://github.com/SuperDisk/Translimeation/blob/master/Slime_Small.tbl
@@ -56,7 +56,8 @@ Hashed memory regions:
 |VRAM|C020|1420|D63793616074F9CBD9D495ADE26708067E8B68BB503C2559388817F0FC1CDA62|30|91|180|61|14|black|#ffefce|Right, I should give you<br>one final good tip.<br>"It begins with Exhaustion,<br>and ends with Exhaustion."| そうじゃ さいごに いいことを<br>おしえて やるかの<br>『ハラュコに はじまり<br> ハラュコに おわる』|
 |VRAM|C020|1420|401FD9140D0FBD4D7A4CB603E3523CF281B2113FBB9B2035B3E849DED28A1A9B|30|91|180|61|14|black|#ffefce|That's a saying my grandpa<br>used to tell me.<br>He said there's a certain<br>power in being exhausted.<br>I wonder what it means?| わしの じいさんが むかし<br>いっていた ことばじゃ<br>ハラュコの ばかぢからが<br>でるそうじゃ なんのことかのう|
 
-## Pause
+
+## Pause Menu
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|

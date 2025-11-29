@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: [Filler, KingMike, eadmaster]
 license: CC-BY-NC-SA
-version: 0.3
+version: 0.4
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "444C9962", "388CFFCEBCD3155CAE2F2C5CEC1F92C1", "46853D2212D2F55DDC27224F943AF14D4353EEEA" ]
 ---
@@ -15,10 +15,15 @@ compatible_hashes: [ "444C9962", "388CFFCEBCD3155CAE2F2C5CEC1F92C1", "46853D2212
 
 ## Translation Notes
 
-Original script translated by Filler, released under CC-BY-NC 4.0:
+Original script dumped and translated by KingMike and Filler:
 https://datacrystal.tcrf.net/wiki/Ghost_Sweeper_Mikami:_Joreishi_wa_Nice_Body
 
 Minor changes made by eadmaster for better readability.
+
+Missing:
+
+ - In game dialogs
+ - Ending cutscene
 
 
 ## Hacking Notes
@@ -29,7 +34,7 @@ Hashed memory regions:
  - |VRAM|4000|4BE0| -> cutscene gfx
  - |VRAM|C200|200| -> stage title
  
-cheats to test all the stages: 
+Passwords to test all the stages: 
 https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 
 
@@ -43,6 +48,7 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 |VRAM|C200|200|6C8C6CBD65DC93F669254F197468A68D917ED6E23B0896BAEC10208246C710C5|30|100|195|60|16|white|black|Conservatory Full of Danger|巨大温室は危険がいっぱい|
 |VRAM|C200|200|C6F9845202E6FA6B37690F154D34CA59456FE2BA91891FCD79FE1D0B4E4918B7|30|100|195|60|16|white|black|Operation Heavenly Air Force |極楽空軍大作戦|
 |VRAM|C200|200|0546712A21D036E115D719BA319E4B82F5F125AACA8D8D8055FEA36C9B776446|50|100|195|60|16|white|black|Something Came Over| なにかが道をやってきた|
+|VRAM|C200|200|F263575DE0EB73EE1F057396F077BC0CF7610EEDCA52510864BFD203B79DBDD2|60|100|195|60|16|white|black|Dream on Dream|ドリーム　オン　ドリーム|
 
 
 ## Dialogues
@@ -88,35 +94,59 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM|D000|BE0|4EED5004906B897D5D4C79C13F23DE88BAA8E36AEB7B6F29A96843DD93480195|35|30|185|55|14|white|#BF000000|So anyway,<br>that's what I meant to tell<br>you earlier.|つまり、<br>さっき私が言いたかったのはアレの事よ。|
-|VRAM|D000|BE0|C5B9C9E9655C49F02D2BEA212C805C46DE22FE50BC1D291D4FBDBE09110D8FF6|35|30|185|55|14|white|#BF000000|That gave me quite a start.<br>You shrunk in the blink of an<br>eye.| 驚きました。<br>突然小さくなるんですもの。|
-|VRAM|D000|BE0|415A7DEC8190824AC039F768A3D69CF4F00A3CC16520C6C007CDDD16222DACFC|35|30|185|55|14|white|#BF000000|The hardest part is yet to<br>come.|まだまだ、大変なにはこれからよ。|
+|VRAM|D000|BE0|4EED5004906B897D5D4C79C13F23DE88BAA8E36AEB7B6F29A96843DD93480195|35|30|185|55|14|white|#BF000000|So anyway,<br>that's what I meant to tell<br>you earlier.<br><sleep><br><sleep>|つまり、<br>さっき私が言いたかったのはアレの事よ。|
+|VRAM|D000|BE0|C5B9C9E9655C49F02D2BEA212C805C46DE22FE50BC1D291D4FBDBE09110D8FF6|35|30|185|55|14|white|#BF000000|That gave me quite a start.<br>You shrunk in the blink of an<br>eye.<br><sleep><br><sleep>| 驚きました。<br>突然小さくなるんですもの。|
+|VRAM|D000|BE0|415A7DEC8190824AC039F768A3D69CF4F00A3CC16520C6C007CDDD16222DACFC|35|30|185|55|14|white|#BF000000|The hardest part is yet to<br>come.<br><sleep><br><sleep>|まだまだ、大変なにはこれからよ。|
 
 
 ### Stage 5
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM|D000|BE0|A9C45CAB3DBE30588E7FE0D86F54CA74E3702F817B34FBCEA2A153510A96B1C1|35|30|185|55|14|white|#BF000000|What's with the broom<br>Ms. Mikami?| そのホウキは何スか？美神さん。|
-|VRAM|D000|BE0|505E8C709FE834124A543ED8C955951F42F79334561817BF23D9FD1137DCF63C|35|30|185|55|14|white|#BF000000|It's a magic broom right?| 魔法のホウキですね。|
-|VRAM|D000|BE0|40ED64CE5D45AA51EAAA5FE77C6A01680E51C5D0A718DBDF4E543E43AC0B7C3C|35|30|185|55|14|white|#BF000000|I'm not riding on that am I?| まさか俺に乗れと？|
-|VRAM|D000|BE0|BFF7B97FDA076E25A764431DBF2942962AFD72694F49C82481324AF35DEA3B33|35|30|185|55|14|white|#BF000000|Get real. The rental fee for<br>this is more than you could<br>earn in 100 years.|これのレンタル料、あんたの１００年分の<br>稼ぎより高いのよ。|
-|VRAM|D000|BE0|C508AE712E0ABC1C853BFF19292062BEF226AC65A0FB0CE9AE4AC1701A8CAD3B|35|30|185|55|14|white|#BF000000|Of course I'll ride it.|もちろん私が乗るわ。|
-|VRAM|D000|BE0|89AD39368489EB786D18FD184AD95F208559C5D2700A49C7F7D7BC9F32B5D4F3|35|30|185|55|14|white|#BF000000|So you're taking to the sky<br>next?| じゃあ、次は空ですか。|
-|VRAM|D000|BE0|AF5EADA04997A62C8F07D629E1A56724B091700DD6300A72FF267F5D02CF4CBC|35|30|185|55|14|white|#BF000000|Yeah. Take care of things<br>while I'm gone okay?| そう、留守番たのむね。|
-|VRAM|D000|BE0|E9BCF415780E239532C4F4724B2964C4EA54537A409FBB610D15E59284B18C33|35|30|185|55|14|white|#BF000000|Have a nice trip.| いってらっしゃーい。|
+|VRAM|D000|BE0|A9C45CAB3DBE30588E7FE0D86F54CA74E3702F817B34FBCEA2A153510A96B1C1|35|30|185|55|14|white|#BF000000|What's with the broom<br>Ms. Mikami?<br><sleep><br><sleep>| そのホウキは何スか？美神さん。|
+|VRAM|D000|BE0|505E8C709FE834124A543ED8C955951F42F79334561817BF23D9FD1137DCF63C|35|30|185|55|14|white|#BF000000|It's a magic broom right?<br><sleep><br><sleep>| 魔法のホウキですね。|
+|VRAM|D000|BE0|40ED64CE5D45AA51EAAA5FE77C6A01680E51C5D0A718DBDF4E543E43AC0B7C3C|35|30|185|55|14|white|#BF000000|I'm not riding on that am I?<br><sleep><br><sleep>| まさか俺に乗れと？|
+|VRAM|D000|BE0|BFF7B97FDA076E25A764431DBF2942962AFD72694F49C82481324AF35DEA3B33|35|30|185|55|14|white|#BF000000|Get real. The rental fee for<br>this is more than you could<br>earn in 100 years.<br><sleep><br><sleep>|これのレンタル料、あんたの１００年分の<br>稼ぎより高いのよ。|
+|VRAM|D000|BE0|C508AE712E0ABC1C853BFF19292062BEF226AC65A0FB0CE9AE4AC1701A8CAD3B|35|30|185|55|14|white|#BF000000|Of course I'll ride it.<br><sleep><br><sleep>|もちろん私が乗るわ。|
+|VRAM|D000|BE0|89AD39368489EB786D18FD184AD95F208559C5D2700A49C7F7D7BC9F32B5D4F3|35|30|185|55|14|white|#BF000000|So you're taking to the sky<br>next?<br><sleep><br><sleep>| じゃあ、次は空ですか。|
+|VRAM|D000|BE0|AF5EADA04997A62C8F07D629E1A56724B091700DD6300A72FF267F5D02CF4CBC|35|30|185|55|14|white|#BF000000|Yeah. Take care of things<br>while I'm gone okay?<br><sleep><br><sleep>| そう、留守番たのむね。|
+|VRAM|D000|BE0|E9BCF415780E239532C4F4724B2964C4EA54537A409FBB610D15E59284B18C33|35|30|185|55|14|white|#BF000000|Have a nice trip.<br><sleep><br><sleep>| いってらっしゃーい。|
 
 
 ### Stage 6
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM|D000|BE0|00663BA3A494BA0C9E74D92FD8A6BDF2936693D53C342A15781F1D16F2E93F73|35|30|185|55|14|white|#BF000000|The statue hasn't gotten<br>very cute.| あんまり、可愛くなくなりましたね。|
-|VRAM|D000|BE0|09C26328B0DEA3E6BD4B43372D92EF5F0F0CEF7D73E901D2CA0E2EC256DB6C9B|35|30|185|55|14|white|#BF000000|No, it hasn't really.| そう、それほどでもないと思うけど。|
-|VRAM|D000|BE0|F145690FA02D01FE68D26CBB49C0A89FC30B759D81DD53240ED70E28D1F35B53|35|30|185|55|14|white|#BF000000|It's your imagination, Ms.<br>Okinu.| 気のせいだよ、おキヌちゃん。|
-|VRAM|D000|BE0|9E76A8D170A4DBC66343B852B91C434519D503BA330795DB1E03801D83E87399|35|30|185|55|14|white|#BF000000|If we get everything in order<br>it will definitely become a<br>beautiful goddess, won't it<br>Ms. Mikami?|全部そろえばきっときれーな女神様に<br>なるよ、ねェ美神さん。|
-|VRAM|D000|BE0|E49F075E896C20D0A85F0C539047AA92F5B52D265683ABB9BEA0689E2C869F0E|35|30|185|55|14|white|#BF000000|That's right. Let's get the<br>next one, Yokoshima!|そうね、じゃあ次に行きましょう。<br>横島クン。|
-|VRAM|D000|BE0|400E0D4B3C100D1CB029FCEC78917316397BE460A864CE28A8790F78EBFE81F2|35|30|185|55|14|white|#BF000000|Ha-ha-ha-ha-ha-ha-...| はははははは。。。。。。|
-|VRAM|D000|BE0|03DCA1161CB1D196093F5FC20FE4164EF77E1E774CA206953F78F0DB41B49BC2|35|30|185|55|14|white|#BF000000|Ho-ho-ho-ho-ho-ho-...| ふふふふふふ。。。。。。|
-|VRAM|D000|BE0|A177E969739DC40EFB88D5C5625653CA8F13FB8E701AC62AA17B3ECF9B1796EA|35|30|185|55|14|white|#BF000000|I wonder about that.|そうかなぁ。|
+|VRAM|D000|BE0|00663BA3A494BA0C9E74D92FD8A6BDF2936693D53C342A15781F1D16F2E93F73|35|30|185|55|14|white|#BF000000|The statue hasn't gotten<br>very cute.<br><sleep><br><sleep>| あんまり、可愛くなくなりましたね。|
+|VRAM|D000|BE0|09C26328B0DEA3E6BD4B43372D92EF5F0F0CEF7D73E901D2CA0E2EC256DB6C9B|35|30|185|55|14|white|#BF000000|No, it hasn't really.<br><sleep><br><sleep>| そう、それほどでもないと思うけど。|
+|VRAM|D000|BE0|F145690FA02D01FE68D26CBB49C0A89FC30B759D81DD53240ED70E28D1F35B53|35|30|185|55|14|white|#BF000000|It's your imagination, Ms.<br>Okinu.<br><sleep><br><sleep>| 気のせいだよ、おキヌちゃん。|
+|VRAM|D000|BE0|9E76A8D170A4DBC66343B852B91C434519D503BA330795DB1E03801D83E87399|35|30|185|55|14|white|#BF000000|If we get everything in order<br>it will definitely become a<br>beautiful goddess, won't it<br>Ms. Mikami?<br><sleep><br><sleep>|全部そろえばきっときれーな女神様に<br>なるよ、ねェ美神さん。|
+|VRAM|D000|BE0|E49F075E896C20D0A85F0C539047AA92F5B52D265683ABB9BEA0689E2C869F0E|35|30|185|55|14|white|#BF000000|That's right. Let's get the<br>next one, Yokoshima!<br><sleep><br><sleep>|そうね、じゃあ次に行きましょう。<br>横島クン。|
+|VRAM|D000|BE0|400E0D4B3C100D1CB029FCEC78917316397BE460A864CE28A8790F78EBFE81F2|35|30|185|55|14|white|#BF000000|Ha-ha-ha-ha-ha-ha-...<br><sleep><br><sleep>| はははははは。。。。。。|
+|VRAM|D000|BE0|03DCA1161CB1D196093F5FC20FE4164EF77E1E774CA206953F78F0DB41B49BC2|35|30|185|55|14|white|#BF000000|Ho-ho-ho-ho-ho-ho-...<br><sleep><br><sleep>| ふふふふふふ。。。。。。|
+|VRAM|D000|BE0|A177E969739DC40EFB88D5C5625653CA8F13FB8E701AC62AA17B3ECF9B1796EA|35|30|185|55|14|white|#BF000000|I wonder about that.<br><sleep><br><sleep>|そうかなぁ。|
 
+
+### Stage 7
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|D000|BE0|9A6F60CD277F47DD620B3C56B69760551F3702936C6B4755C8314A1E8A32DB32|35|30|185|55|14|white|#BF000000|The statue is still not very <br>attractive.<br><sleep><br><sleep>|やっぱり、可愛くない。|
+|VRAM|D000|BE0|20787E1BF6581F5B60965A234AB2AED6787E06902600A72DDD796A20D6D90362|35|30|185|55|14|white|#BF000000|It's just your imagination.<br><sleep><br><sleep>| 気のせいよ、気のせい。|
+|VRAM|D000|BE0|8943C8EFF61939C354512E83D6108AF03AB1AF9F29BAA87CBAC5DDE891F3B2FD|35|30|185|55|14|white|#BF000000|I wouldn't call this a<br>"beautiful goddess" however.<br><sleep><br><sleep>|しかし、<br>これは麗しの女神様という姿では。|
+|VRAM|D000|BE0|B70986AF987EF63A65A32CF789631773AA7D84CD66BDD1E97EFA632459362F3B|35|30|185|55|14|white|#BF000000|What's the difference?<br>The important part is the<br>10 mil price tag.<br><sleep><br><sleep>|だから、どうしたと言うの。<br>本物なのよ、時価ン百億円の。|
+|VRAM|D000|BE0|69EE7399C48A7216FA391730D732CC1800DF02BC7E3A0CD77AFFBB07957B43AF|35|30|185|55|14|white|#BF000000|Come on, Yokoshima,<br>help me out!<br><sleep><br><sleep>|さあ、横島くん、協力してね！|
+|VRAM|D000|BE0|F5B9C032148AF198A8530ED0974C04D18A34458FB4446B112E685CE89F4195E2|35|30|185|55|14|white|#BF000000|The final opponent is inside<br>a dream.<br><sleep><br><sleep>|最後の相手は夢の中なの。|
+|VRAM|D000|BE0|A5659B8673C7846601D788C02507FA67B758A00E5B4B646E84749728C138246E|35|30|185|55|14|white|#BF000000|Sweet dreams.<br><sleep><br><sleep>|いい夢みてね。|
+|VRAM|D000|BE0|9DA9F4360B8F67CAEFAA97F2B0DD2D10A184E51C6916B24D6555AB60CA3EE8C1|35|30|185|55|14|white|#BF000000|Okay, last stage.<br>To the dream world!<br><sleep><br><sleep>|さあラストステージ、夢の世界へ！！|
+
+
+### Stage 8
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|D000|BE0|833DF680663C36EA272DBFA011551663D5322E825294E4F2887851D0A48C7D65|35|30|185|55|14|white|#BF000000|We did it Ms. Mikami.<br>This is the Goddess' true<br>appearance.<br><sleep><br><sleep>|やりました美神さん、<br>これで女神様のおでましスね。|
+|VRAM|D000|BE0|91BDE46A5DAB7A3D0493D8AE5EF87E1FA590F4140C1609470DB0132EDFF074C8|35|30|185|55|14|white|#BF000000|Yeah, 10 million worth.<br><sleep><br><sleep>|そう、ン百億円の。|
+|VRAM|D000|BE0|C0D93C568C94E35882F9F6654A3D48038B702B4F84A44B288E19C571D95009DC|35|30|185|55|14|white|#BF000000|I think we should stop this<br>Ms. Mikami.<br><sleep><br><sleep>|やっぱりやめましょう、美神さん。|
+|VRAM|D000|BE0|8D97BB8B2D0B457853365BC7F62686FCC2B0A8988503539C8ECFEC14AA96A468|35|30|185|55|14|white|#BF000000|We've come this far, the<br>appearance doesn't matter.<br>We'll have a wish granted.<br><sleep><br><sleep>|ええい、ここまできたら姿はどおでもええ。<br>望みをかなえてもらうんじゃ。|
+|VRAM|D000|BE0|7EB7992FCCB2B771A8FD780F9CCD1C0373DCC3ED381DC3FFA61BE49A66A36E4C|35|30|185|55|14|white|#BF000000|Come on, let's go!|さあ、いくわよ。|

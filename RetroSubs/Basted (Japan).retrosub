@@ -4,17 +4,16 @@ author: eadmaster
 license: CC-BY-NC-SA
 version: 0.1
 repository: https://github.com/eadmaster/RetroSubs
-compatible_hashes: [ "" ]
+compatible_hashes: [ "491B2FDD", "4AAAEB79EEEC8DE73AAB9F75A5E6E405", "48ED6DAE466DDE20E505D4A06D93E5996AD6E380" ]
 ---
 
 <!-- vim: syntax=Markdown -->
 
 
-
 # Basted Fan Translation
 
 
-## Notes
+## Hacking Notes
 
 Text encoded in SJIS on disc track 2.
   

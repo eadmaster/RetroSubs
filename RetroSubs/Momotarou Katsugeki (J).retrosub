@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9
+version: 0.9.1
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -212,10 +212,10 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
-|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|60|55|130|30|black|#DFFFFFFF|To start let's practice<br>dodging!|
-|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|60|55|130|30|black|#DFFFFFFF|Dodge the falling poop!|
-|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|130|30|black|#DFFFFFFF|Press Button I to jump<br>and dodge it!|
-|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|130|30|black|#DFFFFFFF|Head right to the goal!<br>Ready? Start!|
+|VRAM1|D700|C00|913951DACF0CFE8AEFB43506E1F6123EF097343F45A3BA3DF0F79F30BCC985B5|60|55|130|30|black|#DFFFFFFF|To start let's practice<br>dodging!<br><sleep><br><sleep>|
+|VRAM1|D700|C00|9B2293ECF35D0AD5F22447D4EE2B1E559ADD4B614C66E2A5F4CAF475EACB63A5|60|55|130|30|black|#DFFFFFFF|Dodge the falling poop!<br><sleep><br><sleep>|
+|VRAM1|D700|C00|56F8F05DA6E099D5FE9711E2F2565BF9ECBE4D573EAF8BC7F985703843987C01|60|55|130|30|black|#DFFFFFFF|Press Button I to jump<br>and dodge it!<br><sleep><br><sleep>|
+|VRAM1|D700|C00|C436323BC240328965465C8179B87821C93E6E3A4C258E7C72C86CB510C5BBEB|60|55|130|30|black|#DFFFFFFF|Head right to the goal!<br>Ready? Start!<br><sleep><br><sleep>|
 
 
 ### Granpas
@@ -724,8 +724,8 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|----------|------|--------|----|---|
-|VRAM1|D700|C00|A3C24914D0BA3E7CC8CFA63A3535A8D05456B1F5611CB628304305E2068F3F19|60|55|130|30|12|black|#DFFFFFFF|Break the balloons and<br>Something good will<br>happen!|くすだまを みごと わってみせい<br>いいことが あるぞ! ウヒャヒャ|
-|VRAM1|D700|C00|CC87DC4D12F7C8D6D99F7029D8AD52C4436180ECC62BCA24B356179553C13BF6|60|55|130|30|12|black|#DFFFFFFF|Alright, get ready!<br>Start!| さあ よういはいいか!<br>スタートち"ゃ!|
+|VRAM1|D700|C00|A3C24914D0BA3E7CC8CFA63A3535A8D05456B1F5611CB628304305E2068F3F19|60|55|130|30|12|black|#DFFFFFFF|Break the balloons and<br>Something good will<br>happen!<br><sleep><br><sleep>|くすだまを みごと わってみせい<br>いいことが あるぞ! ウヒャヒャ|
+|VRAM1|D700|C00|CC87DC4D12F7C8D6D99F7029D8AD52C4436180ECC62BCA24B356179553C13BF6|60|55|130|30|12|black|#DFFFFFFF|Alright, get ready!<br>Start!<br><sleep><br><sleep>| さあ よういはいいか!<br>スタートち"ゃ!|
 
 
 ### Hermit 4
