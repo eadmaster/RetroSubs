@@ -259,8 +259,8 @@ function get_new_table_line()
         --print(newLine)
 
         -- clean current text
-        fields[12] = " "  -- text
-        fields[13] = " "  -- jap_text
+        fields[12] = ""  -- text
+        fields[13] = ""  -- jap_text
         
         gui_update_from_model()
 
