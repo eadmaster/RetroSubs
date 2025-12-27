@@ -1,8 +1,8 @@
 ---
 format: RetroSubs Version 2.0
-author: [Filler, KingMike, eadmaster]
+author: [Filler, KingMike, Gun_Hazard, eadmaster]
 license: CC-BY-NC-SA
-version: 0.4
+version: 0.6
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "444C9962", "388CFFCEBCD3155CAE2F2C5CEC1F92C1", "46853D2212D2F55DDC27224F943AF14D4353EEEA" ]
 ---
@@ -10,7 +10,7 @@ compatible_hashes: [ "444C9962", "388CFFCEBCD3155CAE2F2C5CEC1F92C1", "46853D2212
 <!-- vim: syntax=Markdown -->
 
 
-# Ghost Sweeper Mikami English fan translation
+# Ghost Sweeper Mikami English Translation
 
 
 ## Translation Notes
@@ -18,12 +18,18 @@ compatible_hashes: [ "444C9962", "388CFFCEBCD3155CAE2F2C5CEC1F92C1", "46853D2212
 Original script dumped and translated by KingMike and Filler:
 https://datacrystal.tcrf.net/wiki/Ghost_Sweeper_Mikami:_Joreishi_wa_Nice_Body
 
+Missing lines provided by Gun_Hazard
+https://www.romhacking.net/forum/index.php?topic=13218.0
+
 Minor changes made by eadmaster for better readability.
 
-Missing:
+References:
 
- - In game dialogs
- - Ending cutscene
+ - https://gs-mikami.fandom.com/wiki/Ghost_Sweeper_Mikami:_Joreishi_ha_Nice_Body
+ - http://www.hardcoregaming101.net/ghost-sweeper-mikami/
+ - https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/faqs/36444
+
+TODO: easy mode ending
 
 
 ## Hacking Notes
@@ -37,34 +43,55 @@ Hashed memory regions:
 Passwords to test all the stages: 
 https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 
+Cheats:
+https://gamehacking.org/game/43094
+
+
+## Title screen
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|4000|4BE0|E1D0DC86F142B578502E06D0378942B2BDA813F51010FD7DECA2962B7F6C3276|2|40|135|80|14|#E7595A|#BF000000|Ghost Sweeper<br>GS Mikami:<br>The Exorcist<br>With A Nice Body<br>Eng Translation v0.6|ゴーストスイーパー GS美神 除霊師はナイスバディ|
+
+TODO: copyright line: |VRAM|4000|4BE0|E1D0DC86F142B578502E06D0378942B2BDA813F51010FD7DECA2962B7F6C3276|25|180|205|60|12|white|#DF000000|© Takashi Shiina / Shogakukan, Asahi-to, Toei Video<br>© Banalex 1993|©椎名高志/小学館・旭通・東映動画<br>©バナレックス 1993|
+
 
 ## Stage Titles
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM|C200|200|A02D20BA2138CFFC7B82DA5B0FF8761A1B6CE53673545E71FE4BB9E31FCAD9CD|30|100|195|60|16|white|black|  The 24hr Train to Hell|24時発地獄行き幽霊列車|
+|VRAM|C200|200|A02D20BA2138CFFC7B82DA5B0FF8761A1B6CE53673545E71FE4BB9E31FCAD9CD|30|100|195|60|16|white|black|     The 24hr Train to Hell|24時発地獄行き幽霊列車|
 |VRAM|C200|200|404E36046A7512AE756E201027FFBC53AD8CDF225C70E5ADFEBB1496FAAFF219|50|100|195|60|18|white|black|House is Haunted? | 洋館は妖館？|
 |VRAM|C200|200|19EEB77994A130544407A60590550D50844CCFDE8DAAC4BF4E1C09D7D855FB65|30|100|195|60|16|white|black|Heavenly Fantastic Voyage|極楽ミクロ決死圏|
 |VRAM|C200|200|6C8C6CBD65DC93F669254F197468A68D917ED6E23B0896BAEC10208246C710C5|30|100|195|60|16|white|black|Conservatory Full of Danger|巨大温室は危険がいっぱい|
 |VRAM|C200|200|C6F9845202E6FA6B37690F154D34CA59456FE2BA91891FCD79FE1D0B4E4918B7|30|100|195|60|16|white|black|Operation Heavenly Air Force |極楽空軍大作戦|
 |VRAM|C200|200|0546712A21D036E115D719BA319E4B82F5F125AACA8D8D8055FEA36C9B776446|50|100|195|60|16|white|black|Something Came Over| なにかが道をやってきた|
-|VRAM|C200|200|F263575DE0EB73EE1F057396F077BC0CF7610EEDCA52510864BFD203B79DBDD2|60|100|195|60|16|white|black|Dream on Dream|ドリーム　オン　ドリーム|
+|VRAM|C200|200|F263575DE0EB73EE1F057396F077BC0CF7610EEDCA52510864BFD203B79DBDD2|60|100|195|60|16|white|black|  Dream on Dream|ドリーム　オン　ドリーム|
 
 
-## Dialogues
-
-
-### Stage 1 / Opening
+## Opening
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM|4000|4BE0|E3334AEE5448BAE0CE43748BBBC52367F291E60C1BF3F0725B5B9713123E9186|25|170|205|40|12|white|black|One day in Mikami's office...| ある日の美神の事務所|
 |VRAM|4000|4BE0|37D09A3C9BD5777E0BB22A43F862209903035F65C3271123A2BDF4DF2FE2B4EC|25|170|205|40|12|white|black|"Excuse me.<br> Special delivery."| すいませーん。<br>お届け物でーす。|
-|VRAM|4000|4BE0|D5976C568023D2BBE2A46D470EC8CBD1C5D32A5CA30746B8D4E7FC384822E63E|25|155|205|60|12|white|black|Okinu: "Is it a present?"<br>Mikami: "Ooo, who's it from...<br> Yakuchindou!?"<br>Please accept this gift for all of your<br> help.| おキヌ　ぷれせんと、ですか？<br>美神　なになに。。。厄珍堂！？<br>日頃お世話になってるあなたに<br> 感謝をこめてプレセント。|
-|VRAM|4000|4BE0|58177C568AAD4A1E9CED294D9FCAE2A9533766263D1A281FBD3F63A6AC68FFC6|25|155|205|60|12|white|black|You've won our grand prize drawing.<br>We look forward to your patronage.<br> <br>              Shopkeeper Yakuchin| 抽選の結果あなたか一等に<br> 当選いたしました。<br>またのごひいきを<br>店主　厄珍|
-|VRAM|4000|4BE0|88FB485439A19446B24987BADA834653A7BDC17A06F1FB19EE811A72395A6867|25|155|205|60|12|white|black|Yokoshima: "It's a shabby figurine."<br>Mikami: "T-The legendary...<br>   Aegis Goddess statue?!<br>   They say if you adorn it with 7 gems <br>   it will grant you a wish."| ＰＳプレセント品はもちろんタダです<br>横島　　しけた置物ですね。<br> 横島　　しけた置物ですね<br> アイギスの女神像！？<br>７つの宝石を集めると<br>望みをかなえてくれると<br>いわれている。|
-|VRAM|4000|4BE0|422BD8E86F60BE9E9BEA5B62F9024BD0BA55F4C81A0EA9DC0F60C99545F4544C|25|155|205|60|12|white|black|Mikami: "The current market value<br>   for the set is 10 million."<br>Yokoshima: "Grant a wish?"<br>Okinu: "That's amazing."|美神　宝石そろえりゃ、<br>時価ン百億円。<br>横島　望みをかなえてくれる？<br>おキヌ　すこいですね|
-|VRAM|4000|4BE0|2830AB25F7105CA9F8F3FA5EC0C6922DEA96F382EE6DDF8D52BFBCF476291C3C|25|155|205|60|12|white|black|Yokoshima: "All set to go Ms.Mikami!"<br>Mikami: "Without the gems that statue<br>   is no better than a paperweight!<br>Come on, let's go gather those gems!"| 横島　準備OKです、美神さん<br>美神　宝石がそろわなけりゃ、像も<br>漬物石と同じ！<br>さあ、宝石を集めに|
+|VRAM|4000|4BE0|D5976C568023D2BBE2A46D470EC8CBD1C5D32A5CA30746B8D4E7FC384822E63E|25|155|205|62|12|white|black|Okinu: "Is it a present?"<br>Mikami: "Ooo, who's it from...<br>   Magic Shop Yakuchindou!?"<br>   "Please accept this gift for all of<br>   your help.| おキヌ　ぷれせんと、ですか？<br>美神　なになに。。。厄珍堂！？<br>日頃お世話になってるあなたに<br> 感謝をこめてプレセント。|
+|VRAM|4000|4BE0|58177C568AAD4A1E9CED294D9FCAE2A9533766263D1A281FBD3F63A6AC68FFC6|25|155|205|62|12|white|black|You've won our grand prize drawing.<br>We look forward to your patronage.<br>                  Shopkeeper Yakuchin<br>P.S. Presents are of course free of<br>charge."| 抽選の結果あなたか一等に<br> 当選いたしました。<br>またのごひいきを<br>店主　厄珍|
+|VRAM|4000|4BE0|88FB485439A19446B24987BADA834653A7BDC17A06F1FB19EE811A72395A6867|25|155|205|62|12|white|black|Yokoshima: "It's a shabby figurine."<br>Mikami: "T-The legendary...<br>   Aegis Goddess statue?!<br>   They say if you adorn it with 7 gems <br>   it will grant you a wish."| ＰＳプレセント品はもちろんタダです<br>横島　　しけた置物ですね。<br> 横島　　しけた置物ですね<br> アイギスの女神像！？<br>７つの宝石を集めると<br>望みをかなえてくれると<br>いわれている。|
+|VRAM|4000|4BE0|422BD8E86F60BE9E9BEA5B62F9024BD0BA55F4C81A0EA9DC0F60C99545F4544C|25|155|205|62|12|white|black|Mikami: "The current market value<br>   for the set is 10 million."<br>Yokoshima: "Grant a wish?"<br>Okinu: "That's amazing."|美神　宝石そろえりゃ、<br>時価ン百億円。<br>横島　望みをかなえてくれる？<br>おキヌ　すこいですね|
+|VRAM|4000|4BE0|2830AB25F7105CA9F8F3FA5EC0C6922DEA96F382EE6DDF8D52BFBCF476291C3C|25|155|205|62|12|white|black|Yokoshima: "All set to go Ms.Mikami!"<br>Mikami: "Without the gems that statue<br>   is no better than a paperweight!<br>   Come on, let's go gather those<br>   gems!"| 横島　準備OKです、美神さん<br>美神　宝石がそろわなけりゃ、像も<br>漬物石と同じ！<br>さあ、宝石を集めに|
+
+
+## Dialogues
+
+### Stage 1
+
+#### Boss
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|D000|BE0|C9B5AD82E37351BDB915C72557CD391685B79054E306198BBD4047BBA695E94C|35|30|185|55|14|white|#BF000000|You can take the train all<br>you want, but I think you've<br>gone a little too far.<br><sleep><br><sleep>|列車に乗るのは勝手だけど、<br>ちょっと悪さが過ぎたようね。|
+|VRAM|D000|BE0|C2B404825726343AF8562DA09AE0E3681125F731C4C7F15A24E50575B1516F45|35|30|185|55|14|white|#BF000000|I, Ghost Sweeper Reiko<br>Mikami, will send you to<br>heaven!<br><sleep><br><sleep><clear>|このゴーストスィーパー美神令子が<br>極楽へ、いかせてあげるわ!|
 
 
 ### Stage 2
@@ -74,10 +101,10 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 |VRAM|D000|BE0|D4223E90B4C06467E235829C6D8394BD4FFE967918A69BC4D44B75BBBB8E047D|35|30|185|55|14|white|#BF000000|Huh, the statue changed<br>appearance.<br><sleep><br><sleep>|へぇ～、形が変わるんですね。|
 |VRAM|D000|BE0|4B2CE809EE307680F3503861142CCD0BD985950DFE29E7176D1646346C893C65|35|30|185|55|14|white|#BF000000|It transforms as each seal<br>is lifted.<br><sleep><br><sleep>| 封印を解くごこに変化するわよ。|
 |VRAM|D000|BE0|12936B58104C28131E3D5E86738E3B91DD85D5E89556251DDD0A38D4D0D4DA4C|35|30|185|55|14|white|#BF000000|Piece of cake, isn't that right<br>Ms. Mikami?<br>Let's keep up this pace!<br>What's next?<br><sleep><br><sleep>|いやー楽勝スね、美神さん。<br>この調子でどんどん行くきましょ、<br>次は何ですか？|
-|VRAM|D000|BE0|4F817DCE09CB0FED70C3334E081ECB3AE9F5078431A000F140592699BD466922|35|30|185|55|14|white|#BF000000|N prefecture's S area's<br>hot spring hotel's...<br><sleep><br><sleep>| Ｎ県　Ｓ沢温泉ホテル|
+|VRAM|D000|BE0|4F817DCE09CB0FED70C3334E081ECB3AE9F5078431A000F140592699BD466922|35|30|185|55|14|white|#BF000000|The Northern Serizawa<br>Hot Springs Hotel...<br><sleep><br><sleep>| Ｎ県　Ｓ沢温泉ホテル。。。|
 |VRAM|D000|BE0|585D551B898E7874D2CFF8D3CF64E00CDCF287E70C46E4D4E8C91FD019532CCF|35|30|185|55|14|white|#BF000000|A... Hot spring!<br><sleep><br><sleep>| お。。。温泉スか。|
 |VRAM|D000|BE0|D5FA4DBDEC1BFD40DB35A90BB314FEBD2FE032EC0CEA0656FA06345916314C78|35|30|185|55|14|white|#BF000000|Come on, let's go!<br><sleep><br><sleep>| さあ、行きましょう。|
-|VRAM|D000|BE0|9ED5C88747750CF1C010E251C9F457DE6FB330651BA31DD6FA83ACE94482A358|35|30|185|55|14|white|#BF000000|... It's an annex.<br><sleep><br><sleep>| 。。。の別館よ。|
+|VRAM|D000|BE0|9ED5C88747750CF1C010E251C9F457DE6FB330651BA31DD6FA83ACE94482A358|35|30|185|55|14|white|#BF000000|...It's an annex.<br><sleep><br><sleep>| 。。。の別館よ。|
 
 
 ### Stage 3
@@ -97,6 +124,18 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 |VRAM|D000|BE0|4EED5004906B897D5D4C79C13F23DE88BAA8E36AEB7B6F29A96843DD93480195|35|30|185|55|14|white|#BF000000|So anyway,<br>that's what I meant to tell<br>you earlier.<br><sleep><br><sleep>|つまり、<br>さっき私が言いたかったのはアレの事よ。|
 |VRAM|D000|BE0|C5B9C9E9655C49F02D2BEA212C805C46DE22FE50BC1D291D4FBDBE09110D8FF6|35|30|185|55|14|white|#BF000000|That gave me quite a start.<br>You shrunk in the blink of an<br>eye.<br><sleep><br><sleep>| 驚きました。<br>突然小さくなるんですもの。|
 |VRAM|D000|BE0|415A7DEC8190824AC039F768A3D69CF4F00A3CC16520C6C007CDDD16222DACFC|35|30|185|55|14|white|#BF000000|The hardest part is yet to<br>come.<br><sleep><br><sleep>|まだまだ、大変なにはこれからよ。|
+
+
+#### Boss
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|D000|BE0|1916DFD462F7F3A9F0056D7F1324B8A97FCEF2636EA3A9CF6FC537B99ECA6376|35|30|185|55|14|white|#BF000000|Okinu, what’s wrong?<br><sleep><br><sleep>|おキヌちゃん、どうしたの。|
+|VRAM|D000|BE0|C24BF2748D911D7B0B04DB666688EB10B5AE4953BDF7DE16A252168F6EFEDEA8|35|30|185|55|14|white|#BF000000|Ms. Mikami, the spirits here<br>are not evil.<br><sleep><br><sleep>|美神さん、ここの霊は悪くないんです。|
+|VRAM|D000|BE0|8C28D60B28856AB6BB7913E2B18F02CC00EFC473182B8D3B7B9253535346FFEC|35|30|185|55|14|white|#BF000000|Ms. Mikami, the spirits here<br>are not evil. They have been<br>distorted by the gem…<br><sleep><br><sleep>|美神さん、ここの霊は悪くないんです。<br>ここの霊気が歪んでいて、それで･･････。|
+|VRAM|D000|BE0|2DB252DD95C353837A4702E99725895B5A7EF9269CBDCDFC7C5ABFB0C3EFC63B|35|30|185|55|14|white|#BF000000|It’s okay, I know.<br>Now, stay back, it’s not safe.<br><sleep><br><sleep>|大丈夫よ、解っているわ。<br>さあ、危ないから後ろに下がってなさい。|
+|VRAM|D000|BE0|F59EB8D23C1D1484962C3C5A3A33F18E91E5D2A235530BEE8B18ADDC0BFFA965|35|30|185|55|14|white|#BF000000|It’s sad you were twisted<br>like this, but you’ve<br>gone a little too far.<br><sleep><br><sleep>|歪んでしまったのは可愛そうだけど、 <br>ちょっと悪さが過ぎたようね。|
+|VRAM|D000|BE0|C92D3AD658CACE7FF584188C21656F0DFB6006B72E4BB10B23E9A86550720BD7|35|30|185|55|14|white|#BF000000|I, Ghost Sweeper Reiko<br>Mikami, will send you to<br>heaven!<br><sleep><br><sleep><clear>|このゴーストスィーパー美神令子が<br>極楽へ、いかせてあげるわ!|
 
 
 ### Stage 5
@@ -141,6 +180,19 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 |VRAM|D000|BE0|9DA9F4360B8F67CAEFAA97F2B0DD2D10A184E51C6916B24D6555AB60CA3EE8C1|35|30|185|55|14|white|#BF000000|Okay, last stage.<br>To the dream world!<br><sleep><br><sleep>|さあラストステージ、夢の世界へ！！|
 
 
+#### Boss
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|D000|BE0|A80670400459A32535175D973EBF370ED3EB1AE517AA5D2527EA291D9BB9A132|35|30|185|55|14|white|#BF000000|It's okay Yokoshima.<br><sleep><br><sleep>|横島くん、大丈夫。|
+|VRAM|D000|BE0|95C394C7CC62F75C1CA03E0FDF4FB2E0E31910C8275307535FA0FDB96A50EE12|35|30|185|55|14|white|#BF000000|Ms. Mikami?<br>The real Ms. Mikami right?<br>That was mean.<br>Entering my dream like that.<br><sleep><br><sleep>|美神さん。本物の美神さんスね。<br>ひどいスよ。<br>オレの夢にあんなの呼び込むなんて。　|
+|VRAM|D000|BE0|B2D59B0C84E216513843F731B8E8C155752EF339FEBD727C803244D5DA06F4D8|35|30|185|55|14|white|#BF000000|I'll pay you a proper bonus.<br><sleep><br><sleep>|ちゃんとボーナスあげるから。|
+|VRAM|D000|BE0|C25C72D5DC9261F8D931140BCEB122D8252D448A84ACA6F227D0978F4AF1CADA|35|30|185|55|14|white|#BF000000|A bonus won't heal my<br>heart.<br><sleep><br><sleep>|ボーナスなんかじゃぁ僕の心は<br>いやされない。|
+|VRAM|D000|BE0|561011E2BF6D927F40218E8881A505CCD9B9DFE10EB08FD3E51B4CBC53EAE1C3|35|30|185|55|14|white|#BF000000|What I need right now is<br>your love Ms. Mikami!<br><sleep><br><sleep>|今の僕に必要なには美神さんの<br>愛だけですぅ！|
+|VRAM|D000|BE0|3B447540BB39D3D4056D31AEB82DFB7954CB36F94F8E6BCCB7804E77C1538C27|35|30|185|55|14|white|#BF000000|I don't really care since it's<br>Yokoshima's dream but,<br>you've gone a bit overboard.<br><sleep><br><sleep>|横島くんの夢だからまあ良いけど、<br>ちょっと悪さが過ぎたようね。|
+|VRAM|D000|BE0|0F7061C2261CD7EEE122A517997918F7D197C026F3FEE63C9B600E31B4F411C9|35|30|185|55|14|white|#BF000000|I, Reiko Mikami will send<br>you to heaven!<br><sleep><br><sleep><clear>|このゴーストスィーパー美神令子が<br>極楽は、いかせてあげるわ！|
+
+
 ### Stage 8
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
@@ -149,4 +201,14 @@ https://gamefaqs.gamespot.com/snes/570973-gs-mikami-joreishi-wa-nice-body/cheats
 |VRAM|D000|BE0|91BDE46A5DAB7A3D0493D8AE5EF87E1FA590F4140C1609470DB0132EDFF074C8|35|30|185|55|14|white|#BF000000|Yeah, 10 million worth.<br><sleep><br><sleep>|そう、ン百億円の。|
 |VRAM|D000|BE0|C0D93C568C94E35882F9F6654A3D48038B702B4F84A44B288E19C571D95009DC|35|30|185|55|14|white|#BF000000|I think we should stop this<br>Ms. Mikami.<br><sleep><br><sleep>|やっぱりやめましょう、美神さん。|
 |VRAM|D000|BE0|8D97BB8B2D0B457853365BC7F62686FCC2B0A8988503539C8ECFEC14AA96A468|35|30|185|55|14|white|#BF000000|We've come this far, the<br>appearance doesn't matter.<br>We'll have a wish granted.<br><sleep><br><sleep>|ええい、ここまできたら姿はどおでもええ。<br>望みをかなえてもらうんじゃ。|
-|VRAM|D000|BE0|7EB7992FCCB2B771A8FD780F9CCD1C0373DCC3ED381DC3FFA61BE49A66A36E4C|35|30|185|55|14|white|#BF000000|Come on, let's go!|さあ、いくわよ。|
+|VRAM|D000|BE0|7EB7992FCCB2B771A8FD780F9CCD1C0373DCC3ED381DC3FFA61BE49A66A36E4C|35|30|185|55|14|white|#BF000000|Come on, let's go!<br><sleep><br><sleep><br><clear>|さあ、いくわよ。|
+
+
+## Ending
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM|4000|4BE0|4922549FE16D58DF9DB30B6F51BCEB9BA4E05B097B291D47AB0BB713A69D48B7|25|170|205|40|12|white|black|Yakuchin: “That’s right. You see, we<br>   were just getting rid of old stock.<br>   So, does that help you?”|厄珍 「そうね。アノね。<br>在庫処分とも言うあるね。<br>とうある。アル、役に立ってるか?|
+|VRAM|4000|4BE0|23AC380230E87EA5A4F404E0184D4CCF268C5CD131B0211BBDCBA74903BB9B8B|25|170|205|40|12|white|black|Mikami: “Yeah, thanks!!”|美神 「おかげさまで!!」|
+|VRAM|4000|4BE0|476571A55E8B4BF39D9DA5C6635F05AF340C0A5B079297BFABC368F7D62BD5C9|25|155|205|62|12|white|black|Mikami: “Whew... honestly, what a<br>   pain! I never want to go through<br>   something like that again...<br>   Oh, right, Okinu?<br>   When’s our next job?”|美神 「ふう、まったく…<br>さんざいだった。<br>さんざんだったわ。<br>こんなの二度とゴメンだわ。<br>あ、そうそう<br>おキヌちゃん?<br>次の仕事はいつ? 」|
+|VRAM|4000|4BE0|3E5FA48377B1678AAD61D40E67CBCF1B8875A01A197F50F4072FBC42B619A4B7|25|155|205|62|12|white|black|Okinu: “Okaaay... I think it’s starting<br>   this afternoon...”<br>Mikami: “Whaaat?! Yokoshima!<br>   Hurry up now, now!!”|おキヌ「は~い。たしか<br>今日の昼からで~す。」<br>美神 「えぇ~~!!<br>横島くん。<br>早くしたくてしたく!!」|
