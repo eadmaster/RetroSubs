@@ -1,0 +1,53 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "29258236", "B434D5DB56108F0A69C03B9C4CB376B2", "37C0DD911029C0670149EEDCFEB3CCE1E2E4A6DB" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+# Langrisser III English Translation
+
+
+## Notes
+
+Jap script: 
+https://github.com/igifinder/lang3/blob/master/scripts/jp/
+
+TODO: options screen
+
+
+## Dialogues
+
+### Story intro
+
+Jap script from `scen1.sjs`
+
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VDP1 Ram|62A80|1500|BD2EF897BFABF24B6A55E4EA7986B5186153ACC4B3107B5F0E91C46633E4AD68|30|130|280|90|14|white|#dd17174d|...O youth who aspires to be a knight.<br>...O youth who weaves the threads of<br>history.<br>Awaken.|‥‥騎士を志す若者よ。<br>‥‥歴史を紡ぐ若者よ。<br>目を覚ましなさい。|
+|VDP1 Ram|62A80|1500|87024342F01C896CAFB1ABD38C6F1FAA2F6B300AABDA94FB3EBF7530A204F1D9|30|130|280|90|14|white|#dd17174d|My name is Lushiris.<br>On the surface world, I am known as the<br>Goddess of Light.|私の名はルシリス。<br>地上では、光の女神と呼ばれています。|
+|VDP1 Ram|62A80|1500|3248FC883331C0D4C45F5CEE6B1D38C91C3CF9E72A812030B757813C29F7B1FB|30|130|280|90|14|white|#dd17174d|The Kingdom of Larcas, which I protect,<br>is a prosperous land that has enjoyed<br>peace for many years.|私が守護するラーカス王国は、永年に渡る平和を守ってきた、豊かなる繁栄の国です。|
+|VDP1 Ram|62A80|1500|34DF0AE65BFF10A19F16C2358F46AA8FB400FE504F025CB8555D92FC4C7CD30F|30|130|280|90|14|white|#dd17174d|However, a dark shadow now looms over<br>Larcas.|ですが、そのラーカスに暗き影の暗示が出ています。|
+|VDP1 Ram|62A80|1500|CA051A344CDAE120F5601BD77227EF85A5FA6F82F2585DC3CA1988752C38FA0F|30|130|280|90|14|white|#dd17174d|Soon, the era of peace will draw to a close,<br>and a time of upheaval shall begin.|まもなく平和の歴史は幕を閉じ、動乱の時代が始まるでしょう。|
+|VDP1 Ram|62A80|1500|ABD674CC8BFDC9EB31298164365B423EA517C5EAA367A3CF0608EA3967B899B8|30|130|280|90|14|white|#dd17174d|But it is not my duty to protect the world<br>of men, it is yours.<br>I can do nothing more than offer my<br>guidance.|しかし人の世を守るのは私ではなく、あなた達の役目です。<br>私はその手助けをすることしかできません。|
+|VDP1 Ram|62A80|1500|853F3CC9C3D90BF73F3CADEFD6FAA781CB3FB742B6531113FEB0717896DECCB4|30|130|280|90|14|white|#dd17174d|If you truly desire peace, your conviction<br>will move the hearts of many and restore<br>peace to this world once more.|あなたが平和を望むなら、その思いは人々の心を動かし、再びこの世に平和をもたらすでしょう。|
+|VDP1 Ram|62A80|1500|C451D9E2DFDB4F921D1E8CE9236946DABE92F52001CB980644BA07B8B3EDCA70|30|130|280|90|14|white|#dd17174d|To test whether you are truly capable of<br>saving this world, I shall now ask you a<br>few questions.|あなたが本当にこの世界を救えるかどうか試すため、これからいくつかの質問をします。|
+|VDP1 Ram|62A80|1500|1536FA7BFCDA846701CA4F039377CBEB746D86076FCD48AFD4E944E46A237E49|30|130|280|90|14|white|#dd17174d|First, please tell me your name.|まずは、あなたの名前を教えて下さい。|
+|VDP1 Ram|62A80|1500|8C8E718D8611502B302F72D2BF579EDA6582CE8448E2E61E571BDBBAB07202F1|30|130|280|90|14|white|#dd17174d|Now, please answer my questions.|それでは私の質問に答えて下さい。|
+|VDP1 Ram|62A80|1500|5F018BA9C2FC256536B28411804AB497DFBF63F8F2363BCD27E807F9196A6FE4|30|130|280|90|14|white|#dd17174d|What do you believe is most important for<br>creating an invincible army?|無敵の部隊を作るために、あなたが最も重要だと思うものは何ですか？|
+|VDP1 Ram|62A80|1500|78340F1275B329DD583D0B92B9E003BCE0A5EBBA901B54248E55BDFA9BBD5116|30|130|280|90|14|white|#dd17174d|Leadership<br> <br>Mobility<br> <br>Destructive power|統率力<br>機動力<br>破壊力|
+|VDP1 Ram|62A80|1500|8FC3981DA4302E82E893DE678145755051BFE1898344ECE072A97B9B63DA3CDD|30|130|280|90|14|white|#dd17174d|What do you believe is most important for<br>creating an invincible army?|無敵の部隊を作るために、あなたが最も重要だと思うものは何ですか？|
+|VDP1 Ram|62A80|1500|6F0F3B748E89B3EF83A54C176CC1FF119338C9F9D042987359656070E8CF837A|30|130|280|90|14|white|#dd17174d|What is required to become a hero?|英雄になるために必要なものは何ですか？|
+|VDP1 Ram|62A80|1500|F57165BBDC6729F0B461C52774E2B827AA36199AD5A2614522C33ED0B4B83EE9|30|130|280|90|14|white|#dd17174d|Courage<br> <br>Charisma<br> <br>Indomitable spirit|勇気<br>カリスマ<br>不屈の精神|
+|VDP1 Ram|62A80|1500|1709ED1DC0DD0669654EC5AFD2A0A63CC458ACC5DFF75265F6F87F2413B9C938|30|130|280|90|14|white|#dd17174d|What is required to become a hero?|英雄になるために必要なものは何ですか？|
+|VDP1 Ram|62A80|1500|8ABD837D704E3A4B22D539704C10C6795470B9E9609F237E7E4A733857D0A1B1|30|130|280|90|14|white|#dd17174d|Which of the following do you prefer?|次のうちで、あなたの好きなものはどれですか？|
+|VDP1 Ram|62A80|1500|F5AE6A71653DD0252E4F5CB0EA8BA638A49280BE0A6955DAD2BEA9C1B506110A|30|130|280|90|14|white|#dd17174d|The calm before the storm<br> <br>A sea-scented breeze<br> <br>The autumn wind through dancing leaves|嵐の前の静寂<br>海の香りのする潮風<br>木の葉の舞う秋の風|
+
+
+TODO: name entry screen

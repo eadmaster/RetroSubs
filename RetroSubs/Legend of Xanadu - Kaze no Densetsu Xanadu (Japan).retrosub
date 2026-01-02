@@ -1,0 +1,44 @@
+---
+format: RetroSubs Version 2.0
+author: eadmaster
+license: CC-BY-NC-SA
+version: 0.1
+repository: https://github.com/eadmaster/RetroSubs
+compatible_hashes: [ "DEA17C4E", "6EF9080DD8B2A78F82DED7A78DFCFFA1", "1091B393DB45CFDE9A3A870F78FADF90EC20098C" ]
+---
+
+<!-- vim: syntax=Markdown -->
+
+
+# Legend of Xanadu English Translation
+
+
+## Notes
+
+References:
+
+ - https://gamefaqs.gamespot.com/turbocd/916073-legend-of-xanadu-kaze-no-densetsu-xanadu/faqs/79381
+ - https://www.tg-16.com/Our_Portfolio.htm
+ 
+
+## Main menu
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|E400|A80|59CF66AD8C12590FA15F8AF7676B18936ABDC5C1F19C14D136A60461ABC58FD5|78|31|230|60|16|white|#DF4891ff|PROLOGUE<br>BEGIN<br>CONTINUE|プロローグ<br>じめから<br>つづきから|
+|VRAM1|E400|A80|5DA6DA23C03CC2E06F288C0362BA77C6FCC42F71409F92AC3C659BC1970CBA6C|5|165|230|50|14|white|#DF000000|BLUE MEMORY<br> <br>Not saved||
+|VRAM1|E400|A80|8355199A30D7ABCAD716CDE0DCD6C4149599E0A06BDDCE34DF43ACB186547B98|5|165|230|50|14|white|#DF000000|RED MEMORY<br> <br>Not saved||
+|VRAM1|E400|A80|3DCEA1C9D920573213C2383634DD0A1074E3EC754B76179221F38F1D790A346C|5|165|230|50|14|white|#DF000000|GREEN MEMORY<br> <br>Not saved||
+
+;NO? |VRAM1|2000|B70|511B3CD7F33F7E22F688A4D4D55D109E5999699732F29F75E5CA11E06B0310AE|78|31|230|60|16|white|#DF4891ff|Prologue<br>Begin<br>Continue|プロローグ<br>じめから<br>つづきから|
+
+
+## Dialogues
+
+|region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
+|------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
+|VRAM1|2000|B70|32B7C6E6F4E178E3342569E83D6B0A024C79AF9C89FEB3AB7FC380442E65598B|5|154|230|55|14|white|#DF000000|[Bolda guy]<br>Whoa, it's a ship!!<br>The merchants are here!!|[ボルダのダンバー]<br>うおーっ、船だっ!!<br>商人が来たーッ!!|
+|VRAM1|2000|B70|35E6ECBE37F292FFB08895DCB576538077FAADCA76B14AE0EB610347F411B381|5|154|230|55|14|white|#DF000000|[Casta guy]<br>I won't lose to the likes of Bolda<br>village! We're going to trade first!!|[カスタのガス]<br>ポルダ村なんかに負けるか!<br>こっちが先に取り引きするぞっ!!|
+|VRAM1|2000|B70|9F9FAFFE07037A3523B9CD9246E3F30DCB67C6A133D35FFD99593553FD51286F|5|154|230|55|14|white|#DF000000|[Casta guy]<br>Ah...<br>There it goes...|[カスタのガス]<br>あ〜あ・・・<br>行っちまった・・・|
+|VRAM1|2000|B70|A7DCC902FD9228016058E133C343448ACA53B039C19A0DB4762F1E35A43DE4CC|5|154|230|55|14|white|#DF000000|[Bolda guy]<br>Wh-wh-wh-what's with this guy?!<br>He's covered in blood!<br>I-Is he a murderer?!|[ボルダのダンバー]<br>うな、な、な、なんだ、こいつ!<br>血まみれじゃねぇか!<br>ひ、人殺しか?|
+|VRAM1|2000|B70|B5AA543EE4DE194181A4788D913D68C833670522018BF93B3DE0BF2A1A87D860|5|154|230|55|14|white|#DF000000|[Casta guy]<br>A murderer!?<br>...AAAh!!|[カスタのガス]<br>人殺し!?<br>・・・ひぇッ!!|

@@ -281,8 +281,21 @@ function add_table_line()
     newLine = get_new_table_line()
     
     -- append to file
-    local file = io.open(filename, "a")
-    file:write("\n" .. newLine)
+    local file = io.open(filename, "r+")  -- read + append
+    
+    file:seek("end", -2)
+    last_chars = file:read(2)
+    
+    file:seek("end")
+    if last_chars:sub(-1) ~= "\n" then
+        -- missing newline
+        file:write("\n")
+    elseif last_chars:sub(1, 1) == "\n" then
+        -- last two chars are "\n\n", overwrite one
+        file:seek("end", -1)
+    end
+    
+    file:write(newLine)
     file:close()
 end
 
