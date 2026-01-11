@@ -3,8 +3,11 @@
 0C=<pause>\n
 
 B0=ー
+BA=\n
 A4=、
 A5=・
+
+// TODO: all remaining symbols and kanas
 
 20= 
 21=!
@@ -4053,7 +4056,7 @@ AF=ッ
 9AFA=奧
 9AFB=奬
 9AFC=奩
-9B40=奸
+/9B40=奸
 9B41=妁
 9B42=妝
 9B43=佞

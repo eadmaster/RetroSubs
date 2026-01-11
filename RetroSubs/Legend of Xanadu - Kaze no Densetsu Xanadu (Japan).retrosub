@@ -15,6 +15,8 @@ compatible_hashes: [ "DEA17C4E", "6EF9080DD8B2A78F82DED7A78DFCFFA1", "1091B393DB
 
 ## Notes
 
+The kanjis are encoded in SJIS, while the kanas and symbols are using a custom 1-byte encoding (see `Legend of Xanadu - Kaze no Densetsu Xanadu (Japan).tbl`).
+
 References:
 
  - https://gamefaqs.gamespot.com/turbocd/916073-legend-of-xanadu-kaze-no-densetsu-xanadu/faqs/79381

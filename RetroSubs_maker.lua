@@ -17,10 +17,10 @@
 -- script for quick retrosubs creation
 
 -- user settings:
---local SCREENSHOT_HOTKEY = "S"
-local SCREENSHOT_BASE_PATH = "/tmp/r/"
-local OCR_CMD="easyocr --lang ja --detail 0 --paragraph 1 --file "
---local OCR_CMD="tesseract "shot.png" stdout -l jpn_vert+jpn+eng --psm 5 --oem 1"
+local TRIGGER_HOTKEY = "P1 B1"  -- player 1 button 1
+--local TRIGGER_HOTKEY = "P1 I"  -- player 1 button 1 (with movies)
+local SCREENSHOT_BASE_PATH = "/tmp/"
+local OCR_CMD="meikiocr "  -- https://github.com/rtr46/meikiocr/
 
 
 function get_memory_hash(region, start, len)
@@ -88,6 +88,8 @@ function gui_destroyall()
 end
 
 
+autotrigger_checkbox = nil
+
 function gui_init()
         local xform, yform, delta_x, delta_y = 0, 4, 120, 20
         -- forms.newform([int? width = nil], [int? height = nil], [string title = nil], [nluafunc onclose = nil])
@@ -126,9 +128,9 @@ function gui_init()
         forms.setproperty(btn, "AutoSize", true)
         yform = yform + delta_y
         
-        --btn = forms.button(main_window, "Try OCR", try_ocr, xform, yform)
-        --forms.setproperty(btn, "AutoSize", true)
-        --yform = yform + delta_y
+        btn = forms.button(main_window, "Try OCR", try_ocr, xform, yform)
+        forms.setproperty(btn, "AutoSize", true)
+        yform = yform + delta_y
         
         btn = forms.button(main_window, "Copy to clipboard", copy_table_line, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
@@ -136,7 +138,10 @@ function gui_init()
         
         btn = forms.button(main_window, "Append to file", add_table_line, xform, yform)
         forms.setproperty(btn, "AutoSize", true)
+        yform = yform + delta_y
         
+        --autotrigger_checkbox = forms.checkbox(main_window, "Autotrigger with " .. TRIGGER_HOTKEY, xform, yform)
+        --forms.setproperty(autotrigger_checkbox, "AutoSize", true)
 end
 
 
@@ -193,27 +198,31 @@ function try_ocr()
         -- save a screenshot
         last_shot_path = SCREENSHOT_BASE_PATH .. last_update .. ".png"
         client.screenshot(last_shot_path)
-        -- TODO: ocr and translate
-        -- run tesseract OCR on shot.png and get output
         
         local handle = io.popen(OCR_CMD .. last_shot_path)
         local ocr_result = handle:read("*a")
-        handle:close()
+        local ocr_success, _, ocr_exit_code = handle:close()
+        if not ocr_success then
+            if ocr_exit_code == 127 or ocr_exit_code == 9009 then
+                print("Error: The command '" .. OCR_CMD .. "' was not found.")
+                gui.addmessage("Error: The command '" .. OCR_CMD .. "' was not found.")
+            end
+        end
+        
+        os.remove(last_shot_path)
 
         -- remove trailing newline if needed
-        --ocr_result = ocr_result:gsub("%s+$", "")
+        ocr_result = ocr_result:gsub("%s+$", "")
         -- replace all remaining newlines with <br>
         ocr_result = ocr_result:gsub("\n", "<br>")
 
         -- change last column with jap text
         fields[#fields] = ocr_result
+        fields[#fields-1] = ""  -- empty eng text
         
+        -- TODO: also try to translate? 
+                
         gui_update_from_model()
-        
-        -- TODO: translate
-        --fields[#fields-1] = forms.gettext(textbox)
-        --fields[#fields-1] = " ... " 
-        --fields[#fields-1] = "New English text here<br>Another line?" 
 end
 
 
@@ -317,13 +326,25 @@ while true do
         break
     end
     
-    -- CPU SAVER
-	--if (emu.framecount() - last_update) > CPU_SAVER_INTERVAL  then
-    --local pressed_keys = input.get()
-    --if pressed_keys[SCREENSHOT_HOTKEY] then  -- TODO: debounce?
-    --    copy_table_line()
-    --end
-    
+    -- fully automated generation via a button trigger
+    if forms.ischecked(autotrigger_checkbox) then
+
+        if (emu.framecount() - last_update) > CPU_SAVER_INTERVAL  then    -- CPU SAVER
+
+            -- local pressed_keys = input.get()
+            local pressed_keys = joypad.get()
+
+            if movie.isloaded() and movie.mode()=="PLAY" then
+                pressed_keys = movie.getinput(emu.framecount())
+            end
+            
+            if pressed_keys[TRIGGER_HOTKEY]==true then
+                try_ocr()
+                add_table_line()
+            end
+        end
+    end
+
 	emu.frameadvance();
 end  -- while
 
