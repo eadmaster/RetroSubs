@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.1
+version: 0.9.3
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -52,7 +52,7 @@ ALT.: Peach Boy Adventure
 
 ## Status menu
 
-	体力(HP)  3       Items(どうぐ)        Skill(じゅつ)
+	体力(HP)  3       Items(どうぐ)        Spells(じゅつ)
 	技(SP)    1         ...                  ...
 	金(Ryo)   200両
 
@@ -64,7 +64,7 @@ ALT.: Peach Boy Adventure
 
 |region|start|len|hash|x_pos|y_pos|text|
 |------|-----|---|----|-----|-----|----|
-|VRAM1|2300|6C0|27C7FDE82796AAD1BC9C0971A5C1EC9A9801BB24F0046612B2E024C07D3E8F18|15|18|HP                          Items                 Skill<br>SP<br> <br>Money<br> <br>Sword<br> <br> <br>Armor|
+|VRAM1|2300|6C0|27C7FDE82796AAD1BC9C0971A5C1EC9A9801BB24F0046612B2E024C07D3E8F18|15|18|HP                          Items                 Spells<br>MP<br> <br>Money<br> <br>Sword<br> <br> <br>Armor|
 
 
 ## Item menu
@@ -74,45 +74,45 @@ Statically patched into the ROM:
 ```lua
 -- Item menu
 memory.write_bytes_as_array(0x000197FB, {string.byte('ITEMS',1,5)}, "ROM") -- どうぐ = Items
-memory.write_bytes_as_array(0x00019801, {string.byte('SKILL',1,5)}, "ROM") -- じゅつ = Skills
+memory.write_bytes_as_array(0x00019801, {string.byte('SPELL',1,5)}, "ROM") -- じゅつ = Spells
 -- Items names
-memory.write_bytes_as_array(0x000430BA, {string.byte('ICE<SHARD<',1,10)}, "ROM") -- ひょうがのつぶて = Ice Shard
-memory.write_bytes_as_array(0x0004308E, {string.byte('SUN<SHARD',1,9)}, "ROM") -- にちりんのつぶて = Sun Shard
+memory.write_bytes_as_array(0x000430BA, {string.byte('ICESHARD\x00',1,10)}, "ROM") -- ひょうがのつぶて = Ice Shard
+memory.write_bytes_as_array(0x0004308E, {string.byte('SUNSHARD\x00',1,9)}, "ROM") -- にちりんのつぶて = Sun Shard
 memory.write_bytes_as_array(0x000430E7, {string.byte('SNOWSHOE',1,8)}, "ROM") -- かんじき = Snowshoes
-memory.write_bytes_as_array(0x0004316B, {string.byte('FLIPPERS<<<<',1,12)}, "ROM") -- カッパのみずかき = Kappa Flippers
+memory.write_bytes_as_array(0x0004316B, {string.byte('FLIPPERS\x00',1,12)}, "ROM") -- カッパのみずかき = Kappa Flippers
 memory.write_bytes_as_array(0x00043141, {string.byte('INVIS',1,5)}, "ROM") -- かくれみの = Cloak of Invisibility (temp. invincibility)
-memory.write_bytes_as_array(0x00043008, {string.byte('DUMPLING',1,8)}, "ROM") -- きびだんご = Dumpling
-memory.write_bytes_as_array(0x00042F74, {string.byte('HP<RICE<<<',1,10)}, "ROM") -- からだのオニギリ = Health Rice Ball
-memory.write_bytes_as_array(0x00042FA3, {string.byte('SP<RICE<<',1,9)}, "ROM") -- わざのオニギリ = Skill Rice Ball
-memory.write_bytes_as_array(0x00042FD1, {string.byte('HSP<RICE<',1,11)}, "ROM") -- ユキのオニギリ = Yuki’s Rice Ball
+memory.write_bytes_as_array(0x00043008, {string.byte('DUMPLING',1,8)}, "ROM") -- きびだんご = Millet Dumpling
+memory.write_bytes_as_array(0x00042F74, {string.byte('HP<RICE\x00',1,10)}, "ROM") -- からだのオニギリ = Health Rice Ball
+memory.write_bytes_as_array(0x00042FA3, {string.byte('MP<RICE\x00',1,9)}, "ROM") -- わざのオニギリ = Spell Rice Ball
+memory.write_bytes_as_array(0x00042FD1, {string.byte('HMP<RICE\x00',1,11)}, "ROM") -- ユキのオニギリ = Yuki’s Rice Ball
 memory.write_bytes_as_array(0x00043063, {string.byte('FART<POW',1,8)}, "ROM") -- オナラのもと = Fart Powder (temp. back shoot)
-memory.write_bytes_as_array(0x00043114, {string.byte('P=FALL<<<<',1,10)}, "ROM") -- ももふれボウズ = Peach Fall (from the sky)
-memory.write_bytes_as_array(0x0004345F, {string.byte('P=ROLL<',1,7)}, "ROM") -- ももコロコロ = Peach Roller
-memory.write_bytes_as_array(0x000434DF, {string.byte('P=TSU<',1,5)}, "ROM") -- ももつなみ = Peach Tsunami
+memory.write_bytes_as_array(0x00043114, {string.byte('P=FALL\x00',1,10)}, "ROM") -- ももふれボウズ = Peach Fall (from the sky)
+memory.write_bytes_as_array(0x0004345F, {string.byte('P=ROLL\x00',1,7)}, "ROM") -- ももコロコロ = Peach Roller
+memory.write_bytes_as_array(0x000434DF, {string.byte('P=TSU\x00',1,5)}, "ROM") -- ももつなみ = Peach Tsunami
 memory.write_bytes_as_array(0x000433E5, {string.byte('TELEP',1,5)}, "ROM") -- ももひえん = teleport
 memory.write_bytes_as_array(0x00043487, {string.byte('P=SPIN',1,6)}, "ROM") -- ももまわし = Peach Spin
-memory.write_bytes_as_array(0x00043506, {string.byte('HOCUS<<',1,7)}, "ROM") -- ぱろぷて = Hocus Pocus (lit. Parapunte) (from Dragon Quest)  https://dragon-quest.org/wiki/Hocus_Pocus
+memory.write_bytes_as_array(0x00043506, {string.byte('H=POCUS',1,7)}, "ROM") -- ぱろぷて = Hocus Pocus (lit. Parapunte) (from Dragon Quest)  https://dragon-quest.org/wiki/Hocus_Pocus
 -- Item commands
 memory.write_bytes_as_array(0x000431BD, {string.byte('EAT ',1,4)}, "ROM") -- たべる = eat
 memory.write_bytes_as_array(0x000431C3, {string.byte('USE',1,3)}, "ROM") -- つから = use
-memory.write_bytes_as_array(0x000431C8, {string.byte('DRP',1,3)}, "ROM") -- すてる = dispose/Throw away
+memory.write_bytes_as_array(0x000431C7, {string.byte('DROP',1,4)}, "ROM") -- すてる = dispose/Throw away
 memory.write_bytes_as_array(0x000431DE, {string.byte('DOG',1,3)}, "ROM") -- いぬ = DOG
-memory.write_bytes_as_array(0x000431E2, {string.byte('PHEA',1,4)}, "ROM") -- きじ = Pheasant
+memory.write_bytes_as_array(0x000431E2, {string.byte('BIRD',1,4)}, "ROM") -- きじ = Pheasant
 memory.write_bytes_as_array(0x000431E7, {string.byte('APE',1,3)}, "ROM") -- さる = Ape/Monkey
 -- messages
 memory.write_bytes_as_array(0x00042F46, {string.byte('NONE ',1,5)}, "ROM") -- ありません = None (items)
-memory.write_bytes_as_array(0x00042EDA, {string.byte('NONE ',1,5)}, "ROM") -- ありません = None (skills)
+memory.write_bytes_as_array(0x00042EDA, {string.byte('NONE ',1,5)}, "ROM") -- ありません = None (spells)
 --memory.write_bytes_as_array(0x000431B5, {string.byte('NO USE',1,6)}, "ROM") -- つかえません = None
 --memory.write_bytes_as_array(0x0004372F, {string.byte('NO USE',1,6)}, "ROM") -- つかえません = None
 memory.write_bytes_as_array(0x000199DA, {string.byte('NONE  ',1,6)}, "ROM") -- つかえません = None
 memory.write_bytes_as_array(0x00019A70, {string.byte('NONE  ',1,6)}, "ROM") -- つかえません = None
 memory.write_bytes_as_array(0x00019A66, {string.byte('CANT EAT',1,8)}, "ROM") -- たべられません  = cannot eat it
-memory.write_bytes_as_array(0x000199CE, {string.byte('NO SP     ',1,10)}, "ROM") -- わざのももがない
+memory.write_bytes_as_array(0x000199CE, {string.byte('NO MP     ',1,10)}, "ROM") -- わざのももがない
 memory.write_bytes_as_array(0x00043737, {string.byte('USE',1,3)}, "ROM") --つかう = use
-memory.write_bytes_as_array(0x0004373C, {string.byte('NO ',1,3)}, "ROM") --やめる = NO
+memory.write_bytes_as_array(0x0004373B, {string.byte('BACK',1,4)}, "ROM") --やめる = BACK
 -- weapons (in status screen)
 memory.write_bytes_as_array(0x00043CB6, {string.byte('WOODEN',1,6)}, "ROM") -- ぼくとう = Wooden Sword
-memory.write_bytes_as_array(0x00043CBD, {string.byte('KATA',1,4)}, "ROM") -- かたな = Katana
+memory.write_bytes_as_array(0x00043CBD, {string.byte('KATN',1,4)}, "ROM") -- かたな = Katana
 memory.write_bytes_as_array(0x00043CC3, {string.byte('BYAKKO<<',1,8)}, "ROM") -- びゃっこのけん = Byakko/White Tiger Sword
 memory.write_bytes_as_array(0x00043CCD, {string.byte('WYVERN<<',1,7)}, "ROM") -- ひりゅうのけん = Wyvern/Flying Dragon Sword
 memory.write_bytes_as_array(0x00043CD6, {string.byte('ASHURA<<',1,7)}, "ROM") -- あしゅらのけん = Ashura Sword
@@ -168,7 +168,7 @@ MEMO: statically patched with the teleport menu above
 |VRAM1|D080|500|91955C3282414F1C619C885B7556C8C13D5755B05497AEF4E6FFB6DA0790147A|60|43|130|60|black|#DFFFFFFF|Got a Sun Shard|にちりんの<br>つぶてを<br>てにいれた|
 |VRAM1|D080|500|5A607355781A7FD6459FBCF2B0791423B79248B09539DFEFC608F5D4A98F5B87|60|45|130|50|black|#CFFFFFFF|Got the Cloak of<br>Invisibility|かくれみの....てに いれた |
 |VRAM1|D080|500|AF0252BECB8614875E92A472ED929635CAB92E9086BA3A02D0DADC6B82D0097E|60|45|130|50|black|#CFFFFFFF|Got a Health Rice Ball|からだの<br>オニギリを<br>てにいれた|
-|VRAM1|D080|500|E64891403A8D0193B7850AD4B99ACBE15F465EA77AA5FF00BD951EA03DE7DC3C|60|45|130|50|black|#CFFFFFFF|Got a Skill Rice Ball|わざのオニギリ<br>てにいれた|
+|VRAM1|D080|500|E64891403A8D0193B7850AD4B99ACBE15F465EA77AA5FF00BD951EA03DE7DC3C|60|45|130|50|black|#CFFFFFFF|Got a Spell Rice Ball|わざのオニギリ<br>てにいれた|
 |VRAM1|D080|500|E35F6CBBBE48CDAE60EC74D8DFCFFBA44D623C5C020CD57B47625CB3C81B979B|60|45|130|50|black|#CFFFFFFF|Got a Dumpling|きびたんこを<br>てにいれた|
 |VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Momotaro took a dog<br>with him.|ももたろうは<br>いぬを<br>おともにした|
 |VRAM1|D080|500|CE0738D5C3A326C1110A2CCB94A3A1BD43AF21864274566B5DB40958323643B7|60|45|130|50|black|#CFFFFFFF|Momotaro got 10 ryo|ももたろうは<br>10両を<br>てにいれた|
@@ -228,8 +228,8 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D700|C00|10E0947966CEA15B66F940EB2FC3CD62DF65B103118D6A455D0DDA51BC1DF207|62|40|120|45|white|#DF000000|Momotaro got<br>100 ryo!|ももたろうは<br>[number]両  てにいれた!|
 |VRAM1|D700|C00|B3D8BA354296208230383E1E59E4A0FD63C0B9BDD27584ECF64D01077FB32EB0|62|40|120|45|white|#DF000000|Momotaro got<br>200 ryo!|ももたろうは<br>[number]両  てにいれた!|
 |VRAM1|D700|C00|2A02CE3243DD8C0B7F8C33B9CFDFB3A610FB516DF2EEA53434F2DB2A73F8A524|62|40|120|45|white|#DF000000|Momotaro got<br>300 ryo!|ももたろうは<br>[number]両  てにいれた!|
-|VRAM1|D700|C00|1BE2D055D164A08AD0B7DBF5D3EC3EE5A3A1AE95EBE42CA4CB43CF67AE763190|62|40|120|45|white|#DF000000|Take this dumpling<br>with you as well!|「 きびだんこ"も<br>もっていくがよい!|
-|VRAM1|D700|C00|D22E4F95F9DDA5EF2D0E5AB019F2F97F529812B86EB65D67B96330764D27AE15|62|40|120|45|white|#DF000000|Momotaro got a<br>dumpling!|ももたろうは きびだんこ"を<br>ひとつ てにいれた!|
+|VRAM1|D700|C00|1BE2D055D164A08AD0B7DBF5D3EC3EE5A3A1AE95EBE42CA4CB43CF67AE763190|62|40|120|45|white|#DF000000|Take this Dumpling<br>with you as well!|「 きびだんこ"も<br>もっていくがよい!|
+|VRAM1|D700|C00|D22E4F95F9DDA5EF2D0E5AB019F2F97F529812B86EB65D67B96330764D27AE15|62|40|120|45|white|#DF000000|Momotaro got a<br>Dumpling!|ももたろうは きびだんこ"を<br>ひとつ てにいれた!|
 |VRAM1|D700|C00|999B829646B7262A6C3A43655283B69E2F12F6C8CF79B027FB87D2DDAA34A7A2|62|40|120|45|white|#DF000000|Momotaro!<br>Fight for peace, and for<br>the good of all folks!|「 ももたろうや!<br>よのため ひとのため<br>はけ"むのじゃ|
 
 
@@ -284,7 +284,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|2156859412F7B191F074E4B4C1C076116E507F47A7E839482B259331E37EE099|60|45|130|50|black|#CFFFFFFF|Want to check your<br>status?|じぶんの<br>つよさを<br>みたいなら|
 |VRAM1|D080|500|E73D275CD52699F3B3BEF3ECE430F447E747AACF05F2177298B5D63A19AD9788|60|45|130|50|black|#CFFFFFFF|Press Select to see it!|セレクトを<br>おすのですよ|
 |VRAM1|D080|500|3473B612576794B08F2F7DECC417DE126073E686586BD5C4A912FB7D09A44E7B|60|45|130|50|black|#CFFFFFFF|A hermit lives atop<br>a high spot.|せんにんは<br>たかいとこに<br>すんでおる!!|
-|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF|Ask him for a new Skill.|せんじゅつを<br>おしえて<br>もらうがよい|
+|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF|Ask him for a new Spell.|せんじゅつを<br>おしえて<br>もらうがよい|
 |VRAM1|D080|500|947BD23EC8592CC4197DD727486D5660E84217B658D17FFC20A36FCA2FD45EE2|60|45|130|50|black|#CFFFFFFF|Press the Run Button|ランボタンを<br>おすと|
 |VRAM1|D080|500|C9D50321D84663516EC537B8A14DA6BD97DF6790891FD93C0B16D407B305D2A7|60|45|130|50|black|#CFFFFFFF|to use the items!!|じゅつや<br>どうぐが<br>つかえるぞ!!|
 |VRAM1|D080|500|E45490EDDC414043FD691E389C5E1CF3E06244A929EA8845860D00F7ABFFB59F|60|45|130|50|black|#CFFFFFFF|Of course, only if you<br>have some of them!|もっとも<br>もってないと<br>つかえんが!!|
@@ -318,7 +318,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|7600|780|8F33B016150200A4458BE159031F0634288B3C763C91E7D12A0E159FDA6922B1|60|43|130|28|black|#DFFFFFFF|Welcome!<br>What would you like?|いらっしゃいませ-!<br>なにに なさいますか?|
 |VRAM1|7600|780|173B67CD2BC4765A3582F7DF8F6456D4EC609D902ABBC020992791CE358610EA|60|43|130|28|black|#DFFFFFFF|Health Rice Ball:<br>restores 1 HP|からだのオニギリ: 1コ たべると<br>からだのももが 1コ かいふくよ|
-|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|#DFFFFFFF|Yuki’s Rice Ball: restores<br>1 each of HP and SP!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
+|VRAM1|7600|780|1981D3B25B664B4B358E4D4FE3BFA53F64443E160AC36C6544DEE0B5243BDD6F|60|43|130|28|black|#DFFFFFFF|Yuki’s Rice Ball: restores<br>1 each of HP and MP!|ユキのオニギリ:からだとわざが<br>それぞれ 1コ かいふくよ!|
 |VRAM1|7600|780|EF48F3102D46A8D32109D3BE85639949D3DC448289B56135A1320AE236E84412|60|43|130|28|black|#DFFFFFFF|Didn’t find anything you<br>liked? Come again!|おきに めさなかったみたいね!<br>また いらしてくださいね!|
 |VRAM1|7600|780|162CD072E1B53B338E90DB8F2DAE88CDAA68E22BF554C3BD95BF8F92E0A1B81F|60|43|130|28|black|#DFFFFFFF|Thank you very much!<br>Anything else?|ありがとうございました! まだなにかごいりょうですか?|
 |VRAM1|7600|780|718C98C359947516F7DAD16745E0CC6588D9B485EB5AC0C8B3C1809CE3E69C99|60|43|130|28|black|#DFFFFFFF|Dumpling: calls allies<br>and heals Momotaro!|きびだんご:おともをよんだりからだのももがかいふくよ!|
@@ -329,7 +329,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|7600|780|BFC6BBE65143948879AA230183399DCDD743B3200E0D47FF57FE33EB8B366EA6|60|43|130|28|black|#DFFFFFFF|If you answer correctly,<br>I’ll grant you a new Skill.|クイズに ぜんぶ せいかいすれば<br> じゅつを さずけてやろう|
+|VRAM1|7600|780|BFC6BBE65143948879AA230183399DCDD743B3200E0D47FF57FE33EB8B366EA6|60|43|130|28|black|#DFFFFFFF|If you answer correctly,<br>I’ll grant you a new Spell.|クイズに ぜんぶ せいかいすれば<br> じゅつを さずけてやろう|
 |VRAM1|7600|780|B7C4CA41D8DB835314B7234BA056527A6A40156219F2247EF2FEBE0C32AADEDC|60|43|130|60|black|#DFFFFFFF|What did Urashima Tarō<br>receive from the princess?<br>  Treasure Box<br>  Surprise Box<br>  Pencil case|うらしまたろうはおとひめから<br>なにをもらったか?<br>おこたえは?<br>たまてばこ <br>ぴっくりばこ<br>ふでばこ|
 |VRAM1|7600|780|0C59F7142C5ECC36B05D69408B705BF7FC2EF55E0716838684E69E8BED0EE0B6|60|43|130|60|black|#DFFFFFFF|In the tale of Hanasaka Jiisan,<br>what great tree grew from Shiro’s grave?<br> Pine<br> Bamboo<br> Plum|はなさかじじいでシロの<br>はかからはえたたいぼくは?<br>おこたえは?<br>まつ<br>たけ<br>うめ|
 |VRAM1|7600|780|5FA2D9CE69D950EF65300A55931EFD0BA7D54B4AB11F785903DAF57A5C44D2B7|60|43|130|60|black|#DFFFFFFF|In the tale of Kobutori Jiisan,<br>who removed the old man’s lump?<br>A Kappa<br>A Oni<br>A Doctor|こぶとりじいさんはだれに<br>こぶをとってもらったか?<br>おこたえは?<br>カッパ<br>オニ<br>おいしゃさん|
@@ -457,8 +457,8 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|7600|780|C47573BEB4F85A1A2C04EF6A8060C547023BE287BDBF918F32AEA531DF821D66|60|43|130|28|black|#DFFFFFFF|Welcome! Buy my rice<br>balls, won’t you?|いらっしゃーい!<br>わさのオニギリをかっていってよ|
-|VRAM1|7600|780|1B4795A7BFC4D90E95E0CB06765478A08CEF499434957F9C6E3F257A068881F1|60|43|130|28|black|#DFFFFFFF|Skill Rice Ball: eat one,<br>recover one SP!|わざのオニギリ:1コ たべると<br>わさのももか 1コ かいふく!|
-|VRAM1|7600|780|0D3FE5F44C9698AF59918F3CAB35BB831969EAB239EF0FB67C21DD4F766BB3E8|60|43|130|28|black|#DFFFFFFF|Thanks, come again<br>if you run out of SP!|ありがとうございました!<br>わざがなくなったらまたきてね|
+|VRAM1|7600|780|1B4795A7BFC4D90E95E0CB06765478A08CEF499434957F9C6E3F257A068881F1|60|43|130|28|black|#DFFFFFFF|Spell Rice Ball: eat one,<br>recover one MP!|わざのオニギリ:1コ たべると<br>わさのももか 1コ かいふく!|
+|VRAM1|7600|780|0D3FE5F44C9698AF59918F3CAB35BB831969EAB239EF0FB67C21DD4F766BB3E8|60|43|130|28|black|#DFFFFFFF|Thanks, come again<br>if you run out of MP!|ありがとうございました!<br>わざがなくなったらまたきてね|
 
 
 ### Inn
@@ -496,7 +496,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|7600|780|37B0EE161E573AC900084ED9563EBEC84648EE65E47F91E952F60FBE8D374F11|60|43|130|28|black|#DFFFFFFF|I am the Jump Hermit!|わしはジャンプせんにんちゃ!|
-|VRAM1|7600|780|B93FB5564B5A10F84644BC4C49210A687FE3E294EB1CCF3CC332EAF089ED0F80|60|43|130|28|black|#DFFFFFFF|If you beat me, I’ll teach<br>you a new Skill!|わしとあっちむいてホイをしてかったなら じゅつをおしえよう|
+|VRAM1|7600|780|B93FB5564B5A10F84644BC4C49210A687FE3E294EB1CCF3CC332EAF089ED0F80|60|43|130|28|black|#DFFFFFFF|If you beat me, I’ll teach<br>you a new Spell!|わしとあっちむいてホイをしてかったなら じゅつをおしえよう|
 |VRAM1|7600|780|4B2F1AD3F70772F4C3594F9610213B7D4E340610D348BF95BE56BB74EAD714D8|60|43|130|28|black|#DFFFFFFF|Rock-Paper-Scissors|じゃんけん|
 |VRAM1|7600|780|3DAE6DF33E008107CE6D7EBDEC201B86E5BEC4A5F6241B6A9DC6BA27FA3FA467|60|43|130|28|black|#DFFFFFFF|Rock-Paper-Scissors!<br>Look That Way!|じゃんけんぽん!<br>あっちむいて|
 |VRAM1|7600|780|8665B78974EE9BAAEC5C3DC66CC4335C88D2D5AE5E751B682E8D9D7F827650C6|60|43|130|28|black|#DFFFFFFF|It’s a tie! Try again!|あいこで しょ!|
@@ -555,7 +555,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|7600|780|7FE046BFC2A382BDA0E4372437A556EC774DC03EE3904525DC695FE6804E3FDB|60|45|130|60|black|#DFFFFFFF|What was inside the hole<br>in Omusubi Kororin?<br> An elephant<br> A mole<br> A mouse|おむすびころりんのあなのなかにはなにがいたか?<br>ゾウ<br>もぐら<br>ねずみ|
 |VRAM1|7600|780|BB1FB650DF2F5E378C092E2D9F27DC92EDCE5030C9CCA18ECA7AEB312F0713A9|60|45|130|60|black|#DFFFFFFF|Who punished the tanuki<br>in Mt.Kachikachi?<br> A fox<br> A rabbit<br> A giraffe|おむすびころりんのあなのなかにはなにがいたか?<br>ゾウ<br>もぐら<br>ねずみ|
 |VRAM1|7600|780|8E24F5B88EA94F014BDD00B9C2E65B8D285B8F5B58E946F17AE53ACA99E7A271|60|45|130|60|black|#DFFFFFFF|As expected of<br>Momotaro! I will grant<br>you the Peach Roller!|さすがはももたろうちゃ!<br>ももコロコロを さずけようぞ!|
-|VRAM1|7600|780|ACA553254F75EEE3D161542F04628BF533A7B5C4B54E8510739AF453D0ED85A4|60|45|130|28|black|#DFFFFFFF|Momotaro! I've already<br>taught you the Skill!|ももたろう! わしはすでにせんしゅつをおしえたはずちゃ!|
+|VRAM1|7600|780|ACA553254F75EEE3D161542F04628BF533A7B5C4B54E8510739AF453D0ED85A4|60|45|130|28|black|#DFFFFFFF|Momotaro! I've already<br>taught you the Spell!|ももたろう! わしはすでにせんしゅつをおしえたはずちゃ!|
 |VRAM1|7600|780|74812FE236D1FBDF95421D09C8358E4ED0B8131530CF7E8588751C2E71E5798B|60|45|130|28|black|#DFFFFFFF|Now head to Urashima!|はよ!  おにがしまをめざせ!|
 
 
