@@ -302,8 +302,9 @@ function show_text(entry)
             --    end
             --    clear_text()
             --    return
+            --elseif line:match("^sleep(=%d+)?%>$") then
+            --    duration = tonumber(line:match("^sleep=(%d+)>")) or 60
             elseif (line == "sleep>") then
-                -- todo: parse arg: duration in ms
                 duration = 60  -- 1 sec
                 timer_start = emu.framecount()
                 if DEBUG_RETROSUB then
@@ -312,6 +313,20 @@ function show_text(entry)
                 while (emu.framecount() - timer_start < duration) do
                     --console.log(emu.framecount() - timer_start)
                     emu.frameadvance();
+                end
+            elseif (line:find("lua>") ~= nil) then
+                code = line:match("lua>(.*)")
+                --code = line:match("^lua>(.*)$")
+                if code then
+                    if DEBUG_RETROSUB then
+                        console.log("inline lua code: " .. code)
+                    end
+                    local fn, err = load(code, "inline_lua")
+                    if not fn then
+                        console.log("Lua error: " .. err)
+                    else
+                        pcall(fn)
+                    end
                 end
             else
                 -- draw current line

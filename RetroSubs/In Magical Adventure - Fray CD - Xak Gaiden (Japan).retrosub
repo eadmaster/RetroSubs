@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.2
+version: 0.9.4
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
@@ -162,10 +162,8 @@ TODO: change hashed region + fix buggy lines -> System Bus|2000|...
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load save<br>From start|ロード<br>最初から|
-|VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load save|ステージの最初から<br>セーブした場所から|
-
-TODO: fix loading with multiple saves
+|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load file<br>From start|ロード<br>最初から|
+|VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load file|ステージの最初から<br>セーブした場所から|
 
 
 ## Status menu
@@ -187,16 +185,24 @@ TODO: fix loading with multiple saves
 |VRAM1|3D00|3E0|B40D2555E47A02E3C16DC89E1C58E70BE4D0EF0A84BB657D1C72DD8B73C43094|15|10|0|0|white|#EF000000|Status<br> <br>                           HMM... NOT GREAT...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 |VRAM1|3D00|3E0|7D9EB1B51A8E6B6D3F8FEFD35CB4DE5FA1F1E9A28237FB5429F7A948A512D280|15|10|0|0|white|#EF000000|Status<br> <br>                           IT HURTS!~ <br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 |VRAM1|3D00|3E0|AEB69128BB199BFE7D04AADA094F19ECA55CA1082E4578279D6331AD061797D0|15|10|0|0|white|#EF000000|Status<br> <br>                           I’M DONE FOR...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
+|System Bus|D12A|200|C72D937183B62AD925F146412AF034066189EC8C1158F862CC925AA97E350AF3|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |
 
-TODO: statically patch village names? (used in save/load screen and teleport menu)
+Patching memory directly:
 
- - アーザルの町 = Town of Arzal
- - レイジアの村 = Reigia Village
- - ヴァルアの町 = Valuah Town
+     0x0000d89b アーザルの町　レイジアの村　ヴァルアの町　空中城テラス　結界樹の下　　牢屋１階　　　牢屋４階　　　いけにえの祭壇ヴァルアの祝宴
+     ->
+     "Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ"
 
-;```lua
-;memory.write_bytes_as_array(0x000197FB, {string.byte('ITEMS',1,5)}, "ROM") -- どうぐ = Items
-;```
+     0x0000d0de −どこへテレポートしますか？−
+     ->
+     "−Ｔｅｌｅｐｏｒｔ　ｔｏ？−"
+
+     0x0000d12a 　アーザルの町\0　アーザルの町　レイジアの村\0　アーザルの町　レイジアの村\0　ヴァルアの町\0　空中城のテラス\0　空中城テラス　結界樹の下\0　空中城テラス　結界樹の下\0　牢屋１階\0　空中城テラス　結界樹の下\0　牢屋１階　　　牢屋４階
+     -> 
+     "Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ"
+
+2FIX: not effective on 1st access of the main menu
+;NO? 1st file only: |System Bus|c7ce|10|3215F2765C6B91CFEE57787108FAE24B9475B364D661A5584F8E665452770CD7|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xC7D7, bizstring.encode("Ｊａｉｌ", "Shift_JIS"), "System Bus")|
 
 
 ## Item boxes
@@ -293,7 +299,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|5F29FD320101201F03615229797D7CF4B7C99660A41C9F95426F4E039E6D2C17|9|188|238|35|14|white|#EF000000|[Samus] Don’t worry, Menea.|[サムス] だいじょうぶだよ、メネア。|
 |VRAM1|3D00|570|965ECB35336D6EE15E262C5796892489215E25988E1384D694DF95C490F30D1F|9|188|238|35|14|white|#EF000000|I’ll make sure to protect you.|キミはこのボクがかならず守ってあげるよ。|
 |VRAM1|3D00|570|10689A1B24D5587A635F6F87584C0D373FB2387A2DE01B6F22EC81E117E714AF|9|188|238|35|14|white|#EF000000|[Menea] Oh, Samus...|[サムス] まぁっ、サムスったら・・・。|
-|VRAM1|3D00|570|90827E5E72DE8F5CC5BB74A621816D143DA568BFF2B897873A3C074EF57A7D35|9|188|238|35|14|white|#EF000000|[Fray] Don’t tell me it was really<br>Latok...?|［フレイ］ まさか本当にラトク　さんが・・・？|
+|VRAM1|3D00|570|90827E5E72DE8F5CC5BB74A621816D143DA568BFF2B897873A3C074EF57A7D35|9|188|238|35|14|#DA9148|#EF000000|[Fray] Don’t tell me it was really<br>Latok...?|［フレイ］ まさか本当にラトク　さんが・・・？|
 |VRAM1|3D00|570|F248DCBDFD4C5021E68E094C79B12F03CEB70702094667D766DC5EC57EF5D944|9|188|238|35|14|white|#EF000000|No, impossible! Step aside!|ううん、そんなコトありえない！どいてっ！|
 |VRAM1|3D00|570|DADE5E9AA0156FC50B587E00A7C3C10FABE55CFE206052C3A841BCC00BDAE7EA|9|188|238|35|14|white|#EF000000|[Fray] I’ll prove Latok’s innocence<br>myself!|［フレイ］ラトクさんの無実、この私がはらしてみせるわ！|
 |VRAM1|3D00|570|4FAE9B4790374F918BC48CDD4889D703D8CE1C1ACD44B7FCA7DD96B966669768|9|188|238|35|14|white|#EF000000|[Samus] Menea...|[サムス] メネア・・・|
@@ -707,8 +713,8 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|26216E9646D588A147EA439DFC4B1B47306F5BF9B2C1A98F085AFEBB46197FB7|9|188|238|35|14|white|#EF000000|[Samus] If Menea made it,<br>it's sure to be tasty.|［サムス］メネアが作ったものなら何だってオイシイよ。|
 |VRAM1|3D00|570|9FD6B0E3B36D835B2E8768D8947646266D1F809494F152A336434613952844E9|9|188|238|35|14|white|#EF000000|[Menea] I'll feed you. Ahh...|［メネア］食べさせてあげる。　あ〜〜〜ん。|
 |VRAM1|3D00|570|0DE3C994699951A12BD0428DBABD3426382AADC05FFA07C3DA0B44064BEEF4BA|9|188|238|35|14|white|#EF000000|[Samus] Ahhh...|［サムス］あ〜〜〜〜〜〜ん。|
-|VRAM1|2600|6E0|4C3E8FF09C1FD4F5C75A44C49E5B58F798AA29DB6BFA7366402DC6B4F90294E0|9|118|238|100|14|white|#EF000000|[Razel] Sorry to keep you waiting.<br>Here it is, only one.<br> <br>You got the Leef Potion!||いやぁ、待たせてすまんかったの。 あったぞ、１つきりじゃったがな。そら、これじゃ。<br>リーフの秘薬【□】をもらった!|
-|VRAM1|2600|6E0|BA684BEC78BE4C0788B50CE8059433BC7CD37D937B0888B6C7FD712848809D76|9|118|238|100|14|white|#EF000000|[Fray] Thank you. How much is it?||［フレイ］ありがとうございます。　おいくらですか？|
+|VRAM1|2600|6E0|4C3E8FF09C1FD4F5C75A44C49E5B58F798AA29DB6BFA7366402DC6B4F90294E0|9|118|238|100|14|white|#EF000000|[Razel] Sorry to keep you waiting.<br>Here it is, only one.<br> <br>You got the Leef Potion!|いやぁ、待たせてすまんかったの。 あったぞ、１つきりじゃったがな。そら、これじゃ。<br>リーフの秘薬【□】をもらった!|
+|VRAM1|2600|6E0|BA684BEC78BE4C0788B50CE8059433BC7CD37D937B0888B6C7FD712848809D76|9|118|238|100|14|white|#EF000000|[Fray] Thank you. How much is it?|［フレイ］ありがとうございます。　おいくらですか？|
 |VRAM1|2600|6E0|B45127A4A477E3E866783813B75F8C2CB927C3CAA4F2768390170780FFF6D78B|9|118|238|100|14|white|#EF000000|[Razel] No problem.<br>More importantly, someone must be<br>sick. Take it to them quickly.| かまわんよ。そんなことよりも、誰か病気なんじゃろう。　はやく持って行ってあげなさい。|
 |VRAM1|2600|6E0|A8F9368EAF127FD6A54E21324924FF7A9EDC6764864F9A305784C8B0E5E096DE|9|118|238|100|14|white|#EF000000|[Fray] Ah, thank you.<br>Then, I'll take this.|［フレイ］ あ、ありがとうございます。じゃあ、これで。|
 |VRAM1|2600|6E0|03EB56F2F3FEAB973B3EA07422A0DA837EB620B0ADF85D98D2DEED5025593FCD|9|118|238|100|14|white|#EF000000|[Razel] Take care.| 気をつけてな。|
@@ -731,7 +737,7 @@ TODO: speech dialogues:
 |VRAM1|2600|6E0|B74B20D9A78F6158BEB8E919FFAE127F70F5CEF85BE64B4D79001718C7A87B8F|9|118|238|100|14|white|#EF000000|Arrow Rod LV3, eh?<br>Fires three magic arrows.<br>That’s right, three of them!<br>Price: 4000G<br>Buy it? Yes ★ No| アローロッドLV3ね。<br>魔法の矢が３本も出るの。３本よ、３本！どお？<br>値段は4000G<br>買いますか? はい  いいえ|
 |VRAM1|2600|6E0|7951BDA7989A750766F083EE73741D9520FE0E0CF0492D5B85AB6F3916A08B25|9|118|238|100|14|white|#EF000000|Thunder Rod LV3, eh?<br>Lightning shoots in four directions:<br>up, down, left, right. That piercing<br>feeling is just irresistible!<br>Price: 4500G<br>Buy it? Yes ★ No| サンダーロッドLV3ね。<br>カミナリが上下左右４方向に飛ぶのよ。この突きさすような感覚がたまんないわぁ。<br>値段は4500G<br>買いますか? はい  いいえ|
 |VRAM1|2600|6E0|BBB91364341DA966F8A9DDD8269D23321C8CD07FAD642080C8C198833F9CFB88|9|118|238|100|14|white|#EF000000|3-Way Rod LV2, eh?<br>Shooting in three directions is<br>fine, but it feels a little lacking.<br>How about for your collection?<br>Price: 2500G<br>Buy it? Yes ★ No| 3WAYロッドLV2ね<br>３方向に飛ぶのはいいけど、なんだか物足りないわ。<br>コレクションにどう？<br>値段は2500G<br>買いますか? はい  いいえ|
-|VRAM1|2600|6E0|7167FD7E2A99DB35D4927C20C663FF0045838231D0993133E19380E898DC4784|9|118|238|100|14|white|#EF000000|Fire Rod LV2, eh?<br>For those who like wild battles,<br>diving right into the enemy’s chest,<br>Ah, it thrills me!<br>Price: 2400G<br>Buy it? Yes ★ No|ファイアーロッドLV2ね。<br>敵のフトコロへ飛び込んでいくような、野性的な戦いが好きな人向けね。ああ、シビレルわぁ〜。<br>値段は2400G<br>買いますか? はい  いいえ||
+|VRAM1|2600|6E0|7167FD7E2A99DB35D4927C20C663FF0045838231D0993133E19380E898DC4784|9|118|238|100|14|white|#EF000000|Fire Rod LV2, eh?<br>For those who like wild battles,<br>diving right into the enemy’s chest,<br>Ah, it thrills me!<br>Price: 2400G<br>Buy it? Yes ★ No|ファイアーロッドLV2ね。<br>敵のフトコロへ飛び込んでいくような、野性的な戦いが好きな人向けね。ああ、シビレルわぁ〜。<br>値段は2400G<br>買いますか? はい  いいえ|
 |VRAM1|3D00|570|84DA8DDE004D91C196DC3F88ECCCA1FEE71505C81391D0FABE8C689CF0B91D8C|9|188|238|35|14|white|#EF000000|[Fray] Huh? No point coming here<br>after all… |［フレイ］あれれ？　こんなトコ来てもしようがないじゃない。|
 |VRAM1|3D00|570|4DBB4DA121D21A737293CB5F0A15450410CAB8CE267E3335D09DF3190E6C5D69|9|188|238|35|14|white|#EF000000|[Fray] Looks like no one lives here. |［フレイ］どうやら、ここには誰も住んでないみたいね。|
 |VRAM1|3D00|570|4416390B6A438AFB520127085C014B84C95F893EBCA3C6CAB4D68C5F4CBDA1E0|9|188|238|35|14|white|#EF000000|[Fray] Aaaah! I thought I was going<br>to die!|［フレイ］あ〜〜〜〜〜、死ぬかと思った。|
@@ -897,7 +903,7 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|920A76B9E94062170CA9804CAB70A81CA9CD404F609E16BA53EA55A856B111EA|9|188|238|35|14|white|#EF000000|Mill, Isac, here we go!|ミル、アイザック先生、行ってきます！|
 
 
-### Flying Castle Ku Or, Terrace
+### Flying Castle, Terrace
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
@@ -1015,7 +1021,7 @@ TODO: speech dialogues:
 |VRAM1|2600|6E0|33C4998FFB9BDEE80CF493EB703D31E29DC6C7B5E3723A09D635E5849EE21BC6|9|118|238|100|14|white|#EF000000|Thunder Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 4500G.<br>Buy it? Yes ★ No|サンダーロッドLVLV3でっか<br>いやぁ、お目が高い!<br>勉強させてもらいますよって、 どんどん買うてってや。<br>値段は4500G<br>買いますか? はい ★ いいえ|
 |VRAM1|2600|6E0|8440CE3A1620375DBB70D64962BF047FDC164B86AB8C73E769C6EA30F555AD59|9|118|238|100|14|white|#EF000000|3-Way Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 5000G.<br>Buy it? Yes ★ No|3WAYロッドLV3でっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は5000G<br>買いますか? はい ★ いいえ|
 |VRAM1|2600|6E0|3C05DEE8A6E736CCC9C499C3F59A53900A8D3D4B791CC0CAF871CCCFDA53414F|9|118|238|100|14|white|#EF000000|Fire Rod LV3.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 7500G.<br>Buy it? Yes ★ No|ファイアーロッドLV3でっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は7500G<br>買いますか? はい ★ いいえ|
-|VRAM1|2600|6E0|10256B8955E28E61B02CB43AD6B005BEAAE3AA2CF2E5C62C4462DBAF53773928|9|118|238|100|14|white|#EF000000|Fire Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 500G.<br>Buy it? Yes ★ No|ファイアーでっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は500G<br>買いますか? はい ★ いいえ||
+|VRAM1|2600|6E0|10256B8955E28E61B02CB43AD6B005BEAAE3AA2CF2E5C62C4462DBAF53773928|9|118|238|100|14|white|#EF000000|Fire Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 500G.<br>Buy it? Yes ★ No|ファイアーでっか<br>いやぁ、お目が高い！<br>勉強させてもらいますよって、どんどん買うてってや。<br>値段は500G<br>買いますか? はい ★ いいえ|
 |VRAM1|2600|6E0|BE3C94938CB70759FE70309C2CEAC0C165770A26D5B67C0BD615965DEC340365|9|118|238|100|14|white|#EF000000|Thunder Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 600G.<br>Buy it? Yes ★ No| |
 |VRAM1|2600|6E0|457AB8413BEC7368A27228BE106E0EB33B4A6AEF55CD97C6958D22C599598127|9|118|238|100|14|white|#EF000000|Water Dragon Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 900G.<br>Buy it? Yes ★ No| |
 |VRAM1|2600|6E0|B6D82380523BA19B8C1EDE51416CA0F1AE7FF05C72AA384BDBB7090944E5813F|9|118|238|100|14|white|#EF000000|Fire Dragon Magic.<br>Ah, you have a keen eye!<br>I’ll learn from you, so feel free to buy<br>as many as you like.<br>The price is 1200G.<br>Buy it? Yes ★ No| |
@@ -1057,6 +1063,9 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|238035EA4B06CFA8B7EDBA9B7FCF74D2EE8662A01F2D4E2E16CB495DF4C5488C|9|188|238|35|14|white|#EF000000|[Fray] Maybe there’s a door this key<br>unlocks.|［フレイ］どこかに、このカギで開く扉があるのかしら？|
 |VRAM1|3D00|3E0|290B7374684099747EFAC935ED202A56254D54DFD848567823FBB25B38D4EDFB|9|188|238|35|14|white|#EF000000|It’s empty.|からっぽだった。|
 |VRAM1|3D00|570|2E2E96D1BD117D0AFEA3C7E874860687002EC28DAB2D9FCFF2AE0E122AD28027|9|188|238|35|14|white|#EF000000|Right, I’ll try using that key I found<br>earlier.|そうだ、さっき見つけたカギを使ってみよっと。|
+|VRAM1|3D00|570|7171BAB7C2556B71BC89DCC2EAB9A23E4E54D6B4EF0B953FF2E1550E9C214103|9|188|238|35|14|white|#EF000000|[Fray] It won’t open…<br>Think it’s locked?|［フレイ］開かないなぁ。カギがかかってんのかな？|
+|VRAM1|3D00|570|BFFB64238C91EECFC60916253E137BBEFA336C9772939AC326F6A06EF68C4A3B|9|188|238|35|14|white|#EF000000|[Sleep talk] ...Mmm...<br>...something smells...|［ねごと］・・・う゛ーん・・・<br>・・・なんかにおうな・・・|
+|VRAM1|3D00|570|7A5816E46D373831A2BBFA22712D1AA39E54F6F13A0F2E08FB8CCEE2D9C81B81|9|188|238|35|14|white|#EF000000|[Sleep talk] ...Mmm...<br>...Zzzzz...|［ねごと］・・・うーん・・・<br>・・・ＺＺＺＺＺ・・・|
 |VRAM1|3D00|570|F12E4587FFC6B20DCABFA2741F5A4FAC2E45C79B1D01214EBAE1F19ABE6D1860|9|188|238|35|14|white|#EF000000|[Sleep talk] ZZZZZ...|［ねごと］ＺＺＺＺＺ・・・|
 |VRAM1|3D00|570|E5F14D7E2F7FB88F20C02310653198EFC4BDD56E352284D9C1BAC786D3F15E35|9|188|238|35|14|white|#EF000000|[Fray] Doesn’t look like I can wake<br>him.|［フレイ］ちょっと起こせそうにないわね。|
 |VRAM1|3D00|570|214ADA9C1321344F015A38588C48C880C56C3C4BD4F2CCD4A087CC7E63DE3776|9|188|238|35|14|white|#EF000000|[Sleep talk] I’m homeee!|［ねごと］今かえったぞー！|
@@ -1076,15 +1085,15 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|267229798928C40CB0BCB776CBCEA54297E0360BD68D377FDB64C060CD20355C|9|188|238|35|14|white|#EF000000|[Fray] Hellooo!!|［フレイ］もしもぉーし！！|
 |VRAM1|3D00|570|8FD7038620321AC919CFB7B60CEAABE0EE4DCF8FBBD522FEB974F5EB0358D72B|9|188|238|35|14|white|#EF000000|[Sleep talk] snooore... snore-snore...|［ねごと］すぴょすぴょ・・・。|
 |VRAM1|3D00|570|7D6BCC212E6348ED4E9A4412A701BFF48BCEDA3D4BAC080BA3145032F0DD11D8|9|188|238|35|14|white|#EF000000| …No good. |［フレイ］・・・ダメか。|
-|VRAM1|3D00|570|61680515C18A53ADC39242DAA26C535A76875D636D1A7287BD36E610E8492823|9|188|238|35|14|white|#EF000000|[Sleep-talking] One slime…<br>two slimes… |［ねごと］スライムが１ぴき、スライムが２ひき・・・。|
+|VRAM1|3D00|570|61680515C18A53ADC39242DAA26C535A76875D636D1A7287BD36E610E8492823|9|188|238|35|14|white|#EF000000|[Sleep talk] One slime…<br>two slimes… |［ねごと］スライムが１ぴき、スライムが２ひき・・・。|
 |VRAM1|3D00|570|056224531F79D99879BF50F362C9E8F54DB30AD0DEBF0BD605DBA1D694287D67|9|188|238|35|14|white|#EF000000|Three slimes…<br>Four slimes… |スライムが３びき、<br>スライムが４ひき・・・。|
 |VRAM1|3D00|570|287722A52A1B0987B103AD7A065B8AA1527A694A6F2093935734BB30E4B6CB49|9|188|238|35|14|white|#EF000000|Waaah, I can’t sleep…<br>...*mumble mumble* |え〜ん、ねむれないよぉ。<br>・・・・・・むにゃむにゃ。| 
-|VRAM1|3D00|570|89DC1FEA3DBEFC87311ECFD1A17391CEA175019B31487B124C0F71AF4D2F33BA|9|188|238|35|14|white|#EF000000|[Sleep-talking] Mmm… I can’t eat<br>that much… *mumble* |［ねごと］うぅ〜ん、そんなに食べらんないわよぉ。むにゃ。|
-|VRAM1|3D00|570|CC800549B48C9B9D71E35FB27349B39DBF12ECA44C3CE7D8A3769D74F84F2206|9|188|238|35|14|white|#EF000000|[Sleep-talking] Hahahahahahahaha… |［ねごと］きゃははははははははははははははははははははは。|
+|VRAM1|3D00|570|89DC1FEA3DBEFC87311ECFD1A17391CEA175019B31487B124C0F71AF4D2F33BA|9|188|238|35|14|white|#EF000000|[Sleep talk] Mmm… I can’t eat<br>that much… *mumble* |［ねごと］うぅ〜ん、そんなに食べらんないわよぉ。むにゃ。|
+|VRAM1|3D00|570|CC800549B48C9B9D71E35FB27349B39DBF12ECA44C3CE7D8A3769D74F84F2206|9|188|238|35|14|white|#EF000000|[Sleep talk] Hahahahahahahaha… |［ねごと］きゃははははははははははははははははははははは。|
 |VRAM1|3D00|570|7B44CE0CC27F7B4B1A5357E6097F60A99BF9F668AD340001028B836BE2ABDCDD|9|188|238|35|14|white|#EF000000| …*mumble mumble* |・・・むにゃむにゃ。|
-|VRAM1|3D00|570|CD0D5A0D72659C04E03B012D2867A5DA88892193CC0FA1F770C36DD5FB5BED35|9|188|238|35|14|white|#EF000000|[Samus, sleep-talking]<br>…Menea.|［サムスのねごと］・・・・・・メネア。||
+|VRAM1|3D00|570|CD0D5A0D72659C04E03B012D2867A5DA88892193CC0FA1F770C36DD5FB5BED35|9|188|238|35|14|white|#EF000000|[Samus sleep talk]<br>…Menea.|［サムスのねごと］・・・・・・メネア。|
 |VRAM1|3D00|570|25EF26C552ABD4D3BFAE1BEEEEAD42A1A2E6ACE2E58A6E9DFF14BB7C90E157AA|9|188|238|35|14|white|#EF000000|I came… to save you…<br>*mumble mumble*|キミをたすけに来たよ・・・<br>むにゃむにゃ。|
-|VRAM1|3D00|570|EBA181F4EA7C21615E05BF63B4D1E0B86A3C2692343520F3027EB930D601CBD1|9|188|238|35|14|white|#EF000000|[Menea, sleep-talking]<br>…Ah, Samus…|［メネアのねごと］・・・ああ、サムス。|
+|VRAM1|3D00|570|EBA181F4EA7C21615E05BF63B4D1E0B86A3C2692343520F3027EB930D601CBD1|9|188|238|35|14|white|#EF000000|[Menea sleep talk]<br>…Ah, Samus…|［メネアのねごと］・・・ああ、サムス。|
 |VRAM1|3D00|570|EC7E36E8661D45D6445FB7BB62BEB6166332948BF7018D509A205D943EE49DED|9|188|238|35|14|white|#EF000000|You came to save me.<br>....snooze....|たすけに来てくれたのね。<br>・・・くーすぴーーー・・・。|
 |VRAM1|3D00|570|18BC0988C0DE53865D09BD252FF7B170DF9D27EFDC234A7649B2D08647DEF76F|9|188|238|35|14|white|#EF000000|[Fray] Hm? There’s something<br>written inside the lid.|［フレイ］ん？　フタのうらに　何か書いてある。|
 |VRAM1|3D00|3E0|661B353D772CDB4EF6ADF5AE54F32381DD682CB2107D163BB222326524B16F61|9|188|238|35|14|#D95594|#EF000000|Better safe than sorry.|ころばぬ先のツエ。|
@@ -1348,6 +1357,11 @@ TODO: speech dialogues:
 
 ## Ending cutscene
 
+TODO: better lines splitting:
+ 
+ - 9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC
+ - 81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1
+
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|3D00|570|E905334E24244EAC79A7CE3644E81DBB1487D6DD6AB139494CDF1A3E924DEE44|9|188|238|35|14|white|#EF000000|　　　    - The Next Day -| 　　　　−　次の日　−|
@@ -1377,7 +1391,3 @@ TODO: speech dialogues:
 |VRAM1|3D00|570|9D845426F7D8EF5CF9FEEED4AFC4FAAD06BC3AF1038E85A7CF36FFBB35BED5A6|10|10|0|0|14|#ffff00|#EF000000|“Lastly, Mill, I’m sorry for always being selfish.<br>Next time, I’ll make sure to visit and properly<br>thank you.<br>I’ll never forget my days at the magic academy.<br>Until the day we meet again. Fray.”<br>“Ah, gees. I forgot to write about myself.<br>As for me...”| 「最後に、ミル先生、わがままばかりってごめんなさい。今度、必ずそちらへご挨拶に伺います」<br>「魔法学校での生活はきっと忘れません」<br>いつか、また会う日まで、くれい」<br>きぃーす。私のことを書くのを忘れてしまいました。わたしはー|
 |VRAM1|3D00|570|2D22D552150D8A148A6D5604ECCE5CF50E72E6F2217085971EA4B81144A53F92|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok!| |
 
-TODO: better lines splitting:
- 
- - 9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC
- - 81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1

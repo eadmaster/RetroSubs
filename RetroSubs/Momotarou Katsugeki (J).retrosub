@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.3
+version: 0.9.4
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -22,9 +22,12 @@ Missing:
  - Boss victory banners
  - Other hidden minigames?
 
-TODO: revise localized names:
+References:
 
-https://momotaro.fandom.com/wiki/Momotaro_Densetsu_1%E2%86%922
+ - https://momotaro.fandom.com/wiki/Momotaro_Densetsu_1%E2%86%922
+ - https://www.romhacking.net/translations/1779/
+ - https://gamefaqs.gamespot.com/x68000/656688-momotarou-densetsu-peach-boy-legend/faqs/66994
+ - https://gamefaqs.gamespot.com/gameboy/943147-momotarou-densetsu-gaiden/faqs/73388
  
 
 ## Hacking notes
@@ -53,7 +56,7 @@ ALT.: Peach Boy Adventure
 ## Status menu
 
 	体力(HP)  3       Items(どうぐ)        Spells(じゅつ)
-	技(SP)    1         ...                  ...
+	技(MP)    1         ...                  ...
 	金(Ryo)   200両
 
 	ぶき(Weapon)
@@ -73,18 +76,18 @@ Statically patched into the ROM:
 
 ```lua
 -- Item menu
-memory.write_bytes_as_array(0x000197FB, {string.byte('ITEMS',1,5)}, "ROM") -- どうぐ = Items
+memory.write_bytes_as_array(0x000197FB, {string.byte('ITEM\x00',1,5)}, "ROM") -- どうぐ = Items
 memory.write_bytes_as_array(0x00019801, {string.byte('SPELL',1,5)}, "ROM") -- じゅつ = Spells
 -- Items names
 memory.write_bytes_as_array(0x000430BA, {string.byte('ICESHARD\x00',1,10)}, "ROM") -- ひょうがのつぶて = Ice Shard
 memory.write_bytes_as_array(0x0004308E, {string.byte('SUNSHARD\x00',1,9)}, "ROM") -- にちりんのつぶて = Sun Shard
 memory.write_bytes_as_array(0x000430E7, {string.byte('SNOWSHOE',1,8)}, "ROM") -- かんじき = Snowshoes
 memory.write_bytes_as_array(0x0004316B, {string.byte('FLIPPERS\x00',1,12)}, "ROM") -- カッパのみずかき = Kappa Flippers
-memory.write_bytes_as_array(0x00043141, {string.byte('INVIS',1,5)}, "ROM") -- かくれみの = Cloak of Invisibility (temp. invincibility)
+memory.write_bytes_as_array(0x00043140, {string.byte('INVSBL',1,6)}, "ROM") -- かくれみの = Invisibility Cloak (temp. invincibility)
 memory.write_bytes_as_array(0x00043008, {string.byte('DUMPLING',1,8)}, "ROM") -- きびだんご = Millet Dumpling
 memory.write_bytes_as_array(0x00042F74, {string.byte('HP<RICE\x00',1,10)}, "ROM") -- からだのオニギリ = Health Rice Ball
 memory.write_bytes_as_array(0x00042FA3, {string.byte('MP<RICE\x00',1,9)}, "ROM") -- わざのオニギリ = Spell Rice Ball
-memory.write_bytes_as_array(0x00042FD1, {string.byte('HMP<RICE\x00',1,11)}, "ROM") -- ユキのオニギリ = Yuki’s Rice Ball
+memory.write_bytes_as_array(0x00042FD1, {string.byte('YUKIRICE\x00',1,11)}, "ROM") -- ユキのオニギリ = Yuki’s Rice Ball
 memory.write_bytes_as_array(0x00043063, {string.byte('FART<POW',1,8)}, "ROM") -- オナラのもと = Fart Powder (temp. back shoot)
 memory.write_bytes_as_array(0x00043114, {string.byte('P=FALL\x00',1,10)}, "ROM") -- ももふれボウズ = Peach Fall (from the sky)
 memory.write_bytes_as_array(0x0004345F, {string.byte('P=ROLL\x00',1,7)}, "ROM") -- ももコロコロ = Peach Roller
@@ -124,9 +127,9 @@ memory.write_bytes_as_array(0x00043D00, {string.byte('RED<<',1,5)}, "ROM") -- �
 memory.write_bytes_as_array(0x00043D07, {string.byte('SATSUKI',1,7)}, "ROM") -- さつきのどう
 memory.write_bytes_as_array(0x00043D10, {string.byte('BRAVE<<',1,7)}, "ROM") -- ゆうきのどう
 -- village names (teleport menu + banners)
-memory.write_bytes_as_array(0x0001F2B2, {string.byte(' START    ',1,10)}, "ROM") -- ゲーム スタート
-memory.write_bytes_as_array(0x000437B0, {string.byte('STARTING',1,8)}, "ROM") -- たびだちの村
-memory.write_bytes_as_array(0x00043741, {string.byte('STARTING',1,8)}, "ROM") -- たびだちの村
+memory.write_bytes_as_array(0x0001F2B2, {string.byte(' START!   ',1,10)}, "ROM") -- ゲーム スタート
+memory.write_bytes_as_array(0x000437B0, {string.byte('<TRAVEL<',1,8)}, "ROM") -- たびだちの村
+memory.write_bytes_as_array(0x00043741, {string.byte('TRAVEL<<',1,8)}, "ROM") -- たびだちの村
 memory.write_bytes_as_array(0x000437BD, {string.byte('HANASA',1,6)}, "ROM") -- はなさかの村
 memory.write_bytes_as_array(0x0004374B, {string.byte('HANASA',1,6)}, "ROM") -- はなさかの村
 memory.write_bytes_as_array(0x000437C6, {string.byte('KINTARO',1,7)}, "ROM") -- きんたろうの村
@@ -137,7 +140,7 @@ memory.write_bytes_as_array(0x000437DA, {string.byte('URASHI',1,6)}, "ROM") -- �
 memory.write_bytes_as_array(0x00043764, {string.byte('URASHI',1,6)}, "ROM") -- うらしまの村
 memory.write_bytes_as_array(0x000437E2, {string.byte('KACHIKACHI',1,10)}, "ROM") -- カチカチやまの村
 memory.write_bytes_as_array(0x0004376B, {string.byte('KACHIKACHI',1,10)}, "ROM") -- カチカチやまの村
-memory.write_bytes_as_array(0x000437EE, {string.byte('ISSUNBOSH',1,9)}, "ROM") -- いっすんぼうし村
+memory.write_bytes_as_array(0x000437EE, {string.byte('ISSUNBOSH',1,9)}, "ROM") -- いっすんぼうし村 
 memory.write_bytes_as_array(0x00043777, {string.byte('ISSUNBOSH',1,9)}, "ROM") -- いっすんぼうし村
 memory.write_bytes_as_array(0x00043792, {string.byte('STATUE   ',1,9)}, "ROM") -- さいごのしぞう
 memory.write_bytes_as_array(0x00043782, {string.byte('TAHITA',1,6)}, "ROM") -- たけとりの村  = Tahitachi Village
@@ -166,10 +169,13 @@ MEMO: statically patched with the teleport menu above
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
 |VRAM1|D080|500|6CE3A0317BE508D2CEA67D47E7A1FB7E4394B392BB9FA83E38D253669FB587B0|60|45|130|50|black|#CFFFFFFF|Got an Ice Shard|ひょうがのつぶてに  いれた|
 |VRAM1|D080|500|91955C3282414F1C619C885B7556C8C13D5755B05497AEF4E6FFB6DA0790147A|60|43|130|60|black|#DFFFFFFF|Got a Sun Shard|にちりんの<br>つぶてを<br>てにいれた|
-|VRAM1|D080|500|5A607355781A7FD6459FBCF2B0791423B79248B09539DFEFC608F5D4A98F5B87|60|45|130|50|black|#CFFFFFFF|Got the Cloak of<br>Invisibility|かくれみの....てに いれた |
+|VRAM1|D080|500|5A607355781A7FD6459FBCF2B0791423B79248B09539DFEFC608F5D4A98F5B87|60|45|130|50|black|#CFFFFFFF|Got the Invisibility<br>Cloak|かくれみの....てに いれた|
 |VRAM1|D080|500|AF0252BECB8614875E92A472ED929635CAB92E9086BA3A02D0DADC6B82D0097E|60|45|130|50|black|#CFFFFFFF|Got a Health Rice Ball|からだの<br>オニギリを<br>てにいれた|
 |VRAM1|D080|500|E64891403A8D0193B7850AD4B99ACBE15F465EA77AA5FF00BD951EA03DE7DC3C|60|45|130|50|black|#CFFFFFFF|Got a Spell Rice Ball|わざのオニギリ<br>てにいれた|
+|VRAM1|D080|500|9201AE73493D124C67E3EB23975E2E77DD32AF719E1B467E633533044CB813FA|60|45|130|50|black|#CFFFFFFF|Got Yuki’s Rice Ball|ユキの オニギリを  てにいれた|
 |VRAM1|D080|500|E35F6CBBBE48CDAE60EC74D8DFCFFBA44D623C5C020CD57B47625CB3C81B979B|60|45|130|50|black|#CFFFFFFF|Got a Dumpling|きびたんこを<br>てにいれた|
+|VRAM1|D080|500|B9C5C50C31BEF7D80D6D9F763B6CDCFBB984F38E24F436166CF7E13D6E14FC05|60|45|130|50|black|#CFFFFFFF|Got Peach Fall|ももふれ<br>ボウズを<br>てにいれた|
+|VRAM1|D080|500|3F3A56CACD8C538528333B57DC28EAA6AA4B5C79E08831BD63F2ADA350D1B584|60|45|130|50|black|#CFFFFFFF|Got Fart Powder|オナラのもとを  てにいれた|
 |VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Momotaro took a dog<br>with him.|ももたろうは<br>いぬを<br>おともにした|
 |VRAM1|D080|500|CE0738D5C3A326C1110A2CCB94A3A1BD43AF21864274566B5DB40958323643B7|60|45|130|50|black|#CFFFFFFF|Momotaro got 10 ryo|ももたろうは<br>10両を<br>てにいれた|
 |VRAM1|D080|500|A03602AC6EF5F771833EFC6EE75316F9484482595EA8AD4877954C4026E5085C|60|55|130|30|black|#CFFFFFFF|Momotaro got 20 ryo|ももたろうは<br>20両を<br>てにいれた|
@@ -178,10 +184,8 @@ MEMO: statically patched with the teleport menu above
 |VRAM1|D080|500|57CAA56C9CF49020E872D143E648A69F3D69C9FD97BFB779458489D3922169D7|60|55|130|30|black|#CFFFFFFF|Momotaro got 80 ryo|ももたろうは<br>80両を<br>てにいれた|
 |VRAM1|D080|500|DDBACD045983EF459A5707421A23DB44B38661C8F8C8CFEA4BB9317609903F47|60|45|130|50|black|#CFFFFFFF|Momotaro got 100 ryo|ももたろうは<br>100両を<br>てにいれた|
 |VRAM1|D080|500|47D9348C23C9776D6C8F56A01F49489C53C15F796B528A0EFEEE38ABB1ED40ED|60|45|130|50|black|#CFFFFFFF|Momotaro took a<br>pheasant with him.|ももたろうは<br>きじを<br>おともにした|
-|VRAM1|D080|500|B9C5C50C31BEF7D80D6D9F763B6CDCFBB984F38E24F436166CF7E13D6E14FC05|60|45|130|50|black|#CFFFFFFF|Got Peach Fall.|ももふれ<br>ボウズを<br>てにいれた|
+|VRAM1|D080|500|C262D7DE39116669A92F34F1130E0175D4CC4F06F5A1CEE563B819EEBAC8BBCC|60|45|130|50|black|#CFFFFFFF|Momotaro took a dog<br>with him.|ももたろうは<br>いぬを<br>おともにした|
 |VRAM1|D080|500|1EB758291E5BDD57874DFCB70FD6458F0A4572BA66520FFE88AC0010870BF650|60|45|130|50|black|#CFFFFFFF|Momotaro took a<br>monkey with him.|ももたろう<br>はさるを<br>おともにした|
-|VRAM1|D080|500|9201AE73493D124C67E3EB23975E2E77DD32AF719E1B467E633533044CB813FA|60|45|130|50|black|#CFFFFFFF|Got Yuki’s Rice Ball|ユキの オニギリを  てにいれた|
-|VRAM1|D080|500|3F3A56CACD8C538528333B57DC28EAA6AA4B5C79E08831BD63F2ADA350D1B584|60|45|130|50|black|#CFFFFFFF|Got Fart Powder|オナラのもとを  てにいれた|
 |VRAM1|D080|500|D8F6D263E78DAE7C2BD0AA82A32378DB9154FFE76E090DB839AABE95FA9295AC|60|45|130|50|black|#CFFFFFFF|Momotaro got a<br>turtle shell|ももたろうは こうらを てにいれた|
 
 
@@ -269,7 +273,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|DD6103547451075546E61DB9ECC6DAAC054EFAB8ECA88F53387B383C14CC0D5F|60|45|130|50|black|#CFFFFFFF|Well then, be careful<br>on your journey!|では<br>こころして<br>ゆくがよい!|
 
 
-### Starting Village
+### Travel Village
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|
@@ -284,9 +288,9 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|2156859412F7B191F074E4B4C1C076116E507F47A7E839482B259331E37EE099|60|45|130|50|black|#CFFFFFFF|Want to check your<br>status?|じぶんの<br>つよさを<br>みたいなら|
 |VRAM1|D080|500|E73D275CD52699F3B3BEF3ECE430F447E747AACF05F2177298B5D63A19AD9788|60|45|130|50|black|#CFFFFFFF|Press Select to see it!|セレクトを<br>おすのですよ|
 |VRAM1|D080|500|3473B612576794B08F2F7DECC417DE126073E686586BD5C4A912FB7D09A44E7B|60|45|130|50|black|#CFFFFFFF|A hermit lives atop<br>a high spot.|せんにんは<br>たかいとこに<br>すんでおる!!|
-|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF|Ask him for a new Spell.|せんじゅつを<br>おしえて<br>もらうがよい|
+|VRAM1|D080|500|5C67077DE76A33524FE849AE4CF0D674297093E62C41FDFFFA9FE4E6964A1DEF|60|45|130|50|black|#CFFFFFFF|Ask him for a new<br>Spell.|せんじゅつを<br>おしえて<br>もらうがよい|
 |VRAM1|D080|500|947BD23EC8592CC4197DD727486D5660E84217B658D17FFC20A36FCA2FD45EE2|60|45|130|50|black|#CFFFFFFF|Press the Run Button|ランボタンを<br>おすと|
-|VRAM1|D080|500|C9D50321D84663516EC537B8A14DA6BD97DF6790891FD93C0B16D407B305D2A7|60|45|130|50|black|#CFFFFFFF|to use the items!!|じゅつや<br>どうぐが<br>つかえるぞ!!|
+|VRAM1|D080|500|C9D50321D84663516EC537B8A14DA6BD97DF6790891FD93C0B16D407B305D2A7|60|45|130|50|black|#CFFFFFFF|to use Items and<br>Spells!!|じゅつや<br>どうぐが<br>つかえるぞ!!|
 |VRAM1|D080|500|E45490EDDC414043FD691E389C5E1CF3E06244A929EA8845860D00F7ABFFB59F|60|45|130|50|black|#CFFFFFFF|Of course, only if you<br>have some of them!|もっとも<br>もってないと<br>つかえんが!!|
 |VRAM1|D080|500|BA1B7DF3A85124D1A313B2A74E809BE8CC67064B8D801186EB70439AF9EFAB5A|60|45|130|50|black|#CFFFFFFF|Hold Button I to jump,|I ボタンで<br>シ"ャンフ°<br>しながら
 |VRAM1|D080|500|885AF9F0BC11F2A4FD68578EE440E924D41829482FE6D8B7D0D6F64211645B20|60|45|130|50|black|#CFFFFFFF|then press Button II<br>to attack in midair!|IIボタンで<br>こうけ"き<br>するのだ!!|
@@ -298,13 +302,13 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|--------|
-|VRAM1|7600|780|DA5307D27E829C6A72C440702ED85CE115ADC15B1C5C6A9575ADC428611BAFAD|60|43|130|28|black|#DFFFFFFF|Welcome! You should<br>buy a weapon!|いらっしゃい! ぶき かっていくと いいど!|
+|VRAM1|7600|780|DA5307D27E829C6A72C440702ED85CE115ADC15B1C5C6A9575ADC428611BAFAD|60|43|130|28|black|#DFFFFFFF|Welcome!<br>Buy a better weapon!|いらっしゃい! ぶき かっていくと いいど!|
 |VRAM1|7600|780|0436E142BDC742D9BC6C6D0CD1CC02A6F2C24C70E70C88EAA8D5E7B39FD724C1|60|43|130|28|black|#DFFFFFFF|Not your thing, huh?<br>Come again!|おきに めさなかった ようだな!また きてくれよなっ!|
 |VRAM1|7600|780|AB74BAA80C5A2E49779933751F9B51F36123797A90D6DA2796A39DEE46E2839A|60|43|130|28|black|#DFFFFFFF|Katana: slightly longer<br>bullet range!|かたな:たまの とぶきょりが<br>すこし ながくなるだど!|
 |VRAM1|7600|780|20724719DF6785C6F2B090621ADDA9951E31CD27697EEC7C242120DFD8F28BC0|60|43|130|28|black|#DFFFFFFF|Byakko Sword: fires<br>2 bullets at once!|びゃっこのけん:たまが<br>2れんしゃに.なるだど|
 |VRAM1|7600|780|3D2E8EDD4213B15B157C9D62F5EAB1EE4DF3EC97614AAEEDD59DC7525018679D|60|43|130|28|black|#DFFFFFFF|Too bad! Not enough<br>money. Try again later.|さ"んねん!おかねが.たりないよ.もうひとがんばりだ!|
 |VRAM1|7600|780|C5CC978B5639E8C2F4926E6F69AC56B382484C5267A1CF95C38C21CF52D8EE06|60|43|130|28|black|#DFFFFFFF|Thanks! Anything else?| |
-|VRAM1|7600|780|EB29AEED33A27290975A18068DBA5BFDFA6B00183797A27BAD00EF05B5B4F3DE|60|43|130|28|black|#DFFFFFFF|You already have this.<br>No need to buy it again!|そのぶきより つよいぶきはないね やくに たてなくて コ"メンだど!|
+|VRAM1|7600|780|EB29AEED33A27290975A18068DBA5BFDFA6B00183797A27BAD00EF05B5B4F3DE|60|43|130|28|black|#DFFFFFFF|No use. Not better<br>than what you have!|そのぶきより つよいぶきはないね やくに たてなくて コ"メンだど!|
 |VRAM1|7600|780|6C156F52C272151EB930304246CABBDD5CF3C9086470A694E53E0F8C9DFFBFDE|60|43|130|28|black|#DFFFFFFF|Thanks a lot!<br>Come again!|まいどありぃ!<br>また きてくれよなっ!|
 |VRAM1|7600|780|6337D375F52B4322349B38997C403CB377446FB46400E53E4EBC6C5CDC8DD444|60|43|130|28|black|#DFFFFFFF|Wyvern Sword:<br>longest shot range!|ひりゅうのけん: たまのとぶきょりがいちばんながいたど!|
 |VRAM1|7600|780|45C64FE80B31AA1E2116AAB9FCFA1DED735A4F95DE852435567275855C8B805C|60|43|130|28|black|#DFFFFFFF|Ashura Sword: fires<br>3 bullets at once!|あしゅらのけん:たまが<br>3れんしゃに なるだど!| 
@@ -349,7 +353,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|08ADB4FE29E39DDD2297A0C41AC8E32C006AE396366DF5D3DB5DAA62629727FE|60|45|130|50|black|#CFFFFFFF|They scattered the<br>cherry blossoms<br>of this village!|この村の<br>サクラを<br>ちらせたの|
 |VRAM1|D080|500|5B8AAA585C3A9D85AFB5A5245FB62CEE224D15FD901F915276C36D293A53EE35|60|45|130|50|black|#CFFFFFFF|It was such a beautiful<br>village…<br>But now it’s gone!|とっても<br>きれいなむら<br>だったのに|
 |VRAM1|D080|500|C2686268083F080C40F0392569F1FA411DC7A8C9605844D5BBA758E86D9E1590|60|45|130|50|black|#CFFFFFFF|Sniff sniff…|しくしく|
-|VRAM1|D080|500|29C49C0CB49F2F366A62C3BCA321894B9641E6F0EB8E3B15309AA5FAD91F678C|60|45|130|50|black|#CFFFFFFF|You can’t defeat<br>them while they spin!!||まわってる<br>あいだは<br>たおせんぞ!!|
+|VRAM1|D080|500|29C49C0CB49F2F366A62C3BCA321894B9641E6F0EB8E3B15309AA5FAD91F678C|60|45|130|50|black|#CFFFFFFF|You can’t defeat<br>them while they spin!!|まわってる<br>あいだは<br>たおせんぞ!!|
 |VRAM1|D080|500|78CD7C6BF982EFAF6C69F0190091227A383FC5DB8D45907585B4A3C1AB9CD183|60|45|130|50|black|#CFFFFFFF|The onis that spins<br>around…|ぐるぐる<br>まわるおには<br>|
 |VRAM1|D080|500|61357A05A07D5E04121AC58D9A27F40CF391D063B30706571B63F1990B00CE33|60|45|130|50|black|#CFFFFFFF|Here’s a tip just for you!|ここだけの<br>はなしじゃ!!|
 |VRAM1|D080|500|0E4123872A96CE46FF700A1851C1774A16111B83F29912F66869BCE22890F4F9|60|45|130|50|black|#CFFFFFFF|The boss’s weak<br>point…|ぼすきゃらの<br>じゃくてんは<br>|
@@ -622,7 +626,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|610DAF5DD4DF5604578A55D361B65FF3F0D56178BD18DCC81EF537863FAC7601|60|45|130|50|black|#CFFFFFFF|Then you can<br>reach higher<br>places!!|いっしょに<br>たかいとこに<br>いけるんだ!!|
 |VRAM1|D080|500|315BDD310FBF2FB6DCB7CBE180760EF371E0970117F13B07974D108E24FF4B16|60|45|130|50|black|#CFFFFFFF|Before the onis<br>came|オニが<br>いなかった<br>ころは|
 |VRAM1|D080|500|12CA4135D9782E1749659EAE1AA6B3B72A42599FEB4523AFE9B4D198886F6E32|60|45|130|50|black|#CFFFFFFF|We used to<br>play a lot|よく<br>あそんだんだ|
-|VRAM1|7600|780|615B95F475840DEA16704739E0B26E59A860A4213F518E894647EB30B3B2B715|60|43|130|28|black|#DFFFFFFF|Cloak of Invisibility:<br>Blinds the onis!|よく きなすった!<br>なにか こ"ようかな?|
+|VRAM1|7600|780|615B95F475840DEA16704739E0B26E59A860A4213F518E894647EB30B3B2B715|60|43|130|28|black|#DFFFFFFF|Invisibility Cloak:<br>Blinds the onis!|よく きなすった!<br>なにか こ"ようかな?|
 |VRAM1|D080|500|5FD5A269694B3E4DE8473EE04D985DCDFEC568395500B3F1034F326EA76DC24F|60|45|130|50|black|#CFFFFFFF|Phew...<br>looks like things<br>are back to normal.|ふ-<br>もとどおりに<br>なったみたい|
 |VRAM1|D080|500|FE386CFD7D267DAC01687B8EC2CB8A2D2068CA176DE4F87D39976CF69A90CDB7|60|45|130|50|black|#CFFFFFFF|I’ve never<br>been good with<br>the heat, you know.|あついのって<br>にがてだった<br>のよねえ|
 |VRAM1|D080|500|F72915BC28B32105167B4A9D2415540112288A59CF611BDF09E3995F5D49152C|60|45|130|50|black|#CFFFFFFF|Thanks to you,<br>the Mt.Kachikachi<br>Hot Springs|おかげさまで<br>カチカチやま<br>おんせんに|
@@ -858,13 +862,29 @@ TODO:
 |VRAM1|C000|680|1C594926D437170D092770F738C661F84848454A17C3E09A1758E30405366C20|60|45|130|50|12|black|#CFFFFFFF|Presented by<br>HUDSON SOFT| せいさく HUDSON SOFT|
 
 
-## Game over screen, Easter egg
+## Game over screen
+
+Statically patched into the ROM:
+
+```lua
+memory.write_bytes_as_array(0x0001F739, {string.byte('GAMEOVER\x00',1,11)}, "ROM") -- ゲーム オーパー  = GAME OVER
+memory.write_bytes_as_array(0x0001F745, {string.byte('CONT\x00',1,5)}, "ROM") -- つづける = CONTINUE/RETRY
+memory.write_bytes_as_array(0x0001F74C, {string.byte('END\x00',1,4)}, "ROM") -- おわる = END
+memory.write_bytes_as_array(0x0001F751, {string.byte('SAVE\x00',1,5)}, "ROM") -- セーブ = SAVE
+memory.write_bytes_as_array(0x0001F7AA, {string.byte('SAVED!\x00',1,11)}, "ROM") -- せ-ふ"[kana]しました
+memory.write_bytes_as_array(0x0001F4F1, {string.byte('PASSWORD',1,8)}, "ROM") -- しそうのうた = SONG/PASSWORD
+memory.write_bytes_as_array(0x0001F4FC, {string.byte('LOAD',1,5)}, "ROM") -- ロート = LOAD
+memory.write_bytes_as_array(0x0001F50D, {string.byte('LOAD<FILE\x00',1,15)}, "ROM") -- どれをロードしますが
+memory.write_bytes_as_array(0x0001F55B, {string.byte('ENTER PASSWORD<<<<',1,18)}, "ROM")
+memory.write_bytes_as_array(0x0001F56F, {string.byte('WRONG PASSWORD!<<<<<',1,20)}, "ROM")
+memory.write_bytes_as_array(0x0001F586, {string.byte('RECHECK AND',1,11)}, "ROM")
+memory.write_bytes_as_array(0x0001F593, {string.byte('TRY AGAIN!<<<<<<<',1,17)}, "ROM")
+```
+
+
+## Easter egg
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|--------|--------|----|-----|--------|
 |VRAM1|7600|780|DE7B892378BB9EFECA49E5DCC9DCABA6DC21AACC17D8A8047FE597514C7146B6|60|43|130|28|12|black|#DFFFFFFF|I knew it! There was a<br>ladies’ hot spring!|やっぱり ありましたね!<br>おたのしみの おんなぶろ!|
 |VRAM1|7600|780|2357DC87BF72A0D7F0B3CB6A68036FE267EEBF301A953D8A283D5C93B8E65C2E|60|43|130|28|12|black|#DFFFFFFF|Lucky you, big brother!<br>Hehehe! Hehehe!”| おにいさん ラッキ-やね!<br>ぐふふのふ! ぐふふのふ!|
-|VRAM1|D700|C00|F19B8BB40E609C3A9AF4193267D1192AED5A69B6C8317B89BDEED27D50AD7BC2|50|43|150|95|14|white|#DF000000|            Game over<br>               Continue<br>               End<br>               Save<br>| |
-|VRAM1|D700|C00|66E6A634CD966E6E82D645FE7BC5D073C6FE33B36B67BAD87019B252F70722EE|50|43|150|95|12|white|#DF000000| Saved!| |
-|VRAM1|D700|C00|4616E84C79E85ABD3E92940468C1DBCBB23EB9B67F9CE0B4440A766C71A4B71E|95|90|70|30|14|white|#DF000000|Password<br>Load| |
-|VRAM1|D700|C00|4EE95393F7D0E4673D52BE7A716FE9BE390A5D1403EA4210AE9559A622C55729|85|57|83|15|14|white|#DF000000| Select file| |

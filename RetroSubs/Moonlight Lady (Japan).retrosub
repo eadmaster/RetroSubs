@@ -46,6 +46,8 @@ TODO:  - |VRAM1|2000|...| -> menu, cutscenes
 
 ## Dialogues
 
+TODO: Diary written.| 日記をつけました｡|
+
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|FE20|80|38723A2E5E8A17AA7950DC008209944E898F69A7BD10A23C839D341E935FD5CA|20|20|0|0|14|white|#DF000091|<clear>| |
@@ -118,5 +120,3 @@ TODO:  - |VRAM1|2000|...| -> menu, cutscenes
 |VRAM1|3D00|140|E2D601C92B8061597F43A9758461F1E421978343B4BCD5C6CFAEBAA5AC737932|28|213|195|55|14|white|#DF000091|Do you want to write in your<br>diary?<br> <br>     Yes   No| 日記をつけますか?<br><br>    う ん   や だ|
 |VRAM1|3400|200|2CEA6D93735677A23CAEC044F5C79F8CB56ECA4BD5CE219C5C50E4850C7DDB46|28|153|195|55|14|white|#DF000091|There’s a diary here.<br>Do you want to write in it?<br>              Yes         No| 日記帳があります｡<br>日記をつけますか?<br><br>    う ん   や だ|
 |VRAM1|3400|200|1AB337467EF898444282766DEC2CB96D33FBBCF99DF7C34EBA126FD545879E51|28|153|195|55|14|white|#DF000091|[Hiyoko]<br>I found a <br>‘Potpourri Herb’|日和子は<br>“ハーブポプリ”<br>         を見つけた|
-
-TODO: Diary written.| 日記をつけました｡|

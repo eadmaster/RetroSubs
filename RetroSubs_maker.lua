@@ -95,7 +95,7 @@ function gui_init()
         -- forms.newform([int? width = nil], [int? height = nil], [string title = nil], [nluafunc onclose = nil])
         local main_window = forms.newform(400, 700, "RetroSubs Maker", destroyall)
 
-        label = forms.label(main_window, "editing ".. filename, xform, yform)
+        label = forms.label(main_window, "Appending to ".. filename, xform, yform)
         forms.setproperty(label, "AutoSize", true)
         yform = yform + delta_y
         -- forms.textbox(long formhandle, [string caption = nil], [int? width = nil], [int? height = nil], [string boxtype = nil], [int? x = nil], [int? y = nil], [bool multiline = False], [bool fixedwidth = False], [string scrollbars = nil])
