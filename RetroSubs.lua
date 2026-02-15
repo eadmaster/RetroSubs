@@ -1,5 +1,5 @@
 --  RetroSubs - Subtitles for retro games.
---  Copyright (C) 2025 - eadmaster
+--  Copyright (C) 2025-2026 - eadmaster
 --  https://github.com/eadmaster/RetroSubs/
 -- 
 --  RetroSubs is free software: you can redistribute it and/or modify it under the terms
@@ -22,15 +22,79 @@ function detect_emu()
         return "retroarch"
     elseif client and type(client.getversion) == "userdata" then
         return "bizhawk"
+    elseif fba then
+        return "fba"
+    --TODO: fceu
+    --elseif emu and type(emu.app_name) == "function" and emu.app_name() == "mame" then
+    --    return "mame"
     else
         return nil
     end
 end
 
+function detect_content()
+    if CURRENT_EMU == "bizhawk" or CURRENT_EMU == "retroarch"  then
+        return gameinfo.getromname()
+    elseif CURRENT_EMU == "fba" then
+        --CURRENT_CONTENT = fba.romname()) -- internal name: e.g. "pce_momoktsg"
+        return fba.gamename() -- extended name: e.g. "Momotarou Katsugeki (Japan)"
+    end
+    return ""
+end
+
+function message(msg)
+    if CURRENT_EMU == "bizhawk" or CURRENT_EMU == "retroarch"  then
+        gui.addmessage(msg)
+    elseif CURRENT_EMU == "fba" then
+        fba.message(msg)
+    end
+end
+
+
+-- Helper to safely convert the C-table to a Lua string in 5.1
+local function bytes_to_string(byte_table)
+    local unpack_func = unpack or table.unpack
+    -- Lua has a limit on the number of arguments (stack size).
+    -- If the memory region is large, we must use a loop.
+    if #byte_table < 2000 then
+        return string.char(unpack_func(byte_table))
+    else
+        local parts = {}
+        for i = 1, #byte_table do
+            parts[i] = string.char(byte_table[i])
+        end
+        return table.concat(parts)
+    end
+end
+
+
+function hash_region(start, len, region)
+    if CURRENT_EMU == "bizhawk" or CURRENT_EMU == "retroarch"  then
+        return memory.hash_region(start, len, region)
+    else
+        -- compute sha256 using external lib
+        
+        local byte_table = memory.readbyterange(start, len)
+        local binary_data = bytes_to_string(byte_table)
+        local sha2 = require("sha2")
+        h = sha2.sha256(binary_data)
+        --print(h)
+        return(h:upper())
+        --return sha2.sha256(binary_data)
+    end
+end
+
+
 CURRENT_EMU = detect_emu()
+CURRENT_CONTENT = detect_content()
 
 
 local function trim(s)
+    --if CURRENT_EMU == "bizhawk" or CURRENT_EMU == "retroarch"  then
+    --    s = bizstring.trim(s)
+    --    if not s then s="" end
+    --    return s
+    --else
     return (s:gsub("^%s*(.-)%s*$", "%1"))
 end
 
@@ -58,7 +122,7 @@ function parse_markdown_multi_tables(filename)
         return nil
     else
         print("found: ", filename)
-        gui.addmessage("RetroSub loaded")
+        message("RetroSub loaded")
     end
 
     local header_map = nil
@@ -67,145 +131,153 @@ function parse_markdown_multi_tables(filename)
     for line in file:lines() do
         line = trim(line)
         
-        -- Skip empty lines or comments
-        if line == "" or line:match("^%s*[#;]") then
-            header_found = false
-            goto continue
-        end
-
-        -- Detect Lua code block start
-        if line:match("^%s*```lua") then
-            executing_lua = true
-            lua_lines = {}
-            goto continue
-        end
+        repeat
             
-        -- If inside a Lua block, collect lines
-        if executing_lua then
-            if line:match("^%s*```") then
-                -- End of Lua block, execute code
-                local code = table.concat(lua_lines, "\n")
-                local fn, err = load(code)
-                if fn then
-                    local ok, result = pcall(fn)
-                    if not ok then
-                        print("Error executing Lua block:", result)
+            -- Skip empty lines or comments
+            if line == "" or line:match("^%s*[#;]") then
+                header_found = false
+                break
+            end
+
+            -- Detect Lua code block start
+            if line:match("^%s*```lua") and _VERSION ~= "Lua 5.1" then
+                executing_lua = true
+                lua_lines = {}
+                break
+            end
+                
+            -- If inside a Lua block, collect lines
+            if executing_lua then
+                if line:match("^%s*```") then
+                    -- End of Lua block, execute code
+                    local code = table.concat(lua_lines, "\n")
+                    local fn, err = load(code)
+                    if fn then
+                        local ok, result = pcall(fn)
+                        if not ok then
+                            print("Error executing Lua block:", result)
+                        end
+                    else
+                        print("Error compiling Lua block:", err)
                     end
+                    executing_lua = false
                 else
-                    print("Error compiling Lua block:", err)
+                    table.insert(lua_lines, line)
                 end
-                executing_lua = false
-            else
-                table.insert(lua_lines, line)
+                break
             end
-            goto continue
-        end
-            
-        -- Detect header line
-        if not header_found and line:match("^|") then
-            local raw_cols = split_markdown_row(line)
-            local cols = {}
-            for _, col in ipairs(raw_cols) do
-                cols[#cols + 1] = trim(col):lower()
-            end
+                
+            -- Detect header line
+            if not header_found and line:match("^|") then
+                local raw_cols = split_markdown_row(line)
+                local cols = {}
+                for _, col in ipairs(raw_cols) do
+                    cols[#cols + 1] = trim(col):lower()
+                end
 
-            -- Check if required columns exist
-            local map = {}
-            for i, c in ipairs(cols) do
-                map[c] = i
-            end
+                -- Check if required columns exist
+                local map = {}
+                for i, c in ipairs(cols) do
+                    map[c] = i
+                end
 
-            local has_all_required = true
-            for _, c in ipairs(required_cols) do
-                if not map[c] then
-                    has_all_required = false
+                local has_all_required = true
+                for _, c in ipairs(required_cols) do
+                    if not map[c] then
+                        has_all_required = false
+                        break
+                    end
+                end
+
+                if has_all_required then
+                    header_map = map
+                    header_found = true
                     break
                 end
             end
 
-            if has_all_required then
-                header_map = map
-                header_found = true
-                goto continue
-            end
-        end
-
-        -- Skip separator line under header
-        if header_found and line:match("^|%s*[-]+") then
-            goto continue
-        end
-
-        -- Parse data row when header found
-        if header_found then
-            if not line:match("^|") then
-                -- End of this table, reset for next table
-                header_found = false
-                header_map = nil
-                goto continue
+            -- Skip separator line under header
+            if header_found and line:match("^|%s*[-]+") then
+                break
             end
 
-            local cols = split_markdown_row(line)
-            for i, col in ipairs(cols) do
-                --cols[i] = trim(col)
-                cols[i] = col
-            end
-
-            -- Skip row if fewer columns than header
-            if #cols < #header_map then
-                print("Warning: skipping malformed row: " .. line)
-                goto continue
-            end
-
-            -- Extract required fields
-            local function getcol(name)
-                return cols[header_map[name]]
-            end
-            
-            local region = getcol("region")
-            local start  = getcol("start")
-            local len    = getcol("len")
-            local hash   = getcol("hash")
-            local text   = getcol("text")
-
-            if not (region and start and len and hash and text and tonumber(start, 16) and tonumber(len, 16)) then
-                print("Warning: skipping incomplete row: " .. line)
-                goto continue
-            end
-            
-            local curr_entry = {
-                region = region,
-                start  = start,
-                len    = len,
-                hash   = hash,
-                text   = text,
-            }
-            
-            --if DEBUG_RETROSUB then
-            --    check_long_line(text) 
-            --end
-
-            for _, name in ipairs(optional_cols) do
-                if header_map[name] then
-                    local val = getcol(name) or nil
-                    if name == "x_pos" or name == "y_pos" or name == "width_box" or name == "height_box" or name == "font_size" then
-                        val = tonumber(val) -- returns nil if not valid
-                    end
-                    curr_entry[name] = val
+            -- Parse data row when header found
+            if header_found then
+                if not line:match("^|") then
+                    -- End of this table, reset for next table
+                    header_found = false
+                    header_map = nil
+                    break
                 end
+
+                local cols = split_markdown_row(line)
+                for i, col in ipairs(cols) do
+                    --cols[i] = trim(col)
+                    cols[i] = col
+                end
+
+                -- Skip row if fewer columns than header
+                if #cols < #header_map then
+                    print("Warning: skipping malformed row: " .. line)
+                    break
+                end
+
+                -- Extract required fields
+                local function getcol(name)
+                    return cols[header_map[name]]
+                end
+                
+                local region = getcol("region")
+                local start  = getcol("start")
+                local len    = getcol("len")
+                local hash   = getcol("hash")
+                local text   = getcol("text")
+
+                if not (region and start and len and hash and text and tonumber(start, 16) and tonumber(len, 16)) then
+                    console.log("Warning: skipping incomplete row: " .. line)
+                    break
+                end
+                
+                -- check valid region
+                if not memory.usememorydomain(region) then
+                    console.log("warning: memory domain not available in current core (skipped): " .. region)
+                    break
+                end
+                
+                local curr_entry = {
+                    region = region,
+                    start  = start,
+                    len    = len,
+                    hash   = hash,
+                    text   = text,
+                }
+                
+                --if DEBUG_RETROSUB then
+                --    check_long_line(text) 
+                --end
+
+                for _, name in ipairs(optional_cols) do
+                    if header_map[name] then
+                        local val = getcol(name) or nil
+                        if name == "x_pos" or name == "y_pos" or name == "width_box" or name == "height_box" or name == "font_size" then
+                            val = tonumber(val) -- returns nil if not valid
+                        end
+                        curr_entry[name] = val
+                    end
+                end
+                
+                local key1 = region .. ":" .. start .. ":" .. len
+                entries[key1] = entries[key1] or {}
+                
+                -- check if duplicate
+                if DEBUG_RETROSUB and entries[key1][hash] ~= nil then
+                    console.log("warning: duplicate hash found (prev line overwritten): " .. hash)
+                end
+                
+                entries[key1][hash] = curr_entry
             end
 
-            local key1 = region .. ":" .. start .. ":" .. len
-            entries[key1] = entries[key1] or {}
-            
-            -- check if duplicate
-            if DEBUG_RETROSUB and entries[key1][hash] ~= nil then
-                console.log("warning: duplicate hash found (prev line overwritten): " .. hash)
-            end
-            
-            entries[key1][hash] = curr_entry
-        end
-
-        ::continue::
+        until true
     end
 
     file:close()
@@ -215,21 +287,25 @@ end
 
 function get_memory_hash(region, start, len)
     if not start or not len or start < 0 or len <= 0 then
-        print("invalid memory region", start, len)
+        console.log("invalid memory region", start, len)
         return ""
     end
     -- else
 
     -- bizhawk/retroarch
     -- TODO: catch exceptions
-    local hash = memory.hash_region(start, len, region)
+    local hash = hash_region(start, len, region)
     return hash
 end
 
 
 function clear_text()
-    gui.cleartext()
-    gui.clearGraphics()
+    if CURRENT_EMU == "bizhawk" or CURRENT_EMU == "retroarch"  then
+        gui.cleartext()
+        gui.clearGraphics()
+    elseif CURRENT_EMU == "fba" then
+        gui.clearuncommitted()
+    end
 end
 
 
@@ -237,19 +313,21 @@ function check_long_line(text)
     for line in (text .. "<br>"):gmatch("([^<]+)<br>") do
         if line then
             if (line:len() >= DEBUG_MAX_LINE_LEN) then
-                print("long line: ", line)
+                console.log("long line: ", line)
             end
         end
     end
 end
 
 function show_text(entry)
+    --print(entry.text)
+    
     --local height = client.bufferheight()
     --local width = client.bufferwidth()  -- TODO: center by default
     local x_pos = entry.x_pos or 10  -- default: upper-left corner
     local y_pos = entry.y_pos or 10  -- default: upper-left corner
-    local bg_color = entry.bg_color or 0xFF000000  -- default: black (0xAARRGGBB)
-    local fg_color = entry.fg_color or 0xFFFFFFFF  -- default: white
+    local bg_color = entry.bg_color or "black"  -- default: black (0xAARRGGBB)
+    local fg_color = entry.fg_color or "white"  -- default: white
     local height_box = entry.height_box -- optional
     local width_box = entry.width_box -- optional
     local font_size = entry.font_size or 12  -- optional  -- client.getconfig().FontSize 
@@ -261,6 +339,10 @@ function show_text(entry)
     if CURRENT_EMU == "retroarch" then
         font_size = 32 + (font_size - 12)  -- * scaling_factor
         font_face = ""
+        -- inverted color defaults
+        bg_color = entry.bg_color or "white"
+        fg_color = entry.fg_color or "black"
+        clear_text()
     end
     
     --print("X:", x_pos)
@@ -345,20 +427,24 @@ function show_text(entry)
     end
 end
 
+
+
 -- main
-local parsed_markdown = parse_markdown_multi_tables("RetroSubs/" .. gameinfo.getromname() .. ".retrosub")
+local parsed_markdown = parse_markdown_multi_tables("RetroSubs/" .. CURRENT_CONTENT .. ".retrosub")
 if parsed_markdown == nil then
     -- try to load from content dir
-    local curr_rom_path = nil
+    local curr_rom_path = ""
     
     if gameinfo and type(gameinfo.getrompath) == "function" then 
         curr_rom_path = gameinfo.getrompath()  -- retroarch-only
     end
     
-    local config = client.getconfig()    -- bizhawk-only
-    if config.RecentRoms and config.RecentRoms[0] then
-        curr_rom_path = config.RecentRoms[0]
-        curr_rom_path = curr_rom_path:gsub("%*OpenRom%*", "")
+    if client then
+        local config = client.getconfig()    -- bizhawk-only
+        if config.RecentRoms and config.RecentRoms[0] then
+            curr_rom_path = config.RecentRoms[0]
+            curr_rom_path = curr_rom_path:gsub("%*OpenRom%*", "")
+        end
     end
     
     if curr_rom_path then
@@ -367,7 +453,7 @@ if parsed_markdown == nil then
     end
     
     if parsed_markdown == nil then
-        print("parsing failed or retrosub file not found: " .. curr_rom_path)
+        console.log("parsing failed or retrosub file not found: " .. curr_rom_path)
         return
     end
 end
@@ -395,7 +481,7 @@ while true do
     
     -- CPU SAVER
 	if (emu.framecount() - last_update) > CPU_SAVER_INTERVAL  then
-        
+
         last_update = emu.framecount()
         no_match = true
         curr_visible_text_list = {} -- new empty table

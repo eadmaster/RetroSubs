@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.4
+version: 0.9.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
@@ -158,12 +158,13 @@ TODO: change hashed region + fix buggy lines -> System Bus|2000|...
  - 14A50C968663BCA463F5CFEBD210D00D9671207463D8FDC92F959D6B5195343E
 
 
-## Save menus
+## Save menu
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load file<br>From start|ロード<br>最初から|
+|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load file<br>From start<br> <lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("　Ａｒｚａｌ　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |ロード<br>最初から|
 |VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load file|ステージの最初から<br>セーブした場所から|
+|VRAM1|1200|FA0|FA0DC1C5A1638C208D385A39ACFFA69FFF3B648C5A79ACA53568423DB0C12A18|55|70|150|30|18|white|#da91ff|    Please wait♡|ちょっとまってネ♡|
 
 
 ## Status menu
@@ -185,7 +186,19 @@ TODO: change hashed region + fix buggy lines -> System Bus|2000|...
 |VRAM1|3D00|3E0|B40D2555E47A02E3C16DC89E1C58E70BE4D0EF0A84BB657D1C72DD8B73C43094|15|10|0|0|white|#EF000000|Status<br> <br>                           HMM... NOT GREAT...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 |VRAM1|3D00|3E0|7D9EB1B51A8E6B6D3F8FEFD35CB4DE5FA1F1E9A28237FB5429F7A948A512D280|15|10|0|0|white|#EF000000|Status<br> <br>                           IT HURTS!~ <br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
 |VRAM1|3D00|3E0|AEB69128BB199BFE7D04AADA094F19ECA55CA1082E4578279D6331AD061797D0|15|10|0|0|white|#EF000000|Status<br> <br>                           I’M DONE FOR...<br> <br>                             Gold               Shield<br> <br> <br>Item<br> <br>Magic<br> <br> <br>Rod<br> <br>Heal<br> <br>Teleport|
-|System Bus|D12A|200|C72D937183B62AD925F146412AF034066189EC8C1158F862CC925AA97E350AF3|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |
+
+
+2FIX: not effective on 1st access of the main menu
+|System Bus|D12A|D6|C11D8762777C6F9A4E18EB8F1386A01FFB6EF4D60BA5B721903083E65DFBDFF7|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |
+;NO? 1st file only: |System Bus|c7ce|10|3215F2765C6B91CFEE57787108FAE24B9475B364D661A5584F8E665452770CD7|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xC7D7, bizstring.encode("Ｊａｉｌ", "Shift_JIS"), "System Bus")|
+
+;NOT WORKING EITHER:```lua
+print("ok")
+memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus")
+memory.write_bytes_as_array(0xd12a, bizstring.encode("Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus")
+memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus")
+```
+
 
 Patching memory directly:
 
@@ -200,9 +213,6 @@ Patching memory directly:
      0x0000d12a 　アーザルの町\0　アーザルの町　レイジアの村\0　アーザルの町　レイジアの村\0　ヴァルアの町\0　空中城のテラス\0　空中城テラス　結界樹の下\0　空中城テラス　結界樹の下\0　牢屋１階\0　空中城テラス　結界樹の下\0　牢屋１階　　　牢屋４階
      -> 
      "Ａｒｚａｌ\0　　Ｒｅｉｇｉａ\0　　　　　　　　Ｒｅｉｇｉａ\0　　　　　　　　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ"
-
-2FIX: not effective on 1st access of the main menu
-;NO? 1st file only: |System Bus|c7ce|10|3215F2765C6B91CFEE57787108FAE24B9475B364D661A5584F8E665452770CD7|15|10|0|0|white|#EF000000|<lua>memory.write_bytes_as_array(0xC7D7, bizstring.encode("Ｊａｉｌ", "Shift_JIS"), "System Bus")|
 
 
 ## Item boxes
