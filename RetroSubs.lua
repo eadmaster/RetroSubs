@@ -337,7 +337,12 @@ function show_text(entry)
     
     -- different defaults for retroarch
     if CURRENT_EMU == "retroarch" then
-        font_size = 32 + (font_size - 12)  -- * scaling_factor
+        --font_size = 32 + (font_size - 12)  -- * scaling_factor
+        if (font_size - 12) > 0 then
+            font_size = 32 + (font_size - 12)
+        else
+            font_size = 32
+        end
         font_face = ""
         -- inverted color defaults
         bg_color = entry.bg_color or "white"
