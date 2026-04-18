@@ -151,37 +151,26 @@ TODO: fix duplicate hashes:
 |VRAM1|3D00|570|382086EFCCDEA6C06ED30E51EFD3D390BC38F4C251C9C1B7CBA4C37553796BB2|10|10|14|#ffff00|#EF000000|Are you okay?|大丈夫だい?|
 |VRAM1|3D00|570|5B59773CB0BF991B1EC4A2E941EA202FA661E04759EBEE9792C5B0A651FB9058|10|10|14|#ffff00|#EF000000|That was scary!|怖かったー!|
 |VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|14|#ffff00|#EF000000|Ah… now I can travel together with Latok.<br>Latok, I’ll be coming to you soon.<br>Hey, hey, isn’t that the rumored Latok Kart?<br>Wh-who is talking about my Latok?!|はぁ…これでラトクさんと一緒に旅ができるんだ<br>ラトクさん、もうすぐあなたのもとへ参ります<br>ねぇねぇ、それって噂のラトクカートじゃないの?|
-|VRAM1|1200|FA0|EF10413E724D218D274E6B91FD23E5914658F44C9CA4EDD0AAC7000048686188|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…||
-|VRAM1|1200|FA0|6F0DBC2FC1349403207B14E6100D092C153BDA21234189F118449D79094D902F|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…||
-|VRAM1|1200|FA0|B4F4CF0D5B1AAD97F10B4631A9669845410FF76E6F8A779A4B2E8E71ABC30A27|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…||
-|VRAM1|1200|FA0|266FCA9382611133DE1EABEE3CCFDAADF99DEBD979AF4268D843AC8B615D9A90|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…||
-|VRAM1|1200|FA0|727296696D5FF855684E177E2387AC4046FE64CAE4DBE122407245E8ED2CB84F|10|10|14|#ffff00|#EF000000|A criminal…? <br>Latok…||
-|VRAM1|1200|FA0|393C02057A13B178CF0F2C3B8C581898094517BFC4656B435AC139CBFC4F893A|10|10|14|#ffff00|#EF000000|A criminal…? <br>Latok…||
+|VRAM1|1200|FA0|6F0DBC2FC1349403207B14E6100D092C153BDA21234189F118449D79094D902F|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
+|VRAM1|1200|FA0|393C02057A13B178CF0F2C3B8C581898094517BFC4656B435AC139CBFC4F893A|10|10|14|#ffff00|#EF000000|A criminal…? <br>Latok…<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
 |VRAM1|1200|FA0|46E5DAF7B33AE84A6F784FAFCCA5146B7F08A183046AC9E32576F8A9182EC285|10|10|14|#ffff00|#EF000000|No, that’s definitely a lie!<br>Latok would never commit a crime!||
 |VRAM1|1200|FA0|6B3714559ABDCB25906273351E71DD7DF28CCE49592821DBF342F9D1D1A25A38|10|10|14|#ffff00|#EF000000|[Mill] A-are you alright, Fray?<br>You suddenly stood up…<br>[Fray] Mill, sir, I have somewhere to<br>go, so I’ll be leaving now!||
-|VRAM1|1200|FA0|FF8F61EB8C12C7B3919B54A819AD4CC13DD08186F897628322B12C1391C67500|10|10|14|#ffff00|#EF000000|[Mill] Fray? Please wait.<br>What about the graduation<br>ceremony? Fray!||
-|VRAM1|1200|FA0|8BC59627F03FFAE71988496BA5126B07F209DB0532C5CD90C07A39D34932B6FD|10|10|14|#ffff00|#EF000000|[Mill] Fray? Please wait.<br>What about the graduation<br>ceremony? Fray!||
+|VRAM1|1200|FA0|FF8F61EB8C12C7B3919B54A819AD4CC13DD08186F897628322B12C1391C67500|10|10|14|#ffff00|#EF000000|[Mill] Fray? Please wait.<br>What about the graduation<br>ceremony? Fray!<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
 
-; TODO: fix blinking (change hashed region):
- - What’s going on?<br>Ah, could that be about that town...
- - A criminal…? <br>Latok…
- - Fray? Please wait.<br>What about the graduation<br>c
 ;|VRAM1|3D00|570|A708FA824A1DFD6AC1D0FCFAF180D07C5B54F2DAEE17AA4036D293180C201241|10|10|14|#ffff00|#EF000000|This year again, young inexperienced<br>mages are about to graduate.|今年もまた甘手の若い魔法使いたちが スタッチの時を迎えにとしていた|
-;|VRAM1|3D00|570|14A50C968663BCA463F5CFEBD210D00D9671207463D8FDC92F959D6B5195343E|10|10|14|#ffff00|#EF000000|<br><br><br>
+
+;TODO: fix duplicated hash: C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0
 ;|た、だれよ!私のラトクさんの噂をしてんのは!<br>なになに?<br>ああ、それってもしかして例のアーザルの街の…<br>そう!あの勇者、ラトクが有解犯なんだってさ<br>そうそう!ほら、若い人たちばかり狙われてるっていう… <br>有解犯?<br>あのラトクさんが…<br>いや、そんなの嘘に決まってる!<br>ラトクさんが有解なんてするはずないわ!<br>ど…どうかしましたか、フレイさん。急に立ち上がったりして… <br>ミル先生、私、ちょっと行くところがあるから、これで失礼するわ!<br>フレイさん?ちょっと待ってください。卒業式はどうするんですか? <br>フレイさん!|
 
 TODO: try for scene detection: |VRAM1|1200|FA0|,  NO? 1E00
-TODO: change hashed region + fix buggy lines -> System Bus|2000|...
- - A708FA824A1DFD6AC1D0FCFAF180D07C5B54F2DAEE17AA4036D293180C201241
- - 14A50C968663BCA463F5CFEBD210D00D9671207463D8FDC92F959D6B5195343E
 
 
 ## Save menu
 
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
-|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load File<br>New Game<br> <lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("　Ａｒｚａｌ　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |ロード<br>最初から|
-|VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load File|ステージの最初から<br>セーブした場所から|
+|VRAM1|1200|FA0|3112F44A5661B0F1C5C6F1E4AB08BD2BCD57CE5705B1506580982577CB54304B|95|112|100|30|14|white|#2448ff|Load Game<br>New Game<br> <lua>memory.write_bytes_as_array(0xd0e0, bizstring.encode("Ｔｅｌｅｐｏｒｔ　ｔｏ？　", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd12a, bizstring.encode("　Ａｒｚａｌ　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｒｅｉｇｉａ　　　　　　　\0　Ｖａｌｕａｈ\0　Ｔｅｒｒａｃｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ\0　Ｔｅｒｒａｃｅ　Ｔｒｅｅ\0　Ｊａｉｌ　　　Ｊａｉｌ", "Shift_JIS"), "System Bus") ; memory.write_bytes_as_array(0xd89b, bizstring.encode("Ａｒｚａｌ　　Ｒｅｉｇｉａ　Ｖａｌｕａｈ　Ｔｅｒｒａｃｅ　Ｔｒｅｅ　　Ｊａｉｌ　　　Ｊａｉｌ　　　Ａｌｔａｒ　　Ｖａｌｕａｈ", "Shift_JIS"), "System Bus") |ロード<br>最初から|
+|VRAM1|1200|FA0|656FF69DF7B0A844FD5520E1B9DBD04090D898193F47785438CA7B5B640DD5D5|65|112|150|30|14|white|#2448ff|Retry<br>Load Game|ステージの最初から<br>セーブした場所から|
 |VRAM1|1200|FA0|FA0DC1C5A1638C208D385A39ACFFA69FFF3B648C5A79ACA53568423DB0C12A18|55|70|150|30|18|white|#da91ff|    Please wait♡|ちょっとまってネ♡|
 
 
