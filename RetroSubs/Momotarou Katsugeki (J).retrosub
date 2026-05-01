@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.4
+version: 0.9.5
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "345f43e9", "ec7358edb3672a8aa8850623eec72a71" ]
 ---
@@ -408,7 +408,7 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|D080|500|9F0490CF20D2A054D11753917A6351AC56A9AF2294C4F62532734E238FEC46E7|60|45|130|50|black|#CFFFFFFF|This is Kintaro’s<br>village.|ここは<br>きんたろうの<br>むら|
 |VRAM1|D080|500|3CC60E8FF30C30665DD47FBDBACCC78FA9BB0BDB38A3B4D48CA107F205275808|60|45|130|50|black|#CFFFFFFF|At the foot<br>of Mt. Ashigara,<br>everything’s wrecked!!|あしがらやま<br>のふもとで<br>こ"わす!!|
 |VRAM1|D080|500|C69316500D45787AD7358930307FD04C838B8AAF014345C3DC1A9DDA2648DBF5|60|45|130|50|black|#CFFFFFFF|Things keep<br>falling down<br>from Mt. Ashigara!|あしがらやま<br>から<br>おちてくる|
-|VRAM1|D080|500|316CF36C785D22A05B5F3A8E7AAB5B2322F768E61356E1E85800B01DAF1ECD32|60|45|130|50|black|#CFFFFFFF|It’s because<br>of that huge<br>Kintaro candy!!|でっけえ<br>きんたろあめ<br>のせいでよお|
+|VRAM1|D080|500|316CF36C785D22A05B5F3A8E7AAB5B2322F768E61356E1E85800B01DAF1ECD32|60|45|130|50|black|#CFFFFFFF|It’s because<br>of that huge<br>Kintaro candy!!|でっけえ<br>キンタロあめ<br>のせいでよお|
 |VRAM1|D080|500|B6C0969EB94BD4D98248529E95B29D89A07D9A7A796030F059EF0EF252D5D0F3|60|45|130|50|black|#CFFFFFFF|We can’t<br>harvest<br>any crops!!|さくもつは<br>とれねえ!!|
 |VRAM1|D080|500|9D18EFA9B1C6EFD0DD09199F2F753173A8D6DF9B9A378A4E3B359671C0442998|60|45|130|50|black|#CFFFFFFF|We can’t even<br>walk outside!!|そとも<br>あるけねえ!!|
 |VRAM1|D080|500|F4C3313B79B0BFF70E3EE5AB4A4225303847BFC2C77A560FC4AEEBDCCE6D2808|60|45|130|50|black|#CFFFFFFF|Everything’s<br>going wrong!!|ふんだり<br>けったりだ!!|
@@ -454,6 +454,8 @@ memory.write_bytes_as_array(0x0001F4D0, {string.byte('<HARD<<<<<<<',1,12)}, "ROM
 |VRAM1|7600|780|2DE15970C4CAF79ED81938BBE5F41307CC33F09BEF4E411B14F611877B624D07|60|43|130|28|black|#DFFFFFFF|Satsuki Armor: enemy<br>damage halved!|さつきのどう:てきのダメ-ジが はんぶんに なりますよ!|
 |VRAM1|7600|780|1B3678895B9BE4926FE6E6CD71DD2AA20AE59702C66A2BC6879385A089A4A533|60|43|130|28|black|#DFFFFFFF|Brave Armor: very<br>low enemy damage!|ゆうきのどう:てきのダメージがいちばん かるくなりますよ|
 |VRAM1|7600|780|530B2E19DFF4C7029F17128B9DE430EC29FC8423256D43E2E4A96D625ECA7B11|60|43|130|28|black|#DFFFFFFF|Seems it wasn’t to your<br>liking. Come again!|おきにめさなかったようですね<br>またのおこしをまっています!|
+|VRAM1|7600|780|EC9700B6576AC3496BDB16DE94A648F072CFF376222133BFB44F3783B9B734AB|60|43|130|28|black|#DFFFFFFF|Sorry, not better<br>than what you have!|それいじょうの ぼうくは ないよ<br>おやくにたてなくて、すみません|
+|VRAM1|7600|780|F3AF299626F4A3FDFE9349981E0D0C4A16CD7DEBADFD686F1FF39B734972B74A|60|43|130|28|black|#DFFFFFFF|You need more money.<br>Come back later!|おや お去ゃくさん!<br>おかねがたりなようですが?|
 
 
 ### Rice ball Shop
@@ -791,7 +793,7 @@ TODO: all the questions
 
 ## Boss victory banners
 
-WIP
+TODO
 
 ```lua
 --memory.write_bytes_as_array(0x00048340, {string.byte('VICTORY!     ',1,13)}, "ROM") -- ばんざいぐんだん さんじょう! = Cheers to the 3rd group!

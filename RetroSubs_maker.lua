@@ -140,8 +140,8 @@ function gui_init()
         forms.setproperty(btn, "AutoSize", true)
         yform = yform + delta_y
         
-        --autotrigger_checkbox = forms.checkbox(main_window, "Autotrigger with " .. TRIGGER_HOTKEY, xform, yform)
-        --forms.setproperty(autotrigger_checkbox, "AutoSize", true)
+        autotrigger_checkbox = forms.checkbox(main_window, "Autotrigger with " .. TRIGGER_HOTKEY, xform, yform)
+        forms.setproperty(autotrigger_checkbox, "AutoSize", true)
 end
 
 
