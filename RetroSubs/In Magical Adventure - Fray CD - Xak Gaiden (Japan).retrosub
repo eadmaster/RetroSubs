@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.9.7
+version: 0.9.8
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "5345162A", "DBB202CC6612FAF198FCE29F1941CE64" ]
 ---
@@ -41,7 +41,7 @@ Localized names:
  - Isac (アイザック) (Professor/Sorcerer)
  - Valuah (Town) (ヴァルアの町)
  - Lake Reitia (レイティア湖)
- - Leef Potion (リーフの秘薬) -> Leaf Potion?
+ - Leef Potion (リーフの秘薬) -> Leaf Potion?, Leef Medicine?
  - Mill Grard (ミル・グラード) (wizard, former teacher at the Magic School)
  - Miry (ミリー)
  - Razel ［ラゼル］
@@ -89,6 +89,7 @@ MSX only:
 references:
 
  - https://retro-type.com/xyz/xcharacters.htm
+ - https://retro-type.com/xyz/xstory2.htm
  - https://www.oocities.org/reiszvanadis/guide.htm
  - https://www.generation-msx.nl/software/microcabin/fray---in-magical-adventure/release/1838/
  - https://www.amusement-center.com/project/egg/console/detail.php?id=ecsw0077&lang=en
@@ -110,7 +111,7 @@ Hashed memory regions:
  - |VRAM1|2600|6E0| -> shop items description, fulscreen dialogues
 
 > [!NOTE]
-> Could not use a single memory region for the dialogues because the animated text cursor makes the hashes to rotate.
+> Could not use a single memory region for the dialogues because the animated text cursor makes the hashes rotate.
 
 TODO: fix duplicate hashes:
 
@@ -148,10 +149,10 @@ TODO: fix duplicate hashes:
 |VRAM1|3D00|570|DE972203BC9838C5FE27A4DF7118E54A045FB584CE3C7F1096D58293B39CC94E|10|10|14|#ffff00|#EF000000|Spring, 756 S.E.|生歴756年 春|
 |VRAM1|1200|FA0|1FC128082861AFE59278B13D6436D6AFB11F22DD50088B97D977B85EBF3FEC68|10|10|14|#ffff00|#EF000000|This year again, young inexperienced<br>mages are about to graduate.|今年もまた甘手の若い魔法使いたちが スタッチの時を迎えにとしていた|
 |VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|14|#ffff00|#EF000000|Graduation, huh… it’s already been<br>three years since then.|卒業か、もうあれから3年にもなるのね|
-|VRAM1|3D00|570|382086EFCCDEA6C06ED30E51EFD3D390BC38F4C251C9C1B7CBA4C37553796BB2|10|10|14|#ffff00|#EF000000|Are you okay?|大丈夫だい?|
-|VRAM1|3D00|570|5B59773CB0BF991B1EC4A2E941EA202FA661E04759EBEE9792C5B0A651FB9058|10|10|14|#ffff00|#EF000000|That was scary!|怖かったー!|
-|VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|14|#ffff00|#EF000000|Ah… now I can travel together with Latok.<br>Latok, I’ll be coming to you soon.<br>Hey, hey, isn’t that the rumored Latok Kart?<br>Wh-who is talking about my Latok?!|はぁ…これでラトクさんと一緒に旅ができるんだ<br>ラトクさん、もうすぐあなたのもとへ参ります<br>ねぇねぇ、それって噂のラトクカートじゃないの?|
-|VRAM1|1200|FA0|6F0DBC2FC1349403207B14E6100D092C153BDA21234189F118449D79094D902F|10|10|14|#ffff00|#EF000000|What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
+|VRAM1|3D00|570|382086EFCCDEA6C06ED30E51EFD3D390BC38F4C251C9C1B7CBA4C37553796BB2|10|10|14|#ffff00|#EF000000|[Latok] Are you okay?|大丈夫だい?|
+|VRAM1|3D00|570|5B59773CB0BF991B1EC4A2E941EA202FA661E04759EBEE9792C5B0A651FB9058|10|10|14|#ffff00|#EF000000|[Fray] That was scary!|怖かったー!|
+|VRAM1|3D00|570|C17E5AA9B678538CF7D53B428B6D468C9ACFC4C081713029250FB206416073C0|10|10|14|#ffff00|#EF000000|[Fray] Ah… now I can travel together with Latok.<br>Latok, I’ll be coming to you soon.<br>[student] Hey, isn’t that the rumored Latok Kart?<br>[Fray] Wh-who is talking about my Latok?!|はぁ…これでラトクさんと一緒に旅ができるんだ<br>ラトクさん、もうすぐあなたのもとへ参ります<br>ねぇねぇ、それって噂のラトクカートじゃないの?|
+|VRAM1|1200|FA0|6F0DBC2FC1349403207B14E6100D092C153BDA21234189F118449D79094D902F|10|10|14|#ffff00|#EF000000|[student] What’s going on?<br>Ah, could that be about that town of<br>Arzal… Yes! That Latok, is apparently<br>a kidnapper…<br>Yeah, yeah! They say he’s targeting<br>only young people…<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
 |VRAM1|1200|FA0|393C02057A13B178CF0F2C3B8C581898094517BFC4656B435AC139CBFC4F893A|10|10|14|#ffff00|#EF000000|A criminal…? <br>Latok…<br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep><br><sleep>||
 |VRAM1|1200|FA0|46E5DAF7B33AE84A6F784FAFCCA5146B7F08A183046AC9E32576F8A9182EC285|10|10|14|#ffff00|#EF000000|No, that’s definitely a lie!<br>Latok would never commit a crime!||
 |VRAM1|1200|FA0|6B3714559ABDCB25906273351E71DD7DF28CCE49592821DBF342F9D1D1A25A38|10|10|14|#ffff00|#EF000000|[Mill] A-are you alright, Fray?<br>You suddenly stood up…<br>[Fray] Mill, sir, I have somewhere to<br>go, so I’ll be leaving now!||
@@ -723,18 +724,18 @@ TODO: patch in memory shop strings:
 |VRAM1|3D00|570|B7D4CDBC66341AFE36D964A3758EB878150540FBE39BD219F5B5846B075CF9D9|9|188|238|35|14|white|#EF000000|[Mill] …Hmm, maybe…| ［ミル］・・・う〜ん、もしかしたら・・・|
 |VRAM1|3D00|570|9C7C51A6A217FB35DAB3EB610F31FBC6E9176D43D7D8F75B6E1CB2EDFCB4A883|9|188|238|35|14|white|#EF000000|Miry might possess strong magical<br>powers.| ミリーさんは、強い魔力を持っているのかもしれませんね。|
 |VRAM1|3D00|570|9DD1B17B4F4D6D6CFADCD85CD06718614F4FD2544C5E52B3F8C21CC84A7AF5AE|9|188|238|35|14|white|#EF000000|[Miry] Really?<br>So I am a genius after all!|［ミリー］ホント？<br>やっぱ、あたしってば天才！|
-|VRAM1|3D00|570|C71F511EDA658DCBCBC0D9124DB40B8F86C5949E373E54FFEC95C66D21DC9949|9|188|238|35|14|white|#EF000000|[Mill] But still, who could have made<br>such a thing… No way!?|［ミル］それにしても一体だれがあんなモノを ・・まさか！？|
-|VRAM1|3D00|570|7D5108F5E154178E491BDB423FC664B8A2B6CB5DDB9E16BE90167BFC1871BE5E|9|188|238|35|14|white|#EF000000|[Fray] No way, what?| [フレイ]まさか、なに？|
+|VRAM1|3D00|570|C71F511EDA658DCBCBC0D9124DB40B8F86C5949E373E54FFEC95C66D21DC9949|9|188|238|35|14|white|#EF000000|[Mill] But still, who could have made<br>such a thing… Unless...|［ミル］それにしても一体だれがあんなモノを ・・まさか！？|
+|VRAM1|3D00|570|7D5108F5E154178E491BDB423FC664B8A2B6CB5DDB9E16BE90167BFC1871BE5E|9|188|238|35|14|white|#EF000000|[Fray] Unless, what?| [フレイ]まさか、なに？|
 |VRAM1|3D00|570|579B97E8CC3390AD484CCD0CC515B6761412CA113CD37FE99623F3E5E5984B55|9|188|238|35|14|white|#EF000000|Could it be related to this case?| ひょっとして、今回の事件と関係あるって言うんじゃ？|
-|VRAM1|3D00|570|1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4|9|188|238|35|14|white|#EF000000|[Mill] Absolutely.|［ミル］そのとおりですよ。|
+|VRAM1|3D00|570|1D5B769CA6C9AACFEE0EE91E7A68F9A234EEA6B529A90C74F0538474A7B110B4|9|188|238|35|14|white|#EF000000|[Mill] Exactly.|［ミル］そのとおりですよ。|
 |VRAM1|3D00|570|EDD419362BAFAD1FB60CC67881A191F8B4199F27AC361E27AB222B4FD8A7D64C|9|188|238|35|14|white|#EF000000|This could turn into a great danger<br>for the world of Xak…| いや、もしかするとこのサーク界の一大事となるかも・・・。|
 |VRAM1|3D00|570|D032D983E7C65C0404F40C5C3BE83339F352E8715AF8680B5C974F2844B8C78B|9|188|238|35|14|white|#EF000000|We have to do something to stop<br>him.| なんとかしてアイツをくいとめないと。|
 |VRAM1|3D00|3E0|D57500B24328324874531CB3565CF91505A56977C5BA7BDEA8ECDAB460ECF73C|9|188|238|35|14|white|#EF000000|[Fray] Him?|［フレイ］アイツ？|
-|VRAM1|3D00|570|A7AAF39E8BCB65D72A8AEBF91EBEA8A20AB64B0CF32AEE9BBDC674DCC2D5685E|9|188|238|35|14|white|#EF000000|[Miry] Huh? Is that Grandpa’s<br>voice?|［ミリー］あれ、おじいちゃんの声？|
-|VRAM1|3D00|9C0|46529EFEC5A975C835DD91BC615B97638CD0CA90ED313C18D010795239F3D12A|9|188|238|35|14|white|#EF000000|[Fray] Oops, I totally forgot about<br>him.|［フレイ］いっけなぁ〜い、そのコトすっかり忘れてた。|
+|VRAM1|3D00|570|A7AAF39E8BCB65D72A8AEBF91EBEA8A20AB64B0CF32AEE9BBDC674DCC2D5685E|9|188|238|35|14|white|#EF000000|[Miry] Huh? Was that Grandpa?|［ミリー］あれ、おじいちゃんの声？|
+|VRAM1|3D00|9C0|46529EFEC5A975C835DD91BC615B97638CD0CA90ED313C18D010795239F3D12A|9|188|238|35|14|white|#EF000000|[Fray] Oops, I totally forgot about<br>that!|［フレイ］いっけなぁ〜い、そのコトすっかり忘れてた。|
 |VRAM1|3D00|570|9F86414D5097999204BDA1437EFA6E3883A1C0CFEB0C1CD64BF633B626A200B7|9|188|238|35|14|white|#EF000000|[Mill] Fray, is something wrong?|［ミル］フレイさん、どうかしたんですか？|
 |VRAM1|3D00|570|11EC8F028FBCF40EE61CBF1370D695C840525AB6809793079CF4E827A861C338|9|188|238|35|14|white|#EF000000|[Fray] Sorry, Mill.| ［フレイ］ごめん、ミル。|
-|VRAM1|3D00|570|ACFAC820CDA61EBC9D5BB4F06BD2C6B13307D93925D9DF579B2030CDB9F9D81F|9|188|238|35|14|white|#EF000000|I have another matter and must go<br>to Razel’s village.| 私ちょっと別の用事で、レイジアの村へ行かなきゃならないの。|
+|VRAM1|3D00|570|ACFAC820CDA61EBC9D5BB4F06BD2C6B13307D93925D9DF579B2030CDB9F9D81F|9|188|238|35|14|white|#EF000000|I have another matter and must go<br>to Razel’s village.|私ちょっと別の用事で、レイジアの村へ行かなきゃならないの。|
 |VRAM1|3D00|9C0|0785A57B28E9F7FAB75C090EDC0CC182DCB7FE46DBC694D2940277FB0228AA0E|9|188|238|35|14|white|#EF000000|[Mill] Understood.|［ミル］わかりました。|
 |VRAM1|3D00|570|376F51025B419355A4B4E804AB0377C5CFDFCFCDD632E15E1F1CE45EA060317F|9|188|238|35|14|white|#EF000000|I’ll try to figure out a way to reach<br>the flying castle.|私はなんとか空中城へ行く方法を考えてみます。|
 |VRAM1|3D00|570|C9E3F306115803037D3ED09E488817FC10D597C35326B915D3B26EA41F6C7393|9|188|238|35|14|white|#EF000000|[Miry] Come back soon, Fray.|［ミリー］早く帰ってきてね、　フレイおねえちゃん。|
@@ -802,7 +803,7 @@ TODO: patch in memory shop strings:
 |VRAM1|3D00|570|33184A1069AB20BF5EDAE75D05C03EB9B79E3DD4EC5B859B9C767FF428A2986C|9|188|238|35|14|white|#EF000000|[Isac] Hey! What are you thinking?!|［アイザック］これ！　なにをカンちがいしておる！|
 |VRAM1|3D00|570|F35CE257AE431875945B3BA98043F41B2D272DE8BCA278677ABE6C421D88D57D|9|188|238|35|14|white|#EF000000|This is how it’s done.|こうするんじゃよ。|
 |VRAM1|3D00|570|D0F1CA54198D2338A85C5E61053E6883C42CFCE612BA685DA37C2FAECF3B5078|9|188|238|35|14|white|#EF000000|[Isac] There, you should be dry now.|［アイザック］うむ、これでかわいたじゃろ。|
-|VRAM1|3D00|570|51033D5E929B6B3EF27F7A3D8A267C73F5AAEFC6B474F26AF574E529637556C1|9|188|238|35|14|white|#EF000000|Now, quickly deliver the potion to the<br>village chief.|ほれ、はやく村長に薬をとどけて|
+|VRAM1|3D00|570|51033D5E929B6B3EF27F7A3D8A267C73F5AAEFC6B474F26AF574E529637556C1|9|188|238|35|14|white|#EF000000|Now, hurry up and deliver the<br>potion to the village chief.|ほれ、はやく村長に薬をとどけて|
 |VRAM1|3D00|570|46BF863E6B44BF92765E4494C5143B9F9D9370ECFB01E90E14ADC605E7599A86|9|188|238|35|14|white|#EF000000|[Fray] Ugh, why do I always have to<br>go through this!?|［フレイ］もうっ、なんでこんな目にあわなきゃなんないのよ！|
 |VRAM1|3D00|570|8815784B77D912C86E4B0C6C3594BA728C86D3EC83A29497B95EACDFBC23E7DA|9|188|238|35|14|white|#EF000000|[Fray] Here. This is the Leef Potion.|［フレイ］はい。これがリーフの秘薬です。|
 |VRAM1|3D00|570|E20EB8FC6A9A253D10E1EAD6A7D3F427797AF75DBBD6DFBE8660D8762D370A92|9|188|238|35|14|white|#EF000000|[Isac] Yes. well done,<br>well done.|［アイザック］うむ。ごくろうごくろう。|
@@ -827,7 +828,7 @@ TODO: patch in memory shop strings:
 |VRAM1|3D00|9C0|E12B45AEF1CC5FDFB0B57925271A850D80A0351240088EC5F05D30BFE31F74AE|9|188|238|35|14|white|#EF000000|[Isac] What!?<br>The flying Castle Ku-Or!?|［アイザック］なんじゃと！空中城ク・オルじゃと！？|
 |VRAM1|3D00|570|FFD82B98E991963FD1E99139F2D5859D5A74B285839BA917A6542F29A877F15C|9|188|238|35|14|white|#EF000000|If that’s true, we must hurry to<br>Valuah Town.|それが本当ならば急いでヴァルアの町に向かわねばならん。|
 |VRAM1|3D00|570|88D453E481745729F5937696D13BA2453EFB30552B429F8BFCB50752C21A6DEA|9|188|238|35|14|white|#EF000000|Young lady, are you ready?|娘、用意はいいな？|
-|VRAM1|3D00|570|02CCFDC03938CDFEE2028F7BB4C71DF35F02732D819FDF0095B9CA3FAB3F2940|9|188|238|35|14|white|#EF000000|[Fray] Fine, whatever you want.|［フレイ］もう、どうにでもしてください。|
+|VRAM1|3D00|570|02CCFDC03938CDFEE2028F7BB4C71DF35F02732D819FDF0095B9CA3FAB3F2940|9|188|238|35|14|white|#EF000000|[Fray] Fine, whatever you say.|［フレイ］もう、どうにでもしてください。|
 |VRAM1|3D00|9C0|13784218C5A8BFEB9FB61E91DAA4A318F6DA598FDE1B4B067D934711310F1851|9|188|238|35|14|white|#EF000000|[Isac] Very well. Then let's go.|［アイザック］うむ。それでは行くぞ。|
 |VRAM1|3D00|570|F3B1DDEEC3536CAB66114627AE15A2855861D00C715BB992CFC3A8A58AE25CA7|9|188|238|35|14|white|#EF000000|[Mill] Oh? Fray, are you back<br>already?|［ミル］おや？　フレイさん、　今おかえりですか？|
 |VRAM1|3D00|570|6BB75AB9D2B96E1AB06C920C39800C3CCF468E9BDC83F80D2C77FBA1FDF7CF1B|9|188|238|35|14|white|#EF000000|And this person is…|そちらの方は・・・|
@@ -1407,29 +1408,30 @@ TODO: better lines splitting:
 |region|start|len|hash|x_pos|y_pos|width_box|height_box|font_size|fg_color|bg_color|text|jap_text|
 |------|-----|---|----|-----|-----|---------|----------|---------|--------|--------|----|--------|
 |VRAM1|3D00|570|E905334E24244EAC79A7CE3644E81DBB1487D6DD6AB139494CDF1A3E924DEE44|9|188|238|35|14|white|#EF000000|　　　    - The Next Day -| 　　　　−　次の日　−|
-|VRAM1|3D00|570|9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok, you’re leaving already?<br>[Latok] Yeah. I got what I came for,<br>so it’s time to find the next job.<br>Don’t look so sad. It’s not like we’ll never see<br>each other again.<br>[Fray] Who’s sad!? I’m perfectly fine, thank you!|ルト君、もう行っちゃうの？<br>うん。もらうももらったから、また次の仕事を探さなきゃなんねしな。<br>そんな悲しい顔すんなよ。もう二度と会えなくなるわけじゃねぇんだからよ。<br>誰が悲しい顔してるのよ！私は、ウレオネーちゃん！|
-|VRAM1|3D00|570|CD7E6AC19C8B0348D717FDFB389929955EF8A1915B252DAAD0BEA10630DC4019|10|10|0|0|14|#ffff00|#EF000000|[Miry] Big sis' Fray!| |
-|VRAM1|3D00|570|DA8D35A18403B1E5D97FCAC8FA6B8188D5CCE391B401E29783591BE3636A4146|10|10|0|0|14|#ffff00|#EF000000|[Fray] Miry, what happended?<br>[Miry] Guess what! I’m going to magic school!<br>[Fray] Really? That’s wonderful, Miry!| ミリー、どうしたの？そんなに急いで。<br>あるあるね。私、魔法学校に行くことになったの。<br>本当に？おめでとう、ミリ|
-|VRAM1|3D00|570|5224B7EA6022C26F41765BEC37777C51515421BCAEF8E1F4377A7DBD8032A0F0|10|10|0|0|14|#ffff00|#EF000000|[Grandpa] Still, it’ll be lonely without you around.<br>[Isac] We at the Magic School will take good<br>care of your granddaughter.<br>[Mill] Miry, training at the Academy is quite strict,<br>you know. Isn’t that right, Fray?|ミリーがいなくなると、寂しくなるの。<br>おまごさんは、魔法学校が責任もってお預かりいたします。<br>ミリーさん、魔法学校の修行は厳しいですよ。ね、フレイさん|
-|VRAM1|3D00|570|5D6E79C06B6852A08CB7BFF6440C0D9A043BBBF6A72D57CC8809DDFA1123E77E|10|10|0|0|14|#ffff00|#EF000000|[Miry] No problem! I’m a genius, after all!| 大丈夫！なんてたって、私は天才なんだから！|
+|VRAM1|3D00|570|9664A86DCBA925C39E30D0010404A46014CC19AF9273012B4B1D329773A0BAEC|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok, are you leaving already?<br>[Latok] Yeah. I got what I came for,<br>so it’s time to find the next job.<br>Don’t look so sad. It’s not like we’ll never see<br>each other again.<br>[Fray] Who’s sad!? I'm just...|ルト君、もう行っちゃうの？<br>うん。もらうももらったから、また次の仕事を探さなきゃなんねしな。<br>そんな悲しい顔すんなよ。もう二度と会えなくなるわけじゃねぇんだからよ。<br>誰が悲しい顔してるのよ！私は、|
+|VRAM1|3D00|570|CD7E6AC19C8B0348D717FDFB389929955EF8A1915B252DAAD0BEA10630DC4019|10|10|0|0|14|#ffff00|#EF000000|[Miry] Big sis' Fray!|ウレオネーちゃん！|
+|VRAM1|3D00|570|DA8D35A18403B1E5D97FCAC8FA6B8188D5CCE391B401E29783591BE3636A4146|10|10|0|0|14|#ffff00|#EF000000|[Fray] Miry, what happended?<br>[Miry] Guess what! I’m going to magic school!<br>[Fray] Really? That's amazing, Miry!| ミリー、どうしたの？そんなに急いで。<br>あるあるね。私、魔法学校に行くことになったの。<br>本当に？おめでとう、ミリ|
+|VRAM1|3D00|570|5224B7EA6022C26F41765BEC37777C51515421BCAEF8E1F4377A7DBD8032A0F0|10|10|0|0|14|#ffff00|#EF000000|[Grandpa] Still, it’ll be lonely around here<br>without my little Miry.<br>[Isac] Don't worry, sir. The academy will look<br>after your granddaughter.<br>[Mill] Miry, the training at the Academy is quite<br>strict. Right, Fray?|ミリーがいなくなると、寂しくなるの。<br>おまごさんは、魔法学校が責任もってお預かりいたします。<br>ミリーさん、魔法学校の修行は厳しいですよ。ね、フレイさん|
+|VRAM1|3D00|570|1C22E3FABD98052ADD3A4D1BA1583FBF976B088672995BA85B45DDB8B0CF3EB2|10|10|0|0|14|#ffff00|#EF000000|[Fray] Yeah!| |
+|VRAM1|3D00|570|5D6E79C06B6852A08CB7BFF6440C0D9A043BBBF6A72D57CC8809DDFA1123E77E|10|10|0|0|14|#ffff00|#EF000000|[Miry] I'll be fine! I’m a genius, after all!| 大丈夫！なんてたって、私は天才なんだから！|
 |VRAM1|3D00|570|1F493C383AD5442F72490C94B030E631F0D5F846B5E5AECDDC0A2395D9A31850|10|10|0|0|14|#ffff00|#EF000000|Hahaha!| ははははは！|
 |VRAM1|3D00|570|455FA011073C65D5A57CAF4396BFF51716B4A7A6C554FA6019DBDA887EB9867E|10|10|0|0|14|#ffff00|#EF000000|[Latok] Well then, I guess I should get going.<br>[Fray] All right, but don’t go chasing after every<br>girl you see!| じゃあ、俺はそろそろ行くぜ<br> ええ、じゃあ、うとく、女の人ばっか追いかけまわしちゃだめよ|
 |VRAM1|3D00|570|8F41F362B6F872DE3412A005831E49D3AF085F5F8DD758CE73943B592812451C|10|10|0|0|14|#ffff00|#EF000000|[Latok] Hah, nothing else you wanna say<br>before I go?| 最後ぐらい他に言うことねえのかよ|
 |VRAM1|3D00|570|A1BBEF74AC40F907DDEE3F3D4FF8949DFEDA70DD0077522078BB69328144A6A2|10|10|0|0|14|#ffff00|#EF000000|[Fray] Then… goodbye.| じゃあ、さよなら|
 |VRAM1|3D00|570|1D2A3324917FCE230F066DA02E97B55B27F79844B28C3BE90243CD483B9A7ADB|10|10|0|0|14|#ffff00|#EF000000|[Latok] Huh?| お|
 |VRAM1|3D00|570|99E28EE9324F29383AB01283EBDD477FADD494AF7B11B4678563DC0B0F853AC6|10|10|0|0|14|#ffff00|#EF000000|[Major] Wait, please!| 待ってください|
-|VRAM1|3D00|570|51C5F3BF00E444D79A46BA623FCEDC2E58B0AB80BCB193A1FE17B67FB6D030A6|10|10|0|0|14|#ffff00|#EF000000|[Miry] Huh? Major?| あれ、ちょうちょうさん|
+|VRAM1|3D00|570|51C5F3BF00E444D79A46BA623FCEDC2E58B0AB80BCB193A1FE17B67FB6D030A6|10|10|0|0|14|#ffff00|#EF000000|[Miry] Huh? The major?| あれ、ちょうちょうさん|
 |VRAM1|3D00|570|81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1|10|10|0|0|14|#ffff00|#EF000000|[Major] Great news! We found him!<br>[Fray] Found him? Who?<br>[Major] The blue-haired warrior you were searching for!| よかった マリアッター フルエイザー 居たんですよ<br>居たって 誰が?<br>あなたが探していた 青い髪の戦士ですよ|
 |VRAM1|3D00|570|372FF60B4DAB638EB015900475D881611A4CE2C343D6F9D6DE41481BA69F733F|10|10|0|0|14|#ffff00|#EF000000|[Fray] It’s all right… you don’t have to worry<br>about Latok anymore.<br>[Mayor] Wait—Latok!?| あなたが探していた 青い髪の戦士ですよ<br>そう その ラトク|
-|VRAM1|3D00|570|81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1|10|10|0|0|14|#ffff00|#EF000000|[Major] Someone said they saw a man named<br>Latok Cart!<br>[Fray] What!? Really!? Where!?<br>[Major] In a town called Valuah.<br>They say a warrior of Duel’s blood is fighting<br>monsters there!<br>[Fray] That’s it! It has to be him!<br>Wow—Latok! I’m coming for you!| ラトクカートって人 見かけたんですって<br>はっ! ホントに! 特で!<br>きっ! 来たり向かったところにある バノアの街って<br>精神リュエルの血を引く戦士が 妖魔と戦ってるって<br>それよ! 間違いないわ!<br>うわー! ラトクさん! 待っててね!|
+|VRAM1|3D00|570|81A941A6C9C1E0D2534C736EAB7FB2BC6C6D1082122664355CFBE513793E49D1|10|10|0|0|14|#ffff00|#EF000000|[Major] Someone said they saw a man named<br>Latok Cart!<br>[Fray] What!? Really!? Where!?<br>[Major] In a town called Banuwa.<br>They say a warrior of Duel’s blood is fighting<br>monsters there!<br>[Fray] That’s it! It has to be him!<br>Wow—Latok! I’m coming for you!| ラトクカートって人 見かけたんですって<br>はっ! ホントに! 特で!<br>きっ! 来たり向かったところにある バノアの街って<br>精神リュエルの血を引く戦士が 妖魔と戦ってるって<br>それよ! 間違いないわ!<br>うわー! ラトクさん! 待っててね!|
 |VRAM1|3D00|570|615F8C65B8A9603ADD74CA599CCCDDD8F54ACA0947C6C5C06C04996F50127143|10|10|0|0|14|#ffff00|#EF000000|[Mill] Huh? Wait, Fray!| あ? 待って! プレイさん!|
-|VRAM1|3D00|570|CE21DBFD4712819CCB1C9903E617A9BA505694A668BF1B66C92FF9445F1C2EE1|10|10|0|0|14|#ffff00|#EF000000|[Fray] Sorry, Mill! I’ll come back for sure later!| ごめんね エミル! 後で必ず行くからね!|
+|VRAM1|3D00|570|CE21DBFD4712819CCB1C9903E617A9BA505694A668BF1B66C92FF9445F1C2EE1|10|10|0|0|14|#ffff00|#EF000000|[Fray] Sorry, Mill! I'll catch up with you later,<br>I promise!| ごめんね エミル! 後で必ず行くからね!|
 |VRAM1|3D00|570|1363E4EEB36384ED5794BA97333F7F6A93C8F1B00E59D8F8D3926CFF462DA11A|10|10|0|0|14|#ffff00|#EF000000|[Miry] She’s gone…|行っちゃったね|
-|VRAM1|3D00|570|795E9E76E37E8399625DDF44FC85D8B8D74AEED20CBC409B35E1BD030932924F|10|10|0|0|14|#ffff00|#EF000000|[Latok] She’s changed, hasn’t she?|変わってね アイツ|
-|VRAM1|3D00|570|BA2F04519516CB17ED36960BCE9E718F293817CA48992066BB5D53D2694724B8|10|10|0|0|14|#ffff00|#EF000000|[Fray] “How are you, Mill?<br>I’m writing this letter on my journey to the town<br>of Valuah.”| 「お元気ですか?ミル先生。今、バノアの町へ向かう旅の途中で、この手紙を書いています」|
+|VRAM1|3D00|570|795E9E76E37E8399625DDF44FC85D8B8D74AEED20CBC409B35E1BD030932924F|10|10|0|0|14|#ffff00|#EF000000|[Latok] She hasn't changed a bit.|変わってね アイツ|
+|VRAM1|3D00|570|BA2F04519516CB17ED36960BCE9E718F293817CA48992066BB5D53D2694724B8|10|10|0|0|14|#ffff00|#EF000000|[Fray] “How are you, Mill?<br>I’m writing this letter on my journey to the town<br>of Banuwa.”| 「お元気ですか?ミル先生。今、バノアの町へ向かう旅の途中で、この手紙を書いています」|
 |VRAM1|3D00|570|F32C345A78360FBFC2E4F7018FE5F5755DCB27A3AA27B2ECDC7969760A7861B8|10|10|0|0|14|#ffff00|#EF000000|“Has anything changed over there since I left?”| 「その後、そちらで変わったこととかありませんか?」|
 |VRAM1|3D00|570|84BF28FD4BD41A91B111A31D56B38835B486DBF45DB67E9643E3FF18009153FB|10|10|0|0|14|#ffff00|#EF000000|“Is Miry doing well?<br>I hope she isn’t feeling lonely thinking about<br>her grandfather.”<br>“And Professor Isac, sorry for saying mean<br>things about you before.<br>You did save my life, after all.<br>Please take care of yourself.”| 「ミルは元気でやってますか?おじいさんのことを思い出して、旅しくしていることありませんか?」<br>「アイジャク先生、いろいろ悪口ってごめんなさい。なんたって、命の恩人だもんね。お体には気をつけてくださいね」|
-|VRAM1|3D00|570|9145BEB9FF48C0DE9E3CF239EE7DF32A406CBE7DE36ABC09314E594EAAEF0061|10|10|0|0|14|#ffff00|#EF000000|“By the way, have you seen Latok since then?<br>I thought we parted ways in Banuwa,<br>but I wonder where he is now and what he’s<br>doing.”| 「ところで、あれからルドクに見ました?私もバルアの町では分かれた気になんだけど、どこで何をしているのかしら」|
-|VRAM1|3D00|570|9D845426F7D8EF5CF9FEEED4AFC4FAAD06BC3AF1038E85A7CF36FFBB35BED5A6|10|10|0|0|14|#ffff00|#EF000000|“Lastly, Mill, I’m sorry for always being selfish.<br>Next time, I’ll make sure to visit and properly<br>thank you.<br>I’ll never forget my days at the Magic School.<br>Until the day we meet again. Fray.”<br>“Ah, gees. I forgot to write about myself.<br>As for me...”| 「最後に、ミル先生、わがままばかりってごめんなさい。今度、必ずそちらへご挨拶に伺います」<br>「魔法学校での生活はきっと忘れません」<br>いつか、また会う日まで、くれい」<br>きぃーす。私のことを書くのを忘れてしまいました。わたしはー|
+|VRAM1|3D00|570|9145BEB9FF48C0DE9E3CF239EE7DF32A406CBE7DE36ABC09314E594EAAEF0061|10|10|0|0|14|#ffff00|#EF000000|“By the way, have you seen Latok since then?<br>We parted ways in Valuah,<br>but I wonder where he is now and what he’s<br>doing.”| 「ところで、あれからルドクに見ました?私もバルアの町では分かれた気になんだけど、どこで何をしているのかしら」|
+|VRAM1|3D00|570|9D845426F7D8EF5CF9FEEED4AFC4FAAD06BC3AF1038E85A7CF36FFBB35BED5A6|10|10|0|0|14|#ffff00|#EF000000|“Lastly, Mill, I’m sorry for always being selfish.<br>Next time, I’ll make sure to visit and properly<br>thank you.<br>I’ll never forget my days at the Magic School.<br>Until the day we meet again. Fray.”<br> <br>“P.S. Gees, I forgot to write about myself.<br>As for me...”| 「最後に、ミル先生、わがままばかりってごめんなさい。今度、必ずそちらへご挨拶に伺います」<br>「魔法学校での生活はきっと忘れません」<br>いつか、また会う日まで、くれい」<br>きぃーす。私のことを書くのを忘れてしまいました。わたしはー|
 |VRAM1|3D00|570|2D22D552150D8A148A6D5604ECCE5CF50E72E6F2217085971EA4B81144A53F92|10|10|0|0|14|#ffff00|#EF000000|[Fray] Latok!| |
 
