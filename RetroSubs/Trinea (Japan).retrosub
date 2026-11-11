@@ -2,7 +2,7 @@
 format: RetroSubs Version 2.0
 author: eadmaster
 license: CC-BY-NC-SA
-version: 0.6.2
+version: 0.6.3
 repository: https://github.com/eadmaster/RetroSubs
 compatible_hashes: [ "C20419EC", "8622B25466D1CF31E8A8771838B02CA7", "BA4866A599C9DC380C11F0CB3C1F8E0374D35DFF" ]
 ---
@@ -25,9 +25,7 @@ Localized names:
  - Jiltania (ジルタニア)
  - Penta Dragon (ペンタドラゴン)
  - Count Vampierre (ヴァンピエ―ル伯爵), Vampiale, Vampir, Vampyr
- - Ruria (ルリア) https://vndb.org/c35351, Rulia (gamefaqs), Lyria  https://hero.fandom.com/wiki/Lyria_(Granblue_Fantasy)
- - Midori (緑)
- - Lucia (ル―シア), Rouci
+ - Ruria Midori Lucia (ルリア 緑 ル―シア)
  - Echigoya (越後屋)
  - Blue Leo (青獅子) / Blue Lion
  - Red Leo (紅獅子) / Red Lion / Rouge Leo
@@ -39,6 +37,7 @@ Localized names:
 References:
 
  - https://gamefaqs.gamespot.com/snes/570976-trinea/faqs/36391
+ - https://gamemanual.midnightmeattrain.com/entry/TRINEA
 
 missing:
 
@@ -103,8 +102,8 @@ Hashed memory regions:
 |VRAM|7080|4E0|3D64104880338E8759C5F255AEB06B8B1EB48CBE80D31B91A158839922CAF0A3|17|15|220|90|#FFFBF7|#DF000000|Name: Sara Weathers<br> <br>Favorite saying: “Treasure nature.”<br>Favorite person: “Her father.”<br>Catchphrase: “Am I… strange?”|名前 «サラ・ウェザーズ» すきなことは『しぜんをたいせっにね』<br>すきなひと 『おとうさん』<br>くちくせ 『わたしおかしいのかなー?』|
 |VRAM|7080|4E0|AE5B70D1012A568908F120702711A8C005A8478555865435DF6396AD4A864734|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)|《御船<br>哲也》 |
 |VRAM|7080|4E0|D7B13E54D128A6B8A583D91495584AAA91545D813A9296713EB5CBB42431A982|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)<br> <br>He is the fourth member of the elite<br>special defense unit of Neo Edo,<br>famously known as Neo Edo’s<br>strongest corps, the “E.S.P. 8.”|ネオ江戸さいきょうぶたいとなだかい ネオ江戸ぼうえいたいだいとくしゅぶたい つうしょう『E・S ・P・8』の4はんめのたいいんてある。|
-|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)<br> <br>He deeply admires his teammates:<br>Ruria, Midori and Lucia. All three feel<br>the same way about him, but none of<br>them have realized it yet.|《『緑』にはひそかにあこがれているじょせいがいる<br>なまえは『ルリアみどりルーシア』といい アメリカ<br>けい3せいである。じっはふたりはりょうおもいな<br>のだがふたりともきずいてない。|
-|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria, Midori & Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
+|VRAM|7080|4E0|CDFDDC1C1EEF48E34F2F3FE665D200B615A542670680171D31D856AEA452FE95|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)<br> <br>He secretly admires a woman named<br>Ruria Midori Lucia, a third-generation<br>American and member of the team.<br>The two actually like each other,<br>but neither has realized it.|《『緑』にはひそかにあこがれているじょせいがいる<br>なまえは『ルリアみどりルーシア』といい アメリカ<br>けい3せいである。じっはふたりはりょうおもいな<br>のだがふたりともきずいてない。|
+|VRAM|7080|4E0|CC650F9467681854CD1460784E366C0517C9AD50CE90B06B1ECA05285CDAE265|17|15|220|90|#FFFBF7|#DF000000|Name: Tetsuya Mifune (Untranslated)<br> <br>Favorite saying: “Unprecedented!”<br>Favorite person: Ruria Midori Lucia<br>Catchphrase: “I’ll smash you!”|名前 《御船・椋・哲也》 すきなことば『ぜんじんみとう!』<br>すきなひと 『ルリアみどりルーシア』<br>くちくせ 『たたっきる!』|
 |VRAM|7080|4E0|34A336268D08405B6391B79F95E9C7B50DA32EBE08911BD2595C9CE8D7D23A7A|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse (Untranslated)|名前 《ホルニッセ》|
 |VRAM|7080|4E0|7FAB840AC6594DD71CE821FE71B940CBB84522BE067232398DDFE04AB566C9ED|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse (Untranslated)<br> <br>One of the kingdom’s top knights,<br>he always wears a mask,<br>so few have seen his face.| 名前 «ホルニッセ» きしとしてのじつりょくはくにのなかでも1.2 をあらそうほどだが ふだんから、かめんをつけているためそのすしょうどころかすがおすらみたも のはすくない。|
 |VRAM|7080|4E0|E26BBFF94E1FFB51C9235FFD68BD665C4338C247E5424E60264D4A7A0933138A|17|15|220|90|#FFFBF7|#DF000000|Name: Hornisse (Untranslated)<br> <br>In battle, his cloak billows as<br>he wields his greatsword, cutting<br>deeply into his foes!<br>He fights with fearless courage.| 名前 «ホルニッセ» たたかいのときには しんくのマントをはためかせ<br>てにはグレートソードをもちてきじんふかくきりこ<br>む!ゆうかんなきしてある。|
@@ -312,8 +311,8 @@ Hashed memory regions:
 |VRAM|2000|1000|D94130957DA7A428CA19173FA6D2F3BF48D414E97428BA1FCF21432B27500242|30|150|200|50|14|#FFFBF7|#DF000000|        «Sara»<br>Wait!!<br>I’m not with Echigoya!|《サ ラ》<br>待って！！<br>越後屋の者ではないわ！|
 |VRAM|2000|1000|39AE74FD74131C23B709A36F8CBBFCA13091237DC639ED01405D367C390C4CE4|30|150|200|50|14|#FFFBF7|#DF000000|        «Resistance»<br>Everyone!!<br>Leave this to me!|《レジスタンス》<br>みんな！！<br>ここは 私に まかせて！|
 |VRAM|2000|1000|BB93603CB63BA6883BEE66FAC98AD36ED6985C6F0E88F756904552CFC9D04FDC|30|150|200|50|14|#FFFBF7|#DF000000|        «Sara»<br>.........|《サ ラ》<br>.........。|
-|VRAM|2000|1000|C1172715A9A3A68516245A8E0171BDFD98EC3180D628FF3209954DFA3B269896|30|150|200|50|14|#FFFBF7|#DF000000|        «Resistance»<br>We are...<br>Ruria, Midori and Lucia.|《レジスタンス》<br>私は...<br>ルリア 緑 ル―シア。|
-|VRAM|2000|1000|A101433E226A03CACBAD4047A9E02A0F6FCE719E4587151B584A375F06692FB5|30|150|200|50|14|#FFFBF7|#DF000000|Leaders of these people.<br>And you are?|この者たちのリ―ダ―よ。<br>あなたは？|
+|VRAM|2000|1000|C1172715A9A3A68516245A8E0171BDFD98EC3180D628FF3209954DFA3B269896|30|150|200|50|14|#FFFBF7|#DF000000|        «Resistance»<br>I am...<br>Ruria Midori Lucia.|《レジスタンス》<br>私は...<br>ルリア 緑 ル―シア。|
+|VRAM|2000|1000|A101433E226A03CACBAD4047A9E02A0F6FCE719E4587151B584A375F06692FB5|30|150|200|50|14|#FFFBF7|#DF000000|Leader of these people.<br>And you are?|この者たちのリ―ダ―よ。<br>あなたは？|
 |VRAM|2000|1000|511C4FEA0A5217FD248173FB1B7457C341A753F08F2794E18D8DB9AF30092DA8|30|150|200|50|14|#FFFBF7|#DF000000|        «Sara»<br>I’m Sara Weathers.|《サ ラ》<br>私は サラ ウェザ―ズ。|
 |VRAM|2000|1000|B46F11DE838A1D863A7802F3C70840D52EF1BCDAA24DC74DF6F50AB5CD9FFA85|30|150|200|50|14|#FFFBF7|#DF000000|        «Resistance»<br>.........|《レジスタンス》<br>.........。|
 |VRAM|2000|1000|6A335565678041326A00D519E047620685ABBB95AA3B81751DDA11F49FA3119D|30|150|200|50|14|#FFFBF7|#DF000000|        «Midori»<br>So then, Sara,<br>why have you come here?|《 緑 》<br>それで サラさん<br>どうして ここへ？|
